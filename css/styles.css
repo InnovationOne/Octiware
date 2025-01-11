@@ -1217,6 +1217,10 @@ footer {
   .team-sections {
     gap: 1.5rem;
   }
+
+  .team-row:nth-child(odd) .team-row-image {
+    order: 0;
+  }
 }
 
 @media (max-width: 480px) {
