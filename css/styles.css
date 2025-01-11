@@ -326,7 +326,7 @@ a:active {
 }
 
 .home-box:hover .home-box-overlay img {
-  transform: scale(1.00);
+  /* transform: scale(1.00); */
 }
 
 .home-box-overlay-caption {
@@ -655,7 +655,7 @@ footer {
 }
 
 .meet-hero-section:hover .meet-hero-img {
-  transform: scale(1.00);
+  /* transform: scale(1.00); */
 }
 
 .meet-hero-overlay-caption {
@@ -739,7 +739,7 @@ footer {
 }
 
 .team-row:hover .team-row-image img {
-  transform: scale(1.00);
+  /* transform: scale(1.00); */
 }
 
 .team-row-text {
