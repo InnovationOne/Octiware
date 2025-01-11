@@ -111,6 +111,7 @@ a:active {
   border-radius: 50%;
   transition: 0.3s;
   margin-left: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 .social-icons-header a:hover {
