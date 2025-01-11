@@ -1,9 +1,19 @@
 // Small JS to show/hide the mobile menu
-const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
-const mobileNavContainer = document.querySelector(".mobile-nav-container");
-mobileNavToggle.addEventListener("click", () => {
-  mobileNavContainer.classList.toggle("open");
-});
+const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const mobileNavContainer = document.querySelector('.mobile-nav-container');
+
+if (mobileNavToggle && mobileNavContainer) {
+  mobileNavToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    mobileNavContainer.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!mobileNavContainer.contains(e.target) && e.target !== mobileNavToggle) {
+      mobileNavContainer.classList.remove('open');
+    }
+  });
+}
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
