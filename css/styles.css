@@ -25,6 +25,14 @@ body {
   background-color: var(--white);
 }
 
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
 /* =============================================================================
    HEADER SECTION
 ============================================================================= */
@@ -57,13 +65,6 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: var(--white);
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
 }
 
 /* Desktop Navigation */
@@ -109,6 +110,7 @@ a:active {
   border: 2px solid var(--white);
   border-radius: 50%;
   transition: 0.3s;
+  margin-left: 0.3rem;
 }
 
 .social-icons-header a:hover {
@@ -153,25 +155,35 @@ a:active {
 
 .mobile-nav-container {
   display: none;
-  position: absolute;
-  top: 70px;
-  right: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
   background: var(--brand-color);
   padding: 1.25rem;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-nav-container.open {
   display: block;
+  transform: translateX(0);
 }
 
 .mobile-nav-container ul {
   list-style: none;
+  margin-top: 2rem;
 }
 
 .mobile-nav-container ul li a {
-  color: var(--white);
   display: block;
-  margin-bottom: 0.6rem;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 /* =============================================================================
@@ -251,7 +263,7 @@ a:active {
   background: var(--brand-color);
   border-radius: 50%;
   position: relative;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   animation: move-updown 5s infinite ease-in-out;
   scroll-behavior: smooth;
 }
@@ -261,8 +273,12 @@ a:active {
 }
 
 @keyframes move-updown {
-  0%, 100% { transform: translateY(50px); }
-  50%      { transform: translateY(20px); }
+  0%, 100% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
 }
 
 /* =============================================================================
@@ -275,6 +291,7 @@ a:active {
   flex-wrap: wrap;
   gap: 1.25rem;
   justify-content: center;
+  padding: 0 1rem;
 }
 
 .home-box {
@@ -416,6 +433,7 @@ a:active {
   border: 1px solid #ddd;
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .news-item:hover {
@@ -680,6 +698,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 0 1rem;
 }
 
 .team-row {
@@ -934,6 +953,7 @@ footer {
   flex-direction: column;
   gap: 1.5rem;
   font-family: var(--body-font);
+  padding: 0 1rem;
 }
 
 .join-accordion .accordion-item {
@@ -1118,16 +1138,27 @@ footer {
 }
 
 /* =============================================================================
+   VISUALLY HIDDEN
+============================================================================= */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* =============================================================================
    RESPONSIVE MEDIA QUERIES
 ============================================================================= */
-/* Enhancements for styles.css */
-
-/* MOBILE HEADER IMPROVEMENTS */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    align-items: center;
+    gap: 15px;
   }
 
   .header-nav-desktop {
@@ -1138,27 +1169,27 @@ footer {
     display: block;
   }
 
-  .mobile-nav-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: var(--brand-color);
-    width: 80%;
-    max-width: 300px;
-    height: 100vh;
-    padding: 20px;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .mobile-nav-container.open {
-    transform: translateX(0);
-  }
-
   .mobile-nav-toggle {
     display: block;
     font-size: 1.5rem;
+  }
+
+  .hero-game-title {
+    font-size: 7rem;
+    -webkit-text-stroke-width: 3px;
+  }
+  
+  .meet-join-section {
+    margin: 2rem auto;
+    gap: 1rem;
+  }
+
+  .home-box-overlay {
+    height: 350px;
+  }
+
+  .team-sections {
+    gap: 1.5rem;
   }
 }
 
@@ -1168,8 +1199,10 @@ footer {
   }
 
   .hero-game-title {
-    font-size: 6rem;
-    -webkit-text-stroke-width: 2px;
+    font-size: 5rem;
+    -webkit-text-stroke-width: 0px;
+    color: var(--white); 
+    text-shadow: none;
   }
 
   .cta-buttons {
@@ -1181,15 +1214,30 @@ footer {
     width: 2rem;
     height: 2rem;
   }
-}
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+  .home-box-overlay {
+    height: 280px;
+  }
+
+  .team-sections {
+    gap: 1rem;
+  }
+
+  .team-row {
+    flex-direction: column;
+  }
+
+  .job-detail-container {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  .join-accordion {
+    margin: 2rem auto;
+    gap: 1rem;
+  }
+
+  .meet-hero-text h1 {
+    font-size: 3rem;
+  }
 }
