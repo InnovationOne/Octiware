@@ -92,7 +92,32 @@
     </header>
     <!-- ========== HERO-AREA ========== -->
     <section class="meet-hero-section" aria-labelledby="meet-us-hero-title">
-      <img src="img/meetus_hero.jpg" alt="Meet Us Hero Background" class="meet-hero-img" />
+      <picture>
+        <source
+          srcset="
+            img/meetus_480.webp 480w,
+            img/meetus_768.webp 768w,
+            img/meetus_1320.webp 1320w
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            img/meetus_480.jpg 480w,
+            img/meetus_768.jpg 768w,
+            img/meetus_1320.jpg 1320w
+          "
+          type="image/jpeg"
+        />
+        <img
+          src="img/meetus_1320.jpg"
+          alt="Meet Us Hero Background"
+          class="meet-hero-img"
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 1320px"
+        />
+      </picture>
+      
       <div class="meet-hero-overlay-caption">
         <div class="meet-hero-text">
           <h1 id="meet-us-hero-title">MEET US</h1>

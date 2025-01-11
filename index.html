@@ -119,7 +119,30 @@
         <!-- MEET US -->
         <article class="home-box" id="meet-us">
           <div class="home-box-overlay">
-            <img src="img/meetus_bg.jpg" alt="Team environment background" />
+            <picture>
+              <source
+                srcset="
+                  img/meetus_480.webp 480w,
+                  img/meetus_768.webp 768w,
+                  img/meetus_1320.webp 1320w
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  img/meetus_480.jpg 480w,
+                  img/meetus_768.jpg 768w,
+                  img/meetus_1320.jpg 1320w
+                "
+                type="image/jpeg"
+              />
+              <img
+                src="img/meetus_1320.jpg"
+                alt="Team environment background"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 1320px"
+              />
+            </picture>
             <div class="home-box-overlay-caption">
               <h3 class="overlay-title">MEET US</h3>
               <div class="overlay-buttons">
@@ -143,7 +166,30 @@
         <!-- JOIN US -->
         <article class="home-box" id="join-us">
           <div class="home-box-overlay">
-            <img src="img/joinus_bg.jpg" alt="Background image showcasing collaboration" />
+            <picture>
+              <source
+                srcset="
+                  img/joinus_480.webp 480w,
+                  img/joinus_768.webp 768w,
+                  img/joinus_1320.webp 1320w
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  img/joinus_480.jpg 480w,
+                  img/joinus_768.jpg 768w,
+                  img/joinus_1320.jpg 1320w
+                "
+                type="image/jpeg"
+              />
+              <img
+                src="img/joinus_1320.jpg"
+                alt="Background image showcasing collaboration"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 1320px"
+              />
+            </picture>
             <div class="home-box-overlay-caption">
               <h3 class="overlay-title">JOIN US</h3>
               <div class="overlay-buttons">

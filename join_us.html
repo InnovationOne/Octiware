@@ -92,7 +92,31 @@
     </header>
     <!-- ========== HERO-AREA ========== -->
     <section class="meet-hero-section" aria-labelledby="join-us-hero-title">
-      <img src="img/joinus_hero.jpg" alt="Join Us Hero Background" class="meet-hero-img" />
+      <picture>
+        <source
+          srcset="
+            img/joinus_480.webp 480w,
+            img/joinus_768.webp 768w,
+            img/joinus_1320.webp 1320w
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            img/joinus_480.jpg 480w,
+            img/joinus_768.jpg 768w,
+            img/joinus_1320.jpg 1320w
+          "
+          type="image/jpeg"
+        />
+        <img
+          src="img/joinus_1320.jpg"
+          alt="Join Us Hero Background"
+          class="meet-hero-img"
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 1320px"
+        />
+      </picture>
       <div class="meet-hero-overlay-caption">
         <div class="meet-hero-text">
           <h1 id="join-us-hero-title">JOIN US</h1>
@@ -116,7 +140,7 @@
             <ul>
               <li>
                 <p>
-                  There are currently no open positions in Design &amp; Story. We welcome spontaneous applications – please feel free to get in touch.
+                  There are currently no open positions in Design &amp; Story. We welcome spontaneous applications – please feel free to contact us.
                 </p>
               </li>
             </ul>
