@@ -1258,6 +1258,10 @@ footer {
     gap: 1rem;
   }
 
+  .team-row:nth-child(odd) .team-row-image {
+    order: 0;
+  }
+
   .team-row {
     flex-direction: column;
   }
