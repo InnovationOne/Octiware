@@ -787,6 +787,24 @@ footer {
   color: var(--brand-color);
 }
 
+.team-row-buttons .spontaneous-btn {
+  display: inline-block;
+  border: 2px solid var(--brand-color);
+  background: var(--white);
+  color: var(--brand-color); 
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background 0.3s, color 0.3s;
+}
+
+.team-row-buttons .spontaneous-btn:hover {
+  background: var(--brand-color);
+  color: var(--white);
+}
+
 /* =============================================================================
    JOB DETAIL SECTION
 ================================================================================ */
