@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ========== HEAD SECTION ========== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO: Title and Description -->
+    <title>DEV-Blog #2 | Steamy Isle - Octiware</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <!-- ========== HEADER SECTION ========== -->
+    <header class="header" aria-label="Site header">
+      <div class="header-container">
+        <!-- Logo links -->
+        <div class="header-logo">
+          <a href="../index.html" aria-label="Octiware Home">
+          <img src="../img/OctiwareWithEyes.png" alt="Octiware Logo" class="logo-img" />
+          </a>
+          <a href="../index.html" aria-label="Octiware Home">
+          <span class="logo-text">Octiware</span>
+          </a>
+        </div>
+        <!-- MAIN NAVIGATION -->
+        <nav class="header-nav-desktop" aria-label="Main navigation">
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+          </ul>
+        </nav>
+        <!-- SOCIAL + LANGUAGE SELECT -->
+        <div class="header-right">
+          <div class="social-icons-header" aria-label="Social media links">
+            <a href="https://www.instagram.com/octiware/" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+            <img src="../img/instagram_icon.svg" alt="Instagram Icon" />
+            </a>
+            <a href="https://x.com/octiware" target="_blank" rel="noopener" aria-label="Follow us on X">
+            <img src="../img/x_icon.svg" alt="X Icon" />
+            </a>
+            <a href="https://www.tiktok.com/@octiware" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
+            <img src="../img/tiktok_icon.svg" alt="TikTok Icon" />
+            </a>
+            <a href="https://www.youtube.com/@Octiware" target="_blank" rel="noopener" aria-label="Follow us on YouTube">
+            <img src="../img/youtube_icon.svg" alt="YouTube Icon" />
+            </a>
+            <a href="https://www.reddit.com/user/Octiware/" target="_blank" rel="noopener" aria-label="Follow us on Reddit">
+            <img src="../img/reddit_icon.svg" alt="Reddit Icon" />
+            </a>
+            <a href="https://discord.gg/WqjBxvcSTB" target="_blank" rel="noopener" aria-label="Join us on Discord">
+            <img src="../img/discord_icon.svg" alt="Discord Icon" />
+            </a>
+            <a href="https://www.pinterest.com/octiware/" target="_blank" rel="noopener" aria-label="Follow us on Pinterest">
+            <img src="../img/pinterest_icon.svg" alt="Pinterest Icon" />
+            </a>
+            <a href="https://www.linkedin.com/company/octiware/" target="_blank" rel="noopener" aria-label="Follow us on LinkedIn">
+            <img src="../img/linkedin_icon.svg" alt="LinkedIn Icon" />
+            </a>
+            <a href="https://www.threads.net/@octiware" target="_blank" rel="noopener" aria-label="Follow us on Threads">
+            <img src="../img/threads_icon.svg" alt="Threads Icon" />
+            </a>
+          </div>
+          <!-- LANGUAGE DROPDOWN -->
+          <!--
+            <div class="language-dropdown">
+              <select name="language" id="language" aria-label="Select Language">
+                <option value="en">EN</option>
+                <option value="de">DE</option>
+              </select>
+            </div>-->
+        </div>
+        <!-- MOBILE NAVIGATION (Burger Menu) -->
+        <div class="header-nav-mobile">
+          <button class="mobile-nav-toggle" aria-label="Open mobile menu">☰</button>
+          <div class="mobile-nav-container">
+            <ul>
+              <li><a href="../index.html">HOME</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ========== MAIN SECTION ========== -->
+    <main class="main" aria-label="Main content">
+      <div class="devblog-container">
+        <!-- HEADER / TITLE AREA -->
+        <header class="devblog-header">
+          <h1>DEV-Blog #2 – January 2025</h1>
+          <div class="devblog-date">Published on January 31, 2025</div>
+        </header>
+        <!-- INTRODUCTION -->
+        <article class="devblog-content">
+          <div class="img-container">
+            <img src="../img/dev_blog_2_intro.gif" alt="Dev Blog 2 Header">
+          </div>
+          <!-- Greeting -->
+          <section>
+            <h2>Greetings, Community!</h2>
+            <p>
+              Welcome to our latest development update! This month, we made significant progress in several areas, including the lighting system, item spawner, combat mechanics, and user interface. Read on for a deeper dive into our updates.
+            </p>
+          </section>
+          <!-- ========== 1) COMBAT SYSTEM ========== -->
+          <section>
+            <h2>Combat System</h2>
+            <p>
+              This month, our primary focus was on refining the combat system. Weapon collision detection is handled with precision using <code>Collider2D</code> components, ensuring that hits are accurately registered during gameplay. Additionally, the AI enables enemy units to switch between various states (such as Idle, Roaming, Pursuing, Searching, Attacking, Retreating, Hit, Stunned, Blocking, and Death).
+            </p>
+            <h3>Highlights</h3>
+            <ul>
+              <li>
+                <strong>Enemy Types:</strong> Includes melee, ranged, and magical foes, each with unique strategies.
+              </li>
+              <li>
+                <strong>Weapons:</strong> Weapons can be imbued with unique attributes like fire, ice, or lightning. Current examples include daggers, swords, flails, maces, bows, and crossbows.
+              </li>
+              <li>
+                <strong>Hitbox System:</strong> Weapon attacks create temporary colliders that define precise hit zones. The hit detection is calculated within the animation itself, providing a realistic combat feel.
+              </li>
+              <li>
+                <strong>Drops and Rewards:</strong> Defeated enemies drop rewards based on probabilities.
+              </li>
+            </ul>
+          </section>
+
+          <!-- ========== 2) CHARACTER CUSTOMIZATION ========== -->
+          <section>
+            <h2>Character Customization</h2>
+            <p>
+              A dynamic clothing system has been introduced, enabling players to modify their character's appearance and functionality. A custom script allows for the quick addition of new outfits, taking attributes like armor, resistance, and speed boosts into account.
+            </p>
+            <h3>Highlights</h3>
+            <ul>
+              <li>
+                <strong>Clothing Types:</strong> Includes gloves, helmets/hair, belts, body armor, pants, and shoes, giving players plenty of customization options.
+              </li>
+              <li>
+                <strong>Body Types:</strong> Players can choose between different body types, such as male, female, muscular builds, or even children for story purposes. Skin tones can also be customized.
+              </li>
+              <li>
+                <strong>UI:</strong> The clothing UI is integrated directly into the inventory, allowing for seamless outfit changes via drag-and-drop functionality.
+              </li>
+              <li>
+                <strong>Animation Integration:</strong> A script called <code>AnimationGenerator</code> allows for the creation of animations for outfits, weapons, and body types. Animations such as walking, fighting, or casting spells can be quickly created and swapped in real time.
+              </li>
+            </ul>
+
+            <h3>Demonstration:</h3>
+            <div class="demonstration-container" style="display: flex; gap: 2%; justify-content: center;">
+              <div class="demonstration-item" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                <p>
+                  The first image showcases the inventory and character customization menu. On the left, you can see the character and their equipped items, while the right side displays the inventory. Players can equip or remove clothing via drag-and-drop, with immediate visual updates.
+                </p>
+                <img
+                  src="../img/char_designer_1.jpg"
+                  alt="Character Designer 1"
+                  style="width: 100%; height: auto; margin-top: 5px;"
+                />
+              </div>
+              <div class="demonstration-item" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                <p>
+                  The second image illustrates an in-game example of the dynamic clothing system in action.
+                </p>
+                <img
+                  src="../img/char_designer_2.jpg"
+                  alt="Character Designer 2"
+                  style="width: 100%; height: auto; margin-top: 5px;"
+                />
+              </div>
+            </div>
+
+          <!-- ========== 3) PREFAB-SPAWNER & DYNAMIC WORLD DESIGN ========== -->
+          <section>
+            <h2>Prefab Spawner and Dynamic World Design</h2>
+            <div class="prefab-section" style="display: flex; align-items: flex-start;">
+              <div class="prefab-text" style="width: 60%; padding-right: 2%;">
+                <p>
+                  Another exciting advancement involves our Prefab Spawner system. As shown in the image, the spawner dynamically generates a game environment filled with resources like trees, rocks, and stumps. Object placement occurs randomly within defined areas to ensure a natural distribution. Each tree or rock represents a harvestable resource for players to collect.
+                </p>
+                <h3>Demonstration:</h3>
+                <p>
+                  The image displays a collection of trees and rocks on a farmland area, representing a vibrant environment. Players can use these resources to gather materials and explore the world further. This system is also utilized in areas like beaches and mines.
+                </p>
+              </div>
+              <div class="prefab-image" style="width: 40%;">
+                <img
+                  src="../img/prefab_spawner.jpg"
+                  alt="Prefab Spawner"
+                  style="width: 100%;"
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- ========== 4) MAP CONCEPT DESIGN ========== -->
+          <section>
+            <h2>Map Concept Design</h2>
+            <p>
+              We have developed a new map concept that includes five areas: Beach, City Center, Farm, Mountain, and Mine. The map design serves to create realistic interactions, such as NPC daily routines and dynamic environmental conditions, while also preparing for an internal demo version. The current design is primarily functional, but many unused assets will later enhance the map's visual details.
+            </p>
+          </section>
+
+          <!-- ========== 5) LIGHTING Enhancements ========== -->
+          <section>
+            <h2>Lighting Enhancements</h2>
+            <p>
+              A key focus has been on the dynamic day-night cycle. Using the TimeManager script, smooth transitions between different times of day have been implemented, adjusting shadow behavior and light intensity dynamically. One highlight includes building shadows that realistically shift based on the sun's position.
+            </p>
+          </section>
+
+          <!-- ========== 6) Clock (UI) ========== -->
+          <section>
+            <h2>Clock (UI)</h2>
+            <p>
+              Introducing our first completed UI element: the clock. This feature displays the time both analog and digitally. The bottom left circle shows the current date, while the colored ring and dynamic background represent the season.
+            </p>
+            <ul>
+              <li>
+                <strong>Spring:</strong> Falling pink petals within a pink-themed clock.
+              </li>
+              <li>
+                <strong>Summer:</strong> Green leaves in a green-themed clock.
+              </li>
+              <li>
+                <strong>Fall:</strong> Orange leaves in an orange-themed clock.
+              </li>
+              <li>
+                <strong>Winter:</strong> White snowflakes in a blue-themed clock.
+              </li>
+            </ul>
+            <p>
+              On the right side, the current weather and a forecast for upcoming weather conditions are displayed..
+            </p>
+          </section>
+
+          <!-- ========== 7) Additional Updates ========== -->
+          <section>
+            <h2>Additional Updates</h2>
+            <p>
+              A new multilingual font has been implemented to support a broader player base. Credit to LanaPixels.
+            </p>
+          </section>
+
+          <section>
+            <h2>Stay Tuned</h2>
+            <p>
+              That’s it for this update! In the future, we plan to dive deeper into the technical details on our YouTube channel and publish tutorials for all completed systems. Stay tuned to learn more about our development journey!
+              <br/><br/>
+              Which features do you like the most? Share your feedback with us and stay tuned for more updates!
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact-section" aria-labelledby="contact-title">
+      <div class="contact-content">
+        <h2 id="contact-title" class="visually-hidden">Contact</h2>
+        <div class="contact-boxes">
+          <article class="contact-box">
+            <h3 class="contact-box-title">Info</h3>
+            <a href="mailto:info@octiware.com" class="contact-box-email">info@octiware.com</a>
+          </article>
+          <article class="contact-box">
+            <h3 class="contact-box-title">Job Offers</h3>
+            <a href="mailto:jobs@octiware.com" class="contact-box-email">jobs@octiware.com</a>
+          </article>
+          <article class="contact-box">
+            <h3 class="contact-box-title">Business</h3>
+            <a href="mailto:biz@octiware.com" class="contact-box-email">biz@octiware.com</a>
+          </article>
+          <article class="contact-box">
+            <h3 class="contact-box-title">Press &amp; Content Creators</h3>
+            <a href="mailto:media@octiware.com" class="contact-box-email">media@octiware.com</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ========== FOOTER ========== -->
+    <footer aria-label="Site footer">
+      <div class="footer-content">
+        <div class="footer-container">
+          <!-- FOOTER NAVIGATION -->
+          <nav class="footer-links" aria-label="Footer links">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../privacy_cookie_policy.html">Privacy Policy</a></li>
+              <li><a href="../privacy_cookie_policy.html">Cookie Policy</a></li>
+            </ul>
+          </nav>
+          <!-- SOCIAL MEDIA ICONS (footer) -->
+          <div class="social-icons-header" aria-label="Social media links in footer">
+            <a href="https://www.instagram.com/octiware/" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+            <img src="../img/instagram_icon.svg" alt="Instagram Icon" />
+            </a>
+            <a href="https://x.com/octiware" target="_blank" rel="noopener" aria-label="Follow us on X">
+            <img src="../img/x_icon.svg" alt="X Icon" />
+            </a>
+            <a href="https://www.tiktok.com/@octiware" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
+            <img src="../img/tiktok_icon.svg" alt="TikTok Icon" />
+            </a>
+            <a href="https://www.youtube.com/@Octiware" target="_blank" rel="noopener" aria-label="Follow us on YouTube">
+            <img src="../img/youtube_icon.svg" alt="YouTube Icon" />
+            </a>
+            <a href="https://www.reddit.com/user/Octiware/" target="_blank" rel="noopener" aria-label="Follow us on Reddit">
+            <img src="../img/reddit_icon.svg" alt="Reddit Icon" />
+            </a>
+            <a href="https://discord.gg/WqjBxvcSTB" target="_blank" rel="noopener" aria-label="Join us on Discord">
+            <img src="../img/discord_icon.svg" alt="Discord Icon" />
+            </a>
+            <a href="https://www.pinterest.com/octiware/" target="_blank" rel="noopener" aria-label="Follow us on Pinterest">
+            <img src="../img/pinterest_icon.svg" alt="Pinterest Icon" />
+            </a>
+            <a href="https://www.linkedin.com/company/octiware/" target="_blank" rel="noopener" aria-label="Follow us on LinkedIn">
+            <img src="../img/linkedin_icon.svg" alt="LinkedIn Icon" />
+            </a>
+            <a href="https://www.threads.net/@octiware" target="_blank" rel="noopener" aria-label="Follow us on Threads">
+            <img src="../img/threads_icon.svg" alt="Threads Icon" />
+            </a>
+          </div>
+          <!-- COPYRIGHT -->
+          <div class="footer-copyright">
+            <p>© 2025 Octiware. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ========== SCROLL TO TOP BUTTON ========== -->
+    <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <img src="../img/arrow_up.svg" alt="Arrow Up Icon" />
+    </a>
+    <!-- ========== MAIN SCRIPT ========== -->
+    <script src="../js/main.js" defer></script>
+  </body>
+</html>

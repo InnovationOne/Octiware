@@ -27,6 +27,13 @@ body {
   background-color: var(--white);
 }
 
+code {
+  background-color: #f4f4f4;
+  color: var(--brand-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
 a,
 a:link,
 a:visited,
