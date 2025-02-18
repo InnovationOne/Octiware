@@ -291,6 +291,40 @@ a:active {
 }
 
 /* =============================================================================
+    VISION SECTION 
+============================================================================= */
+.vision-section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--gray-background);
+  border-left: 4px solid var(--brand-color);
+  border-radius: 8px;
+}
+
+.vision-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--brand-color);
+  text-transform: uppercase;
+}
+
+.vision-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+/* Highlight key words */
+.vision-section .highlight {
+  color: var(--brand-color);
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* =============================================================================
    MEET US / JOIN US SECTION
 ============================================================================= */
 .meet-join-section {
