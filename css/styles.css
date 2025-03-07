@@ -365,11 +365,11 @@ a:active {
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-
+/*
 .home-box:hover .home-box-overlay img {
-  /* transform: scale(1.00); */
+   transform: scale(1.00); 
 }
-
+*/
 .home-box-overlay-caption {
   position: absolute;
   top: 0;
@@ -739,11 +739,11 @@ footer {
   display: block;
   transition: transform 0.5s ease;
 }
-
+/*
 .meet-hero-section:hover .meet-hero-img {
-  /* transform: scale(1.00); */
+  transform: scale(1.00);
 }
-
+*/
 .meet-hero-overlay-caption {
   position: absolute;
   top: 0;
@@ -823,11 +823,11 @@ footer {
   display: block;
   transition: transform 0.5s ease;
 }
-
+/*
 .team-row:hover .team-row-image img {
-  /* transform: scale(1.00); */
+  transform: scale(1.00);
 }
-
+*/
 .team-row-text {
   padding: 1.5rem;
   display: flex;
