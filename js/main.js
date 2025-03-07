@@ -78,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const newsItems = document.querySelectorAll('.news-item');
   const NEW_ARTICLE_DAYS = 14;
