@@ -1,0 +1,38 @@
+name: Monthly Devlog Generator
+
+on:
+  schedule:
+    # Wird jeden 1. Monat um 00:00 UTC ausgeführt
+    - cron: '0 0 1 * *'
+  workflow_dispatch:  # Ermöglicht auch manuelles Auslösen
+
+jobs:
+  generate-devlog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Octiware Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install requests openai
+
+      - name: Run Devlog Script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python scripts/devlog_script.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Automatisch generierter Devlog"
+          git push
