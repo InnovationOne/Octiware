@@ -399,7 +399,7 @@ a:focus {
   margin-bottom: var(--spacing-xs);
 }
 
-social-icons-header a:hover,
+.social-icons-header a:hover,
 .social-icons-header a:focus {
   background: var(--brand-color);
 }
