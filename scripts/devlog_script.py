@@ -50,8 +50,8 @@ Bitte integriere diese Commit-Updates so, dass sie den aktuellen Entwicklungsfor
 openai.api_key = OPENAI_API_KEY
 
 # Nutze jetzt openai.Chat.create(...) anstatt openai.ChatCompletion.create(...)
-response = openai.Chat.create(
-    model="gpt-3.5-turbo",  # oder gpt-4, falls du Zugriff hast
+response = openai.chat.create(
+    model="gpt-4o",  # oder gpt-4, falls du Zugriff hast
     messages=[
         {"role": "system", "content": "Du bist ein erfahrener Devblog-Autor."},
         {"role": "user", "content": prompt}
