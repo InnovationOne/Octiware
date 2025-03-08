@@ -20,7 +20,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests openai
+          pip install requests
+          pip install openai
 
       - name: Run Devlog Script
         env:
