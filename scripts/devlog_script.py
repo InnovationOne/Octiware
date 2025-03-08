@@ -5,14 +5,13 @@ import openai
 from datetime import timezone
 
 # --- Konfiguration ---
-
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 
 REPO_OWNER = "InnovationOne"
 REPO_NAME = "Project-SI"
 
-# Statt datetime.datetime.utcnow() -> datetime.datetime.now(timezone.utc)
+# UTC-Zeitpunkt (Warnung vermeiden)
 today = datetime.datetime.now(timezone.utc)
 first_day_of_month = today.replace(day=1)
 
@@ -50,12 +49,8 @@ Bitte integriere diese Commit-Updates so, dass sie den aktuellen Entwicklungsfor
 
 openai.api_key = OPENAI_API_KEY
 
-# ACHTUNG: Hier "o3-mini-high" durch ein reales Modell ersetzen, z.B. "gpt-3.5-turbo"
-model_name = "gpt-3.5-turbo"
-
-# Neue Syntax: openai.chat_complete(...)
-response = openai.chat_complete(
-    model=model_name,
+response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",  # Ersetze ggf. durch ein anderes Modell, das du verwenden kannst
     messages=[
         {"role": "system", "content": "Du bist ein erfahrener Devblog-Autor."},
         {"role": "user", "content": prompt}
@@ -64,9 +59,7 @@ response = openai.chat_complete(
     max_tokens=1500
 )
 
-# Anders als vorher: 
-# Der generierte Text liegt jetzt in response["choices"][0]["message"]["content"]
-html_content = response["choices"][0]["message"]["content"]
+html_content = response.choices[0].message.content
 
 # --- HTML-Ausgabe speichern ---
 output_dir = "devlogs"
