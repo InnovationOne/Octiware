@@ -829,10 +829,11 @@ a:focus {
   background: var(--white);
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   cursor: pointer;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-  min-height: 220px;
+  min-height: 200px;
+  min-width: 300px;
 }
 
 .news-item:hover,
@@ -868,7 +869,6 @@ a:focus {
   background-color: #fff8e1;
   position: relative;
   padding: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
 }
 
 .news-item.new-article::before {
