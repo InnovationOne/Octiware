@@ -1,0 +1,10 @@
+- 2025-03-02: Update ClockUI.cs
+
+Fixed the ClockUI display of the time (minutes) to always show 5 minute increments.
+- 2025-03-02: Interactable in cone or circle
+
+Changed the intractable to either interact in a circle or a cone in front of the player e.g. collectibles vs. chest.
+- 2025-03-02: Fishing animation
+
++ Added a fishing animation.
++ Added a animation when a fish has bitten to bait.
