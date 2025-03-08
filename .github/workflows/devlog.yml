@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests
-          pip install openai
-
+          pip install --upgrade openai
+      
       - name: Run Devlog Script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

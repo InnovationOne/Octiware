@@ -11,7 +11,7 @@ OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 REPO_OWNER = "InnovationOne"
 REPO_NAME = "Project-SI"
 
-# UTC-Zeitpunkt (Warnung vermeiden)
+# Verwende now(timezone.utc) statt utcnow(), um die Warnung zu vermeiden
 today = datetime.datetime.now(timezone.utc)
 first_day_of_month = today.replace(day=1)
 
@@ -49,8 +49,9 @@ Bitte integriere diese Commit-Updates so, dass sie den aktuellen Entwicklungsfor
 
 openai.api_key = OPENAI_API_KEY
 
-response = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",  # Ersetze ggf. durch ein anderes Modell, das du verwenden kannst
+# Nutze jetzt openai.Chat.create(...) anstatt openai.ChatCompletion.create(...)
+response = openai.Chat.create(
+    model="gpt-3.5-turbo",  # oder gpt-4, falls du Zugriff hast
     messages=[
         {"role": "system", "content": "Du bist ein erfahrener Devblog-Autor."},
         {"role": "user", "content": prompt}
@@ -59,6 +60,7 @@ response = openai.ChatCompletion.create(
     max_tokens=1500
 )
 
+# In der neuen Syntax liegt die Antwort hier
 html_content = response.choices[0].message.content
 
 # --- HTML-Ausgabe speichern ---
