@@ -168,6 +168,17 @@ body {
   color: #bbb;
 }
 
+.dark-mode .news-item.new-article {
+  border-color: #ff9800;
+  background-color: #1c1b20;
+  color: #f0f0f0;
+}
+
+.dark-mode .news-item.new-article::before {
+  background-color: #ff9800;
+  color: #fff;
+}
+
 /* 9. Contact Section */
 .dark-mode .contact-section {
   background-color: #141414;
@@ -214,7 +225,6 @@ body {
 .dark-mode .share-icons-header a:hover {
   background-color: #1f4d70;
 }
-
 
 /* 11. Dev Blog */
 .dark-mode .devblog-container {
