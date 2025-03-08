@@ -4,6 +4,7 @@
     <!-- ========== HEAD SECTION ========== -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
     <!-- SEO: Title and Description -->
     <title>DEV-Blog #2 | Octiware</title>
     <!-- Favicon -->
@@ -29,30 +30,30 @@
           </div>
           <!-- Greeting -->
           <section>
-            <h2>Greetings, Community!</h2>
+            <h2>Greetings, Esteemed Travelers of Renalvia!</h2>
             <p>
-              Welcome to our latest development update! This month, we made significant progress in several areas, including the lighting system, item spawner, combat mechanics, and user interface. Read on for a deeper dive into our updates.
+              Once again, we open the doors to our humble workshop, where gears turn, steam rises, and ideas take form. This month, we've made considerable strides in refining our intricate mechanisms—from enhanced lighting contraptions to a sophisticated combat engine. Prepare yourselves for an inside look at our recent inventions!
             </p>
           </section>
           <!-- ========== 1) COMBAT SYSTEM ========== -->
           <section>
             <h2>Combat System</h2>
             <p>
-              This month, our primary focus was on refining the combat system. Weapon collision detection is handled with precision using <code>Collider2D</code> components, ensuring that hits are accurately registered during gameplay. Additionally, the AI enables enemy units to switch between various states (such as Idle, Roaming, Pursuing, Searching, Attacking, Retreating, Hit, Stunned, Blocking, and Death).
+              This month's grand endeavor was refining the art of battle—perfecting weapon interactions using precision-engineered <code>Collider2D</code> mechanisms that ensure every strike feels authentic and rewarding. Our automaton adversaries now boast sophisticated behaviors, shifting seamlessly between idle pondering, vigilant searching, and calculated attacks.
             </p>
             <h3>Highlights</h3>
             <ul>
               <li>
-                <strong>Enemy Types:</strong> Includes melee, ranged, and magical foes, each with unique strategies.
+                <strong>Diverse Foes:</strong> Confront cunning melee brutes, elusive ranged marksmen, and enigmatic spellcasters.
               </li>
               <li>
-                <strong>Weapons:</strong> Weapons can be imbued with unique attributes like fire, ice, or lightning. Current examples include daggers, swords, flails, maces, bows, and crossbows.
+                <strong>Weaponry of Distinction:</strong> Arm yourself with finely-crafted daggers, ornate flails, swords, bows, and more, each potentially imbued with elemental power—fire, frost, or electricity.
               </li>
               <li>
-                <strong>Hitbox System:</strong> Weapon attacks create temporary colliders that define precise hit zones. The hit detection is calculated within the animation itself, providing a realistic combat feel.
+                <strong>Precision Mechanics:</strong> A state-of-the-art hitbox system precisely registers strikes, immersing you deeper into the thrill of battle.
               </li>
               <li>
-                <strong>Drops and Rewards:</strong> Defeated enemies drop rewards based on probabilities.
+                <strong>Treasure & Spoils:</strong> Each enemy yields valuable rewards to the fortunate and daring victor.
               </li>
             </ul>
           </section>
@@ -60,22 +61,20 @@
           <!-- ========== 2) CHARACTER CUSTOMIZATION ========== -->
           <section>
             <h2>Character Customization</h2>
-            <p>
-              A dynamic clothing system has been introduced, enabling players to modify their character's appearance and functionality. A custom script allows for the quick addition of new outfits, taking attributes like armor, resistance, and speed boosts into account.
-            </p>
+            <p>Our innovative Tailor Engine is complete! Now adventurers can meticulously alter their appearance and enhance their attributes with a rich assortment of attire—from sturdy gloves to polished boots, dashing hats, and resilient armor.</p>
             <h3>Highlights</h3>
             <ul>
               <li>
-                <strong>Clothing Types:</strong> Includes gloves, helmets/hair, belts, body armor, pants, and shoes, giving players plenty of customization options.
+                <strong>Extensive Wardrobe:</strong> Gloves, helmets, belts, body armor, trousers, and footwear; each with unique abilities.
               </li>
               <li>
-                <strong>Body Types:</strong> Players can choose between different body types, such as male, female, muscular builds, or even children for story purposes. Skin tones can also be customized.
+                <strong>Personalized Appearances:</strong> Select your persona—from rugged adventurers to elegant inventors, with diverse builds, ages, and tones befitting Renalvia’s diverse inhabitants.
               </li>
               <li>
-                <strong>UI:</strong> The clothing UI is integrated directly into the inventory, allowing for seamless outfit changes via drag-and-drop functionality.
+                <strong>Seamless Attire Management:</strong> A sophisticated, user-friendly inventory interface ensures instant, intuitive outfit swaps through simple drag-and-drop actions.
               </li>
               <li>
-                <strong>Animation Integration:</strong> A script called <code>AnimationGenerator</code> allows for the creation of animations for outfits, weapons, and body types. Animations such as walking, fighting, or casting spells can be quickly created and swapped in real time.
+                <strong>Animation Generator:</strong> Seamlessly crafts animations for diverse clothing styles and weaponry, ensuring fluid and visually captivating character movement.
               </li>
             </ul>
 
@@ -83,7 +82,7 @@
             <div class="demonstration-container" style="display: flex; gap: 2%; justify-content: center;">
               <div class="demonstration-item" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
                 <p>
-                  The first image showcases the inventory and character customization menu. On the left, you can see the character and their equipped items, while the right side displays the inventory. Players can equip or remove clothing via drag-and-drop, with immediate visual updates.
+                  Behold the inner workings of our Tailor Engine interface: On the left, witness your character adorned with gear forged in our creative foundry; on the right, a treasure trove of customizable attire awaits your command. A simple drag-and-drop transforms your avatar like clockwork.
                 </p>
                 <img
                   src="../img/char_designer_1.jpg"
@@ -93,7 +92,7 @@
               </div>
               <div class="demonstration-item" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
                 <p>
-                  The second image illustrates an in-game example of the dynamic clothing system in action.
+                  In this scene, marvel at the dynamic interplay of design and function: our innovative system brings each garment to life, making every piece a vital cog in your steampunk adventure.
                 </p>
                 <img
                   src="../img/char_designer_2.jpg"
@@ -109,7 +108,7 @@
             <div class="prefab-section" style="display: flex; align-items: flex-start;">
               <div class="prefab-text" style="width: 60%; padding-right: 2%;">
                 <p>
-                  Another exciting advancement involves our Prefab Spawner system. As shown in the image, the spawner dynamically generates a game environment filled with resources like trees, rocks, and stumps. Object placement occurs randomly within defined areas to ensure a natural distribution. Each tree or rock represents a harvestable resource for players to collect.
+                  Our patented Prefab Spawner breathes life into Renalvia's landscapes, dispersing resources like sturdy oaks, venerable rocks, and fallen timber naturally across the terrain. Players will gather materials while exploring forests, beaches, or subterranean mines, each location offering endless opportunity and surprises.
                 </p>
                 <h3>Demonstration:</h3>
                 <p>
@@ -130,7 +129,7 @@
           <section>
             <h2>Map Concept Design</h2>
             <p>
-              We have developed a new map concept that includes five areas: Beach, City Center, Farm, Mountain, and Mine. The map design serves to create realistic interactions, such as NPC daily routines and dynamic environmental conditions, while also preparing for an internal demo version. The current design is primarily functional, but many unused assets will later enhance the map's visual details.
+              This month, our mapmakers completed preliminary designs for the Renalvian territories, featuring five distinct regions: tranquil Beaches, a bustling City Center, fertile Farms, majestic Mountains, and resource-rich Mines. These meticulous layouts serve as a canvas for future adventures, immersive NPC interactions, and environmental storytelling.
             </p>
           </section>
 
@@ -138,7 +137,7 @@
           <section>
             <h2>Lighting Enhancements</h2>
             <p>
-              A key focus has been on the dynamic day-night cycle. Using the TimeManager script, smooth transitions between different times of day have been implemented, adjusting shadow behavior and light intensity dynamically. One highlight includes building shadows that realistically shift based on the sun's position.
+              The chronometer now dictates not only the hour but breathes life into our world. Witness as sunlight elegantly glides across Renalvia, casting lengthening shadows and bathing landscapes in warm, natural hues as day transitions seamlessly into night—thanks to the carefully tuned TimeManager mechanism.
             </p>
           </section>
 
@@ -146,24 +145,13 @@
           <section>
             <h2>Clock (UI)</h2>
             <p>
-              Introducing our first completed UI element: the clock. This feature displays the time both analog and digitally. The bottom left circle shows the current date, while the colored ring and dynamic background represent the season.
+              Introducing our first completed Chronometer Interface; a beautifully designed clock that combines the elegance of analog timekeeping with precise digital readouts.
             </p>
-            <ul>
-              <li>
-                <strong>Spring:</strong> Falling pink petals within a pink-themed clock.
-              </li>
-              <li>
-                <strong>Summer:</strong> Green leaves in a green-themed clock.
-              </li>
-              <li>
-                <strong>Fall:</strong> Orange leaves in an orange-themed clock.
-              </li>
-              <li>
-                <strong>Winter:</strong> White snowflakes in a blue-themed clock.
-              </li>
-            </ul>
             <p>
-              On the right side, the current weather and a forecast for upcoming weather conditions are displayed..
+              Each season reveals its distinct essence through animated details: from delicate spring petals and lush summer leaves to autumn’s gentle fall and winter’s drifting snowflakes.
+            </p>
+            <p>
+              Also, enjoy weather updates and forecasts displayed elegantly alongside the clock face.
             </p>
           </section>
 
@@ -171,16 +159,16 @@
           <section>
             <h2>Additional Updates</h2>
             <p>
-              A new multilingual font has been implemented to support a broader player base. Credit to LanaPixels.
+              To broaden our horizons and ensure our chronicles reach adventurers across the globe, we've integrated an exquisite new multilingual typeface, graciously crafted by LanaPixels.
             </p>
           </section>
 
           <section>
             <h2>Stay Tuned</h2>
             <p>
-              That’s it for this update! In the future, we plan to dive deeper into the technical details on our YouTube channel and publish tutorials for all completed systems. Stay tuned to learn more about our development journey!
+              As our steam engines hum and gears continually turn, we invite you to join us on this extraordinary voyage. Soon, we’ll delve deeper into the mechanics through exclusive video updates and tutorials on our YouTube channel.
               <br/><br/>
-              Which features do you like the most? Share your feedback with us and stay tuned for more updates!
+              We eagerly await your insights—tell us which innovations resonate most with your adventurous spirit!
             </p>
           </section>
         </article>
@@ -195,7 +183,7 @@
     <img src="../img/arrow_up.svg" alt="Arrow Up Icon" />
     </a>
     <!-- ========== MAIN SCRIPT ========== -->
-    <script src="../js/main.js" defer></script>
     <script defer src="../js/include-layout.js"></script>
+    <script src="../js/main.js" defer></script>
   </body>
 </html>

@@ -14,6 +14,10 @@ function includeHTML(containerId, file) {
     })
     .then(data => {
       document.getElementById(containerId).innerHTML = data;
+      // Dispatch custom event when header is loaded
+      if (containerId === 'header-placeholder') {
+        document.dispatchEvent(new CustomEvent('headerLoaded'));
+      }
     })
     .catch(err => {
       console.error(`Failed to include ${file}:`, err);
