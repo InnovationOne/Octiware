@@ -8,9 +8,10 @@
   --black: #000;                   /* Black */
   --white: #fff;                   /* White */
   --gray-background: #f6f6f6;       /* Light gray background */
-  --body-font: "Open Sans", "Lato", "Source+Code+Pro", sans-serif;
+  --body-font: "Open Sans", "Lato", "Source Code Pro", sans-serif;
   --base-font-size: 16px;           /* Readable base font size */
   --line-height: 1.6;               /* Improved line-height for readability */
+  --transition-speed: 0.3s;         /* Consistent transition duration */
 
   /* Spacing variables for consistent margins/paddings */
   --spacing-xs: 4px;
@@ -18,6 +19,10 @@
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -47,30 +52,26 @@ body {
    DARK MODE OVERRIDES
    Place this snippet at the very bottom of styles.css
 ============================================================================= */
-
-/* 1. Base Dark Mode */
 .dark-mode body {
   background-color: #101010;
   color: #e0e0e0;
 }
-
-/* 2. Header & Navigation */
 .dark-mode .header,
 .dark-mode .header-container {
   background-color: #0e0e0e;
 }
 .dark-mode .header-nav-desktop ul li a {
   color: #e0e0e0;
+  transition: color var(--transition-speed);
 }
 .dark-mode .header-nav-desktop ul li a:hover,
 .dark-mode .header-nav-desktop ul li a:focus {
   color: var(--brand-color) !important;
 }
 
-/* 3. Code Elements (Not too bright) */
 .dark-mode code {
   background-color: #333;
-  color: #ffd700; /* Or pick another highlight color */
+  color: #ffd700;
 }
 
 /* 4. Hero Section */
@@ -82,10 +83,10 @@ body {
 .dark-mode .vision-section {
   background-color: #1a1a1a;
   color: #e0e0e0;
-  border-left-color: #2b6ea0; /* brand color */
+  border-left-color: var(--brand-color);
 }
 .dark-mode .vision-section h2 {
-  color: #2b6ea0;
+  color: var(--brand-color);
 }
 
 /* 6. “Meet Us” & “Join Us” Cards */
@@ -98,7 +99,7 @@ body {
 }
 .dark-mode .overlay-title {
   color: transparent;
-  -webkit-text-stroke: 2px #fff; /* White outline for big text */
+  -webkit-text-stroke: 2px #fff;
 }
 .dark-mode .home-box-title {
   color: #f0f0f0;
@@ -108,30 +109,32 @@ body {
 }
 
 /* Dark Mode: "Browse Offers" & "Spontaneous Application" */
+.dark-mode .team-row-buttons .spontaneous-btn,
+.dark-mode .team-row-buttons .browse-btn {
+  color: #fff;
+  transition: background var(--transition-speed);
+}
 .dark-mode .team-row-buttons .spontaneous-btn {
   background: #1a1a1a;
-  color: #fff;
 }
 .dark-mode .team-row-buttons .browse-btn {
-  background: #2b6ea0;
-  color: #fff;
+  background: var(--brand-color);
 }
-.dark-mode .team-row-buttons .spontaneous-btn:hover, 
+.dark-mode .team-row-buttons .spontaneous-btn:hover,
 .dark-mode .team-row-buttons .spontaneous-btn:focus {
-  background: #2b6ea0;
-  color: #fff;
+  background: var(--brand-color);
 }
 .dark-mode .team-row-buttons .browse-btn:hover,
 .dark-mode .team-row-buttons .browse-btn:focus {
   background: #1a1a1a;
-  color: #fff;
 }
 
 /* 7. CTA Buttons (e.g., “Join Our Discord!”) */
 .dark-mode .cta-btn {
-  background-color: #2b6ea0;
-  border-color: #2b6ea0;
-  color: #fff;
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+  color: var(--white);
+  transition: background var(--transition-speed);
 }
 .dark-mode .cta-btn:hover,
 .dark-mode .cta-btn:focus {
@@ -149,28 +152,29 @@ body {
   color: #f0f0f0;
 }
 .dark-mode .news-item h3 {
-  color: #2b6ea0;
+  color: var(--brand-color);
 }
 .dark-mode .news-item a {
   color: #f0f0f0;
+  transition: color var(--transition-speed);
 }
- .dark-mode .news-item p {
+.dark-mode .news-item p {
   color: #bbb;
 }
 .dark-mode .news-item a:hover {
-  color: #2b6ea0;
+  color: var(--brand-color);
 }
 .dark-mode .news-tease {
-  color: #bbb; /* brighter than #ccc if you want more contrast */
+  color: #bbb;
 }
 
 /* 9. Contact Section */
 .dark-mode .contact-section {
-  background-color: #141414; /* a neutral dark gray */
+  background-color: #141414;
   color: #e0e0e0;
 }
 .dark-mode .contact-box {
-  background-color: #1e1e1e; 
+  background-color: #1e1e1e;
   border-color: #2a2a2a;
   color: #e0e0e0;
 }
@@ -186,7 +190,6 @@ body {
   color: #f0f0f0;
   border-color: #333;
 }
-/* Careers Page: Accordion + Job Links in Dark Mode */
 .dark-mode .join-accordion .accordion-content a,
 .dark-mode .join-accordion .accordion-content p a {
   color: #f0f0f0;
@@ -194,43 +197,43 @@ body {
 .dark-mode .join-accordion .accordion-content a:hover {
   color: var(--brand-color);
 }
-
 .dark-mode .accordion-toggle {
-  background: linear-gradient(120deg, #2b6ea0, #1f4d70);
+  background: linear-gradient(120deg, var(--brand-color), #1f4d70);
+  transition: background var(--transition-speed);
 }
 .dark-mode .accordion-toggle:hover {
-  background: linear-gradient(120deg, #1f4d70, #2b6ea0);
+  background: linear-gradient(120deg, #1f4d70, var(--brand-color));
 }
 
-/* Share Icons in Job Listings */
 .dark-mode .share-icons-header a {
-  border: 2px solid #2b6ea0;
-  background-color: #2b6ea0;
-  color: #fff;
+  border: 2px solid var(--brand-color);
+  background-color: var(--brand-color);
+  color: var(--white);
+  transition: background var(--transition-speed);
 }
 .dark-mode .share-icons-header a:hover {
   background-color: #1f4d70;
 }
 
+
 /* 11. Dev Blog */
 .dark-mode .devblog-container {
-  background: #1c1b20; /* a near-black with a hint of purple or blue tone */
+  background: #1c1b20;
   border-color: #2b2a30;
   color: #e0e0e0;
 }
 .dark-mode .devblog-header {
-  border-bottom-color: #3a3842; /* matches tinted background */
+  border-bottom-color: #3a3842;
 }
-
 .dark-mode .devblog-header h1,
 .dark-mode .devblog-content h2,
 .dark-mode .devblog-content h3 {
-  color: #2b6ea0; /* brand color for headings */
+  color: var(--brand-color);
 }
 .dark-mode .devblog-content p,
 .dark-mode .devblog-content ul,
 .dark-mode .devblog-content li {
-  color: #ddd; /* a bit brighter than #f0f0f0 if desired */
+  color: #ddd;
 }
 
 /* 12. Footer */
@@ -247,11 +250,11 @@ body {
   border-color: #333;
 }
 .dark-mode .policy-container header h1 {
-  color: #2b6ea0;
+  color: var(--brand-color);
 }
 .dark-mode .policy-container h2 {
   color: #f0f0f0;
-  border-left-color: #2b6ea0;
+  border-left-color: var(--brand-color);
 }
 
 /* 14. Team Sections */
@@ -260,7 +263,7 @@ body {
   border-color: #333;
 }
 .dark-mode .team-row-title {
-  color: #2b6ea0;
+  color: var(--brand-color);
 }
 .dark-mode .team-row-text p {
   color: #e0e0e0;
@@ -272,12 +275,10 @@ body {
   border-color: #333;
   color: #e0e0e0;
 }
-.dark-mode .accordion-content li p, .accordion-content li a {
+.dark-mode .accordion-content li p,
+.dark-mode .accordion-content li a {
   background-color: #1a1a1a;
   color: #e0e0e0;
-}
-.dark-mode .accordion-toggle {
-  background: linear-gradient(120deg, #2b6ea0, #1f4d70);
 }
 .dark-mode .job-detail-container {
   background-color: #1a1a1a;
@@ -296,11 +297,14 @@ code {
 
 a,
 a:link,
-a:visited,
-a:hover,
-a:active {
+a:visited {
   text-decoration: none;
-  outline: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover,
+a:focus {
+  color: var(--brand-color);
 }
 
 /* =============================================================================
@@ -372,12 +376,6 @@ a:active {
   color: var(--white);
   font-weight: bold;
   text-transform: uppercase;
-  transition: color 0.3s;
-}
-
-.header-nav-desktop ul li a:hover,
-.header-nav-desktop ul li a:focus {
-  color: var(--brand-color);
 }
 
 /* Header Right Section */
@@ -396,12 +394,12 @@ a:active {
   height: 2.2rem;
   border: 2px solid var(--white);
   border-radius: 50%;
-  transition: background 0.3s;
+  transition: background var(--transition-speed);
   margin-left: var(--spacing-xs);
   margin-bottom: var(--spacing-xs);
 }
 
-.social-icons-header a:hover,
+social-icons-header a:hover,
 .social-icons-header a:focus {
   background: var(--brand-color);
 }
@@ -421,7 +419,7 @@ a:active {
   appearance: none;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color var(--transition-speed);
 }
 
 .language-dropdown select:hover,
@@ -441,6 +439,7 @@ a:active {
   padding: 0.3rem 0.9rem;
   cursor: pointer;
   display: none;
+  font-size: 1.5rem;
 }
 
 .mobile-nav-container {
@@ -454,7 +453,7 @@ a:active {
   border-radius: 8px;
   text-align: center;
   display: none;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-speed) ease;
   z-index: 9999;
 }
 
@@ -478,11 +477,10 @@ a:active {
 /* =============================================================================
    DARK- / LIGHT-MODE SECTION
 ============================================================================= */
-/* Minimal Switch: Dark Mode */
 .theme-switch {
   width: 60px; 
   height: 30px;
-  background: #2b6ea0;          /* brand color for dark mode */
+  background: var(--brand-color);
   border-radius: 15px;
   position: relative;
   display: flex;
@@ -490,13 +488,9 @@ a:active {
   justify-content: space-between;
   padding: 0 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background var(--transition-speed);
 }
-.theme-switch .icon {
-  width: 18px;
-  height: 18px;
-  z-index: 2;
-}
+
 .switch-slider {
   position: absolute;
   top: 2px;
@@ -504,16 +498,27 @@ a:active {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: #fff;
-  transition: transform 0.3s;
+  background: var(--white);
+  transition: transform var(--transition-speed);
 }
 
-/* Light Mode Variation */
 .theme-switch.light {
-  background: #fda085; /* a simpler warm color for light mode */
+  background: #fda085;
 }
 .theme-switch.light .switch-slider {
   transform: translateX(30px);
+}
+
+.icon-sun-icon,
+.icon-moon-icon {
+  width: 18px;
+  height: 18px;
+  z-index: 2;
+}
+
+.icon-sun-icon,
+.icon-moon-icon {
+  filter: brightness(0) invert(1);
 }
 
 /* =============================================================================
@@ -549,8 +554,8 @@ a:active {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  color: var(--white);
   text-align: center;
+  color: var(--white);
 }
 
 .hero-game-title {
@@ -568,8 +573,7 @@ a:active {
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   font-weight: 300;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .cta-buttons {
@@ -585,10 +589,9 @@ a:active {
   color: var(--white);
   padding: 0.6rem 1.25rem;
   text-transform: uppercase;
-  text-decoration: none;
   font-weight: 700;
   border-radius: 0.6rem;
-  transition: background 0.3s, color 0.3s;
+  transition: background var(--transition-speed), color var(--transition-speed);
 }
 
 .cta-btn:hover,
@@ -605,10 +608,8 @@ a:active {
   height: 2.5rem;
   background: var(--brand-color);
   border-radius: 50%;
-  position: relative;
   margin: var(--spacing-sm) auto 0;
   animation: move-updown 5s infinite ease-in-out;
-  scroll-behavior: smooth;
 }
 
 .hero-down-icon img {
@@ -616,16 +617,12 @@ a:active {
 }
 
 @keyframes move-updown {
-  0%, 100% {
-    transform: translateY(50px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
+  0%, 100% { transform: translateY(50px); }
+  50% { transform: translateY(20px); }
 }
 
 /* =============================================================================
-    VISION SECTION 
+   VISION SECTION 
 ============================================================================= */
 .vision-section {
   max-width: 800px;
@@ -651,7 +648,6 @@ a:active {
   margin-bottom: var(--spacing-md);
 }
 
-/* Highlight key words */
 .vision-section .highlight {
   color: var(--brand-color);
   font-weight: bold;
@@ -679,7 +675,7 @@ a:active {
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  transition: transform var(--transition-speed);
 }
 
 .home-box:hover,
@@ -714,7 +710,7 @@ a:active {
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-speed) ease;
 }
 
 .overlay-title {
@@ -739,7 +735,7 @@ a:active {
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 0.6rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .overlay-button:hover,
@@ -825,7 +821,7 @@ a:active {
   box-shadow: 0 6px 12px rgba(0,0,0,0.08);
   padding: var(--spacing-lg);
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
   min-height: 220px;
 }
 
@@ -850,7 +846,7 @@ a:active {
 .news-item a {
   font-weight: bold;
   color: var(--black);
-  transition: color 0.3s;
+  transition: color var(--transition-speed);
 }
 .news-item a:hover,
 .news-item a:focus {
@@ -894,7 +890,7 @@ a:active {
   margin-top: var(--spacing-lg);
   cursor: pointer;
   border-radius: 0.6rem;
-  transition: background 0.3s, color 0.3s;
+  transition: background var(--transition-speed), color var(--transition-speed);
   font-weight: bold;
 }
 
@@ -951,7 +947,7 @@ a:active {
   text-align: left;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .contact-box:hover,
@@ -970,7 +966,7 @@ a:active {
   font-size: 1rem;
   color: var(--black);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color var(--transition-speed);
 }
 
 .contact-box-email:hover,
@@ -1008,7 +1004,7 @@ footer {
 .footer-links ul li a {
   font-size: 0.875rem;
   color: var(--white);
-  transition: color 0.3s;
+  transition: color var(--transition-speed);
 }
 
 .footer-links ul li a:hover,
@@ -1037,7 +1033,7 @@ footer {
   background: var(--brand-color);
   z-index: 9999;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: opacity var(--transition-speed);
 }
 
 .scroll-to-top.show {
@@ -1324,7 +1320,6 @@ footer {
   color: var(--black);
 }
 
-/* Header & Job Info */
 .job-info-top {
   text-align: center;
   margin-bottom: 2rem;
@@ -1342,7 +1337,7 @@ footer {
   padding: 0.5rem 1rem;
   border-radius: 0.6rem;
   font-weight: 700;
-  transition: background 0.3s, color 0.3s;
+  transition: background var(--transition-speed), color var(--transition-speed);
 }
 
 .back-to-list-btn:hover,
@@ -1372,7 +1367,6 @@ footer {
   color: #777;
 }
 
-/* Share Offer */
 .share-offer {
   margin-top: 1rem;
 }
@@ -1392,7 +1386,7 @@ footer {
   border-radius: 50%;
   margin: 0.2rem;
   background: none;
-  transition: background-color 0.3s;
+  transition: background-color var(--transition-speed);
 }
 
 .share-icons-header a:hover,
@@ -1405,7 +1399,6 @@ footer {
   height: 1.25rem;
 }
 
-/* Job Description & Sections */
 .job-description {
   margin: 2rem 0;
   line-height: 1.6;
@@ -1446,7 +1439,6 @@ footer {
   margin-bottom: 0.3rem;
 }
 
-/* Apply Button */
 .job-action-buttons {
   text-align: center;
   margin-top: 2rem;
@@ -1462,7 +1454,7 @@ footer {
   text-decoration: none;
   font-weight: bold;
   border-radius: 0.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .apply-now-btn:hover,
@@ -1470,10 +1462,6 @@ footer {
   background: var(--white);
   color: var(--brand-color);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.job-highlight-box-header h2 {
-  margin-top: 5rem;
 }
 
 .job-highlight-box {
@@ -1507,7 +1495,7 @@ footer {
   overflow: hidden;
   background: var(--white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow var(--transition-speed);
 }
 
 .join-accordion .accordion-item:hover,
@@ -1515,7 +1503,6 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Accordion Toggle Button */
 .accordion-toggle {
   width: 100%;
   background: linear-gradient(120deg, #2b6ea0, #1f4d70);
@@ -1531,7 +1518,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background 0.3s;
+  transition: background var(--transition-speed);
 }
 
 .accordion-toggle:hover,
@@ -1539,21 +1526,19 @@ footer {
   background: linear-gradient(120deg, #1f4d70, #2b6ea0);
 }
 
-/* Accordion Arrow */
 .accordion-arrow {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
   background: url("../img/arrow_down.svg") no-repeat center;
   background-size: contain;
-  transition: transform 0.3s;
+  transition: transform var(--transition-speed);
 }
 
 .accordion-item.open .accordion-arrow {
   transform: rotate(180deg);
 }
 
-/* Accordion Content */
 .accordion-content {
   display: none;
   background: var(--gray-background);
@@ -1565,7 +1550,6 @@ footer {
   display: block;
 }
 
-/* Reset List Styles */
 .accordion-content ul {
   list-style: none;
   padding-left: 0;
@@ -1581,7 +1565,7 @@ footer {
   font-size: 1rem;
   color: var(--black);
   line-height: 1.5;
-  transition: color 0.3s;
+  transition: color var(--transition-speed);
 }
 
 .accordion-content li a:hover,
@@ -1589,14 +1573,9 @@ footer {
   color: var(--brand-color);
 }
 
-/* Fade-In Effect */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* ===============================================================================
@@ -1632,7 +1611,6 @@ footer {
 .devblog-date {
   color: #6b5943;
   font-size: 1rem;
-  font-family: var(--body-font);
 }
 
 .devblog-content section {
@@ -1715,7 +1693,7 @@ footer {
   text-decoration: none;
   color: #b9976e;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed);
 }
 
 .devblog-action-buttons:hover,
@@ -1776,7 +1754,6 @@ footer {
 
   .mobile-nav-toggle {
     display: block;
-    font-size: 1.5rem;
   }
 
   .hero-game-title {
