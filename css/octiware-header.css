@@ -116,49 +116,25 @@
   background-color: #333;
 }
 
-/* Theme Switch */
-.theme-switch {
-  width: 60px; 
-  height: 30px;
-  background: var(--brand-color);
-  border-radius: 15px;
-  position: relative;
+.style-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 5px;
-  cursor: pointer;
-  transition: background var(--transition-speed);
+  justify-content: center;
 }
 
-.switch-slider {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--white);
-  transition: transform var(--transition-speed);
+.style-toggle-btn img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%);
+  transition: transform 0.2s;
 }
 
-.theme-switch.light {
-  background: #fda085;
-}
-.theme-switch.light .switch-slider {
-  transform: translateX(30px);
-}
-
-.icon-sun-icon,
-.icon-moon-icon {
-  width: 18px;
-  height: 18px;
-  z-index: 2;
-}
-
-.icon-sun-icon,
-.icon-moon-icon {
-  filter: brightness(0) invert(1);
+.style-toggle-btn:hover img {
+  transform: scale(1.1);
 }
 
 /* Mobile Navigation */
@@ -207,3 +183,639 @@
   font-size: 1.2rem;
   margin-bottom: var(--spacing-xs);
 }
+
+/* =========================================
+   STYLE SELECTOR PANEL
+   (Figma-Look, bereinigt)
+   ========================================= */
+
+/* Grund-Container: ausgeblendet via .hidden */
+.hidden {
+  display: none !important;
+}
+
+.customize {
+  position: absolute;
+  top: 70px;    /* an deine Header-Höhe anpassen */
+  right: 20px;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.customize .frame-wrapper {
+  background-color: #ffffff;
+  width: 245px;
+  /* Falls du eine feste Höhe möchtest, könntest du hier z. B. height: 500px; */
+}
+
+.customize .frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  top: 16px;   /* Anpassen nach Bedarf */
+  left: 16px;  /* Anpassen nach Bedarf */
+}
+
+/* ========== Divider / Linien ========== */
+.customize .vector {
+  position: relative;
+  width: 215px;
+  height: 1px;
+  margin-left: -0.5px;
+  margin-right: -0.5px;
+  object-fit: cover;
+}
+
+/* ========== FONT SIZE SECTION ========== */
+.customize .overlap-wrapper {
+  position: relative;
+  width: 214px;
+  height: 76px;
+}
+
+.customize .overlap {
+  position: relative;
+  height: 77px;
+  top: -1px;
+}
+
+.customize .overlap-group {
+  position: absolute;
+  width: 210px;
+  height: 62px;
+  top: 15px;
+  left: 4px;
+}
+
+/* Slider track */
+.customize .img {
+  position: absolute;
+  width: 205px;
+  height: 8px;
+  top: 50px;
+  left: 0;
+}
+
+/* Rechtes "T" */
+.customize .text-wrapper-3 {
+  position: absolute;
+  top: 0;
+  left: 192px;
+  font-size: 30px;
+  line-height: 52.5px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--defaulttextmain);
+}
+
+/* Slider-Handle */
+.customize .rectangle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 46px;
+  left: 58px;
+  background-color: var(--defaultbgmain);
+  border-radius: 23px;
+  box-shadow: 0px 0px 4.6px #00000033;
+}
+
+/* Linkes "T" */
+.customize .text-wrapper-4 {
+  position: absolute;
+  top: 32px;
+  left: 2px;
+  font-size: 12px;
+  line-height: 21px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--defaulttextmain);
+}
+
+/* Label "Font size" */
+.customize .text-wrapper-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  line-height: 21px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--defaulttextsecondary);
+}
+
+/* ========== FONTS SECTION ========== */
+.customize .frame-4 {
+  display: flex;
+  flex-direction: column;
+  width: 214px;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.customize .div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.customize .frame-2 {
+  display: flex;
+  width: 88px;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+/* "Fonts" Label */
+.customize .text-wrapper {
+  position: relative;
+  width: fit-content;
+  font-size: 12px;
+  line-height: 21px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--defaulttextsecondary);
+}
+
+.customize .frame-3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+/* Buttons: Serif, Sans, Mono */
+.customize .frame-6,
+.customize .frame-7 {
+  display: flex;
+  flex-direction: column;
+  width: 67px;
+  height: 67px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0 10px;
+  background-color: var(--defaultbgsecondary);
+  border-radius: 6px;
+  cursor: pointer; /* Wichtig: macht's klickbar */
+  transition: background-color 0.2s;
+}
+
+.customize .frame-6:hover,
+.customize .frame-7:hover {
+  background-color: var(--defaultbgtertiary);
+}
+
+/* "Aa" (Serif) */
+.customize .text-wrapper-7 {
+  width: 28px;
+  font-size: 24px;
+  line-height: normal;
+  font-family: "Linux Libertine", serif; /* oder anpassen */
+  color: var(--defaulttextmain);
+}
+
+/* "serif", "sans", "mono" */
+.customize .text-wrapper-8 {
+  position: relative;
+  width: fit-content;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--defaulttextsecondary);
+  font-size: 12px;
+  line-height: normal;
+}
+
+/* "Aa" (Sans) */
+.customize .text-wrapper-9 {
+  width: 29px;
+  font-size: 24px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: var(--defaulttextmain);
+}
+
+/* "Aa" (Mono) */
+.customize .text-wrapper-10 {
+  width: 29px;
+  font-size: 24px;
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--defaulttextmain);
+}
+
+/* ========== COLORS SECTION ========== */
+.customize .frame-9 {
+  display: flex;
+  flex-direction: column;
+  width: 214px;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+}
+
+.customize .frame-10 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 214px;
+  height: 214px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* "Colors" Label */
+.customize .frame-9 .text-wrapper {
+  font-size: 12px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--defaulttextsecondary);
+  margin-left: 3px;
+}
+
+/* Farbfeld 1 */
+.customize .group-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 67px;
+  height: 67px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--defaultbgsecondary);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.customize .group-wrapper:hover {
+  background-color: var(--defaultbgtertiary);
+}
+
+.customize .group {
+  position: relative;
+  width: 40px;
+  height: 28px;
+  background-color: var(--defaultbgmain);
+  border-radius: 6px;
+  border: 1px solid var(--defaulttextdim);
+}
+.customize .rectangle-wrapper {
+  position: relative;
+  width: 22px;
+  height: 12px;
+  top: 7px;
+  left: 8px;
+  background-color: var(--defaulttextmain);
+  border-radius: 3px;
+}
+.customize .rectangle-2 {
+  width: 11px;
+  height: 12px;
+  background-color: var(--defaulttextaccent);
+  border-radius: 3px 0 0 3px;
+}
+
+/* Farbfeld 2 */
+.customize .frame-11 {
+  display: flex;
+  flex-direction: column;
+  width: 67px;
+  height: 67px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.customize .frame-11:hover {
+  background-color: var(--defaultbgtertiary);
+}
+
+.customize .frame-12 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.customize .group-2 {
+  position: relative;
+  width: 40px;
+  height: 28px;
+  background-color: #f8f0e5; /* Paper-like? Oder anpassen */
+  border-radius: 6px;
+}
+
+.customize .group-3 {
+  position: relative;
+  width: 22px;
+  height: 12px;
+  top: 8px;
+  left: 10px;
+  background-color: var(--defaulttextmain);
+  border-radius: 3px;
+}
+
+/* Farbfeld 3 (Figma-labelling "4") */
+.customize .frame-13 {
+  display: flex;
+  flex-direction: column;
+  width: 67px;
+  height: 67px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.customize .frame-13:hover {
+  background-color: var(--defaultbgtertiary);
+}
+
+.customize .group-5 {
+  position: relative;
+  width: 40px;
+  height: 28px;
+  background-color: #282b37;
+  border-radius: 6px;
+}
+.customize .group-6 {
+  position: relative;
+  width: 22px;
+  height: 12px;
+  top: 8px;
+  left: 10px;
+  background-color: var(--defaultbgsecondary);
+  border-radius: 3px;
+}
+.customize .rectangle-3 {
+  width: 11px;
+  height: 12px;
+  background-color: #7b9aba;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Farbfeld 4 (Figma-labelling "5") */
+.customize .group-7 {
+  position: relative;
+  width: 40px;
+  height: 28px;
+  background-color: #020202;
+  border-radius: 6px;
+}
+.customize .group-8 {
+  position: relative;
+  width: 22px;
+  height: 12px;
+  top: 8px;
+  left: 10px;
+  background-color: #ebebeb;
+  border-radius: 3px;
+}
+.customize .rectangle-4 {
+  width: 11px;
+  height: 12px;
+  background-color: #f9c84b;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Farbfeld 5 (Figma-labelling "6") */
+.customize .group-9 {
+  position: relative;
+  width: 40px;
+  height: 28px;
+  background-color: #ededed;
+  border-radius: 6px;
+}
+.customize .group-10 {
+  position: relative;
+  width: 22px;
+  height: 12px;
+  top: 8px;
+  left: 10px;
+  background-color: #141414;
+  border-radius: 3px;
+}
+.customize .rectangle-5 {
+  width: 11px;
+  height: 12px;
+  background-color: #f94b8a;
+  border-radius: 3px 0 0 3px;
+}
+
+/* ========== LAYOUT SECTION ========== */
+.customize .frame-15 {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.customize .text-wrapper-14,
+.customize .text-wrapper-15,
+.customize .text-wrapper-16 {
+  position: absolute;
+  top: 42px; /* Feinjustieren nach Bedarf */
+  left: 13px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--defaulttextsecondary);
+  font-size: 12px;
+  line-height: 21px;
+  white-space: nowrap;
+}
+
+/* Container für Layout-Buttons */
+.customize .frame-16 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+/* Default Layout */
+.customize .frame-17 {
+  position: relative;
+  width: 67px;
+  height: 67px;
+  background-color: var(--defaultbgsecondary);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.customize .frame-17:hover {
+  background-color: var(--defaultbgtertiary);
+}
+
+.customize .group-16 {
+  position: absolute;
+  width: 43px;
+  height: 30px;
+  top: 7px;
+  left: 12px;
+}
+
+.customize .overlap-group-3 {
+  position: relative;
+  height: 30px;
+}
+
+.customize .rectangle-11 {
+  position: absolute;
+  width: 43px;
+  height: 25px;
+  top: 2px;
+  left: 0;
+  background-color: var(--defaultbgmain);
+  border-radius: 2.4px;
+}
+
+.customize .group-17 {
+  position: absolute;
+  width: 22px;
+  height: 30px;
+  top: 0;
+  left: 10px;
+}
+
+.customize .group-18 {
+  position: absolute;
+  width: 18px;
+  height: 12px;
+  top: 9px;
+  left: 12px;
+}
+
+.customize .rectangle-12,
+.customize .rectangle-13,
+.customize .rectangle-14 {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: var(--defaulttextdim);
+  border-radius: 0.8px;
+}
+
+.customize .rectangle-12 { top: 0; left: 0; }
+.customize .rectangle-13 { top: 5px; left: 0; }
+.customize .rectangle-14 { top: 10px; left: 0; }
+
+/* Narrow Layout */
+.customize .frame-18 {
+  position: relative;
+  width: 67px;
+  height: 67px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: var(--defaultbgmain);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.customize .frame-18:hover {
+  background-color: var(--defaultbgtertiary);
+}
+
+.customize .group-19 {
+  position: absolute;
+  width: 43px;
+  height: 29px;
+  top: 7px;
+  left: 12px;
+}
+
+.customize .overlap-group-4 {
+  position: relative;
+  height: 29px;
+}
+
+.customize .rectangle-15 {
+  position: absolute;
+  width: 43px;
+  height: 25px;
+  top: 2px;
+  left: 0;
+  background-color: var(--defaultbgsecondary);
+  border-radius: 2.39px;
+}
+
+.customize .group-20 {
+  position: absolute;
+  width: 16px;
+  height: 29px;
+  top: 0;
+  left: 10px;
+}
+
+.customize .group-21 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 9px;
+  left: 12px;
+}
+
+.customize .rectangle-16,
+.customize .rectangle-17,
+.customize .rectangle-18 {
+  width: 12px;
+  height: 2px;
+  background-color: var(--defaulttextdim);
+  border-radius: 0.8px;
+  position: absolute;
+}
+.customize .rectangle-16 { top: 0; left: 0; }
+.customize .rectangle-17 { top: 5px; left: 0; }
+.customize .rectangle-18 { top: 10px; left: 0; }
+
+/* Wide Layout */
+.customize .rectangle-19 {
+  position: absolute;
+  width: 43px;
+  height: 25px;
+  top: 2px;
+  left: 0;
+  background-color: var(--defaultbgsecondary);
+  border-radius: 2.4px;
+}
+
+.customize .group-22 {
+  position: absolute;
+  width: 29px;
+  height: 30px;
+  top: 0;
+  left: 8px;
+}
+
+.customize .group-23 {
+  position: absolute;
+  width: 25px;
+  height: 12px;
+  top: 9px;
+  left: 10px;
+}
+
+.customize .rectangle-20,
+.customize .rectangle-21,
+.customize .rectangle-22 {
+  width: 25px;
+  height: 2px;
+  background-color: var(--defaulttextdim);
+  border-radius: 0.8px;
+  position: absolute;
+}
+.customize .rectangle-20 { top: 0; left: 0; }
+.customize .rectangle-21 { top: 5px; left: 0; }
+.customize .rectangle-22 { top: 10px; left: 0; }

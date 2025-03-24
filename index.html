@@ -1,258 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- ========== HEAD SECTION ========== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO: Title and Description -->
-    <title>Octiware - Passion Meets Pixels</title>
-    <meta name="description" content="Octiware is an indie game studio where passion meets pixels. Discover immersive, story-driven RPG experiences crafted with heart and innovation."/>
-    <meta name="keywords" content="Octiware, Games, Indie, Development" />
-    <!-- Pinterest domain verify (example) -->
-    <meta name="p:domain_verify" content="796d3f0d673b86de6ae22e544508bd47" />
-    <!-- Open Graph for social media sharing -->
-    <meta property="og:title" content="Octiware - Passion Meets Pixels" />
-    <meta property="og:description" content="Creating story-driven role-playing games." />
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body id="top">
-    <!-- ========== HEADER SECTION ========== -->
-    <header id="header-placeholder"></header>
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero-section" role="banner">
-      <div class="hero-gif-container">
-        <img src="img/hero.gif" alt="Hero GIF showcasing game elements" class="hero-gif" />
-      </div>
-      <!-- MAIN HERO TITLE -->
-      <div class="hero-text">
-        <h1 class="hero-game-title" id="hero-title">OCTIWARE</h1>
-        <p class="hero-sub-title">
-          Dive into adventures that captivate hearts and ignite imagination. We create games that you won't just play – you'll feel.
-        </p>
-        <!-- CTA BUTTONS -->
-        <div class="cta-buttons">
-          <a href="https://discord.gg/WqjBxvcSTB" target="_blank" rel="noopener" class="cta-btn">Join our Discord!</a>
-          <!-- <a href="#" target="_blank" rel="noopener" class="cta-btn">Wishlist the Adventure!</a> -->
-          <!-- <a href="#" target="_blank" rel="noopener" class="cta-btn">Explore More!</a> -->
-        </div>
-        <!-- SCROLL DOWN ICON -->
-        <a href="#meet-us-section" class="hero-down-icon" id="scrollDownBtn" aria-label="Scroll down to Meet Us section">
-        <img src="img/arrow_down.svg" alt="Arrow Down Icon" />
-        </a>
-      </div>
-    </section>
-    <!-- ========== MAIN SECTION: MEET US & JOIN US ========== -->
-    <main aria-label="Main content">
-      <!-- SECTION: VISION -->
-      <section class="vision-section" id="vision">
-        <h2>Our Vision</h2>
-        <p>
-          Imagine stepping into a world crafted with <span class="highlight">technical finesse</span> and <span class="highlight">visual magic</span>, instantly pulling you into its spell.
-        </p>
-        <p>
-          At Octiware, we don't just build games; we craft <span class="highlight">immersive, story-driven experiences</span>. With each decision you make, the narrative evolves, unveiling surprising twists and <span class="highlight">unforgettable characters</span>.
-        </p>
-        <p>
-          Whether you're adventuring alone or alongside friends, every moment is designed to <span class="highlight">challenge</span>, <span class="highlight">inspire</span>, and <span class="highlight">delight</span>; offering fresh surprises with every playthrough.
-        </p>
-        <p>
-          Welcome to Octiware, where <span class="highlight">passion meets pixels</span> and <span class="highlight">every moment counts</span>.
-        </p>
-      </section>          
+---
+layout: default
+title: "Octiware - Passion Meets Pixels"
+description: "Octiware is an indie game studio where passion meets pixels. Discover immersive, story-driven RPG experiences crafted with heart and innovation."
+keywords: "Octiware, Games, Indie, Development"
+ogtitle: "Octiware - Passion Meets Pixels"
+ogdescription: "Creating story-driven role-playing games."
+---
 
-      <!-- SECTION: MEET US AND JOIN US -->
-      <section class="meet-join-section" id="meet-us-section">
-        <!-- MEET US -->
-        <article class="home-box" id="meet-us">
-          <div class="home-box-overlay">
-            <picture>
-              <source
-                srcset="
-                  img/meetus_480.webp 480w,
-                  img/meetus_768.webp 768w,
-                  img/meetus_1320.webp 1320w
-                "
-                type="image/webp"
-              />
-              <source
-                srcset="
-                  img/meetus_480.jpg 480w,
-                  img/meetus_768.jpg 768w,
-                  img/meetus_1320.jpg 1320w
-                "
-                type="image/jpeg"
-              />
-              <img
-                src="img/meetus_1320.jpg"
-                alt="Team environment background"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 1320px"
-              />
-            </picture>
-            <div class="home-box-overlay-caption">
-              <h3 class="overlay-title">OUR TEAM</h3>
-              <div class="overlay-buttons">
-                <a href="meet_us.html" class="overlay-button">Our Team</a>
-              </div>
-            </div>
-          </div>
-          <div class="home-box-content">
-            <div class="title-and-text">
-              <!-- HEADINGS -->
-              <h2 class="home-box-title">
-                We love pixels<br />
-                <span class="caption-blue">and we live for them</span>
-              </h2>
-              <p class="home-box-paragraph">
-                Octiware is a small, dedicated team driven by boundless creativity, the courage to experiment, and an unwavering attention to detail. Every pixel tells a story, every game is an adventure. Meet the passionate minds behind the magic.
-              </p>
-            </div>
-          </div>
-        </article>
-        <!-- JOIN US -->
-        <article class="home-box" id="join-us">
-          <div class="home-box-overlay">
-            <picture>
-              <source
-                srcset="
-                  img/joinus_480.webp 480w,
-                  img/joinus_768.webp 768w,
-                  img/joinus_1320.webp 1320w
-                "
-                type="image/webp"
-              />
-              <source
-                srcset="
-                  img/joinus_480.jpg 480w,
-                  img/joinus_768.jpg 768w,
-                  img/joinus_1320.jpg 1320w
-                "
-                type="image/jpeg"
-              />
-              <img
-                src="img/joinus_1320.jpg"
-                alt="Background image showcasing collaboration"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 1320px"
-              />
-            </picture>
-            <div class="home-box-overlay-caption">
-              <h3 class="overlay-title">CAREERS</h3>
-              <div class="overlay-buttons">
-                <a href="join_us.html" class="overlay-button">Open Positions</a>
-              </div>
-            </div>
-          </div>
-          <div class="home-box-content">
-            <div class="title-and-text">
-              <h2 class="home-box-title">
-                Small team<br />
-                <span class="caption-blue">Big dreams</span>
-              </h2>
-              <p class="home-box-paragraph">
-                We're on a mission to reshape the world of pixel art games; and we need your passion. Whether you're an artist, coder, or storyteller, your ideas matter here. Join us and leave your mark on the gaming scene.
-              </p>
-            </div>
-          </div>
-        </article>
-      </section>
-      <!-- ========== NEWS SECTION ========== -->
-      <section class="news-section" aria-labelledby="news-title">
-        <div class="news-content">
-          <h2 id="news-title">Behind the Scenes</h2>
-          <p class="news-tease">
-            Peek behind the curtain at Octiware. Explore stories of creativity, passion, and innovation as we develop our games. Be the first to know what's new and become part of our community.
-          </p>
-          <div class="news-container">
-            <!-- News-Artikel  -->
-            <article class="news-item" onclick="location.href='articles/devblog-03.html';" role="link" data-published="2025-03-09">
-              <h3>DEV-Blog #3 – Refining Gameplay & UI</h3>
-              <p>Discover refined animations, cutscenes, and optimized inventory.</p>
-              <a href="articles/devblog-03.html" aria-label="Read more about DEV-Blog #3">Read more about DEV-Blog #3</a>
-            </article>
-            <article class="news-item" onclick="location.href='articles/devblog-02.html';" role="link" data-published="2025-01-31">
-              <h3>DEV-Blog #2 – New Features Unveiled!</h3>
-              <p>Check out combat, lighting systems, and more.</p>
-              <a href="articles/devblog-02.html" aria-label="Read more about Dev-Blog #2">Read more about Dev-Blog #2</a>
-            </article>
-            <article class="news-item" onclick="location.href='articles/devblog-01.html';" role="link" data-published="2025-01-10">
-              <h3>DEV-Blog #1 – The Adventure Begins!</h3>
-              <p>Our first steps into a thrilling steampunk universe. Take a look!</p>
-              <a href="articles/devblog-01.html" aria-label="Read more about Dev-Blog #1">Read more about Dev-Blog #1</a>
-            </article>
-          </div>
-          <div class="load-more-container">
-            <button id="load-more-btn" class="load-more-btn">More Stories</button>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- ========== CONTACT SECTION ========== -->
-    <div id="contact-placeholder"></div>    
-    <!-- ========== FOOTER SECTION ========== -->
-    <footer id="footer-placeholder"></footer>
-    <!-- ========== SCROLL TO TOP BUTTON ========== -->
-    <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
-    <img src="img/arrow_up.svg" alt="Arrow Up Icon" />
+<!-- ========== HEADER SECTION ========== -->
+<header id="header-placeholder"></header>
+<!-- ========== HERO SECTION ========== -->
+<section class="hero-section" role="banner">
+  <div class="hero-gif-container">
+    <img src="img/hero.gif" alt="Hero GIF showcasing game elements" class="hero-gif" />
+  </div>
+  <!-- MAIN HERO TITLE -->
+  <div class="hero-text">
+    <h1 class="hero-game-title" id="hero-title">OCTIWARE</h1>
+    <p class="hero-sub-title">
+      Dive into adventures that captivate hearts and ignite imagination. We create games that you won't just play – you'll feel.
+    </p>
+    <!-- CTA BUTTONS -->
+    <div class="cta-buttons">
+      <a href="https://discord.gg/WqjBxvcSTB" target="_blank" rel="noopener" class="cta-btn">Join our Discord!</a>
+      <!-- <a href="#" target="_blank" rel="noopener" class="cta-btn">Wishlist the Adventure!</a> -->
+      <!-- <a href="#" target="_blank" rel="noopener" class="cta-btn">Explore More!</a> -->
+    </div>
+    <!-- SCROLL DOWN ICON -->
+    <a href="#meet-us-section" class="hero-down-icon" id="scrollDownBtn" aria-label="Scroll down to Meet Us section">
+    <img src="img/arrow_down.svg" alt="Arrow Down Icon" />
     </a>
-    <!-- ========== MAIN SCRIPT ========== -->
-    <script defer src="js/include-layout.js"></script>
-    <script src="js/translation.js" defer></script>
-    <script src="js/main.js" defer></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-      const newsItems = document.querySelectorAll('.news-item');
-      const loadMoreBtn = document.getElementById('load-more-btn');
+  </div>
+</section>
+<!-- ========== MAIN SECTION: MEET US & JOIN US ========== -->
+<main aria-label="Main content">
+  <!-- SECTION: VISION -->
+  <section class="vision-section" id="vision">
+    <h2>Our Vision</h2>
+    <p>
+      Imagine stepping into a world crafted with <span class="highlight">technical finesse</span> and <span class="highlight">visual magic</span>, instantly pulling you into its spell.
+    </p>
+    <p>
+      At Octiware, we don't just build games; we craft <span class="highlight">immersive, story-driven experiences</span>. With each decision you make, the narrative evolves, unveiling surprising twists and <span class="highlight">unforgettable characters</span>.
+    </p>
+    <p>
+      Whether you're adventuring alone or alongside friends, every moment is designed to <span class="highlight">challenge</span>, <span class="highlight">inspire</span>, and <span class="highlight">delight</span>; offering fresh surprises with every playthrough.
+    </p>
+    <p>
+      Welcome to Octiware, where <span class="highlight">passion meets pixels</span> and <span class="highlight">every moment counts</span>.
+    </p>
+  </section>          
 
-      let currentVisible = 4;
-
-      showArticles(currentVisible);
-
-      if (currentVisible >= newsItems.length) {
-        loadMoreBtn.style.display = 'none';
-      }
-
-      // Klick-Event
-      loadMoreBtn.addEventListener('click', () => {
-        currentVisible += 4;
-        showArticles(currentVisible);
-
-        if (currentVisible >= newsItems.length) {
-          loadMoreBtn.style.display = 'none';
-        }
-      });
-
-      function showArticles(count) {
-        for (let i = 0; i < newsItems.length; i++) {
-          if (i < count) {
-            newsItems[i].style.display = 'block';
-          } else {
-            newsItems[i].style.display = 'none';
-          }
-        }
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const newsItems = document.querySelectorAll('.news-item');
-      const NEW_ARTICLE_DAYS = 14;
-
-      newsItems.forEach(item => {
-        const pubDate = item.getAttribute('data-published');
-        if (pubDate) {
-          const publishedTime = new Date(pubDate).getTime();
-          const now = Date.now();
-          const diffDays = (now - publishedTime) / (1000 * 60 * 60 * 24);
-
-          if (diffDays <= NEW_ARTICLE_DAYS) {
-            item.classList.add('new-article');
-          }
-        }
-      });
-    });
-    </script>
-  </body>
-</html>
+  <!-- SECTION: MEET US AND JOIN US -->
+  <section class="meet-join-section" id="meet-us-section">
+    <!-- MEET US -->
+    <article class="home-box" id="meet-us">
+      <div class="home-box-overlay">
+        <picture>
+          <source
+            srcset="
+              img/meetus_480.webp 480w,
+              img/meetus_768.webp 768w,
+              img/meetus_1320.webp 1320w
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              img/meetus_480.jpg 480w,
+              img/meetus_768.jpg 768w,
+              img/meetus_1320.jpg 1320w
+            "
+            type="image/jpeg"
+          />
+          <img
+            src="img/meetus_1320.jpg"
+            alt="Team environment background"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 1320px"
+          />
+        </picture>
+        <div class="home-box-overlay-caption">
+          <h3 class="overlay-title">OUR TEAM</h3>
+          <div class="overlay-buttons">
+            <a href="meet_us.html" class="overlay-button">Our Team</a>
+          </div>
+        </div>
+      </div>
+      <div class="home-box-content">
+        <div class="title-and-text">
+          <!-- HEADINGS -->
+          <h2 class="home-box-title">
+            We love pixels<br />
+            <span class="caption-blue">and we live for them</span>
+          </h2>
+          <p class="home-box-paragraph">
+            Octiware is a small, dedicated team driven by boundless creativity, the courage to experiment, and an unwavering attention to detail. Every pixel tells a story, every game is an adventure. Meet the passionate minds behind the magic.
+          </p>
+        </div>
+      </div>
+    </article>
+    <!-- JOIN US -->
+    <article class="home-box" id="join-us">
+      <div class="home-box-overlay">
+        <picture>
+          <source
+            srcset="
+              img/joinus_480.webp 480w,
+              img/joinus_768.webp 768w,
+              img/joinus_1320.webp 1320w
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              img/joinus_480.jpg 480w,
+              img/joinus_768.jpg 768w,
+              img/joinus_1320.jpg 1320w
+            "
+            type="image/jpeg"
+          />
+          <img
+            src="img/joinus_1320.jpg"
+            alt="Background image showcasing collaboration"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 1320px"
+          />
+        </picture>
+        <div class="home-box-overlay-caption">
+          <h3 class="overlay-title">CAREERS</h3>
+          <div class="overlay-buttons">
+            <a href="join_us.html" class="overlay-button">Open Positions</a>
+          </div>
+        </div>
+      </div>
+      <div class="home-box-content">
+        <div class="title-and-text">
+          <h2 class="home-box-title">
+            Small team<br />
+            <span class="caption-blue">Big dreams</span>
+          </h2>
+          <p class="home-box-paragraph">
+            We're on a mission to reshape the world of pixel art games; and we need your passion. Whether you're an artist, coder, or storyteller, your ideas matter here. Join us and leave your mark on the gaming scene.
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- ========== NEWS SECTION ========== -->
+  <section class="news-section" aria-labelledby="news-title">
+    <div class="news-content">
+      <h2 id="news-title">Behind the Scenes</h2>
+      <p class="news-tease">
+        Peek behind the curtain at Octiware. Explore stories of creativity, passion, and innovation as we develop our games. Be the first to know what's new and become part of our community.
+      </p>
+      <div class="news-container">
+        <!-- News-Artikel  -->
+        <article class="news-item" onclick="location.href='articles/devblog-03.html';" role="link" data-published="2025-03-09">
+          <h3>DEV-Blog #3 – Refining Gameplay & UI</h3>
+          <p>Discover refined animations, cutscenes, and optimized inventory.</p>
+          <a href="articles/devblog-03.html" aria-label="Read more about DEV-Blog #3">Read more about DEV-Blog #3</a>
+        </article>
+        <article class="news-item" onclick="location.href='articles/devblog-02.html';" role="link" data-published="2025-01-31">
+          <h3>DEV-Blog #2 – New Features Unveiled!</h3>
+          <p>Check out combat, lighting systems, and more.</p>
+          <a href="articles/devblog-02.html" aria-label="Read more about Dev-Blog #2">Read more about Dev-Blog #2</a>
+        </article>
+        <article class="news-item" onclick="location.href='articles/devblog-01.html';" role="link" data-published="2025-01-10">
+          <h3>DEV-Blog #1 – The Adventure Begins!</h3>
+          <p>Our first steps into a thrilling steampunk universe. Take a look!</p>
+          <a href="articles/devblog-01.html" aria-label="Read more about Dev-Blog #1">Read more about Dev-Blog #1</a>
+        </article>
+      </div>
+      <div class="load-more-container">
+        <button id="load-more-btn" class="load-more-btn">More Stories</button>
+      </div>
+    </div>
+  </section>
+</main>

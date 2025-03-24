@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TITLE: Nutzt page.title oder fallback site.title -->
+    <title>
+      {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    </title>
+    
+    <!-- DESCRIPTION: Nutzt page.description oder fallback site.description -->
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    {% endif %}
+
+    <!-- KEYWORDS: falls gewünscht -->
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% if page.ogtitle %}{{ page.ogtitle }}{% else %}{{ page.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.ogdescription %}{{ page.ogdescription }}{% else %}{{ page.description }}{% endif %}">
+    <meta property="og:type" content="website">
+    <!-- Du könntest noch meta property="og:image" hinzufügen, wenn du ein Social-Sharing-Bild hast. -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+    <!-- CSS-Dateien -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Falls du weitere CSS-Dateien hast, hier verlinken -->
+
+  </head>
+  <body id="top">
+
+    <!-- HEADER -->
+    {% include header.html %}
+
+    <!-- HAUPTINHALT DER SEITE (wird von index.html & Co. eingefügt) -->
+    <main>
+      {{ content }}
+    </main>
+
+    <!-- CONTACT SECTION -->
+    {% include contact-section.html %}
+
+    <!-- FOOTER -->
+    {% include footer.html %}
+
+    <!-- SCRIPTS -->
+    <!-- In der Regel packst du deine Skripte ans Ende, damit der DOM vorher geladen wird. -->
+    <script defer src="/js/main.js"></script>
+    <script defer src="/js/translation.js"></script>
+    <!-- Falls du noch andere JS-Dateien brauchst, hier verlinken. -->
+    
+  </body>
+</html>

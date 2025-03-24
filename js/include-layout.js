@@ -1,14 +1,14 @@
 // include-layout.js
 document.addEventListener('DOMContentLoaded', () => {
   includeHTML('wiki-header-placeholder', 'wiki-header.html', 'wikiHeaderLoaded');
-  includeHTML('header-placeholder', 'header.html', 'headerLoaded');
+  includeHTML('header-placeholder', 'header.html', 'headerLoaded'); // <-- wichtig
   includeHTML('contact-placeholder', 'contact-section.html', 'contactLoaded');
   includeHTML('footer-placeholder', 'footer.html', 'footerLoaded');
 });
 
 function includeHTML(containerId, file, eventName) {
   const container = document.getElementById(containerId);
-  if (!container) return; // no placeholder => skip
+  if (!container) return;
 
   fetch(file)
     .then((response) => {
@@ -17,7 +17,6 @@ function includeHTML(containerId, file, eventName) {
     })
     .then((html) => {
       container.innerHTML = html;
-      // Once injected, dispatch an event so search.js knows the snippet is ready
       if (eventName) {
         document.dispatchEvent(new CustomEvent(eventName));
       }
