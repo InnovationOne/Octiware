@@ -1,0 +1,82 @@
+/* =====================  base.css  ===================== */
+/* Global imports, variables, and resets */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --brand-color: #2b6ea0;
+  --light-brand-color: #2b6ea019;
+  --black: #000;
+  --white: #fff;
+  --gray-background: #f6f6f6;
+  --body-font: "Open Sans", "Lato", "Source Code Pro", sans-serif;
+  --base-font-size: 16px;
+  --line-height: 1.6;
+  --transition-speed: 0.3s;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+/* Global resets */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body base */
+body {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+  line-height: var(--line-height);
+  color: var(--black);
+  background-color: var(--white);
+}
+
+/* Code elements & links */
+code {
+  background-color: #f4f4f4;
+  color: var(--brand-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Basic link styles */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+a:hover,
+a:focus {
+  color: var(--brand-color);
+}
+
+/* Visually hidden helper */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

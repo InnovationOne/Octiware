@@ -1,25 +1,28 @@
+// include-layout.js
 document.addEventListener('DOMContentLoaded', () => {
-  includeHTML('header-placeholder', 'header.html');
-  includeHTML('contact-placeholder', 'contact-section.html');
-  includeHTML('footer-placeholder', 'footer.html');
+  includeHTML('wiki-header-placeholder', 'wiki-header.html', 'wikiHeaderLoaded');
+  includeHTML('header-placeholder', 'header.html', 'headerLoaded');
+  includeHTML('contact-placeholder', 'contact-section.html', 'contactLoaded');
+  includeHTML('footer-placeholder', 'footer.html', 'footerLoaded');
 });
 
-function includeHTML(containerId, file) {
+function includeHTML(containerId, file, eventName) {
+  const container = document.getElementById(containerId);
+  if (!container) return; // no placeholder => skip
+
   fetch(file)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error fetching ${file}`);
-      }
+    .then((response) => {
+      if (!response.ok) throw new Error(`Error fetching ${file}`);
       return response.text();
     })
-    .then(data => {
-      document.getElementById(containerId).innerHTML = data;
-      // Dispatch custom event when header is loaded
-      if (containerId === 'header-placeholder') {
-        document.dispatchEvent(new CustomEvent('headerLoaded'));
+    .then((html) => {
+      container.innerHTML = html;
+      // Once injected, dispatch an event so search.js knows the snippet is ready
+      if (eventName) {
+        document.dispatchEvent(new CustomEvent(eventName));
       }
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(`Failed to include ${file}:`, err);
     });
 }

@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Cat",
+    "content": "Small domesticated carnivorous mammal. Loved for companionship.",
+    "url": "wiki/cat.html",
+    "thumbnail": "img/cat1.jpg",
+    "category": "Animals"
+  },
+  {
+    "title": "Dog",
+    "content": "Domesticated canine widely considered man's best friend.",
+    "url": "wiki/dog.html",
+    "thumbnail": "img/dog1.jpg",
+    "category": "Animals"
+  }
+]

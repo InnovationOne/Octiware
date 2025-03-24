@@ -1,3 +1,5 @@
+/*
+
 let translations = {};
 
 async function loadTranslations(lang) {
@@ -36,3 +38,5 @@ document.getElementById('language-selector').addEventListener('change', (event) 
 document.addEventListener('DOMContentLoaded', () => {
   loadTranslations('en');
 });
+
+*/

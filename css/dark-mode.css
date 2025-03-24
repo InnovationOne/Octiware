@@ -1,0 +1,327 @@
+/* =====================  dark-mode.css  ===================== */
+.dark-mode body {
+  background-color: #101010;
+  color: #e0e0e0;
+}
+.dark-mode .header,
+.dark-mode .header-container {
+  background-color: #0e0e0e;
+}
+.dark-mode .header-nav-desktop ul li a {
+  color: #e0e0e0;
+  transition: color var(--transition-speed);
+}
+.dark-mode .header-nav-desktop ul li a:hover,
+.dark-mode .header-nav-desktop ul li a:focus {
+  color: var(--brand-color) !important;
+}
+
+.dark-mode code {
+  background-color: #333;
+  color: #ffd700;
+}
+
+.dark-mode .hero-text {
+  color: #f0f0f0;
+}
+
+.dark-mode .vision-section {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border-left-color: var(--brand-color);
+}
+.dark-mode .vision-section h2 {
+  color: var(--brand-color);
+}
+
+.dark-mode .home-box {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+.dark-mode .home-box-overlay-caption {
+  background: rgba(0, 0, 0, 0.6);
+}
+.dark-mode .overlay-title {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+.dark-mode .home-box-title {
+  color: #f0f0f0;
+}
+.dark-mode .home-box-paragraph {
+  color: #e0e0e0;
+}
+
+.dark-mode .team-row-buttons .spontaneous-btn,
+.dark-mode .team-row-buttons .browse-btn {
+  color: #fff;
+  transition: background var(--transition-speed);
+}
+.dark-mode .team-row-buttons .spontaneous-btn {
+  background: #1a1a1a;
+}
+.dark-mode .team-row-buttons .browse-btn {
+  background: var(--brand-color);
+}
+.dark-mode .team-row-buttons .spontaneous-btn:hover,
+.dark-mode .team-row-buttons .spontaneous-btn:focus {
+  background: var(--brand-color);
+}
+.dark-mode .team-row-buttons .browse-btn:hover,
+.dark-mode .team-row-buttons .browse-btn:focus {
+  background: #1a1a1a;
+}
+
+.dark-mode .cta-btn {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+  color: var(--white);
+  transition: background var(--transition-speed);
+}
+.dark-mode .cta-btn:hover,
+.dark-mode .cta-btn:focus {
+  background-color: #1f4d70;
+}
+
+.dark-mode .news-section,
+.dark-mode .news-content {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+.dark-mode .news-item {
+  background-color: #262626;
+  color: #f0f0f0;
+}
+.dark-mode .news-item h3 {
+  color: var(--brand-color);
+}
+.dark-mode .news-item a {
+  color: #f0f0f0;
+  transition: color var(--transition-speed);
+}
+.dark-mode .news-item p {
+  color: #bbb;
+}
+.dark-mode .news-item a:hover {
+  color: var(--brand-color);
+}
+.dark-mode .news-tease {
+  color: #bbb;
+}
+
+.dark-mode .news-item.new-article {
+  border-color: #ff9800;
+  background-color: #1c1b20;
+  color: #f0f0f0;
+}
+
+.dark-mode .news-item.new-article::before {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.dark-mode .contact-section {
+  background-color: #141414;
+  color: #e0e0e0;
+}
+.dark-mode .contact-box {
+  background-color: #1e1e1e;
+  border-color: #2a2a2a;
+  color: #e0e0e0;
+}
+.dark-mode .contact-box-email {
+  color: #f0f0f0;
+}
+
+.dark-mode .accordion-item,
+.dark-mode .job-detail-container,
+.dark-mode .join-accordion .accordion-content {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  border-color: #333;
+}
+.dark-mode .join-accordion .accordion-content a,
+.dark-mode .join-accordion .accordion-content p a {
+  color: #f0f0f0;
+}
+.dark-mode .join-accordion .accordion-content a:hover {
+  color: var(--brand-color);
+}
+.dark-mode .accordion-toggle {
+  background: linear-gradient(120deg, var(--brand-color), #1f4d70);
+  transition: background var(--transition-speed);
+}
+.dark-mode .accordion-toggle:hover {
+  background: linear-gradient(120deg, #1f4d70, var(--brand-color));
+}
+
+.dark-mode .share-icons-header a {
+  border: 2px solid var(--brand-color);
+  background-color: var(--brand-color);
+  color: var(--white);
+  transition: background var(--transition-speed);
+}
+.dark-mode .share-icons-header a:hover {
+  background-color: #1f4d70;
+}
+
+.dark-mode .devblog-container {
+  background: #1c1b20;
+  border-color: #2b2a30;
+  color: #e0e0e0;
+}
+.dark-mode .devblog-header {
+  border-bottom-color: #3a3842;
+}
+.dark-mode .devblog-header h1,
+.dark-mode .devblog-content h2,
+.dark-mode .devblog-content h3 {
+  color: var(--brand-color);
+}
+.dark-mode .devblog-content p,
+.dark-mode .devblog-content ul,
+.dark-mode .devblog-content li {
+  color: #ddd;
+}
+
+.dark-mode footer,
+.dark-mode .footer-content {
+  background-color: #0e0e0e;
+  color: #e0e0e0;
+}
+
+.dark-mode .policy-container {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border-color: #333;
+}
+.dark-mode .policy-container header h1 {
+  color: var(--brand-color);
+}
+.dark-mode .policy-container h2 {
+  color: #f0f0f0;
+  border-left-color: var(--brand-color);
+}
+
+.dark-mode .team-row {
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+.dark-mode .team-row-title {
+  color: var(--brand-color);
+}
+.dark-mode .team-row-text p {
+  color: #e0e0e0;
+}
+
+.dark-mode .accordion-item {
+  background-color: #262626;
+  border-color: #333;
+  color: #e0e0e0;
+}
+.dark-mode .accordion-content li p,
+.dark-mode .accordion-content li a {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+.dark-mode .job-detail-container {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+/* Navigation */
+.dark-mode #epoch-nav {
+  background-color: #1a1a1a;
+  border-color: #333;
+  color: #e0e0e0;
+}
+.dark-mode .epoch-btn,
+.dark-mode .subepoch-btn {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  border-left-color: transparent;
+}
+.dark-mode .epoch-btn.active,
+.dark-mode .subepoch-btn.active {
+  background-color: #3a3a3a;
+  border-left-color: var(--brand-color);
+}
+.dark-mode #epoch-nav h2 {
+  color: #ccc;
+}
+
+/* Timeline Line */
+.dark-mode #timeline-line {
+  background-color: var(--brand-color);
+  /* optional: halo-effekt 
+  background: radial-gradient(circle at 50% 50%, var(--brand-color) 10%, transparent 80%);
+  */
+}
+
+/* Epoche-Block & Header */
+.dark-mode .epoch-block {
+  color: #e0e0e0;
+}
+.dark-mode .epoch-header {
+  background-color: #2a2a2a;
+  box-shadow: none;
+}
+.dark-mode .epoch-title {
+  text-shadow: none;
+}
+.dark-mode .epoch-timeframe {
+  color: #ccc;
+}
+
+/* Subepoch */
+.dark-mode .subepoch-block {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+.dark-mode .subepoch-title {
+  color: #ddd;
+}
+.dark-mode .subepoch-timeframe {
+  color: #999;
+}
+.dark-mode .subepoch-description {
+  color: #ccc;
+}
+
+/* Events */
+.dark-mode .event-wrapper {
+  background-color: #2a2a2a;
+  color: #ddd;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.08);
+}
+.dark-mode .event-title {
+  color: #fff;
+}
+.dark-mode .event-date {
+  color: #bbb;
+}
+.dark-mode .event-description {
+  color: #ccc;
+}
+.dark-mode .connector-line {
+  background-color: #666;
+}
+.dark-mode .event-dot {
+  border-color: #2a2a2a;
+}
+
+/* Overlay */
+.dark-mode #event-overlay .overlay-content {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+.dark-mode #overlay-details h2 {
+  color: var(--brand-color);
+}
+.dark-mode #overlay-details img {
+  border: 2px solid #444;
+}
+
+.dark-mode .extended-desc {
+  color: #ccc;
+}

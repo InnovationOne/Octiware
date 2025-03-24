@@ -1,0 +1,209 @@
+/* =====================  octiware-header.css  ===================== */
+.header {
+  background: var(--black);
+  color: var(--white);
+}
+
+.header-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  background-color: var(--black);
+  gap: var(--spacing-md);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 80px;
+  height: auto;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: var(--spacing-sm);
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+  line-height: 1;
+}
+
+.logo-slogan {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--brand-color);
+  margin-top: var(--spacing-xs);
+  line-height: 1;
+}
+
+/* Desktop Navigation */
+.header-nav-desktop {
+  margin: 0 auto;
+}
+
+.header-nav-desktop ul {
+  list-style: none;
+}
+
+.header-nav-desktop ul li {
+  display: inline-block;
+  margin-right: var(--spacing-md);
+  font-size: 1rem;
+}
+
+.header-nav-desktop ul li a {
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Header Right Section */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* Social Icons in the Header */
+.social-icons-header a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  transition: background var(--transition-speed);
+  margin-left: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
+.social-icons-header a:hover,
+.social-icons-header a:focus {
+  background: var(--brand-color);
+}
+
+.social-icons-header a img {
+  width: 1.25rem; 
+  height: 1.25rem;
+  filter: invert(100%);
+}
+
+/* Language Dropdown */
+.language-dropdown select {
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 0.3rem 0.6rem;
+  appearance: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color var(--transition-speed);
+}
+
+.language-dropdown select:hover,
+.language-dropdown select:focus {
+  background-color: #333;
+}
+
+/* Theme Switch */
+.theme-switch {
+  width: 60px; 
+  height: 30px;
+  background: var(--brand-color);
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: background var(--transition-speed);
+}
+
+.switch-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--white);
+  transition: transform var(--transition-speed);
+}
+
+.theme-switch.light {
+  background: #fda085;
+}
+.theme-switch.light .switch-slider {
+  transform: translateX(30px);
+}
+
+.icon-sun-icon,
+.icon-moon-icon {
+  width: 18px;
+  height: 18px;
+  z-index: 2;
+}
+
+.icon-sun-icon,
+.icon-moon-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Mobile Navigation */
+.header-nav-mobile {
+  position: relative;
+}
+
+.mobile-nav-toggle {
+  background: none;
+  color: var(--white);
+  border: 2px solid var(--white);
+  padding: 0.3rem 0.9rem;
+  cursor: pointer;
+  display: none;
+  font-size: 1.5rem;
+}
+
+.mobile-nav-container {
+  position: absolute;
+  top: 3rem;
+  right: 0;  
+  width: 120px;
+  padding: var(--spacing-xs);
+  background-color: var(--brand-color);
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  text-align: center;
+  display: none;
+  transition: transform var(--transition-speed) ease;
+  z-index: 9999;
+}
+
+.mobile-nav-container.open {
+  display: block;
+}
+
+.mobile-nav-container ul {
+  list-style: none;
+  margin-top: var(--spacing-xs);
+}
+
+.mobile-nav-container ul li a {
+  display: block;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xs);
+}

@@ -1,0 +1,176 @@
+@media (max-width: 1200px) and (min-width: 769px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .header-nav-desktop {
+    margin-top: var(--spacing-sm);
+  }
+
+  .header-nav-desktop ul li {
+    margin-right: var(--spacing-sm);
+  }
+
+  .header-right {
+    margin-top: var(--spacing-sm);
+  }
+  
+  .epoch-block {
+    margin-bottom: calc(var(--spacing-xl) * 1.1);
+  }
+  .subepoch-block {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .header-nav-desktop {
+    display: none;
+  }
+
+  .header-nav-mobile {
+    display: block;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .hero-game-title {
+    font-size: 7rem;
+    -webkit-text-stroke-width: 3px;
+  }
+  
+  .meet-join-section {
+    margin: var(--spacing-lg) auto;
+    gap: var(--spacing-sm);
+  }
+
+  .home-box-overlay {
+    height: 350px;
+  }
+
+  .overlay-title {
+    font-size: 5rem;
+  }
+
+  .team-sections {
+    gap: var(--spacing-md);
+  }
+
+  .team-row:nth-child(odd) .team-row-image {
+    order: 0;
+  }
+
+  #epoch-nav {
+    position: static;
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+    max-height: none;
+  }
+  #timeline-content {
+    margin-left: 0;
+    width: 100%;
+    padding: var(--spacing-md);
+  }
+  #timeline-line {
+    display: none;
+  }
+  .epoch-header {
+    margin-bottom: var(--spacing-sm);
+  }
+  .subepoch-block {
+    width: 80%;
+    margin-bottom: var(--spacing-md);
+  }
+  .event-wrapper {
+    width: 90%;
+    margin: var(--spacing-md) auto;
+  }
+  .connector-line,
+  .event-dot {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo img {
+    width: 60px;
+  }
+
+  .hero-game-title {
+    font-size: 5rem;
+    -webkit-text-stroke-width: 0px;
+    color: var(--white); 
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .hero-down-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .home-box-overlay {
+    height: 280px;
+  }
+
+  .overlay-title {
+    font-size: 3rem;
+    -webkit-text-stroke-width: 0px;
+    color: var(--white); 
+  }
+
+  .team-sections {
+    gap: var(--spacing-sm);
+  }
+
+  .team-row:nth-child(odd) .team-row-image {
+    order: 0;
+  }
+
+  .team-row {
+    flex-direction: column;
+  }
+
+  .job-detail-container {
+    margin: var(--spacing-sm) auto;
+    padding: var(--spacing-sm);
+  }
+
+  .join-accordion {
+    margin: var(--spacing-lg) auto;
+    gap: var(--spacing-sm);
+  }
+
+  .meet-hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .epoch-title {
+    font-size: 1.5rem;
+  }
+  .subepoch-block {
+    width: 90%;
+  }
+  .subepoch-title {
+    font-size: 1rem;
+  }
+  .event-title {
+    font-size: 0.9rem;
+  }
+  .event-date,
+  .event-description {
+    font-size: 0.85rem;
+  }
+}

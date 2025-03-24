@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline | Octiware</title>  
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ========== HEADER SECTION ========== -->
+    <header id="header-placeholder"></header>
+
+    <!-- ========== MAIN SECTION: Timeline ========== -->
+    <main id="timeline-container">
+      <nav id="epoch-nav">
+        <h2>Epochen</h2>
+        <!-- Epoche-Buttons und Sub-Epochen-Buttons werden per JS erzeugt -->
+      </nav>
+  
+      <section id="timeline-content">
+        <div id="timeline-line"></div>
+        <div id="timeline-wrapper"></div>
+      </section>
+    </main>
+  
+    <div id="event-overlay" class="hidden">
+      <div class="overlay-content">
+        <span class="close-btn" id="closeOverlay">&times;</span>
+        <div id="overlay-details"></div>
+      </div>
+    </div>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <div id="contact-placeholder"></div>    
+    <!-- ========== FOOTER SECTION ========== -->
+    <footer id="footer-placeholder"></footer>
+    <!-- ========== SCROLL TO TOP BUTTON ========== -->
+    <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <img src="img/arrow_up.svg" alt="Arrow Up Icon" />
+    </a>
+    <!-- ========== MAIN SCRIPT ========== -->
+    <script defer src="js/include-layout.js"></script>
+    <script src="js/translation.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script defer src="js/timeline.js"></script>
+  </body>
+</html>

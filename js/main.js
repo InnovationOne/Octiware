@@ -49,9 +49,9 @@ document.addEventListener("headerLoaded", function() {
   const themeSwitch = document.getElementById('theme-switch');
   if (!themeSwitch) {
     console.warn("Theme switch element not found!");
-    return; // Exit if not found
+    return;
   }
-  
+
   function applyTheme(theme) {
     if (theme === 'light') {
       document.documentElement.classList.remove('dark-mode');
@@ -60,12 +60,14 @@ document.addEventListener("headerLoaded", function() {
       document.documentElement.classList.add('dark-mode');
       themeSwitch.classList.remove('light');
     }
+
+    const customEvent = new Event('themeChanged');
+    document.dispatchEvent(customEvent);
   }
-  
-  // Get stored theme or default to 'dark'
+
   const storedTheme = localStorage.getItem('theme') || 'dark';
   applyTheme(storedTheme);
-  
+
   themeSwitch.addEventListener('click', function() {
     const currentTheme = localStorage.getItem('theme') || 'dark';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';

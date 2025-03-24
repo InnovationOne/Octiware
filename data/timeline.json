@@ -1,0 +1,1463 @@
+{
+  "epochs": [
+    {
+      "id": "epoch1",
+      "title": "Epoche I – Die Alten Maschinisten",
+      "color": "#D9978E",
+      "timeframe": "ca. 3000 v.D. – 1200 v.D.",
+      "subepochs": [
+        {
+          "id": "subepoch1_1",
+          "title": "Die Archaische Ära",
+          "timeframe": "3000 v.D. – 2600 v.D.",
+          "description": "Die Anfänge der Maschinistenzivilisation.",
+          "events": [
+            {
+              "date": "3000 v.D.",
+              "title": "Erste Seelenentdeckung",
+              "description": "Primitive Kulturen entdecken natürliche Seelenkristalle. Beginn der rituellen Verehrung.",
+              "extendedDescription": "Hier kannst du noch mehr Details über die Entdeckung hinzufügen...",
+              "type": "discovery",
+              "imageUrl": "img/timeline/beispiel.jpg"
+            },
+            {
+              "date": "2875 v.D.",
+              "title": "Der erste Dampf",
+              "description": "Erste dokumentierte Nutzung geothermischer Quellen für primitive Dampfanwendungen in der Region des späteren Boltof-Gebirges.",
+              "extendedDescription": "Hier kannst du noch mehr Details über die Entdeckung hinzufügen...",
+              "type": "war",
+              "imageUrl": "img/timeline/beispiel.jpg"
+            },
+            {
+              "date": "2720 v.D.",
+              "title": "Erste große Siedlungen",
+              "description": "Entstehung erster größerer Gemeinschaften, darunter Proto-Städte an dampfreichen Orten.",
+              "extendedDescription": "Hier kannst du noch mehr Details über die Entdeckung hinzufügen...",
+              "type": "politics",
+              "imageUrl": "img/timeline/beispiel.jpg"
+            }
+          ]
+        },
+        {
+          "id": "subepoch1_2",
+          "title": "Die Ära der Ersten Maschinisten",
+          "timeframe": "2600 v.D. – 2200 v.D.",
+          "description": "Blüte der ersten technologischen Kultur.",
+          "events": [
+            {
+              "date": "2600 v.D.",
+              "title": "Gründung von Arkanvor",
+              "description": "Erste bekannte maschinistische Großstadt. Ursprung technologischer Fortschritte und Organisation der Seelenforschung.",
+              "extendedDescription": "Hier kannst du noch mehr Details über die Entdeckung hinzufügen...",
+              "type": "technology",
+              "imageUrl": "img/timeline/beispiel.jpg"
+            },
+            {
+              "date": "2512 v.D.",
+              "title": "Erster Maschinistischer Rat",
+              "description": "Bildung eines Rates von Wissenschaftlern und Ingenieuren. Erstmalig als politische Kraft."
+            },
+            {
+              "date": "2470 v.D.",
+              "title": "Bau des Ewigen Dampfwerks",
+              "description": "Ein riesiges Netzwerk geothermischer Dampfkraftwerke versorgt Arkanvor und umliegende Städte mit Energie."
+            }
+          ]
+        },
+        {
+          "id": "subepoch1_3",
+          "title": "Das Goldene Zeitalter der Maschinisten",
+          "timeframe": "2200 v.D. – 1500 v.D.",
+          "description": "Epoche maximaler technologischer Entwicklung und Seelenforschung.",
+          "events": [
+            {
+              "date": "2200 v.D.",
+              "title": "Gründung von Dravoll",
+              "description": "Errichtung der Stadt als technologisches Zentrum der Zivilisation. Dravoll wächst rasch zur mächtigsten Stadt von Eryndor."
+            },
+            {
+              "date": "2150 v.D.",
+              "title": "Beginn der Seelenforschung",
+              "description": "Erste systematische Nutzung von Seelenkristallen zur Energieerzeugung, Konstruktion von Seelenmaschinen."
+            },
+            {
+              "date": "2032 v.D.",
+              "title": "Vollendung der Großen Maschine von Dravoll",
+              "description": "Ein gewaltiges, dampf- und seelengetriebenes Konstrukt, symbolisiert den technologischen Höhepunkt."
+            },
+            {
+              "date": "1970 v.D.",
+              "title": "Der Ewige Rat von Dravoll",
+              "description": "Bildung des obersten Rates als herrschende Körperschaft. Beginnt die zentrale Kontrolle über alle Maschinistenstädte."
+            },
+            {
+              "date": "1863 v.D.",
+              "title": "Erste Seelenkristall-Krise",
+              "description": "Übermäßige Nutzung von Seelenkristallen führt zu lokalen Katastrophen und energetischen Instabilitäten."
+            }
+          ]
+        },
+        {
+          "id": "subepoch1_4",
+          "title": "Zeitalter des Zerfalls",
+          "timeframe": "1500 v.D. – 1200 v.D.",
+          "description": "Untergang der Maschinistenkultur durch wachsende Instabilitäten.",
+          "events": [
+            {
+              "date": "1500 v.D.",
+              "title": "Das Seelenbeben von Skalver",
+              "description": "Vernichtung der Stadt Skalver durch unkontrollierte Seelenenergie-Freisetzung. Die Katastrophe mahnt zur Vorsicht, wird aber ignoriert."
+            },
+            {
+              "date": "1433 v.D.",
+              "title": "Aufstieg des Propheten Ordavius",
+              "description": "Mystischer Anführer warnt vor den Risiken des exzessiven Seelengebrauchs. Ordavius gewinnt viele Anhänger, führt zur Spaltung in der Gesellschaft."
+            },
+            {
+              "date": "1350 v.D.",
+              "title": "Rat der Maschinisten verbietet radikale Seelenexperimente",
+              "description": "Die Gesellschaft spaltet sich weiter: Konservative Fraktionen stehen radikalen Forschern gegenüber."
+            },
+            {
+              "date": "1268 v.D.",
+              "title": "Beginn des Großen Maschinistenkriegs",
+              "description": "Der Bürgerkrieg zwischen konservativen und radikalen Maschinistenfraktionen führt zu Verwüstung und Zerstörung vieler Städte."
+            },
+            {
+              "date": "1225 v.D.",
+              "title": "Belagerung von Arkanvor",
+              "description": "Die einst blühende Stadt wird während der Kriege nahezu völlig zerstört, Symbol für den bevorstehenden Zusammenbruch der Kultur."
+            },
+            {
+              "date": "1205 v.D.",
+              "title": "Die Große Maschine von Dravoll gerät außer Kontrolle",
+              "description": "Experiment mit Seelenkristallen löst katastrophale Ereignisse aus. Große Teile Dravolls werden zerstört oder versinken in dichtem, dauerhaftem Nebel."
+            },
+            {
+              "date": "1200 v.D.",
+              "title": "Der Untergang Dravolls",
+              "description": "Dravoll verschwindet endgültig in unerklärlichen Nebelschwaden. Dies markiert offiziell das Ende der Maschinistenkultur."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epoch2",
+      "title": "Epoche II – Ära der Nebelreiche und Dynastien",
+      "color": "#D9AA8E",
+      "timeframe": "1200 v.D. – 600 v.D.",
+      "subepochs": [
+        {
+          "id": "subepoch2_1",
+          "title": "Epoche des Großen Chaos",
+          "timeframe": "1200 v.D. – 1100 v.D.",
+          "description": "Epoche unmittelbar nach dem Untergang der Maschinisten.",
+          "events": [
+            {
+              "date": "1200 v.D.",
+              "title": "Jahre des Nebels",
+              "description": "Nach Dravolls Untergang versinkt das Wissen der Maschinisten in Vergessenheit. Massive Nebelbänke verhindern Reisen und Kontakt zwischen Regionen."
+            },
+            {
+              "date": "1175 v.D.",
+              "title": "Entstehung isolierter Gemeinschaften",
+              "description": "Überlebende des Maschinisten-Zerfalls bilden kleine Gemeinschaften, lose organisiert und mit minimaler Technologie."
+            },
+            {
+              "date": "1149 v.D.",
+              "title": "Erste primitive Dynastien",
+              "description": "Lokale Kriegsherren und Anführer errichten erste, oft kurzlebige Herrschaften auf den Ruinen der alten Maschinistenstädte."
+            }
+          ]
+        },
+        {
+          "id": "subepoch2_2",
+          "title": "Die Entstehung der Nebelreiche",
+          "timeframe": "1100 v.D. – 900 v.D.",
+          "description": "Erste stabile Königreiche formen sich.",
+          "events": [
+            {
+              "date": "1100 v.D.",
+              "title": "Gründung des Königreichs Norvia",
+              "description": "Erste dokumentierte Herrschaft in der Region des späteren Norinwalls. Norvia entwickelt sich zu einem wichtigen regionalen Machtzentrum."
+            },
+            {
+              "date": "1073 v.D.",
+              "title": "Geburt des Königreichs Valoria",
+              "description": "Im Gebiet des späteren Hauses Valmor bildet sich ein militärisch geprägtes Königreich, bekannt für seine strikte militärische Ordnung."
+            },
+            {
+              "date": "1020 v.D.",
+              "title": "Reich der Silbernen Küste entsteht",
+              "description": "Vorgängerreich der späteren Häuser Sevrin und Havelard an der Kosafin-Bucht, etabliert frühe Handelsstrukturen."
+            }
+          ]
+        },
+        {
+          "id": "subepoch2_3",
+          "title": "Die Dynastische Konsolidierung",
+          "timeframe": "900 v.D. – 750 v.D.",
+          "description": "Epoche der politischen Stabilisierung und der Gründung der späteren Adelshäuser.",
+          "events": [
+            {
+              "date": "900 v.D.",
+              "title": "Hausgründung Sevrinius (Haus Sevrin)",
+              "description": "Erste Erwähnung einer mächtigen Handelsfamilie, die die Silberne Küste und deren Seewege kontrolliert."
+            },
+            {
+              "date": "870 v.D.",
+              "title": "Hausgründung Havelion (Haus Havelard)",
+              "description": "Aufbau einer frühen Finanzmacht durch Kontrolle über Rohstoffe und erste monetäre Systeme."
+            },
+            {
+              "date": "843 v.D.",
+              "title": "Gründung der Stadt Endoria (später Enderburg)",
+              "description": "Unter dem Kriegerkönig Valmar (Valmor) entsteht eine mächtige Festung, Symbol militärischer Dominanz."
+            },
+            {
+              "date": "801 v.D.",
+              "title": "Die Dynastie Carrovan (Haus Carroway)",
+              "description": "Ein Gelehrtengeschlecht beginnt altes Wissen der Maschinisten systematisch zu dokumentieren. Erste Bibliotheken und primitive Forschungsstätten entstehen."
+            },
+            {
+              "date": "780 v.D.",
+              "title": "Dynastie Drovani (Haus Drovik)",
+              "description": "Geheimnisvolle Händler- und Schmugglerfamilie etabliert erste informelle Handelsnetzwerke und Spionagekanäle."
+            }
+          ]
+        },
+        {
+          "id": "subepoch2_4",
+          "title": "Die Ära der Ersten Kolonisation und Konflikte",
+          "timeframe": "750 v.D. – 650 v.D.",
+          "description": "Frühe koloniale Ambitionen und dynastische Machtkämpfe.",
+          "events": [
+            {
+              "date": "750 v.D.",
+              "title": "Erste koloniale Expedition nach Sovarim",
+              "description": "Schiffe der Silbernen Küste landen erstmals in Sovarim und gründen kleine Kolonialstützpunkte."
+            },
+            {
+              "date": "730 v.D.",
+              "title": "Krieg der Zwillinge",
+              "description": "Konflikt zwischen den Häusern Sevrinius (Sevrin) und Havelion (Havelard) um Handelsvorherrschaft, endet mit der Aufteilung wirtschaftlicher Macht."
+            },
+            {
+              "date": "704 v.D.",
+              "title": "Erste Expedition nach Galdara",
+              "description": "Unter Leitung der Dynastie Valmor entsteht ein erster Außenposten auf der Inselgruppe Galdara, frühe Spannungen mit einheimischen Kulturen."
+            },
+            {
+              "date": "689 v.D.",
+              "title": "Entstehung des Hauses Mironar (Haus Miron)",
+              "description": "Im fruchtbaren Gebiet Tulvyx (Narovische Ebenen) etabliert sich ein starkes Adelsgeschlecht, spezialisiert auf Landwirtschaft und Viehzucht."
+            }
+          ]
+        },
+        {
+          "id": "subepoch2_5",
+          "title": "Das Silberne Zeitalter der Dynastien",
+          "timeframe": "650 v.D. – 600 v.D.",
+          "description": "Blütezeit der regionalen Dynastien, Fortschritt in Handel und Kultur.",
+          "events": [
+            {
+              "date": "650 v.D.",
+              "title": "Bund der vier Dynastien",
+              "description": "Sevrin, Havelard, Valmor und Carroway schließen ein vorübergehendes Bündnis zur Stabilisierung des Handels und der Wissensweitergabe."
+            },
+            {
+              "date": "630 v.D.",
+              "title": "Große Handelsstraße",
+              "description": "Einrichtung der ersten großen Landroute zwischen Norvia (Norinwall), Endoria (Enderburg) und Tulvyx."
+            },
+            {
+              "date": "612 v.D.",
+              "title": "Eröffnung der Silbernen Bibliothek in Norvia",
+              "description": "Erste systematische Sammlung von Wissen aus vergangenen Epochen durch Haus Carroway."
+            },
+            {
+              "date": "600 v.D.",
+              "title": "Der Rat von Norvia",
+              "description": "Gründung eines regelmäßigen Treffens der führenden Dynastien (Vorläufer späterer politischer Strukturen), die die Grundlage für spätere politische Machtstrukturen legt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epoch3",
+      "title": "Epoche III – Stadtstaaten & Proto-Industrialisierung",
+      "color": "#D9C88E",
+      "timeframe": "600 v.D. – 1 v.D.",
+      "subepochs": [
+        {
+          "id": "subepoch3_1",
+          "title": "Die Zeit der wachsenden Städte",
+          "timeframe": "600 v.D. – 450 v.D.",
+          "description": "Etablierung der Stadtstaaten als politische und wirtschaftliche Machtzentren.",
+          "events": [
+            {
+              "date": "600 v.D.",
+              "title": "Aufstieg Norvias zur Stadt Norinwall",
+              "description": "Aus dem Königreich Norvia entsteht der Stadtstaat Norinwall, der schnell zum wichtigsten Handelszentrum wird."
+            },
+            {
+              "date": "584 v.D.",
+              "title": "Gründung der Stadt Skalver",
+              "description": "Frühe Gründung einer Stadt nahe der Ruinen Skalvers. Beginn erster systematischer Studien über alte Maschinisten-Technologie durch Haus Carroway."
+            },
+            {
+              "date": "570 v.D.",
+              "title": "Ausbau Endorias zur Militärstadt Enderburg",
+              "description": "Das Haus Valmor baut Endoria zu einer mächtigen militärischen Festung aus. Erste systematische Ausbildung militärischer Kräfte."
+            },
+            {
+              "date": "555 v.D.",
+              "title": "Bund der Silbernen Küste",
+              "description": "Die Städte der Silbernen Küste (kontrolliert von Sevrin & Havelard) bilden eine enge Handels- und politische Allianz."
+            }
+          ]
+        },
+        {
+          "id": "subepoch3_2",
+          "title": "Die Ära der frühen Industrialisierung",
+          "timeframe": "450 v.D. – 300 v.D.",
+          "description": "Zeitalter des technologischen Wiederaufbaus und erster dampfbetriebener Technologien.",
+          "events": [
+            {
+              "date": "450 v.D.",
+              "title": "Erste dampfbetriebene Maschinen",
+              "description": "Frühe Nutzung einfacher dampfgetriebener Pumpen und Werkzeuge in Norinwall und Skalver. Wirtschaftliche Blüte und Bevölkerungswachstum."
+            },
+            {
+              "date": "425 v.D.",
+              "title": "Bau der Straße der Eisenräder",
+              "description": "Erste große, dampfbetriebene Straßenbahnlinie zwischen Norinwall und Enderburg, finanziert durch Haus Havelard und überwacht durch Haus Valmor."
+            },
+            {
+              "date": "403 v.D.",
+              "title": "Tulvyx-Landwirtschaftsreformen",
+              "description": "Haus Miron führt dampfunterstützte Landwirtschaftsmaschinen in Tulvyx ein, erhöht die Erträge massiv und sichert langfristigen Wohlstand."
+            }
+          ]
+        },
+        {
+          "id": "subepoch3_3",
+          "title": "Zeitalter der politischen Intrigen und Konflikte",
+          "timeframe": "300 v.D. – 150 v.D.",
+          "description": "Machtkämpfe zwischen Adelshäusern und Stadtstaaten.",
+          "events": [
+            {
+              "date": "300 v.D.",
+              "title": "Der Krieg der Silberherren",
+              "description": "Heftiger politischer Konflikt zwischen den Häusern Sevrin und Havelard, der fast zu einem offenen Bürgerkrieg führt. Friedensvertrag 295 v.D. sichert Handel, hinterlässt aber dauerhafte Spannungen."
+            },
+            {
+              "date": "287 v.D.",
+              "title": "Bündnis von Valmor & Carroway",
+              "description": "Militärischer Schutz Valmors ermöglicht es Carroway, sichere Forschung zu betreiben; Haus Valmor erhält Zugang zu technologischen Innovationen."
+            },
+            {
+              "date": "265 v.D.",
+              "title": "Erste systematische Spionageaktivitäten durch Haus Drovik",
+              "description": "Haus Drovik etabliert sich als führende Spionagemacht, Handel mit Informationen floriert."
+            },
+            {
+              "date": "241 v.D.",
+              "title": "Roter Aufstand von Tulvyx",
+              "description": "Erster dokumentierter Bauernaufstand gegen übermäßige Besteuerung durch Haus Miron. Kurzzeitige Unruhen, gewaltsam niedergeschlagen durch Valmor-Truppen."
+            }
+          ]
+        },
+        {
+          "id": "subepoch3_4",
+          "title": "Die Blüte der Proto-Industrialisierung",
+          "timeframe": "150 v.D. – 50 v.D.",
+          "description": "Fortschrittliche industrielle Entwicklung und politische Zentralisierung.",
+          "events": [
+            {
+              "date": "150 v.D.",
+              "title": "Großes Dampfwerk von Norinwall",
+              "description": "Errichtung einer gewaltigen dampfbetriebenen Produktionsstätte unter Leitung von Häusern Havelard und Sevrin, Beginn der Schwerindustrie."
+            },
+            {
+              "date": "134 v.D.",
+              "title": "Skalvers Institut der Maschinentechnologie",
+              "description": "Haus Carroway eröffnet eine große technische Akademie, erforscht Maschinisten-Erbe weiter und entwickelt neue Technologien."
+            },
+            {
+              "date": "112 v.D.",
+              "title": "Einführung der Renalvianischen Münze",
+              "description": "Einheitliches Währungssystem unter Leitung von Haus Havelard stärkt Handel und Wirtschaft enorm."
+            },
+            {
+              "date": "97 v.D.",
+              "title": "Schlacht der schwarzen Dünen",
+              "description": "Großangelegte militärische Konfrontation zwischen Norinwall und Enderburg aufgrund von Handelsstreitigkeiten, endet ohne klare Sieger, zeigt aber die Grenzen der Machtpolitik auf."
+            }
+          ]
+        },
+        {
+          "id": "subepoch3_5",
+          "title": "Die letzten Jahre der Stadtstaaten",
+          "timeframe": "50 v.D. – 1 v.D.",
+          "description": "Letzte Phase vor dem Umbruch – zunehmende Zusammenarbeit und technologische Entdeckungen.",
+          "events": [
+            {
+              "date": "50 v.D.",
+              "title": "Vertrag von Norinwall",
+              "description": "Erneute politische Stabilisierung zwischen Adelshäusern zur Sicherung wirtschaftlicher und technologischer Kooperation."
+            },
+            {
+              "date": "35 v.D.",
+              "title": "Gründung des Renalvianischen Handelsbundes",
+              "description": "Bündnis aller Adelshäuser zur gemeinsamen Handelskontrolle und gemeinsamen Schutz der Handelswege."
+            },
+            {
+              "date": "20 v.D.",
+              "title": "Erste Seelenkristall-Wiederentdeckung",
+              "description": "Forscher Skalvers (Haus Carroway) stoßen auf alte Seelenkristall-Lagerstätten und beginnen vorsichtige Experimente."
+            },
+            {
+              "date": "10 v.D.",
+              "title": "Erste Expedition in Richtung Dravoll",
+              "description": "Eine große Expedition, unterstützt von allen Adelshäusern, bricht auf, um das verschollene Dravoll zu finden. Scheitert zunächst im dichten Nebel."
+            },
+            {
+              "date": "1 v.D.",
+              "title": "Nebelbruch von Dravoll",
+              "description": "Eine zweite Expedition gelingt und entdeckt Dravoll wieder. Markiert den Beginn einer neuen Zeitrechnung und einen revolutionären technologischen und politischen Wandel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epoch4",
+      "title": "Epoche IV – Adelsherrschaft & Frühe Königreiche",
+      "color": "#A7BEA9",
+      "timeframe": "1 n.D. – 400 n.D.",
+      "subepochs": [
+        {
+          "id": "subepoch4_1",
+          "title": "Zeit der Wiederentdeckung",
+          "timeframe": "1 n.D. – 50 n.D.",
+          "description": "Dravolls Wiederentdeckung verändert die Welt.",
+          "events": [
+            {
+              "date": "1 n.D.",
+              "title": "Nebelbruch von Dravoll",
+              "description": "Die Wiederentdeckung der legendären Stadt Dravoll markiert Jahr Null. Beginn der neuen Zeitrechnung 'nach Dravoll' (n.D.)."
+            },
+            {
+              "date": "12 n.D.",
+              "title": "Gründung des Rates von Dravoll",
+              "description": "Adelshäuser etablieren einen gemeinsamen Rat zur Verwaltung von Technologie und Ressourcen der neu entdeckten Stadt."
+            },
+            {
+              "date": "25 n.D.",
+              "title": "Erste Maschinisten-Relikte in Norinwall",
+              "description": "Einbringung alter Maschinisten-Technologien nach Norinwall, Skalver und Enderburg; intensiver technologischer Aufschwung."
+            }
+          ]
+        },
+        {
+          "id": "subepoch4_2",
+          "title": "Frühe Königreiche und feudale Konsolidierung",
+          "timeframe": "50 n.D. – 150 n.D.",
+          "description": "Etablierung monarchischer Herrschaft unter dominierenden Adelshäusern.",
+          "events": [
+            {
+              "date": "50 n.D.",
+              "title": "Krönung König Aurel Valmor I. in Enderburg",
+              "description": "Erstmals Anspruch auf die Krone von Renalvia durch Haus Valmor. Feudale Ordnung verbreitet sich rasch."
+            },
+            {
+              "date": "72 n.D.",
+              "title": "Silberpakt von Norinwall",
+              "description": "Bündnis zwischen Haus Sevrin (Handel & Marine) und Haus Havelard (Finanzen). Kontrolle über Seehandel und Finanzmärkte."
+            },
+            {
+              "date": "95 n.D.",
+              "title": "Haus Miron etabliert sich als Agraradel",
+              "description": "Haus Miron stabilisiert die Kornkammer Tulvyx, sichert langfristig die Ernährung der Adelsherrschaften und legt Basis für spätere Abhängigkeit."
+            },
+            {
+              "date": "120 n.D.",
+              "title": "Errichtung der Großen Bibliothek von Skalver",
+              "description": "Haus Carroway konsolidiert Wissen und sichert wissenschaftlichen und technologischen Vorsprung gegenüber anderen Adelshäusern."
+            }
+          ]
+        },
+        {
+          "id": "subepoch4_3",
+          "title": "Zeitalter der Expansion und Kolonialisierung",
+          "timeframe": "150 n.D. – 250 n.D.",
+          "description": "Die Adelshäuser beginnen systematische Kolonisation.",
+          "events": [
+            {
+              "date": "150 n.D.",
+              "title": "Kolonialpakt von Kosafin",
+              "description": "Adelshäuser Sevrin und Valmor koordinieren gemeinsame Kolonialexpeditionen nach Sovarim, Galdara und Velthora."
+            },
+            {
+              "date": "173 n.D.",
+              "title": "Gründung der Kolonie Gharbassa in Sovarim",
+              "description": "Erste stabile Kolonie unter Leitung Haus Sevrins, rasche Ausbeutung lokaler Ressourcen."
+            },
+            {
+              "date": "196 n.D.",
+              "title": "Kolonialgründung Vornstahl auf Galdara",
+              "description": "Strategische Inselkolonie für militärische Operationen durch Haus Valmor errichtet."
+            },
+            {
+              "date": "222 n.D.",
+              "title": "Kolonisierung der südlichen Schimmersee (Sovarim)",
+              "description": "Haus Sevrin intensiviert koloniale Kontrolle über Rohstoffe, erste Konflikte mit einheimischen Reichen."
+            }
+          ]
+        },
+        {
+          "id": "subepoch4_4",
+          "title": "Das Zeitalter der Adelskriege",
+          "timeframe": "250 n.D. – 330 n.D.",
+          "description": "Intensive Konflikte zwischen den dominierenden Adelshäusern.",
+          "events": [
+            {
+              "date": "250 n.D.",
+              "title": "Ausbruch der Tulvyx-Kriege",
+              "description": "Haus Miron wehrt sich gegen wachsenden Machtanspruch von Haus Valmor; erster großer interner Krieg Renalvias."
+            },
+            {
+              "date": "271 n.D.",
+              "title": "Schlacht bei Narov",
+              "description": "Haus Valmor erringt wichtigen Sieg, dominiert seither militärisch große Teile des Landes."
+            },
+            {
+              "date": "292 n.D.",
+              "title": "Der schwarze Verrat von Bortalz",
+              "description": "Haus Drovik erlangt entscheidenden Einfluss, indem es heimlich Informationen verkauft und Intrigen schürt."
+            },
+            {
+              "date": "315 n.D.",
+              "title": "Frieden von Olravia",
+              "description": "Große politische Versammlung aller Häuser endet mit Waffenstillstand und vorläufiger Friedensperiode, aber latente Spannungen bleiben bestehen."
+            }
+          ]
+        },
+        {
+          "id": "subepoch4_5",
+          "title": "Das Zeitalter der kulturellen und politischen Blüte",
+          "timeframe": "330 n.D. – 400 n.D.",
+          "description": "Eine vergleichsweise friedliche Phase kultureller Entwicklung.",
+          "events": [
+            {
+              "date": "330 n.D.",
+              "title": "Eröffnung der Akademie der Seefahrt in Norinwall",
+              "description": "Haus Sevrin stärkt Ausbildung maritimer Kräfte, Erweiterung des Seehandels."
+            },
+            {
+              "date": "351 n.D.",
+              "title": "Die Goldenen Reformen durch Haus Havelard",
+              "description": "Finanzreformen schaffen stabilere Wirtschaft, Münzsystem wird verfeinert und allgemeingültig."
+            },
+            {
+              "date": "369 n.D.",
+              "title": "Gründung der Skalvers Gesellschaft der Wissenschaften",
+              "description": "Haus Carroway fördert wissenschaftliche und technische Fortschritte, erste Studien zu Seelenkristallen seit Maschinistenzeit."
+            },
+            {
+              "date": "382 n.D.",
+              "title": "Festung Enderburg massiv erweitert",
+              "description": "Haus Valmor stärkt erneut militärische Vormachtstellung, bereitet langfristige Dominanz vor."
+            },
+            {
+              "date": "397 n.D.",
+              "title": "Erste Spuren revolutionärer Gedanken in Tulvyx",
+              "description": "Unzufriedenheit unter einfachen Bürgern und Bauern zeigt erste Anzeichen kommender politischer Krisen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epoch5",
+      "title": "Epoche V – Imperiale Expansion & das Vereinigte Königreich Renalvia",
+      "color": "#8AA7A5",
+      "timeframe": "400 n.D. – 750 n.D.",
+      "subepochs": [
+        {
+          "id": "subepoch5_1",
+          "title": "Vereinigung Renalvias unter der Valmor-Dynastie",
+          "timeframe": "400 n.D. – 480 n.D.",
+          "description": "Zentrale Machtbildung und Entstehung eines geeinten Königreiches.",
+          "events": [
+            {
+              "date": "400 n.D.",
+              "title": "Krönung des Großkönigs Eldric Valmor in Enderburg",
+              "description": "Haus Valmor erhebt Anspruch auf Herrschaft über alle Adelshäuser und begründet das Königreich Renalvia."
+            },
+            {
+              "date": "421 n.D.",
+              "title": "Vertrag von Norinwall (Adelskompromiss)",
+              "description": "Anerkennung der Vorherrschaft Valmors, gleichzeitige Sicherstellung weitgehender Autonomie für andere Häuser."
+            },
+            {
+              "date": "445 n.D.",
+              "title": "Große Infrastrukturprojekte unter König Eldric",
+              "description": "Bau umfassender Straßen- und Flussnetzwerke zwischen Norinwall, Enderburg, Skalver, Tulvyx und Bortalz."
+            },
+            {
+              "date": "472 n.D.",
+              "title": "Erste gesamt-renalvianische Armee (Valmor-Armee)",
+              "description": "Zentralisierte militärische Macht zur Sicherung der internen Stabilität und Unterstützung kolonialer Vorhaben."
+            }
+          ]
+        },
+        {
+          "id": "subepoch5_2",
+          "title": "Die Blütezeit der imperialen Kolonialmacht",
+          "timeframe": "480 n.D. – 580 n.D.",
+          "description": "Intensive Ausdehnung renalvianischer Kontrolle auf Kolonialgebiete.",
+          "events": [
+            {
+              "date": "480 n.D.",
+              "title": "Dekret von Kosafin",
+              "description": "Königreich Renalvia beansprucht offiziell alle bisherigen Kolonien als direkte königliche Territorien."
+            },
+            {
+              "date": "498 n.D.",
+              "title": "Gründung von Skalhavn in Velthora",
+              "description": "Strategischer Außenposten zur Sicherung von Rohstoffen im eisigen Norden."
+            },
+            {
+              "date": "515 n.D.",
+              "title": "Ausbau von Gharbassa zur kolonialen Hauptstadt Sovarims",
+              "description": "Systematische Nutzung von Rohstoffen, Bau großer Plantagen und Minen."
+            },
+            {
+              "date": "539 n.D.",
+              "title": "Erster Kolonialkrieg in Galdara (Krieg der Blutinseln)",
+              "description": "Konflikte zwischen Einheimischen und renalvianischen Siedlern, geführt durch Haus Valmor."
+            },
+            {
+              "date": "558 n.D.",
+              "title": "Ausbau der Kolonialflotte von Sevrin",
+              "description": "Militärische und wirtschaftliche Dominanz auf See durch Haus Sevrin."
+            }
+          ]
+        },
+        {
+          "id": "subepoch5_3",
+          "title": "Gesellschaftlicher & kultureller Höhepunkt des Königreichs",
+          "timeframe": "580 n.D. – 650 n.D.",
+          "description": "Blüte der renalvianischen Aristokratie, Künste, Wissenschaften und des Wohlstands.",
+          "events": [
+            {
+              "date": "580 n.D.",
+              "title": "Große Weltausstellung von Norinwall",
+              "description": "Präsentation kolonialer Schätze, technologischer Errungenschaften und künstlerischer Werke."
+            },
+            {
+              "date": "592 n.D.",
+              "title": "Gründung des Opernhauses von Olravia",
+              "description": "Adelshaus Havelard etabliert das kulturelle Zentrum der Oberschicht."
+            },
+            {
+              "date": "613 n.D.",
+              "title": "Akademische Reform von Skalver",
+              "description": "Haus Carroway etabliert renommierte Bildungs- und Forschungsinstitute, systematische Erforschung von Seelenkristallen."
+            },
+            {
+              "date": "635 n.D.",
+              "title": "Einführung der Havelard-Banken",
+              "description": "Umfangreiches Bankensystem erleichtert Handel und Investitionen."
+            }
+          ]
+        },
+        {
+          "id": "subepoch5_4",
+          "title": "Epoche der ersten Kolonialkrisen und Unruhen",
+          "timeframe": "650 n.D. – 700 n.D.",
+          "description": "Erste tiefgehende politische und soziale Spannungen, besonders in den Kolonien.",
+          "events": [
+            {
+              "date": "650 n.D.",
+              "title": "Aufstand von Gharbassa",
+              "description": "Erster großer Kolonialaufstand in Sovarim; hart niedergeschlagen durch königliche Truppen."
+            },
+            {
+              "date": "663 n.D.",
+              "title": "Sklavenrevolte von Vornstahl",
+              "description": "Aufstände in Galdara führen zu erhöhter militärischer Präsenz und politischer Unterdrückung."
+            },
+            {
+              "date": "679 n.D.",
+              "title": "Erste Anzeichen einer Agrarkrise in Tulvyx",
+              "description": "Spannungen zwischen Bauernschaft (Haus Miron) und Königshaus (Haus Valmor) wegen hoher Abgaben."
+            },
+            {
+              "date": "692 n.D.",
+              "title": "Drovik-Spionageskandal",
+              "description": "Enthüllungen über umfangreiche Spionagenetzwerke von Haus Drovik sorgen für politische Unruhe und Vertrauensverlust."
+            }
+          ]
+        },
+        {
+          "id": "subepoch5_5",
+          "title": "Die Ära der internen Spannungen und Konflikte",
+          "timeframe": "700 n.D. – 750 n.D.",
+          "description": "Verlust der inneren Stabilität und erste politische Zerfallserscheinungen.",
+          "events": [
+            {
+              "date": "700 n.D.",
+              "title": "Ausbruch der Narovischen Bauernkriege",
+              "description": "Massive Aufstände in Tulvyx gegen Haus Miron und Valmor, erste große politische Krise des Königreichs."
+            },
+            {
+              "date": "713 n.D.",
+              "title": "Attentat auf König Alaric Valmor II.",
+              "description": "König Alaric entgeht knapp einem Mordanschlag, der den Anfang zunehmender politischer Instabilität darstellt."
+            },
+            {
+              "date": "726 n.D.",
+              "title": "Krise von Olravia",
+              "description": "Wirtschaftlicher Zusammenbruch der Banken von Haus Havelard, schwere Rezession, Unruhen breiten sich im ganzen Reich aus."
+            },
+            {
+              "date": "743 n.D.",
+              "title": "Konferenz von Norinwall",
+              "description": "Krisensitzung aller Adelshäuser, gescheitert an tiefen internen Differenzen. Erste deutliche Risse im Königreich sichtbar."
+            },
+            {
+              "date": "750 n.D.",
+              "title": "Tod von König Alaric Valmor II.",
+              "description": "Ohne klaren Nachfolger endet die Herrschaft Alarics im Chaos und setzt den Grundstein für zukünftige Umbrüche."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epoch6",
+      "title": "Epoche VI – Ära der Forschung & Technologischen Blüte",
+      "color": "#B2A7D9",
+      "timeframe": "750 n.D. – 1100 n.D.",
+      "subepochs": [
+        {
+          "id": "subepoch6_1",
+          "title": "Epoche der Ungewissheit und Neuordnung",
+          "timeframe": "750 n.D. – 800 n.D.",
+          "description": "Politische Stabilisierung nach dem Zerfall des Valmor-Königreiches.",
+          "events": [
+            {
+              "date": "750 n.D.",
+              "title": "Interregnum von Norinwall",
+              "description": "Nach dem Tod von König Alaric II. herrscht politisches Chaos. Adelshäuser kämpfen um Einfluss."
+            },
+            {
+              "date": "763 n.D.",
+              "title": "Zweiter Vertrag von Norinwall",
+              "description": "Die Adelshäuser einigen sich auf ein kollektives Regierungssystem, geführt durch einen 'Rat der Sechs Häuser'."
+            },
+            {
+              "date": "780 n.D.",
+              "title": "Gründung des Instituts der Dampfwissenschaften in Skalver",
+              "description": "Haus Carroway leitet eine institutionalisierte technologische Revolution ein."
+            }
+          ]
+        },
+        {
+          "id": "subepoch6_2",
+          "title": "Wiederentdeckung der Seelenkristalle und technologische Renaissance",
+          "timeframe": "800 n.D. – 870 n.D.",
+          "description": "Rasante technologische Entwicklung und intensivierte Erforschung der Maschinisten-Technologien.",
+          "events": [
+            {
+              "date": "800 n.D.",
+              "title": "Wiederaufnahme der Seelenforschung",
+              "description": "Haus Carroway beginnt offiziell intensive Forschungen mit Seelenkristallen in Skalver, anfänglich kontrovers aufgenommen."
+            },
+            {
+              "date": "823 n.D.",
+              "title": "Bau der Maschinisten-Akademie in Skalver",
+              "description": "Zentrum der Erforschung und Wiederentdeckung von altem Maschinisten-Wissen."
+            },
+            {
+              "date": "841 n.D.",
+              "title": "Erste dampfbetriebene Luftschiffe",
+              "description": "Erfolgreiche Versuche von Haus Sevrin und Carroway etablieren Renalvia als führende Luftmacht."
+            },
+            {
+              "date": "862 n.D.",
+              "title": "Galdarische Expedition unter Haus Valmor",
+              "description": "Intensive Erkundungen in Galdara führen zur Entdeckung alter Maschinisten-Ruinen, fördern technologische Erkenntnisse."
+            }
+          ]
+        },
+        {
+          "id": "subepoch6_3",
+          "title": "Gesellschaftliche Reformen und Aufklärung",
+          "timeframe": "870 n.D. – 950 n.D.",
+          "description": "Blütezeit der Bildung, kulturellen Entwicklung und gesellschaftlichen Reformen.",
+          "events": [
+            {
+              "date": "870 n.D.",
+              "title": "Bildungsreform von Carroway",
+              "description": "Systematische Einführung moderner Bildungssysteme für Oberschicht und wohlhabendes Bürgertum."
+            },
+            {
+              "date": "892 n.D.",
+              "title": "Gründung der Schule der Künste in Olravia",
+              "description": "Förderung von Kultur und Kunst durch Haus Havelard, Kulturelle Blütezeit beginnt."
+            },
+            {
+              "date": "910 n.D.",
+              "title": "Gesetz der Händlerfreiheit",
+              "description": "Durch Haus Sevrin initiiert, fördert das Gesetz unabhängigen Handel und stärkt Mittelschicht."
+            },
+            {
+              "date": "933 n.D.",
+              "title": "Tulvyx-Sozialreformen",
+              "description": "Haus Miron setzt erste Gesetze zum Schutz von Bauern und Arbeitern durch, um Aufstände vorzubeugen."
+            }
+          ]
+        },
+        {
+          "id": "subepoch6_4",
+          "title": "Zeitalter der Hochtechnologie und Seelenexperimente",
+          "timeframe": "950 n.D. – 1020 n.D.",
+          "description": "Intensive Forschung führt zu großen technologischen Sprüngen, aber auch zu moralischen Kontroversen.",
+          "events": [
+            {
+              "date": "950 n.D.",
+              "title": "Die große Seelenmaschine von Skalver",
+              "description": "Erste erfolgreiche Versuche, Seelenkristalle zur Energiespeicherung einzusetzen, lösen ethische Debatten aus."
+            },
+            {
+              "date": "967 n.D.",
+              "title": "Skalver-Kontroverse",
+              "description": "Erste öffentliche Kritik an moralischen Implikationen der Seelenforschung; Spannungen innerhalb der Gesellschaft steigen."
+            },
+            {
+              "date": "988 n.D.",
+              "title": "Enderburger Militärreform",
+              "description": "Haus Valmor nutzt neue Technologien und Seelenenergie, um die Armee deutlich zu stärken."
+            },
+            {
+              "date": "1007 n.D.",
+              "title": "Erfindung der Seelenuhr",
+              "description": "Revolutionäre technologische Errungenschaft von Skalver, ermöglicht Speicherung zeitlicher Ereignisse in Seelenkristallen."
+            }
+          ]
+        },
+        {
+          "id": "subepoch6_5",
+          "title": "Ära der ersten Seelen-Krise und politischen Spannungen",
+          "timeframe": "1020 n.D. – 1100 n.D.",
+          "description": "Folgen der ethischen Debatten führen zu ersten politischen und gesellschaftlichen Krisen.",
+          "events": [
+            {
+              "date": "1020 n.D.",
+              "title": "Erste Seelenexplosion in Skalver",
+              "description": "Experimentelle Maschine gerät außer Kontrolle; mehrere Wissenschaftler sterben, Skalver schwer beschädigt."
+            },
+            {
+              "date": "1043 n.D.",
+              "title": "Gründung der Seelenwächter-Bewegung",
+              "description": "Erste organisierte Bewegung gegen exzessive Seelenkristall-Forschung, unterstützt von Teilen der Landbevölkerung und Adeligen."
+            },
+            {
+              "date": "1065 n.D.",
+              "title": "Aufstand der Skalver-Gelehrten",
+              "description": "Proteste und Revolten von Wissenschaftlern gegen Einschränkungen durch den Adel und die konservativen Kräfte."
+            },
+            {
+              "date": "1081 n.D.",
+              "title": "Attentat auf Ratsherren von Carroway",
+              "description": "Eskalation der Spannungen zwischen Befürwortern und Gegnern der Seelenforschung."
+            },
+            {
+              "date": "1100 n.D.",
+              "title": "Zweite Konferenz von Norinwall",
+              "description": "Versammlung aller Häuser zur Beilegung der 'Seelenkrise', endet mit Kompromissen und massiven Einschränkungen der Forschung."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epoch7",
+      "title": "Epoche VII – Ära der Oligarchischen Republik",
+      "color": "#C9A7B7",
+      "timeframe": "1100 n.D. – 1350 n.D.",
+      "subepochs": [
+        {
+          "id": "subepoch7_1",
+          "title": "Übergang zur Oligarchischen Republik",
+          "timeframe": "1100 n.D. – 1150 n.D.",
+          "description": "Ende des Adelrats, Geburt einer neuen Händlerrepublik.",
+          "events": [
+            {
+              "date": "1100 n.D.",
+              "title": "Ende des Rates der Sechs Häuser",
+              "description": "Massive Korruptionsskandale und politische Krisen führen zum Zerfall des Adelrats."
+            },
+            {
+              "date": "1115 n.D.",
+              "title": "Gründung des Großen Oligarchenrates in Norinwall",
+              "description": "Führende Kaufleute und Vertreter der Adelshäuser (v.a. Havelard, Sevrin und Drovik) etablieren eine neue oligarchische Regierungsform."
+            },
+            {
+              "date": "1130 n.D.",
+              "title": "Handelsreform von Sevrin",
+              "description": "Öffnung von Seewegen und Handelsverbindungen, massiver Anstieg des Wohlstands für reiche Kaufleute."
+            }
+          ]
+        },
+        {
+          "id": "subepoch7_2",
+          "title": "Wirtschaftliche Blüte und Expansion",
+          "timeframe": "1150 n.D. – 1220 n.D.",
+          "description": "Goldenes Zeitalter des Handels, Wohlstands, aber auch der sozialen Ungleichheit.",
+          "events": [
+            {
+              "date": "1150 n.D.",
+              "title": "Eröffnung des Silbernen Marktes in Norinwall",
+              "description": "Größter Handelsmarkt Renalvias etabliert, enorme wirtschaftliche Expansion."
+            },
+            {
+              "date": "1167 n.D.",
+              "title": "Haus Drovik stärkt Schwarzmarkt-Netzwerke",
+              "description": "Erhöhte politische Macht durch Informationshandel und Spionage, verbunden mit enormer Korruption."
+            },
+            {
+              "date": "1185 n.D.",
+              "title": "Schlacht um die Valnorische See",
+              "description": "Haus Sevrin vernichtet Piratenflotten und sichert Handelsrouten, baut maritime Vorherrschaft weiter aus."
+            },
+            {
+              "date": "1203 n.D.",
+              "title": "Bankenpakt von Olravia",
+              "description": "Haus Havelard gründet den ersten international agierenden Bankenverband und gewinnt massiv politische Einflussnahme."
+            }
+          ]
+        },
+        {
+          "id": "subepoch7_3",
+          "title": "Ära der Intrigen, Korruption und politischer Instabilität",
+          "timeframe": "1220 n.D. – 1280 n.D.",
+          "description": "Intensive politische Machtspiele, Intrigen und wachsende Unzufriedenheit.",
+          "events": [
+            {
+              "date": "1220 n.D.",
+              "title": "Intrige von Bortalz",
+              "description": "Haus Drovik manipuliert Handelsabkommen und löst wirtschaftliche Konflikte aus, wodurch seine Macht weiter steigt."
+            },
+            {
+              "date": "1239 n.D.",
+              "title": "Krisenjahr von Tulvyx",
+              "description": "Agrarkrise durch übermäßige Besteuerung der Bauern durch die Händlerelite, führt zu sozialen Unruhen."
+            },
+            {
+              "date": "1254 n.D.",
+              "title": "Norinwall-Affäre",
+              "description": "Massiver Korruptionsskandal erschüttert die oligarchische Regierung; erste Revolten des einfachen Bürgertums entstehen."
+            },
+            {
+              "date": "1276 n.D.",
+              "title": "Geheimbund der Silbernen Hände gegründet",
+              "description": "Geheimbund reicher Händler kontrolliert zunehmend Politik und Wirtschaft, manipuliert Märkte und Adelshäuser."
+            }
+          ]
+        },
+        {
+          "id": "subepoch7_4",
+          "title": "Zeitalter der kolonialen Ausbeutung und Krisen",
+          "timeframe": "1280 n.D. – 1320 n.D.",
+          "description": "Intensive Ausbeutung kolonialer Ressourcen, Konflikte in Kolonien.",
+          "events": [
+            {
+              "date": "1280 n.D.",
+              "title": "Intensivierung der Kolonialausbeutung in Sovarim und Galdara",
+              "description": "Enorme Ausbeutung kolonialer Ressourcen zur Finanzierung des Luxus der Oligarchie."
+            },
+            {
+              "date": "1297 n.D.",
+              "title": "Revolte von Gharbassa",
+              "description": "Erneute große Revolten in Sovarim aufgrund brutaler Unterdrückung und Ausbeutung, Niederschlagung durch koloniale Truppen."
+            },
+            {
+              "date": "1305 n.D.",
+              "title": "Galdarischer Kolonialkrieg",
+              "description": "Massive bewaffnete Konflikte zwischen Renalvianischen Truppen und einheimischen Gruppierungen auf Galdara."
+            },
+            {
+              "date": "1314 n.D.",
+              "title": "Erste Piratenkriege der Valnorischen See",
+              "description": "Piratenaufstände gefährden zunehmend Seehandel, Haus Sevrin reagiert mit militärischer Härte."
+            }
+          ]
+        },
+        {
+          "id": "subepoch7_5",
+          "title": "Zeitalter des gesellschaftlichen Zerfalls und der Oligarchiekrise",
+          "timeframe": "1320 n.D. – 1350 n.D.",
+          "description": "Komplette politische Instabilität, gesellschaftlicher Widerstand und Zusammenbruch der oligarchischen Ordnung.",
+          "events": [
+            {
+              "date": "1320 n.D.",
+              "title": "Bauernkrieg von Tulvyx",
+              "description": "Umfassender Bauernaufstand gegen die oligarchische Elite und Haus Miron, schwere Kämpfe erschüttern Renalvia."
+            },
+            {
+              "date": "1331 n.D.",
+              "title": "Aufstand der Kaufmannsgilden von Bortalz",
+              "description": "Gilden lehnen sich gegen die monopolistische Kontrolle des Oligarchenrats auf; erste Zeichen eines systemischen Zerfalls."
+            },
+            {
+              "date": "1340 n.D.",
+              "title": "Olravischer Bankencrash",
+              "description": "Banken des Hauses Havelard brechen zusammen, Wirtschaft Renalvias kollabiert, massive Armut und soziale Unruhen."
+            },
+            {
+              "date": "1345 n.D.",
+              "title": "Erste Revolutionäre Bewegung von Norinwall",
+              "description": "Radikale Gruppen und revolutionäre Zellen entstehen im ganzen Reich, organisierter Widerstand gegen die korrupte oligarchische Herrschaft."
+            },
+            {
+              "date": "1350 n.D.",
+              "title": "Sturz des Großen Oligarchenrates",
+              "description": "Revolutionäre Bewegungen erzwingen das Ende der Oligarchischen Republik, Bürgerkrieg und Chaos brechen aus, Ende der Epoche."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epoch8",
+      "title": "Epoche VIII – Das Königreich der zweiten Dynastie",
+      "color": "#BFA693",
+      "timeframe": "1350 n.D. – 1620 n.D.",
+      "subepochs": [
+        {
+          "id": "subepoch8_1",
+          "title": "Restauration der Monarchie unter Haus Valmor",
+          "timeframe": "1350 n.D. – 1400 n.D.",
+          "description": "Wiederherstellung einer starken monarchischen Zentralmacht.",
+          "events": [
+            {
+              "date": "1350 n.D.",
+              "title": "Krönung König Roderic Valmor IV. (Die Restauration)",
+              "description": "Nach dem Zerfall der oligarchischen Republik übernimmt Haus Valmor erneut die Macht und begründet die zweite königliche Dynastie Renalvias."
+            },
+            {
+              "date": "1363 n.D.",
+              "title": "Edikt von Enderburg",
+              "description": "König Roderic zentralisiert politische Macht, reduziert Einfluss der Händlerelite und stärkt Aristokratie und Militär."
+            },
+            {
+              "date": "1378 n.D.",
+              "title": "Norinwalls Wiederaufbauprogramm",
+              "description": "Massive Investitionen in Infrastruktur und öffentlichen Einrichtungen zur Stabilisierung der Gesellschaft."
+            }
+          ]
+        },
+        {
+          "id": "subepoch8_2",
+          "title": "Koloniale Stabilisierung und Neuorganisation",
+          "timeframe": "1400 n.D. – 1470 n.D.",
+          "description": "Wiederherstellung der Kontrolle über Kolonien und Stabilisierung der Wirtschaft.",
+          "events": [
+            {
+              "date": "1400 n.D.",
+              "title": "Kolonialpakt von Skalhavn",
+              "description": "Königshaus Valmor und Haus Sevrin sichern erneute Kontrolle über die Kolonien Sovarim, Galdara und Velthora."
+            },
+            {
+              "date": "1425 n.D.",
+              "title": "Wiederaufbau der Kolonie Gharbassa",
+              "description": "Nach mehreren Revolten wird Gharbassa militärisch abgesichert, Plantagenwirtschaft erneut etabliert."
+            },
+            {
+              "date": "1443 n.D.",
+              "title": "Festung Vornstahl auf Galdara ausgebaut",
+              "description": "Militärische Präsenz auf Galdara durch Haus Valmor deutlich erhöht, um koloniale Kontrolle zu gewährleisten."
+            },
+            {
+              "date": "1465 n.D.",
+              "title": "Einführung der kolonialen Handelskompanien",
+              "description": "Haus Sevrin organisiert umfangreiche Handelskompanien zur systematischen kolonialen Ausbeutung und Wirtschaftsstabilisierung."
+            }
+          ]
+        },
+        {
+          "id": "subepoch8_3",
+          "title": "Zeitalter der kulturellen Renaissance und aristokratischen Blüte",
+          "timeframe": "1470 n.D. – 1540 n.D.",
+          "description": "Hochkulturelle Blütezeit, geprägt durch Adelshäuser und kulturellen Wohlstand.",
+          "events": [
+            {
+              "date": "1470 n.D.",
+              "title": "Eröffnung der Königlichen Akademie der Künste in Olravia",
+              "description": "Haus Havelard fördert kulturellen Aufschwung, Kunst und Bildung erreichen einen Höhepunkt."
+            },
+            {
+              "date": "1492 n.D.",
+              "title": "Großes Theater von Norinwall eröffnet",
+              "description": "Norinwall entwickelt sich zum kulturellen Zentrum, unterstützt von Adelshäusern und reichen Bürgern."
+            },
+            {
+              "date": "1508 n.D.",
+              "title": "Akademie der strategischen Wissenschaften in Enderburg",
+              "description": "Haus Valmor baut eine bedeutende militärische und technologische Ausbildungsstätte auf."
+            },
+            {
+              "date": "1527 n.D.",
+              "title": "Carroway-Bibliotheken eröffnet",
+              "description": "Systematische Sammlung und Archivierung von Wissen aus den vorangegangenen Epochen durch Haus Carroway."
+            }
+          ]
+        },
+        {
+          "id": "subepoch8_4",
+          "title": "Epoche sozialer Spannungen und wirtschaftlicher Krisen",
+          "timeframe": "1540 n.D. – 1580 n.D.",
+          "description": "Erneute Spannungen aufgrund sozialer Ungleichheit und wirtschaftlicher Schwierigkeiten.",
+          "events": [
+            {
+              "date": "1540 n.D.",
+              "title": "Hungersnot von Tulvyx",
+              "description": "Massive Ernteausfälle führen zu Hungersnot und großer Unzufriedenheit in der Landbevölkerung, Spannungen mit Haus Miron steigen."
+            },
+            {
+              "date": "1556 n.D.",
+              "title": "Galdarischer Silberaufstand",
+              "description": "Neue Revolten auf Galdara gegen exzessive Ausbeutung von Ressourcen; erneute militärische Interventionen nötig."
+            },
+            {
+              "date": "1567 n.D.",
+              "title": "Bankenkrise von Olravia",
+              "description": "Wirtschaftliche Krise aufgrund übermäßiger Verschuldung des Adels, Inflation und soziale Unruhen."
+            },
+            {
+              "date": "1575 n.D.",
+              "title": "Schwarzmarktkrise von Bortalz",
+              "description": "Haus Drovik verliert kurzzeitig Kontrolle über Schwarzmarkt und Informationshandel, verstärkt politische Spannungen."
+            }
+          ]
+        },
+        {
+          "id": "subepoch8_5",
+          "title": "Zeitalter des Zerfalls und Beginn revolutionärer Tendenzen",
+          "timeframe": "1580 n.D. – 1620 n.D.",
+          "description": "Instabilität des Königreiches nimmt zu, revolutionäre Bewegungen entstehen und wachsen.",
+          "events": [
+            {
+              "date": "1580 n.D.",
+              "title": "Revolte von Narov",
+              "description": "Erste umfassende Bauernrevolte in Tulvyx gegen Haus Miron, gewaltsam niedergeschlagen, langfristig jedoch instabile Lage."
+            },
+            {
+              "date": "1592 n.D.",
+              "title": "Entstehung des Bundes der freien Händler in Bortalz",
+              "description": "Kaufleute rebellieren gegen Adelshäuser, besonders gegen Kontrolle von Haus Havelard und Sevrin."
+            },
+            {
+              "date": "1603 n.D.",
+              "title": "Skalver-Rebellion der Gelehrten",
+              "description": "Wissenschaftler und Gelehrte fordern mehr Freiheiten und weniger Kontrolle durch Haus Carroway und die Monarchie."
+            },
+            {
+              "date": "1615 n.D.",
+              "title": "Manifest der Gleichheit",
+              "description": "Erste schriftliche Forderung revolutionärer Gruppen nach radikalen sozialen Reformen und Abschaffung aristokratischer Privilegien."
+            },
+            {
+              "date": "1620 n.D.",
+              "title": "Tod von König Roderic Valmor VI. (Ende der zweiten Dynastie)",
+              "description": "König stirbt ohne klaren Nachfolger, politisches Chaos entsteht, revolutionäre Tendenzen gewinnen massiv an Kraft, Ende der Epoche."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epoch9",
+      "title": "Epoche IX – Ära der Unruhe & Revolutionen",
+      "color": "#B2B2B2",
+      "timeframe": "1620 n.D. – 1840 n.D.",
+      "subepochs": [
+        {
+          "id": "subepoch9_1",
+          "title": "Epoche des politischen Chaos",
+          "timeframe": "1620 n.D. – 1670 n.D.",
+          "description": "Machtvakuum und eskalierende politische Kämpfe nach dem Ende der zweiten Dynastie.",
+          "events": [
+            {
+              "date": "1620 n.D.",
+              "title": "Beginn des Interregnums (Chaosjahre)",
+              "description": "Nach Tod von König Roderic VI. entsteht ein Machtvakuum, intensiver Kampf um politische Herrschaft beginnt."
+            },
+            {
+              "date": "1634 n.D.",
+              "title": "Norinwaller Straßenkämpfe",
+              "description": "Kämpfe zwischen Adelshäusern, Händlergilden und revolutionären Gruppen; politisches Chaos eskaliert."
+            },
+            {
+              "date": "1652 n.D.",
+              "title": "Erster Revolutionskongress in Bortalz",
+              "description": "Erstes organisiertes Treffen revolutionärer Gruppen mit Zielsetzung demokratischer Reformen und Abschaffung des Adels."
+            }
+          ]
+        },
+        {
+          "id": "subepoch9_2",
+          "title": "Entstehung revolutionärer Bewegungen",
+          "timeframe": "1670 n.D. – 1720 n.D.",
+          "description": "Revolutionäre Ideen breiten sich aus, Forderungen nach radikalen Reformen.",
+          "events": [
+            {
+              "date": "1670 n.D.",
+              "title": "Veröffentlichung der Bortalzer Thesen",
+              "description": "Erste systematische Formulierung demokratischer und sozialer Reformforderungen durch revolutionäre Intellektuelle."
+            },
+            {
+              "date": "1685 n.D.",
+              "title": "Narovischer Bauernaufstand",
+              "description": "Erneute umfassende Revolte in Tulvyx gegen Adelshaus Miron und Zentralregierung, deutlich revolutionär geprägt."
+            },
+            {
+              "date": "1703 n.D.",
+              "title": "Geheimbund der freien Gelehrten in Skalver",
+              "description": "Intellektuelle organisieren sich gegen Adelshaus Carroway, fordern radikale Reformen und Freiheit der Forschung."
+            }
+          ]
+        },
+        {
+          "id": "subepoch9_3",
+          "title": "Zeitalter der ersten Revolutionen und Umbrüche",
+          "timeframe": "1720 n.D. – 1770 n.D.",
+          "description": "Intensive revolutionäre Konflikte, offene Revolten und Umbrüche.",
+          "events": [
+            {
+              "date": "1720 n.D.",
+              "title": "Große Revolution von Norinwall",
+              "description": "Offener revolutionärer Aufstand in der Hauptstadt, kurzzeitige Errichtung eines Revolutionsrates, brutale Niederschlagung durch Adel und Militär."
+            },
+            {
+              "date": "1738 n.D.",
+              "title": "Zweite Revolte von Gharbassa",
+              "description": "Koloniale Revolution gegen Ausbeutung in Sovarim, internationale Aufmerksamkeit auf koloniale Missstände."
+            },
+            {
+              "date": "1752 n.D.",
+              "title": "Bürgerkrieg in Galdara",
+              "description": "Intensive Konflikte zwischen Renalvia-Truppen (Haus Valmor) und kolonialen Rebellen, zunehmende politische Schwächung."
+            },
+            {
+              "date": "1768 n.D.",
+              "title": "Gründung der Renalvianischen Freiheitsbewegung",
+              "description": "Erste landesweit organisierte revolutionäre Bewegung mit klarer politischer Zielsetzung zur Abschaffung der Monarchie und Aristokratie."
+            }
+          ]
+        },
+        {
+          "id": "subepoch9_4",
+          "title": "Zeit der politischen Reformen und Kompromisse",
+          "timeframe": "1770 n.D. – 1810 n.D.",
+          "description": "Reaktion auf Revolutionen durch Reformversuche und Zugeständnisse.",
+          "events": [
+            {
+              "date": "1770 n.D.",
+              "title": "Kompromiss von Olravia",
+              "description": "Adelshäuser einigen sich auf eingeschränkte Reformen, um revolutionäre Spannungen zu beruhigen; Zugeständnisse jedoch halbherzig."
+            },
+            {
+              "date": "1783 n.D.",
+              "title": "Agrarreformen von Tulvyx",
+              "description": "Haus Miron setzt umfassende landwirtschaftliche Reformen durch, reduziert Abgaben, stabilisiert kurzfristig Lage der Bauern."
+            },
+            {
+              "date": "1795 n.D.",
+              "title": "Bürgerliche Reformen von Norinwall",
+              "description": "Adelshaus Havelard öffnet politische Beteiligung für Bürgertum teilweise, politische Stabilität jedoch nur oberflächlich."
+            },
+            {
+              "date": "1808 n.D.",
+              "title": "Reformgesetz für freie Forschung in Skalver",
+              "description": "Haus Carroway lockert Forschungskontrollen, stabilisiert kurzzeitig Beziehung zu revolutionären Intellektuellen."
+            }
+          ]
+        },
+        {
+          "id": "subepoch9_5",
+          "title": "Epoche der radikalen Revolutionen und Zerfallserscheinungen",
+          "timeframe": "1810 n.D. – 1840 n.D.",
+          "description": "Wachstum radikaler revolutionärer Ideen, starke politische und soziale Instabilität.",
+          "events": [
+            {
+              "date": "1810 n.D.",
+              "title": "Galdarischer Unabhängigkeitskrieg",
+              "description": "Offener kolonialer Unabhängigkeitskrieg auf Galdara gegen Renalvia; massive Belastung für Adelshäuser."
+            },
+            {
+              "date": "1823 n.D.",
+              "title": "Revolutionäre Erhebung in Bortalz",
+              "description": "Erneute massive Revolte der Händlerklasse und des Bürgertums gegen oligarchische Adelshäuser (Sevrin, Havelard, Drovik)."
+            },
+            {
+              "date": "1835 n.D.",
+              "title": "Große Narovische Revolution",
+              "description": "Umfassender, bewaffneter Aufstand in Tulvyx; Bauern und Bürger verlangen Abschaffung adeliger Privilegien."
+            },
+            {
+              "date": "1839 n.D.",
+              "title": "Manifest von Norinwall",
+              "description": "Radikale revolutionäre Gruppen veröffentlichen Forderungen nach Abschaffung sämtlicher adeliger Privilegien, Monarchie und Einführung eines demokratischen Systems."
+            },
+            {
+              "date": "1840 n.D.",
+              "title": "Ende der revolutionären Epoche",
+              "description": "Massive landesweite politische Krise, Adelshäuser stehen unter extremem Druck, Revolutionen erzwingen politische Veränderungen, Übergang zur nächsten Epoche beginnt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "epoch10",
+      "title": "Epoche X – Kurze Republik, Larsens Militärputsch & Gründung der Stratokratie",
+      "color": "#A2B7C9",
+      "timeframe": "ab 1841 n.D.",
+      "subepochs": [
+        {
+          "id": "subepoch10_1",
+          "title": "Entstehung des Blauen Rates & demokratische Hoffnungen",
+          "timeframe": "1841 n.D. – 1845 n.D.",
+          "description": "Ein Versuch der politischen Demokratisierung und sozialer Reformen.",
+          "events": [
+            {
+              "date": "1841 n.D.",
+              "title": "Gründung des Blauen Rates in Norinwall",
+              "description": "Revolutionäre, demokratische Kräfte etablieren ein erstes demokratisches Regierungsgremium. Politische Hoffnung auf nachhaltige Veränderungen."
+            },
+            {
+              "date": "1842 n.D.",
+              "title": "Neue Verfassung von Norinwall",
+              "description": "Erstmals demokratische Grundrechte, Einschränkung adeliger Privilegien und Einführung grundlegender sozialer Reformen."
+            },
+            {
+              "date": "1844 n.D.",
+              "title": "Agrarreformen von Tulvyx (Blauer Rat)",
+              "description": "Tiefergehende Agrarreformen für Bauern, Abschaffung feudaler Strukturen, aber massiver Widerstand durch Haus Miron und konservative Kräfte."
+            }
+          ]
+        },
+        {
+          "id": "subepoch10_2",
+          "title": "Krise, Widerstände und Zerfall des Blauen Rates",
+          "timeframe": "1845 n.D. – 1849 n.D.",
+          "description": "Zunehmende Spannungen, politische Krisen und Scheitern demokratischer Reformen.",
+          "events": [
+            {
+              "date": "1845 n.D.",
+              "title": "Sevrin-Drovik Komplott",
+              "description": "Adelshäuser Sevrin und Drovik sabotieren systematisch Reformen durch ökonomische Manipulation und Spionage."
+            },
+            {
+              "date": "1846 n.D.",
+              "title": "Unruhen in Norinwall",
+              "description": "Öffentliche Proteste und Aufstände gegen wirtschaftliche Notlage und politische Krisen; Blauer Rat zunehmend hilflos."
+            },
+            {
+              "date": "1848 n.D.",
+              "title": "Bankenkollaps von Olravia",
+              "description": "Wirtschaftliche Instabilität eskaliert, Massenarbeitslosigkeit, Inflation. Der Blaue Rat verliert massiv Unterstützung."
+            },
+            {
+              "date": "1849 n.D.",
+              "title": "Massaker von Bortalz",
+              "description": "Niederschlagung von Protesten durch radikale revolutionäre Kräfte, dramatische politische Krise, endgültiges Scheitern des Blauen Rates."
+            }
+          ]
+        },
+        {
+          "id": "subepoch10_3",
+          "title": "Larsens Militärputsch & Beginn der Stratokratie",
+          "timeframe": "1850 n.D. – 1855 n.D.",
+          "description": "Militärischer Machtwechsel und Errichtung einer neuen autoritären Ordnung.",
+          "events": [
+            {
+              "date": "1850 n.D.",
+              "title": "Larsens Militärputsch (Tag der eisernen Faust)",
+              "description": "Garreth Oswalius Larsen (Valmor-General) stürzt mit militärischer Gewalt den Blauen Rat, erklärt Ausnahmezustand und übernimmt Regierungsgewalt."
+            },
+            {
+              "date": "1851 n.D.",
+              "title": "Gründung der Renalvianischen Stratokratie",
+              "description": "Larsen wird offiziell zum Strategos ernannt, Etablierung einer militärisch-autoritären Regierungsform mit Unterstützung von Haus Valmor."
+            },
+            {
+              "date": "1853 n.D.",
+              "title": "Zentralisierung der Macht durch Larsen",
+              "description": "Abschaffung demokratischer Institutionen, Wiedereinführung der Privilegien für militärische Eliten und treue Adelshäuser."
+            }
+          ]
+        },
+        {
+          "id": "subepoch10_4",
+          "title": "Konsolidierung der Stratokratie und Wiederaufbau",
+          "timeframe": "1855 n.D. – 1860 n.D.",
+          "description": "Aufbau einer stabilen, militärisch kontrollierten Gesellschaft.",
+          "events": [
+            {
+              "date": "1855 n.D.",
+              "title": "Militärreform von Enderburg",
+              "description": "Umfassende militärische Modernisierung und Neuorganisation, Armee als zentrale Säule des Regimes."
+            },
+            {
+              "date": "1856 n.D.",
+              "title": "Handelspakt von Kosafin",
+              "description": "Haus Sevrin kooperiert mit Larsen; Handelsrouten und Kolonien erneut stabilisiert unter militärischer Kontrolle."
+            },
+            {
+              "date": "1858 n.D.",
+              "title": "Große koloniale Befriedung",
+              "description": "Brutale Niederschlagung kolonialer Widerstände in Sovarim und Galdara durch Larsens Truppen; Stabilisierung der Kolonien für das Regime."
+            },
+            {
+              "date": "1860 n.D.",
+              "title": "Wirtschaftlicher Wiederaufbauplan von Olravia",
+              "description": "Larsen führt straffe Wirtschaftsreformen ein, setzt ökonomische Stabilität durch militärische Kontrolle und zentrale Planung durch."
+            }
+          ]
+        },
+        {
+          "id": "subepoch10_5",
+          "title": "Epoche der imperialen Expansion und aktueller Zustand",
+          "timeframe": "ab 1861 n.D.",
+          "description": "Epoche aktueller Ereignisse, Auftrag an den Spieler und Beginn des Spiels.",
+          "events": [
+            {
+              "date": "1861 n.D. (15. Februar)",
+              "title": "Krisenkonferenz von Norinwall",
+              "description": "Strategos Larsen und Adelshäuser sehen sich wachsender Ressourcenknappheit und innenpolitischen Spannungen gegenüber. Entscheidung zur Erschließung neuer Ressourcen."
+            },
+            {
+              "date": "1861 n.D. (24. März)",
+              "title": "Expeditionsbeschluss für die Avenar-Inselkette",
+              "description": "Entscheidung, die seit langem verlassene Inselgruppe neu zu besiedeln, um Ressourcen zu sichern und strategische Positionierung zu stärken."
+            },
+            {
+              "date": "1861 n.D. (4. April)",
+              "title": "Übergabe des Auftrags an den Spieler (Der Ruf der Avenar-Inseln)",
+              "description": "Der Spieler erhält von Strategos Garreth Oswalius Larsen persönlich den offiziellen Auftrag, eine Expedition zu führen, eine Kolonie auf der geheimnisvollen und verlassenen Avenar-Inselgruppe zu errichten, diese zu sichern und deren Geheimnisse zu erforschen."
+            }
+          ]
+        }
+      ]
+    }    
+  ]
+}
