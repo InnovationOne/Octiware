@@ -1,0 +1,236 @@
+/* =====================  base.css  ===================== */
+/* Global imports, variables, and resets */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --brand-color: #2b6ea0;
+  --light-brand-color: #2b6ea019;
+  --black: #000;
+  --white: #fff;
+  --gray-background: #f6f6f6;
+  --body-font: "Open Sans", "Lato", "Source Code Pro", sans-serif;
+  --base-font-size: 16px;
+  --line-height: 1.6;
+  --transition-speed: 0.3s;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+/* Global resets */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body base */
+body {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+  line-height: var(--line-height);
+  color: var(--black);
+  background-color: var(--white);
+}
+
+/* Code elements & links */
+code {
+  background-color: #f4f4f4;
+  color: var(--brand-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Basic link styles */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+a:hover,
+a:focus {
+  color: var(--brand-color);
+}
+
+/* Visually hidden helper */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* =====================  themes.css  ===================== */
+/* ===================== Themes ===================== */
+:root.theme-default {
+  --divider: #D3D5D9;
+  --bg-main:#FFFFFF;
+  --bg-secondary: #F3F4F6;
+  --bg-tertiary: #EDEFF2;
+  --text-main: #202122;
+  --text-secondary: #636C7E;
+  --text-dim: #B0B6C1;
+  --text-accent: #5F96CD;
+}
+
+:root.theme-paper {
+  --divider: #D1C0AA;
+  --bg-main:#F8F0E5;
+  --bg-secondary: #F4E8D7;
+  --bg-tertiary: #EBDAC4;
+  --text-main: #202122;
+  --text-secondary: #7E6D56;
+  --text-dim: #BDAD96;
+  --text-accent: 
+}
+
+:root.theme-dark {
+  --divider: #515151;
+  --bg-main:#191A1A;
+  --bg-secondary: #222222;
+  --bg-tertiary: #303030;
+  --text-main: #D9D9D9;
+  --text-secondary: #AEAEAE;
+  --text-dim: #8A8A8A;
+  --text-accent: 
+}
+
+:root.theme-night {
+  --divider: #51576E;
+  --bg-main:#282B38;
+  --bg-secondary: #343746;
+  --bg-tertiary: #3E4254;
+  --text-main: #D9D9D9;
+  --text-secondary: #BDC0CF;
+  --text-dim: #818698;
+  --text-accent: #7B9BBA;
+}
+
+:root.theme-eclipse {
+  --divider: #383838;
+  --bg-main:#030303;
+  --bg-secondary: #141414;
+  --bg-tertiary: #2A2A2A;
+  --text-main: #B5B5B5;
+  --text-secondary: #D9D9D9;
+  --text-dim: #929292;
+  --text-accent: #F9C84B;
+}
+
+:root.theme-power {
+  --divider: #404B5F;
+  --bg-main:#24242A;
+  --bg-secondary: #191A1C;
+  --bg-tertiary: #3C3C4E;
+  --text-main: #CACACA;
+  --text-secondary: #B6B6C3;
+  --text-dim: #8989A0;
+  --text-accent: #9DD27C;
+}
+
+:root.theme-futur {
+  --divider: #3B3161;
+  --bg-main:#1B1337;
+  --bg-secondary: #F3CE4B0F;
+  --bg-tertiary: #3A2743;
+  --text-main: #E1E0DA;
+  --text-secondary: #F3CE4B;
+  --text-dim: #9E9E9E;
+  --text-accent: #D75EBC;
+}
+
+:root.theme-retro {
+  --divider: #E4DBD2;
+  --bg-main:#F6F1E9;
+  --bg-secondary: #F3E7DE;
+  --bg-tertiary: #D5C9E8;
+  --text-main: #2C2C2C;
+  --text-secondary: #AE794B;
+  --text-dim: #AFA9A5;
+  --text-accent: #D85251;
+}
+
+:root.theme-joy {
+  --divider: #CCCCCC;
+  --bg-main:#EEEEEE;
+  --bg-secondary: #EDE1E5;
+  --bg-tertiary: #ECDDE2;
+  --text-main: #141414;
+  --text-secondary: #46212F;
+  --text-dim: #8D8D8D;
+  --text-accent: #F94B8A;
+}
+
+/* ===================== Fonts ===================== */
+@font-face {
+  font-family: "LanaPixel";
+  src: url("../fonts/LanaPixel.woff2") format("woff2"),
+       url("../fonts/LanaPixel.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root.font-pixel {
+  font-family: "LanaPixel"; 
+}
+
+:root.font-serif {
+  font-family: "Times New Roman", serif;
+}
+
+:root.font-sans {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+:root.font-mono {
+  font-family: "Source Code Pro", monospace;
+}
+
+:root {
+  --text-size-xxs: 0.75rem;  /* 12px */
+  --text-size-xs:  0.875rem; /* 14px */
+  --text-size-sm:  1rem;     /* 16px */
+  --text-size-md:  1.125rem; /* 18px */
+  --text-size-lg:  1.25rem;  /* 20px */
+  --text-size-xl:  1.5rem;   /* 24px */
+  --text-size-xxl: 2rem;     /* 32px */
+}
+
+/* ===================== Layout ===================== */
+:root {
+  --layout-narrow: 665px;
+  --layout-default: 928px;
+  --layout-wide: 1048px;
+}
+
+.main-content {
+  margin: 0 auto;
+  max-width: var(--layout-default);
+}
+
+.layout-narrow .main-content {
+  max-width: var(--layout-narrow);
+}
+.layout-wide .main-content {
+  max-width: var(--layout-wide);
+}

@@ -1,0 +1,281 @@
+{
+  "header": {
+    "logo": "Octiware",
+    "slogan": "Passion Meets Pixels",
+    "nav": {
+      "ourTeam": "Our Team",
+      "careers": "CAREERS"
+    }
+  },
+
+  "footer": {
+    "privacyAndCookiePolicy": "Privacy Policy",
+    "copyright": "© 2025 Octiware. Crafted with ❤️. All rights reserved."
+  },
+
+  "contact": {
+    "sectionTitle": "Contact",
+    "information": "Information",
+    "joinTeam": "Join the Team",
+    "collaborate": "Let's Collaborate",
+    "press": "Press & Creators"
+  },
+
+  "index": {
+    "hero": {
+      "title": "OCTIWARE",
+      "subtitle": "Dive into adventures that captivate hearts and ignite imagination. We create games that you won't just play – you'll feel.",
+      "ctaDiscord": "Join our Discord!"
+    },
+    "vision": {
+      "title": "Our Vision",
+      "paragraph1": "Imagine stepping into a world crafted with technical finesse and visual magic, instantly pulling you into its spell.",
+      "paragraph2": "At Octiware, we don't just build games; we craft immersive, story-driven experiences. With each decision you make, the narrative evolves, unveiling surprising twists and unforgettable characters.",
+      "paragraph3": "Whether you're adventuring alone or alongside friends, every moment is designed to challenge, inspire, and delight; offering fresh surprises with every playthrough.",
+      "paragraph4": "Welcome to Octiware, where passion meets pixels and every moment counts."
+    },
+    "meetUs": {
+      "title": "OUR TEAM",
+      "catchText": "We love pixels and we live for them",
+      "text": "Octiware is a small, dedicated team driven by boundless creativity, the courage to experiment, and an unwavering attention to detail. Every pixel tells a story, every game is an adventure. Meet the passionate minds behind the magic.",
+      "cta": "Our Team"
+    },
+    "joinUs": {
+      "title": "Join Us Not",
+      "catchText": "We love pixels and we live for them",
+      "text": "At Octiware, we're redefining what indie gaming can be; and we want you to join this exciting journey. Whether you're an industry veteran or just beginning your adventure, here you'll find room to grow, innovate, and bring your boldest ideas to life.",
+      "cta": "Careers"
+    },
+    "behindTheScenes": {
+      "title": "Behind the Scenes",
+      "catchText": "We love pixels and we live for them",
+      "text": "Step into the world of Octiware and discover the magic behind the pixels. From concept art to level design, every detail is crafted with passion and precision. Explore the stories behind the games.",
+      "cta": "Dev-Blog"
+    }
+  },
+
+  "join_us": {
+    "hero": {
+      "title": "CAREERS",
+      "text": "At Octiware, we’re redefining what indie gaming can be; and we want you to join this exciting journey. Whether you're an industry veteran or just beginning your adventure, here you'll find room to grow, innovate, and bring your boldest ideas to life. Be part of the team that's shaping the future of gaming.",
+      "highlight": "Your passion can shape stories played by thousands. Join Octiware; where creativity becomes reality."
+    },
+    "accordion": {
+      "designStory": {
+        "title": "DESIGN & STORY",
+        "noPositions": "Currently, there are no open positions in this area; but we're always excited to meet passionate talent! Send us a spontaneous application."
+      },
+      "art": {
+        "title": "ART",
+        "positionsCount": "(2)",
+        "position1": "2D Top-Down Pixel Artist (Remote/Worldwide)",
+        "position2": "2D Top-Down Level Designer (Remote/Worldwide)"
+      },
+      "engineering": {
+        "title": "ENGINEERING",
+        "noPositions": "Currently, there are no open positions in this area; but we're always excited to meet passionate talent! Send us a spontaneous application."
+      },
+      "marketingPR": {
+        "title": "MARKETING & PR",
+        "positionsCount": "(1)",
+        "position1": "Marketing, PR & Community Manager (Remote/Worldwide)"
+      },
+      "musicAudio": {
+        "title": "MUSIC & AUDIO",
+        "noPositions": "Currently, there are no open positions in this area; but we're always excited to meet passionate talent! Send us a spontaneous application."
+      },
+      "localization": {
+        "title": "LOCALIZATION",
+        "noPositions": "Currently, there are no open positions in this area; but we're always excited to meet passionate talent! Send us a spontaneous application."
+      }
+    }
+  },
+
+  "meet_us": {
+    "hero": {
+      "title": "OUR TEAM",
+      "text": "At Octiware, every pixel is crafted with passion, every story told from the heart. We are artists, storytellers, engineers, and dreamers united by the desire to create games you don't just play—you experience deeply.",
+      "highlight": "Each team member at Octiware is a storyteller at heart. Together, we create games you’ll cherish forever."
+    },
+    "team": {
+      "designStory": {
+        "title": "Design & Story",
+        "text": "We’re architects of imagination, crafting gameplay and stories that capture hearts and minds. Here, your ideas bring adventures to life."
+      },
+      "art": {
+        "title": "Art",
+        "text": "Our artists build worlds you can lose yourself in; each pixel placed with passion, precision, and purpose."
+      },
+      "engineering": {
+        "title": "Engineering",
+        "text": "We build worlds players never want to leave. If innovation drives you, we can’t wait to meet you."
+      },
+      "marketingPR": {
+        "title": "Marketing & PR",
+        "text": "Be the voice that connects our games to the world. We tell the story of Octiware to gamers everywhere."
+      },
+      "musicAudio": {
+        "title": "Music & Audio",
+        "text": "Immerse players with unforgettable soundscapes. Our audio creators compose the heartbeat of our stories."
+      },
+      "localization": {
+        "title": "Localization",
+        "text": "Make our games universal. Your work ensures players worldwide share the same thrilling experiences."
+      }
+    }
+  },
+
+  "privacy_policy": {
+    "title": "Privacy & Cookie Policy",
+    "lastUpdated": "Last updated: March 07, 2025",
+    "intro": "Welcome to Octiware! Your privacy matters deeply to us. We do not collect any personal information—only technical data for optimal performance.",
+    "aboutPrivacy": "We respect your privacy deeply. Octiware does not collect, store, or process any personal data from you.",
+    "useOfCookies": "Our website uses cookies solely to ensure smooth functionality, security, and performance.",
+    "typesOfCookies": "We use technical cookies for functionality and performance cookies for optimization.",
+    "thirdPartyServices": "We use trusted third-party services for security and performance. Please review their privacy policies.",
+    "yourRights": "If you have any questions, contact us anytime at info@octiware.com.",
+    "changes": "We may update this policy occasionally. Please check back regularly.",
+    "contact": "For questions or concerns, email us at info@octiware.com."
+  },
+
+  "jobs": {
+    "backToList": "See All Open Positions",
+    "meta": {
+      "location": "Location: Remote/Worldwide",
+      "project": "Project: SI"
+    },
+    "share": "Share this offer:",
+    "applyNow": "Shape our World",
+    "howToApply": "Please send your application via email to jobs@octiware.com with the job title in the subject line. Attach your portfolio and a brief introduction. We usually respond within 1–2 days.",
+    "jobPostings": {
+      "2d_top_down_level_designer": {
+        "title": "2D Top-Down Level Designer",
+        "aboutUs": "At Octiware, our passionate team creates immersive, narrative-driven games.",
+        "aboutProject": "Our project is an atmospheric 2D pixel art RPG set in a vibrant steampunk universe.",
+        "yourTasks": "As a Level Designer, your vision will shape our game’s exploration and narrative.",
+        "yourProfile": "You have proven experience in 2D level design, ideally in RPG or adventure games.",
+        "weOffer": "We offer revenue sharing, global flexibility, professional tools, growth opportunities, and an inclusive culture."
+      },
+      "2d_top_down_marketing_pr": {
+        "title": "Marketing, PR & Community Manager",
+        "aboutUs": "Join our passionate team at Octiware.",
+        "aboutProject": "Our project is an atmospheric 2D pixel art RPG set in a steampunk universe.",
+        "yourTasks": "Amplify our game’s presence worldwide through engaging campaigns and community building.",
+        "yourProfile": "You have experience in marketing, PR, or community management, ideally in gaming.",
+        "weOffer": "We offer revenue sharing, global flexibility, professional tools, and a collaborative environment."
+      },
+      "2d_top_down_pixel_artist": {
+        "title": "2D Top-Down Pixel Artist",
+        "aboutUs": "At Octiware, our creative talents bring our steampunk adventures to life.",
+        "aboutProject": "Our project is a 2D pixel art RPG set in a vibrant, immersive steampunk universe.",
+        "yourTasks": "Create captivating character sprites, immersive environments, and engaging animations.",
+        "yourProfile": "You have a strong portfolio and proven talent in pixel art and animation.",
+        "weOffer": "We offer revenue sharing, remote flexibility, professional tools, and ample growth opportunities."
+      }
+    },
+    "faq": {
+      "applicationProcess": "FAQ: Application Process",
+      "q1": "How does the application process work?",
+      "a1": "After reviewing your application, we arrange a brief introductory call to assess fit.",
+      "q2": "What happens after I apply?",
+      "a2": "We personally review your application and contact you directly.",
+      "q3": "How quickly will I receive feedback?",
+      "a3": "You will typically hear back within 1–2 days.",
+      "q4": "How does onboarding work?",
+      "a4": "We assign initial tasks and introduce you to your main contact for smooth onboarding.",
+      "q5": "Is there an application deadline?",
+      "a5": "No – we are always looking for passionate people to join our team."
+    }
+  },
+
+  "devblog 1": {
+    "post1": {
+      "title": "DEV-Blog #1 – The Adventure Begins!",
+      "date": "Published on January 10, 2025",
+      "sections": {
+        "greeting": {
+          "title": "Greetings, Esteemed Adventurers and Explorers!",
+          "content": "Step aboard and welcome to our DEV-Blog—a chronicle of invention, mystery, and boundless curiosity."
+        },
+        "projectOverview": {
+          "title": "In our game, you assume the role of a leader summoned to the capital Norinwall",
+          "content": "Don the mantle of a visionary leader tasked with breathing life into a forgotten outpost."
+        },
+        "team": {
+          "title": "Behind our game is a small yet dedicated team",
+          "content": "Our crew of developers, artists, and storytellers works tirelessly to craft unforgettable adventures.",
+          "members": {
+            "Michael": "The Engineer of Dreams",
+            "Clawson": "Mastermind of Tales & Design",
+            "Corey": "Keeper of Artistic Visions",
+            "Seoyeon": "Architect of Interfaces and Visual Elegance",
+            "Andrew": "Composer of Atmospheric Melodies"
+          }
+        },
+        "technicalAchievements": {
+          "title": "What We’re Proud Of So Far",
+          "content": "Dynamic weather, intricate systems, and a robust dialogue engine are just a few achievements."
+        },
+        "musicAndSound": {
+          "title": "Music and Sound",
+          "content": "Our soundscapes ebb and flow, each track telling its own story."
+        },
+        "nextSteps": {
+          "title": "What’s Next?",
+          "content": "We are now fine-tuning our combat mechanics and inviting you to share your insights."
+        },
+        "communityInteraction": {
+          "title": "We Want to Hear From You",
+          "content": "Join our discussions on Discord and help shape our future updates."
+        },
+        "closing": {
+          "title": "Thank You for Stopping By",
+          "content": "Stay tuned as our story unfolds—each update is another chapter in our adventure."
+        }
+      }
+    },
+
+    "devblog 2": {
+      "title": "DEV-Blog #2 – New Features Unveiled!",
+      "date": "Published on January 31, 2025",
+      "sections": {
+        "greeting": {
+          "title": "Greetings, Esteemed Travelers of Renalvia!",
+          "content": "Our workshop doors open once again—gears turn, steam rises, and innovations abound."
+        },
+        "combatSystem": {
+          "title": "Combat System",
+          "content": "We refined our battle mechanics with precision-engineered interactions and dynamic foes."
+        },
+        "characterCustomization": {
+          "title": "Character Customization",
+          "content": "Our Tailor Engine lets you customize your appearance with a rich assortment of attire."
+        },
+        "prefabSpawner": {
+          "title": "Prefab Spawner and Dynamic World Design",
+          "content": "Our system breathes life into the landscape by naturally dispersing resources across Renalvia."
+        },
+        "mapConcept": {
+          "title": "Map Concept Design",
+          "content": "Preliminary designs for diverse regions set the stage for immersive adventures."
+        },
+        "lightingEnhancements": {
+          "title": "Lighting Enhancements",
+          "content": "Sunlight glides naturally across the world, casting warm hues as day turns to night."
+        },
+        "clockUI": {
+          "title": "Clock (UI)",
+          "content": "Our Chronometer Interface merges analog elegance with digital precision and weather updates."
+        },
+        "additionalUpdates": {
+          "title": "Additional Updates",
+          "content": "A new multilingual typeface has been integrated to broaden our global reach."
+        },
+        "stayTuned": {
+          "title": "Stay Tuned",
+          "content": "Join us on this extraordinary voyage as we unveil even more innovations in upcoming updates."
+        }
+      }
+    }
+  }
+}

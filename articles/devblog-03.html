@@ -1,115 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- ========== HEAD SECTION ========== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/" />
-    <!-- SEO: Title and Description -->
-    <title>DEV-Blog #3 | Octiware</title>
-    <!-- Favicon -->
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-  </head>
-  <body>
-    <!-- ========== HEADER SECTION ========== -->
-    <header id="header-placeholder"></header>
-    <!-- ========== MAIN SECTION ========== -->
-    <main class="main" aria-label="Main content">
-      <div class="devblog-container">
-        <!-- HEADER / TITLE AREA -->
-        <header class="devblog-header">
-          <h1>DEV-Blog #3 – Refining Gameplay & UI</h1>
-          <div class="devblog-date">Published on March 09, 2025</div>
-        </header>
-        <!-- INTRODUCTION -->
-        <article class="devblog-content">
-          <div class="img-container">
-            <img src="../img/dev_blog_3_intro.gif" alt="Dev Blog 3 Header">
-          </div>
-          <!-- Greeting -->
-          <section>
-            <h2>Greetings, Esteemed Adventurers and Explorers!</h2>
-            <p>
-              From the heart of our steam-powered workshop, we bring you a fresh update designed to enhance both gameplay and user experience. In this edition, we focus on refining our fishing animations, streamlining cutscene creation, and optimizing inventory interactions. Your support is most valued, and we eagerly await your thoughts on these new features.
-            </p>
-          </section>
-          <!-- ========== 1) FISHING & BOBBER ANIMATIONS ========== -->
-          <section>
-            <h2>Smooth Fishing & Bobber Animations</h2>
-            <p>
-              Our angling system now boasts a more natural animation, with a refined bobber movement that brings life to every cast. A dedicated sequence clearly demonstrates the entire fishing process, ensuring a more immersive experience.
-            </p>
-          </section>
-          <!-- ========== 2) CUTSCENE MANAGER ========== -->
-          <section>
-            <h2>New Cutscene Manager</h2>
-            <p>
-              We have introduced a new Cutscene Manager along with a set of practical scripts to help you quickly create engaging cutscenes. This tool is designed to make your narrative crafting as dynamic and precise as our clockwork mechanisms.
-            </p>
-          </section>
-          <!-- ========== 3) PLACEABLE OBJECTS & MULTIPLAYER ENHANCEMENTS ========== -->
-          <section>
-            <h2>Placeable Objects & Multiplayer Updates</h2>
-            <p>
-              Our system for placing objects has been overhauled to improve data saving and multiplayer support. Interactive objects such as chests and furnaces now ensure that only one player may interact with them at a time, facilitating smoother collaborative play.
-            </p>
-          </section>
-          <!-- ========== 4) INVENTORY & ITEM MANAGEMENT UPGRADES ========== -->
-          <section>
-            <h2>Enhanced Inventory & Item Management</h2>
-            <p>
-              We’ve refined how you manage your items. Enjoy improved drag-and-drop functionality, shift-moving, auto sorting, trashing, and more. With upgraded toolbelt and backpack systems, you can now scroll through multiple inventory rows to suit your needs—whether farming, caring for creatures, or preparing for battle.
-            </p>
-            <div class="demonstration-container" style="display: flex; gap: 2%; justify-content: center;">
-              <div class="demonstration-item" style="flex: 1; text-align: center;">
-                <img src="../img/dev_blog_3_chestUI.avif" alt="Chest UI" style="width: 100%; height: auto; margin-bottom: 10px;">
-                <p>Chest UI</p>
-              </div>
-              <div class="demonstration-item" style="flex: 1; text-align: center;">
-                <img src="../img/dev_blog_3_toolbeltUI.avif" alt="Toolbelt UI" style="width: 100%; height: auto; margin-bottom: 10px;">
-                <p>Toolbelt UI</p>
-              </div>
-            </div>
-          </section>
-          <!-- ========== 5) DAILY BEACH DETAILS ========== -->
-          <section>
-            <h2>Daily Changing Seaside Accents</h2>
-            <p>
-              Our coastal vistas now feature visual shells that update daily, adding a fresh aesthetic detail to your seaside wanderings.
-            </p>
-          </section>
-          <!-- ========== 6) REFINED OBJECT INTERACTIONS ========== -->
-          <section>
-            <h2>Refined Object Interactions</h2>
-            <p>
-              Interaction with in-game objects has been fine-tuned for clarity. Chests and similar devices now prioritize the item directly in front of the player, while collectibles like fruits and shells will target the closest item within reach.
-            </p>
-          </section>
-          <!-- ========== 7) STAY TUNED ========== -->
-          <section>
-            <h2>Stay Tuned</h2>
-            <p>
-              Our workshop continues to hum with innovation, and we look forward to your feedback on these improvements. More detailed insights and video tutorials are on the way.
-              <br/><br/>
-              Until next time, keep your gears turning and your spirits high!
-            </p>
-          </section>
-        </article>
+---
+layout: default
+title: "DEV-Blog #3 – Refining Gameplay & UI"
+description: "Our third dev blog focuses on refined fishing, cutscenes, inventory improvements, and more."
+keywords: "Octiware, Dev Blog, Fishing, Cutscenes, Inventory, Indie Games"
+ogtitle: "DEV-Blog #3 – Refining Gameplay & UI"
+ogdescription: "Check out our latest updates on fishing animations, cutscene manager, and inventory enhancements."
+---
+
+<main class="main" aria-label="Main content">
+  <div class="devblog-container">
+    <!-- HEADER / TITLE AREA -->
+    <header class="devblog-header">
+      <h1>DEV-Blog #3 – Refining Gameplay & UI</h1>
+      <div class="devblog-date">Published on March 09, 2025</div>
+    </header>
+    <!-- INTRODUCTION -->
+    <article class="devblog-content">
+      <div class="img-container">
+        <img src="../img/dev_blog_3_intro.gif" alt="Dev Blog 3 Header">
       </div>
-    </main>
-    <!-- ========== CONTACT SECTION ========== -->
-    <div id="contact-placeholder"></div>
-    <!-- ========== FOOTER SECTION ========== -->
-    <footer id="footer-placeholder"></footer>
-    <!-- ========== SCROLL TO TOP BUTTON ========== -->
-    <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
-      <img src="../img/arrow_up.svg" alt="Arrow Up Icon" />
-    </a>
-    <!-- ========== MAIN SCRIPT ========== -->
-    <script defer src="../js/include-layout.js"></script>
-    <script defer src="../js/translation.js"></script>
-    <script defer src="../js/main.js"></script>
-  </body>
-</html>
+      <!-- Greeting -->
+      <section>
+        <h2>Greetings, Esteemed Adventurers and Explorers!</h2>
+        <p>
+          From the heart of our steam-powered workshop, we bring you a fresh update designed to enhance both gameplay and user experience. In this edition, we focus on refining our fishing animations, streamlining cutscene creation, and optimizing inventory interactions. Your support is most valued, and we eagerly await your thoughts on these new features.
+        </p>
+      </section>
+      <!-- ========== 1) FISHING & BOBBER ANIMATIONS ========== -->
+      <section>
+        <h2>Smooth Fishing & Bobber Animations</h2>
+        <p>
+          Our angling system now boasts a more natural animation, with a refined bobber movement that brings life to every cast. A dedicated sequence clearly demonstrates the entire fishing process, ensuring a more immersive experience.
+        </p>
+      </section>
+      <!-- ========== 2) CUTSCENE MANAGER ========== -->
+      <section>
+        <h2>New Cutscene Manager</h2>
+        <p>
+          We have introduced a new Cutscene Manager along with a set of practical scripts to help you quickly create engaging cutscenes. This tool is designed to make your narrative crafting as dynamic and precise as our clockwork mechanisms.
+        </p>
+      </section>
+      <!-- ========== 3) PLACEABLE OBJECTS & MULTIPLAYER ENHANCEMENTS ========== -->
+      <section>
+        <h2>Placeable Objects & Multiplayer Updates</h2>
+        <p>
+          Our system for placing objects has been overhauled to improve data saving and multiplayer support. Interactive objects such as chests and furnaces now ensure that only one player may interact with them at a time, facilitating smoother collaborative play.
+        </p>
+      </section>
+      <!-- ========== 4) INVENTORY & ITEM MANAGEMENT UPGRADES ========== -->
+      <section>
+        <h2>Enhanced Inventory & Item Management</h2>
+        <p>
+          We’ve refined how you manage your items. Enjoy improved drag-and-drop functionality, shift-moving, auto sorting, trashing, and more. With upgraded toolbelt and backpack systems, you can now scroll through multiple inventory rows to suit your needs—whether farming, caring for creatures, or preparing for battle.
+        </p>
+        <div class="demonstration-container" style="display: flex; gap: 2%; justify-content: center;">
+          <div class="demonstration-item" style="flex: 1; text-align: center;">
+            <img src="../img/dev_blog_3_chestUI.avif" alt="Chest UI" style="width: 100%; height: auto; margin-bottom: 10px;">
+            <p>Chest UI</p>
+          </div>
+          <div class="demonstration-item" style="flex: 1; text-align: center;">
+            <img src="../img/dev_blog_3_toolbeltUI.avif" alt="Toolbelt UI" style="width: 100%; height: auto; margin-bottom: 10px;">
+            <p>Toolbelt UI</p>
+          </div>
+        </div>
+      </section>
+      <!-- ========== 5) DAILY BEACH DETAILS ========== -->
+      <section>
+        <h2>Daily Changing Seaside Accents</h2>
+        <p>
+          Our coastal vistas now feature visual shells that update daily, adding a fresh aesthetic detail to your seaside wanderings.
+        </p>
+      </section>
+      <!-- ========== 6) REFINED OBJECT INTERACTIONS ========== -->
+      <section>
+        <h2>Refined Object Interactions</h2>
+        <p>
+          Interaction with in-game objects has been fine-tuned for clarity. Chests and similar devices now prioritize the item directly in front of the player, while collectibles like fruits and shells will target the closest item within reach.
+        </p>
+      </section>
+      <!-- ========== 7) STAY TUNED ========== -->
+      <section>
+        <h2>Stay Tuned</h2>
+        <p>
+          Our workshop continues to hum with innovation, and we look forward to your feedback on these improvements. More detailed insights and video tutorials are on the way.
+          <br/><br/>
+          Until next time, keep your gears turning and your spirits high!
+        </p>
+      </section>
+    </article>
+  </div>
+</main>

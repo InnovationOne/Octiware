@@ -1,190 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- ========== HEAD SECTION ========== -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO: Title and Description -->
-    <title>OUR TEAM - Octiware</title>
-    <meta name="description" content="Meet the team behind Octiware." />
-    <meta name="keywords" content="Octiware, Our Team, Indie, Games" />
-    <!-- Open Graph for social media sharing -->
-    <meta property="og:title" content="OUR TEAM - Octiware" />
-    <meta property="og:description" content="Meet the team driving creativity at Octiware." />
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body id="top">
-    <!-- ========== HEADER SECTION ========== -->
-    <header id="header-placeholder"></header>
-    <!-- ========== HERO-AREA ========== -->
-    <section class="meet-hero-section" aria-labelledby="meet-us-hero-title">
-      <picture>
-        <source
-          srcset="
-            img/meetus_480.webp 480w,
-            img/meetus_768.webp 768w,
-            img/meetus_1320.webp 1320w
-          "
-          type="image/webp"
-        />
-        <source
-          srcset="
-            img/meetus_480.jpg 480w,
-            img/meetus_768.jpg 768w,
-            img/meetus_1320.jpg 1320w
-          "
-          type="image/jpeg"
-        />
-        <img
-          src="img/meetus_1320.jpg"
-          alt="Meet Us Hero Background"
-          class="meet-hero-img"
-          loading="lazy"
-          sizes="(max-width: 768px) 100vw, 1320px"
-        />
-      </picture>
+---
+layout: default
+title: "OUR TEAM - Octiware"
+description: "Meet the team behind Octiware. Artists, storytellers, engineers, and dreamers united in crafting immersive indie games."
+keywords: "Octiware, Our Team, Indie, Games"
+ogtitle: "OUR TEAM - Octiware"
+ogdescription: "Discover the people who bring creativity and innovation to Octiware's story-driven games."
+---
+
+<section class="meet-hero-section" aria-labelledby="meet-us-hero-title">
+  <picture>
+    <source
+      srcset="
+        img/meetus_480.webp 480w,
+        img/meetus_768.webp 768w,
+        img/meetus_1320.webp 1320w
+      "
+      type="image/webp"
+    />
+    <source
+      srcset="
+        img/meetus_480.jpg 480w,
+        img/meetus_768.jpg 768w,
+        img/meetus_1320.jpg 1320w
+      "
+      type="image/jpeg"
+    />
+    <img
+      src="img/meetus_1320.jpg"
+      alt="Meet Us Hero Background"
+      class="meet-hero-img"
+      loading="lazy"
+      sizes="(max-width: 768px) 100vw, 1320px"
+    />
+  </picture>
+  
+  <div class="meet-hero-overlay-caption">
+    <div class="meet-hero-text">
+      <h1 id="meet-us-hero-title">OUR TEAM</h1>
+      <p>
+        At Octiware, every pixel is crafted with passion, every story told from the heart. We are artists, storytellers, engineers, and dreamers united by the desire to create games you don't just play—you experience deeply. Meet the people who pour their hearts into crafting adventures you'll truly care about
+      </p>
+      <p class="emotional-highlight">
+        Each team member at Octiware is a storyteller at heart. <br>Together, we create games you’ll cherish forever.
+      </p>
       
-      <div class="meet-hero-overlay-caption">
-        <div class="meet-hero-text">
-          <h1 id="meet-us-hero-title">OUR TEAM</h1>
-          <p>
-            At Octiware, every pixel is crafted with passion, every story told from the heart. We are artists, storytellers, engineers, and dreamers united by the desire to create games you don't just play—you experience deeply. Meet the people who pour their hearts into crafting adventures you'll truly care about
-          </p>
-          <p class="emotional-highlight">
-            Each team member at Octiware is a storyteller at heart. <br>Together, we create games you’ll cherish forever.
-          </p>
-          
+    </div>
+  </div>
+</section>
+<!-- ========== TEAM SECTIONS ========== -->
+<main aria-label="Main content">
+  <section class="team-sections" id="teams" aria-labelledby="team-sections-title">
+    <h2 id="team-sections-title" class="visually-hidden">OUR TEAM</h2>
+    <!-- DESIGN & STORY TEAM -->
+    <article class="team-row">
+      <div class="team-row-image">
+        <img src="img/team_design.jpg" alt="Design & Story Team" />
+      </div>
+      <div class="team-row-text">
+        <h3 class="team-row-title">Design &amp; Story</h3>
+        <p>
+          We’re architects of imagination, crafting gameplay and stories that capture hearts and minds. Here, your ideas bring adventures to life.
+        </p>
+        <div class="team-row-buttons">
+          <a href="join_us.html" class="browse-btn">Browse Offers</a>
+          <a href="mailto:jobs@octiware.com?subject=Design%20%26%20Story%20-%20Application" class="spontaneous-btn">
+          Spontaneous Application
+          </a>
         </div>
       </div>
-    </section>
-    <!-- ========== TEAM SECTIONS ========== -->
-    <main aria-label="Main content">
-      <section class="team-sections" id="teams" aria-labelledby="team-sections-title">
-        <h2 id="team-sections-title" class="visually-hidden">OUR TEAM</h2>
-        <!-- DESIGN & STORY TEAM -->
-        <article class="team-row">
-          <div class="team-row-image">
-            <img src="img/team_design.jpg" alt="Design & Story Team" />
-          </div>
-          <div class="team-row-text">
-            <h3 class="team-row-title">Design &amp; Story</h3>
-            <p>
-              We’re architects of imagination, crafting gameplay and stories that capture hearts and minds. Here, your ideas bring adventures to life.
-            </p>
-            <div class="team-row-buttons">
-              <a href="join_us.html" class="browse-btn">Browse Offers</a>
-              <a href="mailto:jobs@octiware.com?subject=Design%20%26%20Story%20-%20Application" class="spontaneous-btn">
-              Spontaneous Application
-              </a>
-            </div>
-          </div>
-        </article>
-        <!-- ART TEAM -->
-        <article class="team-row">
-          <div class="team-row-image">
-            <img src="img/team_art.jpg" alt="Art Team" />
-          </div>
-          <div class="team-row-text">
-            <h3 class="team-row-title">Art</h3>
-            <p>
-              Our artists build worlds you can lose yourself in; each pixel placed with passion, precision, and purpose.
-            </p>
-            <div class="team-row-buttons">
-              <a href="join_us.html" class="browse-btn">Browse Offers</a>
-              <a href="mailto:jobs@octiware.com?subject=Art%20-%20Application" class="spontaneous-btn">
-              Spontaneous Application
-              </a>
-            </div>
-          </div>
-        </article>
-        <!-- ENGINEERING TEAM -->
-        <article class="team-row">
-          <div class="team-row-image">
-            <img src="img/team_engineering.jpg" alt="Engineering Team" />
-          </div>
-          <div class="team-row-text">
-            <h3 class="team-row-title">Engineering</h3>
-            <p>
-              We build worlds players never want to leave. If innovation drives you and you're passionate about delivering seamless, captivating experiences, we can’t wait to meet you.
-            </p>
-            <div class="team-row-buttons">
-              <a href="join_us.html" class="browse-btn">Browse Offers</a>
-              <a href="mailto:jobs@octiware.com?subject=Engineering%20-%20Application" class="spontaneous-btn">
-              Spontaneous Application
-              </a>
-            </div>
-          </div>
-        </article>
-        <!-- MARKETING & PR TEAM -->
-        <article class="team-row">
-          <div class="team-row-image">
-            <img src="img/team_marketing.jpg" alt="Marketing &amp; PR Team" />
-          </div>
-          <div class="team-row-text">
-            <h3 class="team-row-title">Marketing &amp; PR</h3>
-            <p>
-              Be the voice that connects our games to the world. From powerful campaigns to authentic community interactions, we tell the story of Octiware to gamers everywhere.
-            </p>
-            <div class="team-row-buttons">
-              <a href="join_us.html" class="browse-btn">Browse Offers</a>
-              <a href="mailto:jobs@octiware.com?subject=Marketing%20%26%20PR%20-%20Application" class="spontaneous-btn">
-              Spontaneous Application
-              </a>
-            </div>
-          </div>
-        </article>
-        <!-- MUSIC & AUDIO TEAM -->
-        <article class="team-row">
-          <div class="team-row-image">
-            <img src="img/team_music.jpg" alt="Music & Audio Team" />
-          </div>
-          <div class="team-row-text">
-            <h3 class="team-row-title">Music &amp; Audio</h3>
-            <p>
-              Immerse players with unforgettable soundscapes. Our audio creators compose the heartbeat of our stories; music that stays with players long after the game ends.
-            </p>
-            <div class="team-row-buttons">
-              <a href="join_us.html" class="browse-btn">Browse Offers</a>
-              <a href="mailto:jobs@octiware.com?subject=Music%20%26%20Audio%20-%20Application" class="spontaneous-btn">
-              Spontaneous Application
-              </a>
-            </div>
-          </div>
-        </article>
-        <!-- LOCALIZATION TEAM -->
-        <article class="team-row">
-          <div class="team-row-image">
-            <img src="img/team_localization.jpg" alt="Localization Team" />
-          </div>
-          <div class="team-row-text">
-            <h3 class="team-row-title">Localization</h3>
-            <p>
-              Make our games universal. Your work ensures players worldwide share the same thrilling and emotional experiences.
-            </p>
-            <div class="team-row-buttons">
-              <a href="join_us.html" class="browse-btn">Browse Offers</a>
-              <a href="mailto:jobs@octiware.com?subject=Localization%20-%20Application" class="spontaneous-btn">
-              Spontaneous Application
-              </a>
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
-    <!-- ========== CONTACT SECTION ========== -->
-    <div id="contact-placeholder"></div>    
-    <!-- ========== FOOTER SECTION ========== -->
-    <footer id="footer-placeholder"></footer>
-    <!-- ========== SCROLL TO TOP BUTTON ========== -->
-    <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
-    <img src="img/arrow_up.svg" alt="Arrow Up Icon" />
-    </a>
-    <!-- ========== MAIN SCRIPT ========== -->
-    <script defer src="js/include-layout.js"></script>
-    <script defer src="js/translation.js" ></script>
-    <script src="js/main.js" defer></script>
-  </body>
-</html>
+    </article>
+    <!-- ART TEAM -->
+    <article class="team-row">
+      <div class="team-row-image">
+        <img src="img/team_art.jpg" alt="Art Team" />
+      </div>
+      <div class="team-row-text">
+        <h3 class="team-row-title">Art</h3>
+        <p>
+          Our artists build worlds you can lose yourself in; each pixel placed with passion, precision, and purpose.
+        </p>
+        <div class="team-row-buttons">
+          <a href="join_us.html" class="browse-btn">Browse Offers</a>
+          <a href="mailto:jobs@octiware.com?subject=Art%20-%20Application" class="spontaneous-btn">
+          Spontaneous Application
+          </a>
+        </div>
+      </div>
+    </article>
+    <!-- ENGINEERING TEAM -->
+    <article class="team-row">
+      <div class="team-row-image">
+        <img src="img/team_engineering.jpg" alt="Engineering Team" />
+      </div>
+      <div class="team-row-text">
+        <h3 class="team-row-title">Engineering</h3>
+        <p>
+          We build worlds players never want to leave. If innovation drives you and you're passionate about delivering seamless, captivating experiences, we can’t wait to meet you.
+        </p>
+        <div class="team-row-buttons">
+          <a href="join_us.html" class="browse-btn">Browse Offers</a>
+          <a href="mailto:jobs@octiware.com?subject=Engineering%20-%20Application" class="spontaneous-btn">
+          Spontaneous Application
+          </a>
+        </div>
+      </div>
+    </article>
+    <!-- MARKETING & PR TEAM -->
+    <article class="team-row">
+      <div class="team-row-image">
+        <img src="img/team_marketing.jpg" alt="Marketing &amp; PR Team" />
+      </div>
+      <div class="team-row-text">
+        <h3 class="team-row-title">Marketing &amp; PR</h3>
+        <p>
+          Be the voice that connects our games to the world. From powerful campaigns to authentic community interactions, we tell the story of Octiware to gamers everywhere.
+        </p>
+        <div class="team-row-buttons">
+          <a href="join_us.html" class="browse-btn">Browse Offers</a>
+          <a href="mailto:jobs@octiware.com?subject=Marketing%20%26%20PR%20-%20Application" class="spontaneous-btn">
+          Spontaneous Application
+          </a>
+        </div>
+      </div>
+    </article>
+    <!-- MUSIC & AUDIO TEAM -->
+    <article class="team-row">
+      <div class="team-row-image">
+        <img src="img/team_music.jpg" alt="Music & Audio Team" />
+      </div>
+      <div class="team-row-text">
+        <h3 class="team-row-title">Music &amp; Audio</h3>
+        <p>
+          Immerse players with unforgettable soundscapes. Our audio creators compose the heartbeat of our stories; music that stays with players long after the game ends.
+        </p>
+        <div class="team-row-buttons">
+          <a href="join_us.html" class="browse-btn">Browse Offers</a>
+          <a href="mailto:jobs@octiware.com?subject=Music%20%26%20Audio%20-%20Application" class="spontaneous-btn">
+          Spontaneous Application
+          </a>
+        </div>
+      </div>
+    </article>
+    <!-- LOCALIZATION TEAM -->
+    <article class="team-row">
+      <div class="team-row-image">
+        <img src="img/team_localization.jpg" alt="Localization Team" />
+      </div>
+      <div class="team-row-text">
+        <h3 class="team-row-title">Localization</h3>
+        <p>
+          Make our games universal. Your work ensures players worldwide share the same thrilling and emotional experiences.
+        </p>
+        <div class="team-row-buttons">
+          <a href="join_us.html" class="browse-btn">Browse Offers</a>
+          <a href="mailto:jobs@octiware.com?subject=Localization%20-%20Application" class="spontaneous-btn">
+          Spontaneous Application
+          </a>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>

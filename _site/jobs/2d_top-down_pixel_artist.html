@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TITLE: Nutzt page.title oder fallback site.title -->
+    <title>
+      2D Top-Down Pixel Artist (Remote/Worldwide) | Octiware
+    </title>
+    
+    <!-- DESCRIPTION: Nutzt page.description oder fallback site.description -->
+    
+    <meta name="description" content="Craft beautiful pixel art and shape unforgettable steampunk adventures in our indie RPG.">
+    
+
+    <!-- KEYWORDS: falls gewünscht -->
+    
+    <meta name="keywords" content="Octiware, 2D Pixel Artist, Game Development, Indie Games, Steampunk, Remote Work">
+    
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Join Us - 2D Top-Down Pixel Artist">
+    <meta property="og:description" content="Animate characters and environments for our steampunk RPG.">
+    <meta property="og:type" content="website">
+    <!-- Du könntest noch meta property="og:image" hinzufügen, wenn du ein Social-Sharing-Bild hast. -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+    <!-- CSS-Dateien -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Falls du weitere CSS-Dateien hast, hier verlinken -->
+
+  </head>
+  <body id="top">
+
+    <!-- HEADER -->
+    <div class="header">
+  <div class="header-container" aria-label="Main site header">
+    <!-- LOGO AREA -->
+    <div class="header-logo">
+      <a href="index.html" aria-label="Octiware Home">
+        <img src="img/OctiwareWithEyes.png" alt="Octiware Logo" class="logo-img"/>
+      </a>
+      <a href="index.html" aria-label="Octiware Home" class="logo-text-container">
+        <span class="logo-text">Octiware</span>
+        <span class="logo-slogan">Passion Meets Pixels</span>
+      </a>
+    </div>
+          
+    <!-- MAIN NAVIGATION -->
+    <nav class="header-nav-desktop" aria-label="Main navigation">
+      <ul>
+        <li><a href="meet_us.html">Our Team</a></li>
+        <li><a href="join_us.html">CAREERS</a></li>
+      </ul>
+    </nav>
+    <!-- SOCIAL LINKS & OPTIONAL LANGUAGE SELECTOR -->
+    <div class="header-right">
+      <div class="social-icons-header" aria-label="Social media links">
+        <a href="https://www.instagram.com/octiware/" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+          <img src="img/instagram_icon.svg" alt="Instagram Icon" />
+        </a>
+        <a href="https://x.com/octiware" target="_blank" rel="noopener" aria-label="Follow us on X">
+          <img src="img/x_icon.svg" alt="X Icon" />
+        </a>
+        <a href="https://www.tiktok.com/@octiware" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
+          <img src="img/tiktok_icon.svg" alt="TikTok Icon" />
+        </a>
+        <a href="https://www.youtube.com/@Octiware" target="_blank" rel="noopener" aria-label="Follow us on YouTube">
+          <img src="img/youtube_icon.svg" alt="YouTube Icon" />
+        </a>
+        <a href="https://www.reddit.com/user/Octiware/" target="_blank" rel="noopener" aria-label="Follow us on Reddit">
+          <img src="img/reddit_icon.svg" alt="Reddit Icon" />
+        </a>
+        <a href="https://discord.gg/WqjBxvcSTB" target="_blank" rel="noopener" aria-label="Join us on Discord">
+          <img src="img/discord_icon.svg" alt="Discord Icon" />
+        </a>
+        <a href="https://www.pinterest.com/octiware/" target="_blank" rel="noopener" aria-label="Follow us on Pinterest">
+          <img src="img/pinterest_icon.svg" alt="Pinterest Icon" />
+        </a>
+        <a href="https://www.linkedin.com/company/octiware/" target="_blank" rel="noopener" aria-label="Follow us on LinkedIn">
+          <img src="img/linkedin_icon.svg" alt="LinkedIn Icon" />
+        </a>
+        <a href="https://www.threads.net/@octiware" target="_blank" rel="noopener" aria-label="Follow us on Threads">
+          <img src="img/threads_icon.svg" alt="Threads Icon" />
+        </a>
+      </div>
+
+      <!-- Style-Selector Button -->
+      <button class="style-toggle-btn" id="styleToggleBtn" aria-label="Open style selector">
+        <img src="img/style_icon.svg" alt="Style Icon" />
+      </button>
+      
+      <!-- LANGUAGE DROPDOWN -->
+      <!-- 
+      <div class="language-dropdown">
+        <select name="language" id="language" aria-label="Select Language">
+          <option value="en">EN</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </div>
+    --->
+    <!-- MOBILE NAVIGATION (Burger Menu) -->
+    <div class="header-nav-mobile">
+      <button class="mobile-nav-toggle" aria-label="Open mobile menu">☰</button>
+      <div class="mobile-nav-container">
+        <ul>
+          <li><a href="#meet-us">OUR TEAM</a></li>
+          <li><a href="#join-us">CAREERS</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== STYLE SELECTOR PANEL ========== -->
+  <div class="customize hidden" id="stylePanel">
+    <div class="customize">
+      <div class="frame-wrapper">
+        <div class="frame">
+          
+          <!-- ========== FONT SIZE SECTION ========== -->
+          <div class="overlap-wrapper">
+            <div class="overlap">
+              <div class="overlap-group">
+                <!-- Slider track for font size -->
+                <img class="img" src="img/vector-12.svg" alt="slider-track" />
+                <!-- "T" on the right side -->
+                <div class="text-wrapper-3">T</div>
+                <!-- Draggable handle -->
+                <div class="rectangle"></div>
+              </div>
+              <!-- "T" on the left side -->
+              <div class="text-wrapper-4">T</div>
+              <!-- Label -->
+              <div class="text-wrapper-5">Font size</div>
+            </div>
+          </div>
+          <!-- Divider -->
+          <img class="vector" src="img/vector-13.svg" alt="divider" />
+
+          <!-- ========== FONTS SECTION ========== -->
+          <div class="frame-4">
+            <div class="div">
+              <!-- Überschrift "Fonts" -->
+              <div class="frame-2">
+                <div class="text-wrapper">Fonts</div>
+              </div>
+              <!-- Serif, Sans, Mono -->
+              <div class="frame-3">
+                <div class="frame-6">
+                  <div class="text-wrapper-7">Aa</div>
+                  <div class="text-wrapper-8">serif</div>
+                </div>
+                <div class="frame-7">
+                  <div class="text-wrapper-9">Aa</div>
+                  <div class="text-wrapper-8">sans</div>
+                </div>
+                <div class="frame-7">
+                  <div class="text-wrapper-10">Aa</div>
+                  <div class="text-wrapper-8">mono</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Divider -->
+          <img class="vector" src="img/vector-13.svg" alt="divider" />
+
+          <!-- ========== COLORS SECTION ========== -->
+          <div class="frame-9">
+            <div class="text-wrapper">Colors</div>
+            <div class="frame-10">
+              <!-- 1. Farbschema -->
+              <div class="group-wrapper">
+                <div class="group">
+                  <div class="rectangle-wrapper">
+                    <div class="rectangle-2"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- 2. Farbschema -->
+              <div class="frame-11">
+                <div class="frame-12">
+                  <div class="group-2">
+                    <div class="group-3"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- 3. Farbschema (hier als "4." bezeichnet, Figma-Export) -->
+              <div class="frame-13">
+                <div class="group-5">
+                  <div class="group-6">
+                    <div class="rectangle-3"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- 4. Farbschema (hier als "5." bezeichnet) -->
+              <div class="frame-13">
+                <div class="group-7">
+                  <div class="group-8">
+                    <div class="rectangle-4"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- 5. Farbschema (hier als "6." bezeichnet) -->
+              <div class="frame-13">
+                <div class="group-9">
+                  <div class="group-10">
+                    <div class="rectangle-5"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Divider -->
+          <img class="vector" src="img/vector-13.svg" alt="divider" />
+
+          <!-- ========== LAYOUT SECTION ========== -->
+          <div class="frame-9">
+            <div class="frame-15">
+              <div class="text-wrapper">Layout</div>
+            </div>
+            <div class="frame-16">
+              <!-- Default Layout -->
+              <div class="frame-17">
+                <div class="group-16">
+                  <div class="overlap-group-3">
+                    <div class="rectangle-11"></div>
+                    <img class="group-17" src="img/group-29.png" alt="layout" />
+                    <div class="group-18">
+                      <div class="rectangle-12"></div>
+                      <div class="rectangle-13"></div>
+                      <div class="rectangle-14"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-wrapper-14">Default</div>
+              </div>
+              <!-- Narrow Layout -->
+              <div class="frame-18">
+                <div class="group-19">
+                  <div class="overlap-group-4">
+                    <div class="rectangle-15"></div>
+                    <img class="group-20" src="img/group-30.png" alt="layout" />
+                    <div class="group-21">
+                      <div class="rectangle-16"></div>
+                      <div class="rectangle-17"></div>
+                      <div class="rectangle-18"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-wrapper-15">Narrow</div>
+              </div>
+              <!-- Wide Layout -->
+              <div class="frame-18">
+                <div class="group-16">
+                  <div class="overlap-group-3">
+                    <div class="rectangle-19"></div>
+                    <img class="group-22" src="img/group-31.png" alt="layout" />
+                    <div class="group-23">
+                      <div class="rectangle-20"></div>
+                      <div class="rectangle-21"></div>
+                      <div class="rectangle-22"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-wrapper-16">Wide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- HAUPTINHALT DER SEITE (wird von index.html & Co. eingefügt) -->
+    <main>
+      <main class="job-detail-container" aria-label="Job posting">
+  <!-- Header & Job Info -->
+  <header class="job-info-top">
+    <div class="detail-header">
+      <a href="../join_us.html" class="back-to-list-btn" aria-label="See all open positions">See All Open Positions</a>
+    </div>
+    <h1 class="job-title" id="job-posting-title">2D Top-Down Pixel Artist</h1>
+    <div class="job-meta">
+      <p class="job-location">Location: Remote/Worldwide</p>
+      <p class="job-project">Project: SI</p>
+    </div>
+    <!-- Share Job -->
+    <div class="share-offer">
+      <p><strong>Share this offer:</strong></p>
+      <div class="share-icons-header" aria-label="Share job posting">
+        <a href="https://x.com/octiware" target="_blank" rel="noopener" aria-label="Share on X">
+        <img src="../img/x_icon.svg" alt="X">
+        </a>
+        <a href="https://www.reddit.com/user/Octiware/" target="_blank" rel="noopener" aria-label="Share on Reddit">
+        <img src="../img/reddit_icon.svg" alt="Reddit">
+        </a>
+        <a href="https://www.linkedin.com/company/octiware/" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+        <img src="../img/linkedin_icon.svg" alt="LinkedIn">
+        </a>
+        <a href="https://www.threads.net/@octiware" target="_blank" rel="noopener" aria-label="Share on Threads">
+        <img src="../img/threads_icon.svg" alt="Threads">
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- Job Details -->
+  <article class="job-description" aria-labelledby="about-us-title">
+    <!-- About Us -->
+    <section aria-labelledby="about-us-title">
+      <h2 id="about-us-title">About Us</h2>
+      <p>
+        At Octiware, we bring together developers, artists, designers, and storytellers from around the globe. We’re united by a shared passion for creating captivating, narrative-driven games. Combining classic pixel art with a fresh steampunk aesthetic, we’re crafting an immersive RPG adventure.
+        If you cherish creative freedom, teamwork, and the opportunity to shape something remarkable, we can’t wait to meet you.
+      </p>
+    </section>
+    <!-- About the Project -->
+    <section aria-labelledby="about-project-title">
+      <h2 id="about-project-title">About the Project</h2>
+      <p>
+        Our project is an atmospheric 2D top-down pixel art RPG set in a vibrant steampunk universe. Inspired by charming indie titles like Haiku the Robot, A Short Hike, and Moonlighter, we blend exploration, strategic gameplay, and storytelling to immerse players in a unique experience.
+      </p>
+      <ul>
+        <li><strong>Platforms:</strong> PC (Steam, Epic, GoG), consoles (Xbox, PlayStation, Switch), and mobile (iOS, Android).</li>
+        <li><strong>Target Audience:</strong> Designed for steampunk enthusiasts and casual gamers worldwide</li>
+        <li><strong>Current Status:</strong> Currently in prototype; beta launch targeted for 2026.</li>
+      </ul>
+    </section>
+    <!-- Your Tasks -->
+    <section aria-labelledby="your-tasks-title">
+      <h2 id="your-tasks-title">Your Tasks</h2>
+      <p>
+        As a 2D Pixel Artist at Octiware, you'll breathe life into our steampunk world. You’ll create captivating character sprites, immersive environments, and beautifully animated assets. Every pixel matters – your artwork will shape our players’ adventures.
+      </p>
+      <ul>
+        <li><strong>Graphic Creation: </strong>Bring characters, objects, and environments to life through vibrant pixel art.</li>
+        <li><strong>Animation: </strong>Create dynamic animations (idle, movement, actions) that enrich gameplay.</li>
+        <li><strong>Visual Consistency: </strong>Ensure a unified visual style that deeply immerses players in our steampunk universe.</li>
+        <li><strong>Collaboration: </strong>Work closely with our UI designers, concept artists, and development team to refine and perfect the game.</li>
+        <li><strong>Feedback Implementation: </strong>Adapt your creations thoughtfully based on team and community feedback.</li>
+      </ul>
+    </section>
+    <!-- Your Profile -->
+    <section aria-labelledby="your-profile-title">
+      <h2 id="your-profile-title">Your Profile</h2>
+      <ul>
+        <li><strong>Expertise:</strong> You have a proven talent in pixel art and animation, ideally experienced with Aseprite or Photoshop. Unity experience is beneficial, but not mandatory.</li>
+        <li><strong>Portfolio:</strong> A strong portfolio showcasing your pixel art and animation skills is highly preferred.</li>
+        <li><strong>Experience:</strong> Previous game development experience is a plus, but enthusiasm, creativity, and passion are most important.</li>
+        <li><strong>Soft Skills:</strong> You're communicative, collaborative, receptive to feedback, and eager to learn.</li>
+        <li><strong>Language Skills:</strong> Fluent English (written and spoken).</li>
+        <li><strong>Working Style:</strong> Comfortable working remotely with flexible hours.</li>
+      </ul>
+    </section>        
+    <!-- We Offer You -->
+    <section aria-labelledby="we-offer-title">
+      <h2 id="we-offer-title">We Offer You</h2>
+      <ul>
+        <li><strong>Revenue Sharing:</strong> Directly benefit from your contributions with our transparent revenue-share model.</li>
+        <li><strong>Global Flexibility:</strong> Enjoy fully remote work, flexible hours, and a supportive, international team.</li>
+        <li><strong>Professional Tools:</strong> Receive access to specialized software tools and resources needed for your role.</li>
+        <li><strong>Growth & Development:</strong> Take advantage of regular team meetups, creative workshops, and personalized development opportunities.</li>
+        <li><strong>Inclusive Culture:</strong> Thrive in a team where open communication, mutual respect, and creativity are core values.</li>
+        <li><strong>Professional Growth:</strong> Gain experience in an ambitious indie project with significant creative freedom.</li>
+      </ul>
+    </section>
+    <section aria-labelledby="how-to-apply-title">
+      <h2 id="how-to-apply-title">How to Apply</h2>
+      <p>Please send us your application via email to <a href="mailto:jobs@octiware.com">jobs@octiware.com</a>. Include the job title in your subject line. Attach your portfolio or work samples and a brief introduction about yourself. We usually respond within 1–2 days.</p>
+    </section>
+  </article>
+  <!-- Apply Now -->
+  <div class="job-action-buttons">
+    <a href="mailto:jobs@octiware.com?subject=2D%20Top-Down%20Pixel%20Artist%20-%20Application" class="apply-now-btn" aria-label="Apply now via email">
+      Shape our World
+    </a>
+  </div>
+
+  <section class="job-highlight-box-header" aria-labelledby="application-process-title">
+    <h2 id="application-process-title">FAQ: Application Process</h2>
+  
+    <div class="job-highlight-box">
+      <strong>How does the application process work?</strong>
+      <p>After reviewing your application, I will arrange a brief introductory call with you. This will help us see if we're a good match.</p>
+    </div>
+  
+    <div class="job-highlight-box">
+      <strong>What happens after I apply?</strong>
+      <p>I will personally review your application and get in touch with you directly.</p>
+    </div>
+  
+    <div class="job-highlight-box">
+      <strong>How quickly will I receive feedback?</strong>
+      <p>You will typically hear back from me within 1–2 days.</p>
+    </div>
+  
+    <div class="job-highlight-box">
+      <strong>How does onboarding look for new team members?</strong>
+      <p>I'll assign you initial tasks and introduce you to your main contact within your area, ensuring a smooth onboarding.</p>
+    </div>
+  
+    <div class="job-highlight-box">
+      <strong>Is there an application deadline?</strong>
+      <p>No, we are always looking for passionate people to join our team.</p>
+    </div>
+  </section>      
+</main>
+    </main>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" aria-labelledby="contact-title">
+  <div class="contact-content">
+    <h2 id="contact-title" class="visually-hidden">Contact</h2>
+    <div class="contact-boxes">
+      <article class="contact-box">
+        <h3 class="contact-box-title">Information</h3>
+        <a href="mailto:info@octiware.com" class="contact-box-email">info@octiware.com</a>
+      </article>
+      <article class="contact-box">
+        <h3 class="contact-box-title">Join the Team</h3>
+        <a href="mailto:jobs@octiware.com" class="contact-box-email">jobs@octiware.com</a>
+      </article>
+      <article class="contact-box">
+        <h3 class="contact-box-title">Let's Collaborate</h3>
+        <a href="mailto:biz@octiware.com" class="contact-box-email">biz@octiware.com</a>
+      </article>
+      <article class="contact-box">
+        <h3 class="contact-box-title">Press &amp; Creators</h3>
+        <a href="mailto:media@octiware.com" class="contact-box-email">media@octiware.com</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- FOOTER -->
+    <div class = "footer-content" aria-label="Site footer">
+  <div class="footer-container">
+    <!-- FOOTER NAVIGATION -->
+    <nav class="footer-links" aria-label="Footer links">
+      <ul>
+        <li><a href="privacy_cookie_policy.html">Privacy & Cookie Policy</a></li>
+      </ul>
+    </nav>
+    <!-- SOCIAL MEDIA ICONS (footer) -->
+    <div class="social-icons-header" aria-label="Social media links in footer">
+      <a href="https://www.instagram.com/octiware/" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+      <img src="img/instagram_icon.svg" alt="Instagram Icon" />
+      </a>
+      <a href="https://x.com/octiware" target="_blank" rel="noopener" aria-label="Follow us on X">
+      <img src="img/x_icon.svg" alt="X Icon" />
+      </a>
+      <a href="https://www.tiktok.com/@octiware" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
+      <img src="img/tiktok_icon.svg" alt="TikTok Icon" />
+      </a>
+      <a href="https://www.youtube.com/@Octiware" target="_blank" rel="noopener" aria-label="Follow us on YouTube">
+      <img src="img/youtube_icon.svg" alt="YouTube Icon" />
+      </a>
+      <a href="https://www.reddit.com/user/Octiware/" target="_blank" rel="noopener" aria-label="Follow us on Reddit">
+      <img src="img/reddit_icon.svg" alt="Reddit Icon" />
+      </a>
+      <a href="https://discord.gg/WqjBxvcSTB" target="_blank" rel="noopener" aria-label="Join us on Discord">
+      <img src="img/discord_icon.svg" alt="Discord Icon" />
+      </a>
+      <a href="https://www.pinterest.com/octiware/" target="_blank" rel="noopener" aria-label="Follow us on Pinterest">
+      <img src="img/pinterest_icon.svg" alt="Pinterest Icon" />
+      </a>
+      <a href="https://www.linkedin.com/company/octiware/" target="_blank" rel="noopener" aria-label="Follow us on LinkedIn">
+      <img src="img/linkedin_icon.svg" alt="LinkedIn Icon" />
+      </a>
+      <a href="https://www.threads.net/@octiware" target="_blank" rel="noopener" aria-label="Follow us on Threads">
+      <img src="img/threads_icon.svg" alt="Threads Icon" />
+      </a>
+    </div>
+    <!-- COPYRIGHT -->
+    <div class="footer-copyright">
+      <p>© 2025 Octiware. Crafted with ❤️. All rights reserved.</p>
+    </div>
+  </div>
+</div>
+
+    <!-- SCRIPTS -->
+    <!-- In der Regel packst du deine Skripte ans Ende, damit der DOM vorher geladen wird. -->
+    <script defer src="/js/main.js"></script>
+    <script defer src="/js/translation.js"></script>
+    <!-- Falls du noch andere JS-Dateien brauchst, hier verlinken. -->
+    
+  </body>
+</html>

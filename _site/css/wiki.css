@@ -1,0 +1,576 @@
+/* =====================  wiki.css  ===================== */
+.wiki-header {
+  background: var(--white);
+}
+
+.wiki-header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  gap: var(--spacing-md);
+  justify-content: space-between;
+}
+
+.wiki-header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.wiki-logo-img {
+  max-width: 80px;
+  height: auto;
+}
+
+.wiki-logo-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: var(--spacing-sm);
+}
+
+.wiki-logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--black);
+  line-height: 1;
+}
+
+.wiki-logo-slogan {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--brand-color);
+  margin-top: var(--spacing-xs);
+  line-height: 1;
+}
+
+.wiki-header-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 var(--spacing-md);
+}
+.wiki-search-form {
+  position: relative;
+  width: 800px;
+  display: flex;
+  align-items: center;
+}
+.wiki-search-form input[type="search"] {
+  width: 100%;
+  height: 2.2rem;
+  padding: 0 var(--spacing-md) 0 var(--spacing-sm);
+  background-color: #f3f4f6;
+  border: 1px none #ddd;
+  border-radius: 4px;
+  color: #666;
+  font-size: 0.95rem;
+  outline: none;
+}
+.wiki-search-form button {
+  position: absolute;
+  right: var(--spacing-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.wiki-search-form button img {
+  opacity: 0.4;
+}
+
+.autocomplete-results {
+  position: absolute;
+  top: calc(2.2rem + 4px); 
+  left: 0;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--white);
+  border: 1px solid #c8ccd1;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 9999;
+  display: none;
+}
+
+.autocomplete-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  border-top: 1px solid var(--light-gray);
+  transition: background 0.15s;
+}
+.autocomplete-item:first-child {
+  border-top: none;
+}
+.autocomplete-item:hover {
+  background: #f2f2f2;
+}
+.autocomplete-item-thumb {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.autocomplete-text {
+  display: flex;
+  flex-direction: column;
+}
+.autocomplete-item-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 3px;
+  color: #222;
+}
+.autocomplete-item-summary {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.2;
+}
+
+.autocomplete-see-all {
+  justify-content: center;
+  color: var(--brand-color);
+  font-weight: 500;
+  border-top: 1px solid #eaeaea !important;
+}
+.autocomplete-see-all:hover {
+  background: #e8f0ff;
+}
+
+.wiki-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 1rem auto 0 auto;
+  padding: 0 1rem;
+}
+.wiki-page-title {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #333;
+}
+.wiki-header-icons a {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+/* ===================== Sticky Header Bar  ===================== */
+.wiki-title-container {
+  max-width: 1300px;
+  margin: 10px auto 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wiki-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wiki-title img {
+  width: 29px;
+  height: 29px;
+}
+
+.wiki-header .page-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #202122;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  background: #f1f1f1;
+  border-radius: 6px;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box img {
+  display: block;
+}
+
+/* ===================== MAIN WRAPPER LAYOUT (3 columns) ===================== */
+.wiki-body {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  padding-top: 1rem;
+  grid-template-columns: 225px 1fr 270px;
+  gap: 1rem;
+}
+/* ========== Left Sidebar (sticky) ========== */
+.wiki-left-sidebar {
+  position: sticky;
+  top: 85px;
+  overflow-x: hidden;
+  align-self: start; /* Ensure proper sticky behavior in grid layout */
+}
+
+/* Outer UL for the entire sidebar */
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each major section (Contents / Top-level articles) */
+.sidebar-section {
+  margin-bottom: 2rem; /* extra spacing between sections */
+}
+
+/* ================= HEADINGS (e.g. "Contents") ================= */
+.heading-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-family: inherit;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.closed-icon {
+  display: inline-block;
+}
+.open-icon {
+  display: none;
+}
+
+/* When data-expanded="true", swap icons */
+.heading-button[data-expanded="true"] .closed-icon {
+  display: none;
+}
+.heading-button[data-expanded="true"] .open-icon {
+  display: inline-block;
+}
+
+.heading-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.heading-text {
+  font-size: 1rem;
+}
+
+.heading-right {
+  display: flex;
+  align-items: center;
+}
+.open-icon {
+  display: none;
+}
+
+/* ================= SUB-LISTS ================= */
+.sidebar-list,
+.sidebar-sublist {
+  list-style: none;
+  margin: 0;
+  padding-left: 1.5rem; /* indentation for hierarchy */
+  margin-top: 1rem;     /* spacing above sub-lists */
+}
+
+/* Additional nesting */
+.sidebar-sublist .sidebar-sublist {
+  margin-top: 0.75rem; /* smaller gap for deeper levels */
+  padding-left: 1.5rem;
+}
+
+/* More spacing between items */
+.sidebar-list > li,
+.sidebar-sublist > li {
+  margin-bottom: 0.8rem;
+}
+
+/* .hidden collapses the UL (set by JS toggling) */
+.hidden {
+  display: none;
+}
+
+/* ================= EXPANDABLE BUTTONS ================= */
+/* For sub-items (like "Early Twentieth Century", "Cats", "Breeds", etc.) */
+.expandable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: inherit;
+  text-align: left;
+}
+
+.expandable-text {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.icon-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.icon-right img {
+  width: 20px;
+  height: 20px;
+}
+
+.open-icon {
+  display: none;
+}
+.expandable[data-expanded="true"] .closed-icon {
+  display: none;
+}
+.expandable[data-expanded="true"] .open-icon {
+  display: inline;
+}
+
+/* ================= LINK COLORS ================= */
+/* 1) "Contents" area => sub-links and sub-headers in gray (#666) */
+.contents-section .sidebar-list a {
+  color: #666;
+  text-decoration: none;
+}
+.contents-section .sidebar-list a:hover {
+  text-decoration: underline;
+}
+
+/* Sub-headers in contents are also gray, non-clickable */
+.contents-subheader {
+  color: #666;
+  font-weight: normal;
+  display: block;
+}
+
+/* 2) "Top-level articles" => sub-links in blue (#0077cc) */
+.top-level-section .sidebar-list a {
+  color: var(--brand-color);
+  text-decoration: none;
+}
+.top-level-section .sidebar-list a:hover {
+  text-decoration: underline;
+}
+
+/* 3) Visited links remain the same color */
+.sidebar-list a:visited {
+  color: inherit;
+}
+
+/* 4) "Current article" => bold + black */
+.current-article {
+  font-weight: bold;
+  color: #000 !important;
+}
+
+/* ===================== Main Article (center) ===================== */
+.wiki-main-content {
+  margin: 0 auto;
+  max-width: 665px;
+  background: transparent;
+  padding: 0;
+}
+
+.wiki-article h1 {
+  /* Typically used for the main article title */
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.wiki-article h2 {
+  /* Major section headings */
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;    /* More spacing before major sections */
+  margin-bottom: 0.5rem;
+  color: #444;
+  border-bottom: 2px solid var(--brand-color);
+  padding-bottom: 0.25rem;
+}
+
+.wiki-article h3 {
+  /* Subsection headings */
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Paragraphs */
+.wiki-article p {  
+  text-align: left;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+  letter-spacing: 0.025em; 
+}
+
+/* “See also” section */
+.wiki-see-also {
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+}
+.wiki-see-also h2 {
+  margin-top: 0;
+}
+
+.see-also-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.see-also-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--light-brand-color);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+.see-also-item img {
+  filter: invert(38%) sepia(38%) saturate(941%) hue-rotate(163deg) brightness(92%) contrast(86%);
+}
+.see-also-item a {
+  color: var(--brand-color);
+  text-decoration: none;
+}
+.see-also-item a:hover {
+  text-decoration: underline;
+}
+
+/* Categories box */
+.wiki-categories {
+  margin-top: 1.5rem;
+  padding: 0.6rem;
+  background: #d8753c19;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #444;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+  flex-wrap: wrap; /* If categories get too long, they wrap nicely */
+}
+
+.wiki-categories img {
+  display: block;
+  filter: invert(49%) sepia(73%) saturate(475%) hue-rotate(338deg) brightness(94%) contrast(88%);
+}
+
+.wiki-categories strong {
+  white-space: nowrap;
+  margin-right: 0.3rem;
+}
+
+.wiki-categories p {
+  flex: 1;
+  display: inline;
+  color: #D8753C;
+  word-break: break-word;
+}
+
+/* Last edited note */
+.wiki-last-edited {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #636C7E;
+  margin-bottom: 5rem;
+}
+
+.brand-highlight {
+  color: var(--brand-color);
+}
+.brand-highlight a {
+  color: var(--brand-color);
+  text-decoration: none;
+}
+.brand-highlight a:hover {
+  background-color: #D0E4F2;
+  text-decoration: underline;
+}
+
+
+/* ===================== Right Sidebar ===================== */
+.wiki-right-sidebar {
+  position: static;
+  height: fit-content;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.8rem;
+}
+
+.infobox-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.infobox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.infobox-grid img {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.infobox-section {
+  margin-bottom: 1rem;
+}
+.infobox-section strong {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.extra-content {
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ========== HEAD SECTION ========== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <!-- SEO: Title and Description -->
+    <title>TEST | Octiware</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <!-- ========== HEADER SECTION ========== -->
+    <header id="wiki-header-placeholder"></header>
+
+    <!-- ========== MAIN SECTION ========== -->
+    <div class="wiki-title-container">
+      <div class="wiki-title">
+        <img src="../img/article.svg" alt="">
+        <h1 class="page-title">The Cat (Felis catus)</h1>
+      </div>
+      <div class="header-icons">
+        <!-- Topologie icon in a light-grey rounded box -->
+        <div class="icon-box">
+          <img src="../img/topo-map-icon.svg" alt="Topologie Icon">
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== 3-Column Layout ===================== -->
+    <div class="wiki-body">
+
+      <!-- ========== Left Sidebar ========== -->
+      <nav class="wiki-left-sidebar" aria-label="Sidebar navigation">
+        <ul class="sidebar-nav">
+
+          <!-- ================= SECTION #1: CONTENTS ================= -->
+          <li class="sidebar-section contents-section">
+            <!-- "Contents" heading button -->
+            <button class="heading-button" data-expanded="true">
+              <span class="heading-left">
+                <!-- Both icons in the same container -->
+                <img src="../img/contents.svg" alt="Closed icon" class="toggle-icon closed-icon" />
+                <img src="../img/minus.svg" alt="Open icon" class="toggle-icon open-icon" />
+            
+                <!-- Text next to the icons -->
+                <span class="heading-text">Contents</span>
+              </span>
+            </button>
+                      
+            <!-- By default, "Contents" is open (data-expanded="true") so no .hidden class -->
+            <ul class="sidebar-list">
+              <li>
+                <!-- Expandable sub‐item for "Early Twentieth Century" -->
+                <button class="expandable" data-expanded="false">
+                  <span class="expandable-text">Early Twentieth Century</span>
+                  <span class="icon-right">
+                    <img src="../img/right_text_icon.svg" class="closed-icon" alt="Closed icon">
+                    <img src="../img/down_text_icon.svg" class="open-icon" alt="Open icon">
+                  </span>
+                </button>
+                <ul class="sidebar-sublist hidden">
+                  <li>
+                    <!-- Non-clickable sub-header in gray -->
+                    <span class="contents-subheader">Major Themes</span>
+                    <ul class="sidebar-sublist">
+                      <li><a href="#">Artist A</a></li>
+                      <li><a href="#">Artist B</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="contents-subheader">Notable Artists</span>
+                    <ul class="sidebar-sublist">
+                      <li><a href="#">Artist C</a></li>
+                      <li><a href="#">Artist D</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Single link at top level of Contents -->
+              <li><a href="#">See also</a></li>
+            </ul>
+          </li>
+
+          <!-- =========== SECTION #2: TOP-LEVEL ARTICLES =========== -->
+          <li class="sidebar-section top-level-section">
+            <!-- "Top-level articles" heading button -->
+            <button class="heading-button" data-expanded="false">
+              <span class="heading-left">
+                <!-- Both icons in the same container -->
+                <img src="../img/top-level-articals.svg" alt="Closed icon" class="toggle-icon closed-icon" />
+                <img src="../img/minus.svg" alt="Open icon" class="toggle-icon open-icon" />
+            
+                <!-- Text next to the icons -->
+                <span class="heading-text">Top-level articles</span>
+              </span>
+            </button>
+
+            <!-- Initially hidden, because data-expanded="false" -->
+            <ul class="sidebar-list hidden">
+              <li><a href="#">Extant Carnivora species</a></li>
+              <li>
+                <button class="expandable" data-expanded="false">
+                  <span class="expandable-text">Cats</span>
+                  <span class="icon-right">
+                    <img src="../img/right_text_icon.svg" class="closed-icon" alt="Closed icon">
+                    <img src="../img/down_text_icon.svg" class="open-icon" alt="Open icon">
+                  </span>
+                </button>
+                <ul class="sidebar-sublist hidden">
+                  <li>
+                    <button class="expandable" data-expanded="false">
+                      <span class="expandable-text">Breeds</span>
+                      <span class="icon-right">
+                        <img src="../img/right_text_icon.svg" class="closed-icon" alt="Closed icon">
+                        <img src="../img/down_text_icon.svg" class="open-icon" alt="Open icon">
+                      </span>
+                    </button>
+                    <ul class="sidebar-sublist hidden">
+                      <li><a href="#">American curl</a></li>
+                      <li><a href="#">Sphynx</a></li>
+                      <!-- Example "current article" in bold/black -->
+                      <li><a href="#" class="current-article">German Rex</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button class="expandable" data-expanded="false">
+                      <span class="expandable-text">Felinology</span>
+                      <span class="icon-right">
+                        <img src="../img/right_text_icon.svg" class="closed-icon" alt="Closed icon">
+                        <img src="../img/down_text_icon.svg" class="open-icon" alt="Open icon">
+                      </span>
+                    </button>
+                    <ul class="sidebar-sublist hidden">
+                      <li><a href="#">Anatomy</a></li>
+                      <li><a href="#">Genetics</a></li>
+                      <li><a href="#">Kitten</a></li>
+                      <li><a href="#">Calico cat</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+  
+      <!-- ========== Main Article ========== -->
+      <main class="wiki-main-content">
+        <article class="wiki-article">
+          <p>
+            The <span class="brand-highlight"><a href="#">cat</a></span> (Felis catus), commonly referred to as the 
+            domestic cat or house cat, is the only domesticated species in the family Felidae. Recent advances in 
+            <span class="brand-highlight"><a href="#">archaeology</a></span> and genetics have shown that the 
+            <span class="brand-highlight"><a href="#">domestication of the cat</a></span> occurred in the Near East 
+            around 7500 BC. It is commonly kept as a house pet and farm cat, but also ranges freely as a feral cat 
+            avoiding human contact. It is valued by humans for companionship and its ability to kill vermin. Its 
+            retractable claws are adapted to killing small prey like mice and rats. It has a strong, flexible body, 
+            quick reflexes, sharp teeth, and its night vision and sense of smell are well developed. It is a social 
+            species, but a solitary hunter and a crepuscular predator. Cat communication includes vocalizations like 
+            meowing, purring, trilling, hissing, growling, and grunting as well as cat body language. It can hear 
+            sounds too faint or too high in frequency for human ears, such as those made by small mammals. It also 
+            secretes and perceives pheromones.
+          </p>
+      
+          <p>
+            Female domestic cats can have kittens from spring to late autumn in temperate zones and throughout the 
+            year in equatorial regions, with litter sizes often ranging from two to five kittens. Domestic cats are 
+            bred and shown at events as registered pedigreed cats, a hobby known as cat fancy. Animal population 
+            control of cats may be achieved by spaying and neutering, but their proliferation and the abandonment 
+            of pets has resulted in large numbers of feral cats worldwide, contributing to the extinction of bird, 
+            mammal and reptile species.
+          </p>
+      
+          <p>
+            As of 2017, the domestic cat was the second most popular pet in the United States, with 95.6 million 
+            cats owned and around 42 million households owning at least one cat. In the United Kingdom, 26% of 
+            adults have a cat, with an estimated population of 10.9 million pet cats as of 2020. As of 2021, there 
+            were an estimated 220 million owned and 480 million stray cats in the world.
+          </p>
+      
+          <!-- 2) Major sections as <h2>, subsections as <h3> -->
+          <section id="senses">
+            <h2>Senses</h2>
+      
+            <h3>Vision</h3>
+            <p>
+              Cats have excellent night vision and can see at one sixth the light level required for human 
+              vision.[51]: 43  This is partly the result of cat eyes having a tapetum lucidum, which reflects 
+              any light that passes through the retina back into the eye, thereby increasing the eye's 
+              sensitivity to dim light.[67] Large pupils are an adaptation to dim light. The domestic cat has 
+              slit pupils, which allow it to focus bright light without chromatic aberration.[68] At low light, 
+              a cat's pupils expand to cover most of the exposed surface of its eyes.[69] The domestic cat has 
+              rather poor color vision and only two types of cone cells, optimized for sensitivity to blue and 
+              yellowish green; its ability to distinguish between red and green is limited.[70] A response to 
+              middle wavelengths from a system other than the rod cells might be due to a third type of cone. 
+              This appears to be an adaptation to low light levels rather than representing true trichromatic 
+              vision.[71] Cats also have a nictitating membrane, allowing them to blink without hindering their 
+              vision.
+            </p>
+      
+            <h3>Hearing</h3>
+            <p>
+              The domestic cat's hearing is most acute in the range of 500 Hz to 32 kHz.[72] It can detect an 
+              extremely broad range of frequencies ranging from 55 Hz to 79 kHz, whereas humans can only detect 
+              frequencies between 20 Hz and 20 kHz. It can hear a range of 10.5 octaves, while humans and dogs 
+              can hear ranges of about 9 octaves.[73][74] Its hearing sensitivity is enhanced by its large 
+              movable outer ears, the pinnae, which amplify sounds and help detect the location of a noise. It 
+              can detect ultrasound, which enables it to detect ultrasonic calls made by rodent prey.[75][76] 
+              Recent research has shown that cats have socio-spatial cognitive abilities to create mental maps 
+              of owners' locations based on hearing owners' voices.[77]
+            </p>
+          </section>
+      
+          <section id="behavior">
+            <h2>Behavior</h2>
+            <p>
+              Domestic cats are highly social animals, and certain breeds are notably more social...
+            </p>
+          </section>
+      
+          <!-- 3) "See also" styled as in your reference image -->
+          <section class="wiki-see-also">
+            <h2>See also</h2>
+            <div class="see-also-list">
+              <!-- 
+                Example “pills” with an icon. 
+                You can vary the background color using extra classes or inline style. 
+              -->
+              <div class="see-also-item">
+                <img src="../img/article.svg" alt="">
+                <a href="#">Cats portal</a>
+              </div>
+              <div class="see-also-item">
+                <img src="../img/article.svg" alt="">
+                <a href="#">Mammals portal</a>
+              </div>
+              <div class="see-also-item">
+                <img src="../img/article.svg" alt="">
+                <a href="#">Animals portal</a>
+              </div>
+              <div class="see-also-item variant-blue">
+                <img src="../img/article.svg" alt="">
+                <a href="#">Cat fancy</a>
+              </div>
+              <div class="see-also-item variant-green">
+                <img src="../img/article.svg" alt="">
+                <a href="#">List of cat breeds</a>
+              </div>
+            </div>
+          </section>
+      
+          <!-- 4) Categories styled as in your reference image -->
+          <div class="wiki-categories">
+            <img src="../img/categories.svg" alt="">
+            <strong>Categories:</strong>
+            <p>Scottish art • Modern art • Scottish contemporary art • Modern history of Scotland</p>
+          </div>
+      
+          <div class="wiki-last-edited">
+            Last edited on 16 November 2023, at 22:48 (UTC)
+          </div>
+      
+        </article>
+      </main>      
+
+      <!-- ========== Right Sidebar ========== -->
+      <aside class="wiki-right-sidebar">
+
+        <!-- Example Infobox: “Image 4” style -->
+        <div class="infobox">
+          <div class="infobox-title">Cat</div>
+          <!-- a small grid of cat photos -->
+          <div class="infobox-grid">
+            <img src="img/cat1.jpg" alt="Cat 1">
+            <img src="img/cat1.jpg" alt="Cat 2">
+            <img src="img/cat1.jpg" alt="Cat 3">
+            <img src="img/cat1.jpg" alt="Cat 4">
+            <img src="img/cat1.jpg" alt="Cat 5">
+            <img src="img/cat1.jpg" alt="Cat 6">
+          </div>
+
+          <div class="infobox-section">
+            <strong>Temporal range:</strong> 9,500 years ago – present
+          </div>
+          <div class="infobox-section">
+            <strong>Conservation status:</strong> Domesticated
+          </div>
+          <div class="infobox-section">
+            <strong>Scientific classification:</strong><br>
+            <strong>Domain:</strong> Eukaryota<br>
+            <strong>Kingdom:</strong> Animalia<br>
+            <strong>Class:</strong> Mammalia
+          </div>
+
+          <!-- If you want to embed something else (like your “Image 5” data),
+              you can place it in an extra section like this: -->
+          <div class="extra-content">
+            <!-- This could contain your specialized content: 
+                e.g., a fish info card, stats tables, etc. -->
+            <p>Additional content goes here.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ========== FOOTER SECTION ========== -->
+    <footer id="footer-placeholder"></footer>
+    <!-- ========== SCROLL TO TOP BUTTON ========== -->
+    <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <img src="../img/arrow_up.svg" alt="Arrow Up Icon" />
+    </a>
+    <!-- ========== MAIN SCRIPT ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.js"></script>
+    <script defer src="../js/include-layout.js"></script>
+    <script defer src="../js/search.js"></script>
+    <script defer src="../js/translation.js" ></script>
+    <script defer src="../js/main.js"></script>
+    <script>
+      document.querySelectorAll('.heading-button, .expandable').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('data-expanded') === 'true';
+          // Flip data-expanded
+          btn.setAttribute('data-expanded', String(!isExpanded));
+
+          // Toggle the UL that follows
+          const nextUl = btn.nextElementSibling;
+          if (nextUl && nextUl.tagName.toLowerCase() === 'ul') {
+            nextUl.classList.toggle('hidden');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
