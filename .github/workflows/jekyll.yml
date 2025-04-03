@@ -32,12 +32,16 @@ jobs:
 
       # Ruby-Umgebung einrichten und Bundler-Cache aktivieren
       - name: Setup Ruby
-        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1.2'
           bundler-cache: true
-          cache-version: 0
 
+      - name: Normalize Gemfile.lock for platform compatibility
+        run: |
+          bundle lock --add-platform x86_64-linux
+          bundle lock --normalize-platforms
+          
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
