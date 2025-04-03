@@ -19,6 +19,7 @@ picture:
   markup: "auto"
   upscale: false
   ignore_missing_images: true
+  ignore_copy_errors: true  
 
 exclude:
   - Gemfile
