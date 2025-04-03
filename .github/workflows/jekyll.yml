@@ -40,3 +40,23 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+      
+# Hinweise zur Verwendung dieses GitHub Actions Workflows:
+
+# 1. Änderungen am Jekyll-Projekt (Inhalte, Layouts, etc.):
+#    - Führen Sie 'docker compose up' lokal aus, um Änderungen zu testen.
+#    - Committen und pushen Sie die Änderungen zu GitHub.
+#    - Dieser Workflow wird automatisch ausgelöst und stellt die Änderungen bereit.
+
+# 2. Änderungen am Docker-Image (z. B. Aktualisierung von Abhängigkeiten):
+#    - Bauen Sie das Docker-Image lokal neu:
+#      docker build -t innovationone/octiware:latest .
+#    - Pushen Sie das aktualisierte Image zu Docker Hub:
+#      docker push innovationone/octiware:latest
+#    - Stellen Sie sicher, dass dieser Workflow auf das aktualisierte Image verweist.
+#    - Committen und pushen Sie die Änderungen zu GitHub, um den Workflow auszulösen.
+
+# Wichtiger Hinweis: Stellen Sie sicher, dass das Docker-Image öffentlich ist,
+# damit GitHub Actions darauf zugreifen kann. Bei privaten Images sind zusätzliche
+# Authentifizierungsschritte erforderlich.

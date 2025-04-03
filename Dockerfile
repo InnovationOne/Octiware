@@ -2,13 +2,14 @@ FROM ruby:3.4.2-bookworm
 
 WORKDIR /srv/jekyll
 
-# Installiere native Bibliotheken für AVIF/WebP
+# Installiere native Bibliotheken für AVIF/WebP und Node.js
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libvips libvips-tools libheif-dev libaom-dev \
+    nodejs npm \
     && rm -rf /var/lib/apt/lists/*
 
-# Kopiere nur Gemfile + Lockfile und installiere Gems
+# Kopiere nur Gemfile und Gemfile.lock und installiere Gems
 COPY Gemfile Gemfile.lock ./
 RUN gem update --system && gem install bundler && bundle install
 
