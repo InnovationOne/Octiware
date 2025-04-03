@@ -1,0 +1,121 @@
+---
+layout: default
+title: "DEV-Blog #3 – Refining Gameplay & UI"
+description: "Our third dev blog focuses on refined fishing, cutscenes, inventory improvements, and more."
+---
+
+<main class="main-content">
+  <div class="devlog-container">
+    
+    <!-- TITLE AREA -->
+    <section class="devlog-header">
+      <h1 class="devlog-title">Devlog #3</h1>
+      <p class="devlog-sub-title">Of Bobbers, Backpacks and Beachcombing</p>
+      <p class="devlog-date">Published on March 09, 2025 — Last revision on March 30, 2025</p>
+    </section>
+
+    <!-- VIDEO -->
+    <article>
+      <div class="video-container">
+        {% include video.html
+          src="/media/devlog-3-hero.webm"
+          poster="/img/devlog-3-hero-poster.jpg"
+          autoplay=true
+          loop=true
+          muted=true
+          playsinline=true
+          class="video-container-v"
+        %}
+      </div>
+
+      <!-- Greetings, Esteemed Adventurers and Reluctant Inventory Hoarders -->
+      <section class="devlog-section">
+        <h3>Greetings, Esteemed Adventurers and Reluctant Inventory Hoarders</h3>
+        <p>Welcome back to the steam-slicked journal of our ongoing descent into beautifully organized chaos. This is Devlog #3, and it comes to you straight from the workshop floor—where sparks fly, variables wobble, and design docs multiply in the shadows.</p>
+        <p>This chapter focuses on the little things. The tactile things. The things you didn’t know you needed until they didn’t work. We’re talking bobbers that actually bounce, cutscenes that no longer implode, inventories that finally make sense, and beaches that look like someone’s been beachcombing before you got there.</p>
+        <p>Let’s crack the valves and see what’s new.</p>
+      </section>
+
+      <!-- A More Dignified Way to Fish -->
+      <section class="devlog-section">
+        <h3>A More Dignified Way to Fish</h3>
+        <p>Fishing. The noble art of standing still and hoping the water agrees with you.</p>
+        <p>We’ve given the whole experience a well-earned polish. The bobber now dips, tugs, and floats like it actually lives in water—not just in a debug box. The full casting sequence flows from cast to catch with the poise of a practiced angler and the drama of a novella.</p>
+        <p>And yes, it still respects your patience level. Or lack thereof.</p>
+      </section>
+      <!-- The Cutscene Conductor Arrives -->
+      <section class="devlog-section">
+        <h3>The Cutscene Conductor Arrives</h3>
+        <p>Introducing the new Cutscene Manager—a slick little clockwork brain that handles drama, timing, and unexpected pauses with grace.</p>
+        <p>Whether you're staging an awkward reunion, a tragic flashback, or a guy tripping over a barrel, this tool lets us script it quickly and cleanly. No more writing four dozen one-off scripts just to make someone turn left. Our goal: cinematic storytelling at the speed of narrative panic.</p>
+        <p>It’s modular, reusable, and surprisingly polite.</p>
+      </section>
+
+      <!-- Objects, Ownership & Order in the Workshop -->
+      <section class="devlog-section">
+        <h3>Objects, Ownership & Order in the Workshop</h3>
+        <p>Previously, multiplayer object interactions felt like watching two raccoons fight over a shiny spoon. That’s fixed now.</p>
+        <p>Interactive objects—like chests, furnaces, and other player-magnets—now enforce polite social behavior. Only one player can tinker at a time. The era of synchronized loot-clicking is over.</p>
+        <p>We’ve also upgraded how placeable objects are stored and retrieved, ensuring smoother saving, less data duplication, and fewer quantum chests.</p>
+      </section>
+
+      <!-- Inventory: Now 80% Less Frustrating -->
+      <section class="devlog-section">
+        <h3>Enhanced Inventory & Item Management</h3>
+        <p>Look, we know inventory systems are the silent assassins of fun.</p>
+        <p>That’s why we gave ours a full revamp. Drag-and-drop feels smoother. Shift-move is smarter. Auto-sorting is finally not a lie. And yes—you can now scroll through your toolbelt like a steampunk cowboy rifling through a sleeve of gadgets.</p>
+        <p>The chest UI is cleaner, the toolbelt UI is sharper, and the trash icon now understands your deepest regrets.</p>
+        
+        <div class="img-side-by-side main-content">
+          <div class="img-side-by-side-1">
+             <p>Chest UI – because chaos doesn’t need to be visual.</p>
+             <details class="zoom-image">
+              <summary>
+                {% picture devlog_3_chestUI.avif --img class="lightbox-img" --alt "Devlog Image 4" %}
+              </summary>
+            </details>
+          </div>
+          <div class="img-side-by-side-2">
+             <p>Toolbelt UI – loadout like a proper mad scientist.</p>
+             <details class="zoom-image">
+              <summary>
+                {% picture devlog_3_toolbeltUI.avif --img class="lightbox-img" --alt "Devlog Image 5" %}
+              </summary>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Shores Now Shift -->
+      <section class="devlog-section">
+        <h3>The Shores Now Shift</h3>
+        <p>Every morning, the sea leaves a new gift.</p>
+        <p>Our coastal areas now change visually day by day—shells, scraps, and curiosities appear as if placed by the tides themselves (or by a particularly aesthetic sea-spirit). It’s a small touch, but one that makes the island feel just a bit more alive—and just a bit less looped.</p>
+        <p>You never know what you’ll find. And that’s the point.</p>
+      </section>
+
+      <!-- Smarter Object Interactions -->
+      <section class="devlog-section">
+        <h3>Smarter Object Interactions</h3>
+        <p>When you walk up to a chest, the game no longer wonders whether you meant the one behind you. We’ve added proper prioritization to interactions: facing = focus. Collectibles now behave like they want to be picked up.</p>
+        <p>This reduces those lovely moments where you run past three apples trying to grab a mushroom that doesn’t exist. You’re welcome.</p>
+      </section>
+
+      <!-- One Cog Ahead -->
+      <section class="devlog-section">
+        <h3>One Cog Ahead</h3>
+        <p>Every screw tightened here makes the whole machine smoother.</p>
+        <p>We’re closing in on the systems that will define your moment-to-moment experience. From the way you open a chest to how the weather rolls in—we want it to feel right, responsive, and occasionally full of delightful surprises.</p>
+        <p>More updates are on the horizon, including a proper peek at combat systems and maybe (just maybe) a playable teaser. Until then, drop by our Discord, say hi, and throw us your wildest suggestions.</p>
+        <p>After all, this island doesn’t just belong to us.</p>
+        <p> It belongs to the ones who play.</p>
+        <p>Steam forward.</p>
+      </section>
+
+      <section class="devlog-section-octi">        
+        <p>— Team Octiware</p>
+      </section>
+
+    </article>
+  </div>
+</main>

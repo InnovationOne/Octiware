@@ -259,7 +259,8 @@ document.addEventListener("DOMContentLoaded", () => {
     allItems.forEach(i => i.classList.remove("active"));
     const block = document.getElementById(epochId);
     if (!block) return;
-    const epTitle = block.querySelector(".epoch-title")?.textContent.trim();
+    const titleElement = block.querySelector(".epoch-title");
+    const epTitle = titleElement ? titleElement.textContent.trim() : "";
     const match = [...allItems].find(it => {
       const b = it.querySelector(".epoch-btn");
       return b && b.textContent.trim() === epTitle;

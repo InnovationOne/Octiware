@@ -1,0 +1,31 @@
+# _data/picture.yml
+
+media_queries:
+  mobile: 'max-width: 600px'    # Für Geräte, deren Viewport maximal 600px breit ist (z.B. Smartphones)
+  tablet: 'max-width: 900px'    # Für Tablets, die maximal 900px breit sind
+  desktop: 'min-width: 901px'   # Für Desktops, wenn der Viewport mindestens 901px breit ist
+
+presets:
+  default:
+    markup: auto                 # Automatische Wahl des HTML-Marketups (<picture> oder <img>), je nach Bedarf
+    formats: [avif, webp, original]  # Generierung von Bildern in AVIF (bevorzugt), dann WebP, abschließend das Originalformat
+    widths: [320, 480, 768, 1024, 1280, 1920, 2560, 3840]  # Liste der Bildbreiten für responsive Versionen
+    sizes:
+      mobile: '100vw'            # Auf Mobilgeräten wird das Bild in voller Viewport-Breite angezeigt
+      tablet: '80vw'             # Auf Tablets 80% der Viewport-Breite
+      desktop: '60vw'            # Auf Desktops 60% der Viewport-Breite
+    fallback_width: 1024         # Standardbreite, wenn keine spezifische Breite passt
+    fallback_format: original    # Fallback-Format ist das Original, falls kein alternatives Format verfügbar ist
+    attributes: {}               # Es werden keine Standardattribute festgelegt – Sie können im Liquid-Tag individuelle Klassen oder andere Attribute definieren
+
+  logo:
+    markup: auto
+    formats: [avif, webp, original]
+    widths: [60, 120, 180]
+    sizes:
+      mobile: '60px'
+      tablet: '60px'
+      desktop: '60px'
+    fallback_width: 60
+    fallback_format: original
+    attributes: {}

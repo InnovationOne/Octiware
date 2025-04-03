@@ -1,0 +1,14 @@
+# Weitere temporäre oder lokale Dateien
+.jekyll-metadata
+.jekyll-cache/
+_site/
+.venv/
+.DS_Store
+*.log
+*.swp
+*.tmp
+*.bak
+*.orig
+*.sublime-project
+*.sublime-workspace
+*.code-workspace

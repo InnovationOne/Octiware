@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "Octiware - Passion Meets Pixels"
+title: "Passion Meets Pixels"
 description: "Octiware is an indie game studio where passion meets pixels. Discover immersive, story-driven RPG experiences crafted with heart and innovation."
-keywords: "Octiware, Games, Indie, Development"
-ogtitle: "Octiware - Passion Meets Pixels"
-ogdescription: "Creating story-driven role-playing games."
 ---
 
-<!-- ========== HEADER SECTION ========== -->
-<header id="header-placeholder"></header>
 <!-- ========== HERO SECTION ========== -->
 <section class="hero-section" role="banner">
   <div class="hero-gif-container">
-    <img src="img/hero.gif" alt="Hero GIF showcasing game elements" class="hero-gif" />
+    {% include video.html
+      src="/media/index-hero.webm"
+      poster="/img/index-hero-poster.jpg"
+      autoplay=true
+      loop=true
+      muted=true
+      playsinline=true
+      class="hero-video"
+    %}
   </div>
   <!-- MAIN HERO TITLE -->
   <div class="hero-text">
     <h1 class="hero-game-title" id="hero-title">OCTIWARE</h1>
-    <p class="hero-sub-title">
-      Dive into adventures that captivate hearts and ignite imagination. We create games that you won't just play – you'll feel.
+    <p class="hero-sub-title main-content">
+      Ready to lose yourself in something you’ll regret loving?<br/> 
+      We make games that aren’t just played. They’re felt. And sometimes, they stick.
     </p>
     <!-- CTA BUTTONS -->
     <div class="cta-buttons">
@@ -27,63 +31,55 @@ ogdescription: "Creating story-driven role-playing games."
       <!-- <a href="#" target="_blank" rel="noopener" class="cta-btn">Explore More!</a> -->
     </div>
     <!-- SCROLL DOWN ICON -->
-    <a href="#meet-us-section" class="hero-down-icon" id="scrollDownBtn" aria-label="Scroll down to Meet Us section">
-    <img src="img/arrow_down.svg" alt="Arrow Down Icon" />
+    <a href="#vision" class="hero-down-icon" id="scrollDownBtn" aria-label="Scroll down to Vision section">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 -960 960 960">
+        <path d="M446.67-800v513l-240-240L160-480l320 320 320-320-46.67-47-240 240v-513h-66.66Z"/>
+      </svg>
     </a>
   </div>
 </section>
 <!-- ========== MAIN SECTION: MEET US & JOIN US ========== -->
 <main aria-label="Main content">
   <!-- SECTION: VISION -->
-  <section class="vision-section" id="vision">
+  <section class="vision-section vision-dots2 main-content" id="vision">
     <h2>Our Vision</h2>
     <p>
-      Imagine stepping into a world crafted with <span class="highlight">technical finesse</span> and <span class="highlight">visual magic</span>, instantly pulling you into its spell.
-    </p>
+      At Octiware, we don’t just make games.  
+      We build <span class="highlight">worlds that notice you</span>.
+    </p>    
     <p>
-      At Octiware, we don't just build games; we craft <span class="highlight">immersive, story-driven experiences</span>. With each decision you make, the narrative evolves, unveiling surprising twists and <span class="highlight">unforgettable characters</span>.
-    </p>
+      Worlds that <span class="highlight">shift when you speak</span>.  
+      Stories that wait for your touch.  
+      Characters that <span class="highlight">don’t forget what you did</span>, or what you didn’t.
+    </p>    
     <p>
-      Whether you're adventuring alone or alongside friends, every moment is designed to <span class="highlight">challenge</span>, <span class="highlight">inspire</span>, and <span class="highlight">delight</span>; offering fresh surprises with every playthrough.
-    </p>
+      It starts with <span class="highlight">technical craft</span> and <span class="highlight">visual precision</span>.  
+      But that’s just the scaffolding.  
+      What matters is what happens when a quiet scene hits too hard,  
+      or when a tiny choice spirals into something you never saw coming.
+    </p>    
     <p>
-      Welcome to Octiware, where <span class="highlight">passion meets pixels</span> and <span class="highlight">every moment counts</span>.
-    </p>
-  </section>          
+      We design for <span class="highlight">meaning</span>, not just mechanics.  
+      For those moments when a game doesn’t just <span class="highlight">work</span>, it <span class="highlight">feels</span>.
+      This is <span class="highlight">interactive fiction</span> with a memory and a pulse.
+    </p>    
+    <p>
+      Welcome to Octiware.  
+      Where <span class="highlight">passion meets pixels</span>, and <span class="highlight">pixels push back</span>.
+    </p>    
+  </section>  
 
   <!-- SECTION: MEET US AND JOIN US -->
-  <section class="meet-join-section" id="meet-us-section">
+  <section class="meet-join-section header-container" id="meet-us-section">
     <!-- MEET US -->
     <article class="home-box" id="meet-us">
       <div class="home-box-overlay">
-        <picture>
-          <source
-            srcset="
-              img/meetus_480.webp 480w,
-              img/meetus_768.webp 768w,
-              img/meetus_1320.webp 1320w
-            "
-            type="image/webp"
-          />
-          <source
-            srcset="
-              img/meetus_480.jpg 480w,
-              img/meetus_768.jpg 768w,
-              img/meetus_1320.jpg 1320w
-            "
-            type="image/jpeg"
-          />
-          <img
-            src="img/meetus_1320.jpg"
-            alt="Team environment background"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 1320px"
-          />
-        </picture>
+        {% picture "not_robots.png" alt="Not Robots Background" %}
         <div class="home-box-overlay-caption">
-          <h3 class="overlay-title">OUR TEAM</h3>
+          <!-- Die data-text wird von CSS per ::before angezeigt -->
+          <h1 class="overlay-title" data-text="Not Robots">Not Robots</h1>
           <div class="overlay-buttons">
-            <a href="meet_us.html" class="overlay-button">Our Team</a>
+            <a href="not-robots.html" class="overlay-button">Say Hi</a>
           </div>
         </div>
       </div>
@@ -91,85 +87,80 @@ ogdescription: "Creating story-driven role-playing games."
         <div class="title-and-text">
           <!-- HEADINGS -->
           <h2 class="home-box-title">
-            We love pixels<br />
-            <span class="caption-blue">and we live for them</span>
+            We write code<br/>
+            <span class="home-box-title-caption">and sometimes poetry</span>
           </h2>
           <p class="home-box-paragraph">
-            Octiware is a small, dedicated team driven by boundless creativity, the courage to experiment, and an unwavering attention to detail. Every pixel tells a story, every game is an adventure. Meet the passionate minds behind the magic.
+            Octiware is a band of pixel romantics with questionable snack habits and dangerous levels of commitment.<br/>
+            We argue about commas. We ship feelings disguised as features.<br/>
+            Here’s the cast behind the chaos.
           </p>
         </div>
       </div>
     </article>
+  
     <!-- JOIN US -->
     <article class="home-box" id="join-us">
       <div class="home-box-overlay">
-        <picture>
-          <source
-            srcset="
-              img/joinus_480.webp 480w,
-              img/joinus_768.webp 768w,
-              img/joinus_1320.webp 1320w
-            "
-            type="image/webp"
-          />
-          <source
-            srcset="
-              img/joinus_480.jpg 480w,
-              img/joinus_768.jpg 768w,
-              img/joinus_1320.jpg 1320w
-            "
-            type="image/jpeg"
-          />
-          <img
-            src="img/joinus_1320.jpg"
-            alt="Background image showcasing collaboration"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 1320px"
-          />
-        </picture>
+        {% picture "jobs_kinda.png" alt="Jobs? Kinda. Background" %}
         <div class="home-box-overlay-caption">
-          <h3 class="overlay-title">CAREERS</h3>
+          <!-- Jobs? Kinda. mit data-text für Glas-Effekt -->
+          <h1 class="overlay-title" data-text="Jobs? Kinda.">Jobs? Kinda.</h1>
           <div class="overlay-buttons">
-            <a href="join_us.html" class="overlay-button">Open Positions</a>
+            <!-- mit-badge sorgt für den Kreis oben links -->
+            <a href="jobs-kinda.html" class="overlay-button with-badge">
+              <span class="badge-circle">3</span>
+              YES, I'M IN
+            </a>
           </div>
         </div>
       </div>
       <div class="home-box-content">
         <div class="title-and-text">
           <h2 class="home-box-title">
-            Small team<br />
-            <span class="caption-blue">Big dreams</span>
+            No suits<br/>
+            <span class="home-box-title-caption">just sparks</span>
           </h2>
           <p class="home-box-paragraph">
-            We're on a mission to reshape the world of pixel art games; and we need your passion. Whether you're an artist, coder, or storyteller, your ideas matter here. Join us and leave your mark on the gaming scene.
+            We're not building a company cult. Just great games with people who give a damn.<br/>
+            You bring the skill, we’ll supply the caffeine, weird lore docs, and existential feature debates.<br/>
+            Let’s make something too bold to ignore.
           </p>
         </div>
       </div>
     </article>
   </section>
+  
   <!-- ========== NEWS SECTION ========== -->
   <section class="news-section" aria-labelledby="news-title">
     <div class="news-content">
-      <h2 id="news-title">Behind the Scenes</h2>
-      <p class="news-tease">
-        Peek behind the curtain at Octiware. Explore stories of creativity, passion, and innovation as we develop our games. Be the first to know what's new and become part of our community.
+      <h2 id="news-title">Inside Octiware</h2>
+      <p class="news-tease main-content">
+        Get a front-row seat to our creative process.<br/>
+        From early ideas to late-night breakthroughs, we share the journey behind every update and feature.<br/>
+        This is how we build transparently and together
       </p>
-      <div class="news-container">
+      <div class="news-container header-container">
         <!-- News-Artikel  -->
-        <article class="news-item" onclick="location.href='articles/devblog-03.html';" role="link" data-published="2025-03-09">
-          <h3>DEV-Blog #3 – Refining Gameplay & UI</h3>
-          <p>Discover refined animations, cutscenes, and optimized inventory.</p>
-          <a href="articles/devblog-03.html" aria-label="Read more about DEV-Blog #3">Read more about DEV-Blog #3</a>
+        <article class="news-item coming-soon">
+          <h4>Devlog #4 - Coming Soon<br/> Story &amp; Website</h4>
+          <p>INTO TEXT HINZUFÜGEN</p>
+          <a href="" aria-label="Read more about DEV-Blog #3">Read more about Devlog #5</a>
         </article>
-        <article class="news-item" onclick="location.href='articles/devblog-02.html';" role="link" data-published="2025-01-31">
-          <h3>DEV-Blog #2 – New Features Unveiled!</h3>
-          <p>Check out combat, lighting systems, and more.</p>
-          <a href="articles/devblog-02.html" aria-label="Read more about Dev-Blog #2">Read more about Dev-Blog #2</a>
+        <article class="news-item" onclick="location.href='articles/devlog-03.html';" role="link" data-published="2025-03-09">
+          <h4>Devlog #3 <br/> Refining Gameplay &amp; UI</h4>
+          <p>INTO TEXT HINZUFÜGEN.</p>
+          <a href="articles/devlog-03.html" aria-label="Read more about DEV-Blog #3">Read more about Devlog #3</a>
         </article>
-        <article class="news-item" onclick="location.href='articles/devblog-01.html';" role="link" data-published="2025-01-10">
-          <h3>DEV-Blog #1 – The Adventure Begins!</h3>
-          <p>Our first steps into a thrilling steampunk universe. Take a look!</p>
-          <a href="articles/devblog-01.html" aria-label="Read more about Dev-Blog #1">Read more about Dev-Blog #1</a>
+        <article class="news-item" onclick="location.href='articles/devlog-02.html';" role="link" data-published="2025-01-31">
+          <h4>Devlog #2 <br/> Steel, Silk and Shadows</h4>
+          <p>INTO TEXT HINZUFÜGEN.</p>
+          <a href="articles/devlog-02.html" aria-label="Read more about Dev-Blog #2">Read more about Devlog #2</a>
+        </article>
+        <article class="news-item" onclick="location.href='articles/devlog-01.html';" role="link" data-published="2025-01-10">
+          <h4>Devlog #1 <br/> The Call to Norinwall</h4>
+          <p>INTO TEXT HINZUFÜGEN</p>
+          <a href="articles/devlog-01.html" aria-label="Read more about Dev-Blog #1">Read more about Devlog #1</a>
         </article>
       </div>
       <div class="load-more-container">

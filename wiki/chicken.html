@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
     <title>Chicken - Octiware</title>
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
   </head>
   <body>
     <!-- ========== HEADER SECTION ========== -->
@@ -16,12 +16,12 @@
     <!-- ========== MAIN SECTION ========== -->
     <div class="wiki-title-container">
       <div class="wiki-title">
-        <img src="../img/article.svg" alt="">
+        <img src="{{ site.baseurl }}/img/article.svg" alt="">
         <h1 class="page-title">Chicken</h1>
       </div>
       <div class="header-icons">
         <div class="icon-box">
-          <img src="../img/topo-map-icon.svg" alt="Topologie Icon">
+          <img src="{{ site.baseurl }}/img/topo-map-icon.svg" alt="Topologie Icon">
         </div>
       </div>
     </div>
@@ -39,8 +39,8 @@
             <button class="heading-button" data-expanded="true">
               <span class="heading-left">
                 <!-- Both icons in the same container -->
-                <img src="../img/contents.svg" alt="Closed icon" class="toggle-icon closed-icon" />
-                <img src="../img/minus.svg" alt="Open icon" class="toggle-icon open-icon" />
+                <img src="{{ site.baseurl }}/img/contents.svg" alt="Closed icon" class="toggle-icon closed-icon" />
+                <img src="{{ site.baseurl }}/img/minus.svg" alt="Open icon" class="toggle-icon open-icon" />
             
                 <!-- Text next to the icons -->
                 <span class="heading-text">Contents</span>
@@ -54,8 +54,8 @@
             <button class="heading-button" data-expanded="false">
               <span class="heading-left">
                 <!-- Both icons in the same container -->
-                <img src="../img/top-level-articals.svg" alt="Closed icon" class="toggle-icon closed-icon" />
-                <img src="../img/minus.svg" alt="Open icon" class="toggle-icon open-icon" />
+                <img src="{{ site.baseurl }}/img/top-level-articals.svg" alt="Closed icon" class="toggle-icon closed-icon" />
+                <img src="{{ site.baseurl }}/img/minus.svg" alt="Open icon" class="toggle-icon open-icon" />
             
                 <!-- Text next to the icons -->
                 <span class="heading-text">Top-level articles</span>
@@ -143,23 +143,23 @@ Baby farm animals must first mature into adults before they are able to produce 
                 You can vary the background color using extra classes or inline style. 
               -->
               <div class="see-also-item">
-                <img src="../img/article.svg" alt="">
+                <img src="{{ site.baseurl }}/img/article.svg" alt="">
                 <a href="#">Cats portal</a>
               </div>
               <div class="see-also-item">
-                <img src="../img/article.svg" alt="">
+                <img src="{{ site.baseurl }}/img/article.svg" alt="">
                 <a href="#">Mammals portal</a>
               </div>
               <div class="see-also-item">
-                <img src="../img/article.svg" alt="">
+                <img src="{{ site.baseurl }}/img/article.svg" alt="">
                 <a href="#">Animals portal</a>
               </div>
               <div class="see-also-item variant-blue">
-                <img src="../img/article.svg" alt="">
+                <img src="{{ site.baseurl }}/img/article.svg" alt="">
                 <a href="#">Cat fancy</a>
               </div>
               <div class="see-also-item variant-green">
-                <img src="../img/article.svg" alt="">
+                <img src="{{ site.baseurl }}/img/article.svg" alt="">
                 <a href="#">List of cat breeds</a>
               </div>
             </div>
@@ -167,7 +167,7 @@ Baby farm animals must first mature into adults before they are able to produce 
       
           <!-- 4) Categories styled as in your reference image -->
           <div class="wiki-categories">
-            <img src="../img/categories.svg" alt="">
+            <img src="{{ site.baseurl }}/img/categories.svg" alt="">
             <strong>Categories:</strong>
             <p>Scottish art • Modern art • Scottish contemporary art • Modern history of Scotland</p>
           </div>
@@ -223,14 +223,14 @@ Baby farm animals must first mature into adults before they are able to produce 
     <footer id="footer-placeholder"></footer>
     <!-- ========== SCROLL TO TOP BUTTON ========== -->
     <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
-    <img src="../img/arrow_up.svg" alt="Arrow Up Icon" />
+    <img src="{{ site.baseurl }}/img/arrow_up.svg" alt="Arrow Up Icon" />
     </a>
     <!-- ========== MAIN SCRIPT ========== -->
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.js"></script>
-    <script defer src="../js/include-layout.js"></script>
-    <script defer src="../js/search.js"></script>
-    <script defer src="../js/translation.js" ></script>
-    <script defer src="../js/main.js"></script>
+    <script defer src="{{ site.baseurl }}/js/include-layout.js"></script>
+    <script defer src="{{ site.baseurl }}/js/search.js"></script>
+    <script defer src="{{ site.baseurl }}/js/translation.js" ></script>
+    <script defer src="{{ site.baseurl }}/js/main.js"></script>
     <script>
       document.querySelectorAll('.heading-button, .expandable').forEach((btn) => {
         btn.addEventListener('click', () => {

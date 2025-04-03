@@ -2,45 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <!-- Responsive Meta Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- TITLE: Nutzt page.title oder fallback site.title -->
     <title>
       {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
     </title>
-    
-    <!-- DESCRIPTION: Nutzt page.description oder fallback site.description -->
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-    {% else %}
-    <meta name="description" content="{{ site.description }}">
-    {% endif %}
 
-    <!-- KEYWORDS: falls gewünscht -->
-    {% if page.keywords %}
-    <meta name="keywords" content="{{ page.keywords }}">
-    {% endif %}
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="{% if page.ogtitle %}{{ page.ogtitle }}{% else %}{{ page.title }}{% endif %}">
-    <meta property="og:description" content="{% if page.ogdescription %}{{ page.ogdescription }}{% else %}{{ page.description }}{% endif %}">
-    <meta property="og:type" content="website">
-    <!-- Du könntest noch meta property="og:image" hinzufügen, wenn du ein Social-Sharing-Bild hast. -->
+    <!-- Jekyll SEO Tag -->
+    {% seo %}
 
     <!-- Favicon -->
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ '/img/favicon.ico' | relative_url }}" type="image/x-icon">
 
     <!-- CSS-Dateien -->
-    <link rel="stylesheet" href="/css/styles.css">
-    <!-- Falls du weitere CSS-Dateien hast, hier verlinken -->
-
+    <link rel="stylesheet" href="{{ '/css/base.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/octiware-header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/sections.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/wiki.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/footer.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/responsive.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/timeline.css' | relative_url }}">
   </head>
   <body id="top">
 
     <!-- HEADER -->
     {% include header.html %}
 
-    <!-- HAUPTINHALT DER SEITE (wird von index.html & Co. eingefügt) -->
+    <!-- HAUPTINHALT DER SEITE -->
     <main>
       {{ content }}
     </main>
@@ -51,11 +41,16 @@
     <!-- FOOTER -->
     {% include footer.html %}
 
+    <!-- SCROLL TO TOP BUTTON -->
+    <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 -960 960 960">
+        <path d="M446.67-160v-513l-240 240L160-480l320-320 320 320-46.67 47-240-240v513h-66.66Z"/>
+      </svg>
+    </a>
+
     <!-- SCRIPTS -->
-    <!-- In der Regel packst du deine Skripte ans Ende, damit der DOM vorher geladen wird. -->
-    <script defer src="/js/main.js"></script>
-    <script defer src="/js/translation.js"></script>
-    <!-- Falls du noch andere JS-Dateien brauchst, hier verlinken. -->
-    
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script defer src="{{ '/js/main.js' | relative_url }}"></script>
+    <script defer src="{{ '/js/translation.js' | relative_url }}"></script>    
   </body>
 </html>

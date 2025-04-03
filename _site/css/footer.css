@@ -1,13 +1,13 @@
 /* =====================  footer.css  ===================== */
 footer {
-  background: var(--black);
+  background: var(--bg-secondary);
 }
 
 .footer-content {
-  max-width: 1320px;
+  max-width: var(--layout);
   margin: 0 auto;
   padding: 1.875rem 1.25rem;
-  color: var(--white);
+  color: var(--text-main);
 }
 
 .footer-container {
@@ -24,17 +24,17 @@ footer {
 }
 
 .footer-links ul li a {
-  font-size: 0.875rem;
-  color: var(--white);
+  font-size: calc(var(--current-text-size) * 0.8);
+  color: var(--text-main);
   transition: color var(--transition-speed);
 }
 
 .footer-links ul li a:hover,
 .footer-links ul li a:focus {
-  color: var(--brand-color);
+  color: var(--text-accent);
 }
 
 .footer-copyright {
   margin-top: var(--spacing-xs);
-  font-size: 0.75rem;
+  font-size: calc(var(--current-text-size) * 0.8);
 }

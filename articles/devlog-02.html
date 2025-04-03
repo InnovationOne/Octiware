@@ -1,0 +1,138 @@
+---
+layout: default
+title: "DEV-log #2 – New Features Unveiled!"
+description: "Dive into our second dev log, showcasing refined combat systems, character customization, and more."
+---
+
+<main class="main-content">
+  <div class="devlog-container">
+
+    <!-- TITLE AREA -->
+    <section class="devlog-header">
+      <h1 class="devlog-title">Devlog #2</h1>
+      <p class="devlog-sub-title">Steel, Silk and Shadows</p>
+      <p class="devlog-date">Published on January 31, 2025 — Last revision on March 30, 2025</p>
+    </section>
+
+    <!-- VIDEO -->
+    <article>
+      <div class="video-container">
+        {% include video.html
+          src="/media/devlog-2-hero.webm"
+          poster="/img/devlog-2-hero-poster.jpg"
+          autoplay=true
+          loop=true
+          muted=true
+          playsinline=true
+          class="video-container-v"
+        %}
+      </div>
+
+      <!-- Greetings, Curious Minds and Clockwork Dreamers -->
+      <section class="devlog-section">
+        <h3>Welcome Back, Travelers of Renalvia</h3>
+        <p>The forges are still burning. The coffee still flows. And somewhere between the tail end of winter and an alarming number of Git commits, we’ve made real progress.</p>
+        <p>This month, we cracked open new chambers of invention—systems forged in logic, stitched with pixels, and occasionally glued together with pure desperation. From dynamic combat to a fashion simulator for the gear-obsessed, our world is growing fast. So grab your chronometer, mind the tripwires, and let’s take you through what’s new on the Isle.</p>
+      </section>
+
+      <!-- The Fine Art of Punching Robots -->
+      <section class="devlog-section">
+        <h3>The Fine Art of Punching Robots</h3>
+        <p>Let’s talk combat.</p>
+        <p>Turns out, teaching a robot to throw a punch—and not look silly doing it—is hard. But behold: our enemies can now pace, flank, and even hesitate before bashing your skull in. They’re almost... thoughtful.</p>
+        <p>Weapons have also been properly engineered by our Ministry of Pointy Things™. You’ll now wield everything from flaming daggers to lightning-flails. Yes, lightning-flails. Yes, you can dual-wield.</p>
+        <p>The hitbox system? Precise enough to upset both players and designers. And if you win a fight, there’s a chance your enemy drops something shiny. Because steampunk may be aesthetic, but loot is forever.</p>
+      </section>
+
+      <!-- Tailor Engine: Fashion Meets Function -->
+      <section class="devlog-section">
+        <h3>Tailor Engine: Fashion Meets Function</h3>
+        <p>Introducing: The Tailor Engine. Finally, a system where your fashion choices can directly affect your survival. Who says you can’t dodge bullets in formalwear?</p>
+        <p>You can now customize your character with a wide selection of garments—gloves, hats, belts, boots, the full RPG runway. Every piece isn’t just a look, but a stat-adjusting, animation-generating, drag-and-dropable expression of identity.</p>
+        <p>Want to play as a grizzled miner with iron shoulders and a floral sash? Go ahead. Our animation system will make it look smooth—even noble.</p>
+
+        <div class="img-side-by-side">
+          <div class="img-side-by-side-1">
+             <p>Inventory- &amp;<br/> Clothing UI.</p>
+             <details class="zoom-image">
+              <summary>
+                {% picture devlog_2_char_designer_1.avif --img class="lightbox-img" --alt "Devlog Image 1" %}
+              </summary>
+            </details>
+          </div>
+          <div class="img-side-by-side-2">
+             <p>Ingame scene with weapon and pants.</p>
+             <details class="zoom-image">
+              <summary>
+                {% picture devlog_2_char_designer_2.avif --img class="lightbox-img" --alt "Devlog Image 2" %}
+              </summary>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Procedural Generation with Taste -->
+      <section class="devlog-section">
+        <h3>Procedural Generation with Taste</h3>
+        <p>Why place every tree by hand when you can summon an army of procedural oaks?</p>
+        <p>Our Prefab Spawner now populates the world with natural randomness—trees sprout where they please, rocks gather where useful, and mines hide where dangerous. It’s Renalvia’s version of a living ecosystem. Except it's all still under our control. Mostly.</p>
+        <p>Players will forage, explore, and curse the occasional misaligned boulder. It's all part of the charm.</p>
+
+
+        <div class="img-text-lf">
+          <p> From forests to beaches to the underworld mines, the Prefab Spawner injects wonder and clutter alike. Don’t be surprised if that "decorative stump" turns out to be crafting fuel. Or lore. </p>
+          <details class="zoom-image">
+            <summary>
+              {% picture devlog_2_prefab_spawner.avif --img class="lightbox-img" --alt "Devlog Image 3" %}
+            </summary>
+          </details>
+        </div>
+      </section>
+
+      <!-- Renalvia: The Bigger Picture -->
+      <section class="devlog-section">
+        <h3>Renalvia: The Bigger Picture</h3>
+        <p>Worldbuilding isn’t just about placing mountains—it’s about knowing why that mountain is there. This month, our cartographers (armed with ink, rage, and hex-grids) finalized the map concept.</p>
+        <p>We now have five distinct regions: the lazy Beaches, the noisy City Center, the fruitful Farms, the moody Mountains, and the oh-no-it’s-dark Mines. Each region is being built with narrative threads, secrets, and enough side quests to make you forget the main plot. You’re welcome.</p>
+      </section>
+
+      <!-- The Light Engine Awakens -->
+      <section class="devlog-section">
+        <h3>The Light Engine Awakens</h3>
+        <p>Time now passes like a proper character—subtle, beautiful, a little bit moody.</p>
+        <p>Thanks to our upgraded TimeManager™, the sun arcs across the sky with real shadows that grow, twist, and melt into evening. Sunlight now hits like it means it. Dusk rolls in like a curtain. Night whispers.</p>
+        <p>It’s not just pretty—it’s immersive. It’s also a pain to debug. But it’s worth it.</p>
+      </section>
+
+      <!-- The Clock UI: Function Meets Flourish -->
+      <section class="devlog-section">
+        <h3>The Clock UI: Function Meets Flourish</h3>
+        <p>We’ve finally implemented the one UI element every steampunk adventure deserves: a beautifully impractical clock.</p>
+        <p>It ticks in analog. It whispers in digital. It displays time, weather, and seasonal shifts with a flair even your real-life calendar can’t match. Watch petals fall in spring, snow drift in winter, and question your life choices in autumn.</p>
+        <p>All lovingly illustrated. All potentially useful.</p>
+      </section>
+
+      <!-- Bonus Bits from the Forge -->
+      <section class="devlog-section">
+        <h3>Bonus Bits from the Forge</h3>
+        <p>Oh right—fonts.</p>
+        <p>We’ve added a brand-new multilingual typeface from LanaPixels. It’s elegant, legible, and—most importantly—includes support for letters we don’t understand but really wanted to use in item names.</p>
+        <p>Also: expect tutorials, videos, and the occasional meme-filled breakdown on our YouTube channel soon. We’re going visual.</p>
+      </section>
+
+      <!-- Your Voice Still Matters (We Swear) -->
+      <section class="devlog-section">
+        <h3>Your Voice Still Matters (We Swear)</h3>
+        <p>As always: We want your feedback. Tell us what excites you. Tell us what breaks. Tell us what should break but doesn’t.</p>
+        <p>Your imagination keeps our machines alive.</p>
+        <p>If you want to do more than just read devlogs, our jobs page is open. Apply with caution. We don’t bite—but we do question resumes written in Comic Sans.</p>
+        <p>Until next time.</p>
+      </section>
+
+      <section class="devlog-section-octi">        
+        <p>— Team Octiware</p>
+      </section>
+
+    </article>
+  </div>
+</main>

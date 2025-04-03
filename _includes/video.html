@@ -1,0 +1,15 @@
+<video
+  {% if include.autoplay %}autoplay{% endif %}
+  {% if include.loop %}loop{% endif %}
+  {% if include.muted %}muted{% endif %}
+  {% if include.playsinline %}playsinline{% endif %}
+  {% if include.controls %} controls{% endif %}
+  width="{{ include.width | default: '100%' }}"
+  height="{{ include.height | default: 'auto' }}"
+  {% if include.poster %}poster="{{ include.poster | relative_url }}"{% endif %}
+  class="{{ include.class }}"
+>
+  <source src="{{ include.src | replace: '.webm', '.av1.webm' | relative_url }}" type="video/webm; codecs=av01">
+  <source src="{{ include.src | replace: '.webm', '.vp9.webm' | relative_url }}" type="video/webm; codecs=vp9">
+  <p>Your browser does not support HTML5 video. <a href="{{ include.src | replace: '.webm', '.mp4' | relative_url }}">Download video</a>.</p>
+</video>

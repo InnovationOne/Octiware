@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>StarTrek Warp Demo (Fix)</title>
+
+  <style>
+    /* --- GRUNDEINSTELLUNGEN --- */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      font-family: sans-serif;
+      color: #fff;
+      overflow: hidden; /* Keine Scrollbars */
+    }
+
+    /* 
+      #bridge-wrapper füllt den ganzen Bildschirm (100% x 100%).
+      Per flexbox wird #bridge-container zentriert. 
+    */
+    #bridge-wrapper {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black; /* Falls das Bild kleiner ist → schwarze Ränder */
+    }
+
+    /*
+      #bridge-container hält das 16:9-Format.
+      - aspect-ratio: 16 / 9 (wird in modernen Browsern unterstützt)
+      - max-width und max-height verhindern, dass das Bild über den Bildschirm hinausgeht.
+      - overflow: hidden, damit beim Zoomen nichts übersteht.
+    */
+    #bridge-container {
+      position: relative;
+      width: 100%; /* Nimmt so viel Platz wie möglich */
+      max-width: calc(100vh * (16/9)); /* Begrenzung, falls der Bildschirm höher als breit ist */
+      aspect-ratio: 16 / 9;
+      background: black;
+      overflow: hidden;
+      transition: transform 1s ease; /* Für Kamera-Zoom */
+      transform-origin: top left;    /* Ggf. anpassen (z.B. center center) */
+    }
+
+    /* 
+      Das eigentliche Brückenbild füllt #bridge-container komplett
+      und behält sein Seitenverhältnis (object-fit: contain).
+    */
+    #bridge-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; 
+    }
+
+    /*
+      Das "Fenster" (Viewscren) auf der Brücke.
+      Mit den vorgegebenen Prozentwerten:
+        top: 17.22%
+        left: 30.99%
+        width: 35.36%
+        height: 22.96%
+      => Bezieht sich auf #bridge-container (das exakt 16:9 skaliert).
+    */
+    #viewscreen {
+      position: absolute;
+      top: 17.22%;
+      left: 30.99%;
+      width: 35.36%;
+      height: 22.96%;
+      overflow: hidden; /* Inhalt nur im Fenster sichtbar */
+      border: 2px solid rgba(255,255,255,0.3);
+      box-shadow: 0 0 20px rgba(0,255,255,0.5) inset;
+    }
+
+    /* Beispiel-Inhalt (Website) */
+    #website-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(20, 20, 20, 0.8);
+      color: #0ff;
+      text-align: center;
+      transition: opacity 1s ease; /* Für Aus-/Einblenden */
+    }
+
+    /* Canvas für Warp-Effekt (über dem Website-Content) */
+    #warp-canvas {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Keine Maus-Interaktion */
+      opacity: 0; /* Unsichtbar, bis Warp beginnt */
+      transition: opacity 0.5s ease;
+    }
+
+    /* Button zum Starten des Warp (Demo) */
+    #warp-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background: #222;
+      color: #0ff;
+      border: 1px solid #0ff;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    /* Countdown- und Status-Overlays */
+    #overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3vw;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none; /* Nicht klickbar */
+      text-shadow: 0 0 10px #0ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button zum Triggern (statt Konami-Code) -->
+  <button id="warp-button">Warp starten</button>
+
+  <!-- Wrapper füllt gesamten Bildschirm & zentriert das 16:9-Element -->
+  <div id="bridge-wrapper">
+    <!-- Container im 16:9-Format -->
+    <div id="bridge-container">
+      <!-- Das Hintergrundbild (Brücke) -->
+      <img id="bridge-image" src="Spaceship.png" alt="Spaceship Bridge" />
+
+      <!-- Der "Bildschirm" (Fenster) auf der Brücke -->
+      <div id="viewscreen">
+        <!-- Canvas für Warp-Effekt -->
+        <canvas id="warp-canvas"></canvas>
+
+        <!-- Beispiel-Website-Content -->
+        <div id="website-content">
+          <h1>Willkommen auf der Brücke!</h1>
+          <p>Dies ist eine Demo-Seite, die im Brückenfenster angezeigt wird.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay-Text für Countdown/Meldungen -->
+  <div id="overlay-text"></div>
+
+  <!-- Platzhalter-Sounds (bitte durch echte Dateien ersetzen) -->
+  <audio id="audio-countdown" src="countdown.mp3"></audio>
+  <audio id="audio-engage" src="engage.mp3"></audio>
+  <audio id="audio-sector0" src="sector0.mp3"></audio>
+
+  <script>
+    /****************************************************************
+     *  GLOBALE VARIABLEN
+     ****************************************************************/
+    const bridgeContainer = document.getElementById("bridge-container");
+    const websiteContent  = document.getElementById("website-content");
+    const warpCanvas      = document.getElementById("warp-canvas");
+    const overlayText     = document.getElementById("overlay-text");
+
+    const audioCountdown  = document.getElementById("audio-countdown");
+    const audioEngage     = document.getElementById("audio-engage");
+    const audioSector0    = document.getElementById("audio-sector0");
+
+    const warpBtn         = document.getElementById("warp-button");
+
+    // Canvas 2D-Kontext
+    let ctx = warpCanvas.getContext("2d");
+
+    // Warp-Phasen-Steuerung
+    let warpActive = false; // True, wenn Warp-Effekt läuft
+    let lines = [];         // Array für Warp-Linien
+    let warpStartTime = 0;  // Zeit, zu der Warp beginnt
+    let warpPhase = 0;      // 0 = aus, 1 = beschleunigen, 2 = voll, 3 = abbremsen
+
+    /*
+      Kamera-„Zoom“:
+      - NORMAL_TRANSFORM = "wir sehen die ganze Brücke" (scale(1))
+      - ZOOMED_TRANSFORM = "wir sind so nah am Fensterausschnitt, dass es Fullscreen wirkt"
+        Hier musst du ggf. anpassen, damit das Fenster bildschirmfüllend ist.
+
+      Tipp: 
+      - "translate(-x%, -y%)" verschiebt das Bild nach oben/links.
+      - "scale(n)" zoomt rein oder raus.
+      - transform-origin ist derzeit "top left". Wenn du z.B. von der Mitte aus skalieren willst, 
+        kannst du "transform-origin: center center;" setzen und dann die translate() anpassen.
+    */
+    const ZOOMED_TRANSFORM   = "translate(-31%, -17%) scale(3)";
+    const NORMAL_TRANSFORM   = "translate(0, 0) scale(1)";
+
+    // Anfangszustand: Wir tun so, als wären wir "reingezoomt" ins Fenster
+    bridgeContainer.style.transform = ZOOMED_TRANSFORM;
+
+    /****************************************************************
+     *  EVENT-LISTENER
+     ****************************************************************/
+    warpBtn.addEventListener("click", startWarpSequence);
+
+    /****************************************************************
+     *  WARP-SEQUENZ
+     ****************************************************************/
+    function startWarpSequence() {
+      if (warpActive) return; // Schon im Warp? Dann nicht nochmal starten.
+      warpActive = true;
+
+      // 1) Kamera zoomt heraus (1 Sekunde)
+      bridgeContainer.style.transform = NORMAL_TRANSFORM;
+
+      // 2) Nach 1 Sekunde Website ausblenden
+      setTimeout(() => {
+        websiteContent.style.opacity = "0";
+      }, 1000); // Zeit anpassen
+
+      // 3) Countdown + Sound (nach 1.5s -> 2 Sek. Countdown)
+      setTimeout(() => {
+        showOverlayText("Warp in 3...2...1... Engage!");
+        playSound(audioCountdown);
+      }, 1500); // Zeit anpassen
+
+      // 4) Nach 3.5s -> Warp-Linien "Beschleunigen"
+      setTimeout(() => {
+        hideOverlayText();
+        playSound(audioEngage);
+        startWarpLinesPhase(1); // beschleunigen
+      }, 3500); // Zeit anpassen
+
+      // 5) Nach 5.5s -> Warp-Flug (volle Frequenz)
+      setTimeout(() => {
+        startWarpLinesPhase(2);
+      }, 5500); // Zeit anpassen
+
+      // 6) Nach 10.5s -> Warp-Linien "Abbremsen"
+      setTimeout(() => {
+        startWarpLinesPhase(3);
+      }, 10500); // Zeit anpassen
+
+      // 7) Meldung "Sector 0 reached" (nach 12.5s)
+      setTimeout(() => {
+        showOverlayText("Sector 0 reached!");
+        playSound(audioSector0);
+      }, 12500); // Zeit anpassen
+
+      // 8) Nach 14.5s -> Overlay weg, Website wieder einblenden & reinzoomen
+      setTimeout(() => {
+        hideOverlayText();
+        websiteContent.style.opacity = "1";
+        // Warp-Linien aus
+        startWarpLinesPhase(0);
+      }, 14500); // Zeit anpassen
+
+      // 9) Kamera zoomt zurück in den Fensterausschnitt (nach 14.5s + 1s)
+      setTimeout(() => {
+        bridgeContainer.style.transform = ZOOMED_TRANSFORM;
+        warpActive = false; // Warp-Sequenz beendet
+      }, 15500); // Zeit anpassen
+    }
+
+    /****************************************************************
+     *  OVERLAY-TEXT HELFER
+     ****************************************************************/
+    function showOverlayText(txt) {
+      overlayText.textContent = txt;
+      overlayText.style.opacity = "1";
+    }
+    function hideOverlayText() {
+      overlayText.style.opacity = "0";
+    }
+
+    /****************************************************************
+     *  SOUND HELFER
+     ****************************************************************/
+    function playSound(audioElem) {
+      if (!audioElem) return;
+      audioElem.currentTime = 0;
+      audioElem.play().catch(e => console.log(e));
+    }
+
+    /****************************************************************
+     *  WARP-LINIEN (Canvas) - Einfaches Partikel-System
+     ****************************************************************/
+    // warpPhase:
+    // 0 = aus
+    // 1 = beschleunigen (wenige Linien, Frequenz steigend)
+    // 2 = voller Warp (viele Linien, schnelle Geschwindigkeit)
+    // 3 = abbremsen (Frequenz sinkend)
+    // => nach Ende wieder 0
+
+    function startWarpLinesPhase(phase) {
+      warpPhase = phase;
+      if (warpPhase === 0) {
+        // Warp beenden
+        warpCanvas.style.opacity = "0";
+        lines = [];
+      } else {
+        warpCanvas.style.opacity = "1";
+        warpStartTime = performance.now();
+      }
+    }
+
+    function createWarpLine() {
+      const rect = warpCanvas.getBoundingClientRect();
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const angle = Math.random() * 2 * Math.PI;
+      return {
+        angle: angle,
+        speed: 0, 
+        length: 0,
+        maxLength: rect.width, // oder rect.height, je nach Zufall
+        x: centerX,
+        y: centerY
+      };
+    }
+
+    function animateWarpLines(timestamp) {
+      requestAnimationFrame(animateWarpLines);
+
+      // Canvas Größe updaten (bei Resize anpassbar)
+      warpCanvas.width  = warpCanvas.clientWidth;
+      warpCanvas.height = warpCanvas.clientHeight;
+
+      // Canvas leeren
+      ctx.clearRect(0, 0, warpCanvas.width, warpCanvas.height);
+
+      if (warpPhase === 0) {
+        return; // Keine Warp-Linien
+      }
+
+      // Zeit seit Start
+      const elapsed = (timestamp - warpStartTime) / 1000; // in Sekunden
+
+      // Phasen-Parameter definieren (Anzahl Linien, Speed, etc.)
+      let lineCount, baseSpeed;
+      switch (warpPhase) {
+        case 1: // Beschleunigen
+          lineCount = 50;
+          baseSpeed = 200 + 300 * elapsed; // nimmt über Zeit zu
+          break;
+        case 2: // Voller Warp
+          lineCount = 200;
+          baseSpeed = 1000;
+          break;
+        case 3: // Abbremsen
+          lineCount = 50;
+          baseSpeed = 1000 - 800 * elapsed; // verringert sich
+          if (baseSpeed < 100) baseSpeed = 100;
+          break;
+        default:
+          lineCount = 0;
+          baseSpeed = 0;
+          break;
+      }
+
+      // Neue Linien hinzufügen, falls noch nicht genug
+      while (lines.length < lineCount) {
+        lines.push(createWarpLine());
+      }
+      // Oder reduzieren, wenn zu viele
+      if (lines.length > lineCount) {
+        lines.splice(lineCount);
+      }
+
+      // Zeichnen
+      ctx.save();
+      // Glow-Effekt
+      ctx.shadowColor = "#0ff";
+      ctx.shadowBlur  = 10;
+      ctx.strokeStyle = "#0ff";
+      ctx.lineWidth   = 2;
+
+      for (let i = 0; i < lines.length; i++) {
+        let ln = lines[i];
+        ln.speed = baseSpeed;
+        ln.length += ln.speed * 0.016; // ~16ms pro Frame
+        if (ln.length > ln.maxLength) {
+          lines[i] = createWarpLine();
+          continue;
+        }
+        const endX = ln.x + Math.cos(ln.angle) * ln.length;
+        const endY = ln.y + Math.sin(ln.angle) * ln.length;
+
+        ctx.beginPath();
+        ctx.moveTo(ln.x, ln.y);
+        ctx.lineTo(endX, endY);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    // Starte Animationsschleife
+    requestAnimationFrame(animateWarpLines);
+
+  </script>
+</body>
+</html>
