@@ -33,8 +33,10 @@ jobs:
       - name: Install libvips
         run: sudo apt-get update && sudo apt-get install -y libvips
 
-      - name: Install Dependencies
-        run: bundle install
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libvips libvips-tools libheif-dev libaom-dev      
 
       - name: Setup Pages
         id: pages
