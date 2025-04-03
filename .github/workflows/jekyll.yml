@@ -22,38 +22,34 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
-      # Repository auschecken (aktuelle Version)
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Ruby-Umgebung einrichten und Bundler-Cache aktivieren
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1.2'
-          bundler-cache: true
+          ruby-version: '3.4.2'
+          bundler-cache: true      
 
-      - name: Normalize Gemfile.lock for platform compatibility
-        run: |
-          bundle lock --add-platform x86_64-linux
-          bundle lock --normalize-platforms
-          
+      - name: Upgrade RubyGems
+        run: gem update --system 3.3.22
+
+      - name: Install Dependencies
+        run: bundle install      
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
       - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
   deploy:

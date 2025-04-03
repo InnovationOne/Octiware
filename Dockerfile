@@ -1,14 +1,20 @@
-FROM ruby:3.2-bookworm
+FROM ruby:3.4.2-bookworm
 
 WORKDIR /srv/jekyll
-ENV BUNDLE_PATH=/usr/local/bundle
 
-# Installiere neuere libvips und Abhängigkeiten für AVIF & WebP
+# Installiere native Bibliotheken für AVIF/WebP
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
     libvips libvips-tools libheif-dev libaom-dev \
-  && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
 
-# Installiere Jekyll, Bundler und weitere benötigte Gems
-RUN gem install jekyll bundler jekyll-sass-converter sass-embedded
+# Kopiere nur Gemfile + Lockfile und installiere Gems
+COPY Gemfile Gemfile.lock ./
+RUN gem update --system && gem install bundler && bundle install
 
-CMD ["bundle", "exec", "jekyll", "serve", "--livereload", "--force_polling"]
+# Restlichen Projektcode kopieren
+COPY . .
+
+EXPOSE 4000 35729
+
+CMD ["bundle", "exec", "jekyll", "serve", "--livereload", "--force_polling", "--host", "0.0.0.0"]

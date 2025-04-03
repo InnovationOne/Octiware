@@ -3,6 +3,7 @@
 .jekyll-cache/
 _site/
 .venv/
+vendor/
 .DS_Store
 *.log
 *.swp
