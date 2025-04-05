@@ -1,0 +1,257 @@
+/* ===============================================================================
+  DEV BLOG SECTION
+=============================================================================== */
+.devlog-container {
+  max-width: var(--layout-text);
+  margin: var(--spacing-lg) auto;
+  padding: var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+/* Devlog Header Styles */
+.devlog-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 3px double var(--text-accent);
+}
+
+.devlog-title {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-main);
+  text-transform: uppercase;
+}
+
+.devlog-sub-title {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-accent);
+  font-style: italic;
+  font-size: calc(var(--current-text-size) * 1.5);
+}
+
+.devlog-date {
+  color: var(--text-dim);
+  font-size: calc(var(--current-text-size) * 0.9);
+}
+
+.video-container {
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.video-container-v {
+  pointer-events: none;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.devlog-section {
+  margin-bottom: var(--spacing-lg);
+  background-color: transparent;
+}
+
+/* Überschrift innerhalb der Section */
+.devlog-section h3 {
+  color: var(--text-accent);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--text-accent);
+  text-transform: uppercase;
+}
+
+/* Absatz innerhalb der Section – Text bleibt gut lesbar */
+.devlog-section p {
+  color: var(--text-main);
+  margin-bottom: var(--spacing-md);
+}
+
+.devlog-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.devlog-section ul li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-main);
+}
+
+/* Custom Bullet: Hier wird ein kleines Icon als Aufzählungszeichen eingefügt */
+.devlog-section ul li::before {
+  content: "◆";
+  color: var(--text-accent);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.devlog-section-octi{
+  display: inline-block;
+  padding: var(--spacing-md);
+  position: relative;
+}
+
+.devlog-section-octi p {
+  font-weight: bold;
+  color: transparent;
+  text-transform: uppercase;
+  background: linear-gradient(
+    120deg,
+    #b73239,
+    #b76432,
+    #b7a832,
+    #66b732,
+    #32b7a3,
+    #3271b7,
+    #7932b7,
+    #b73292,
+    #b73239
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: metallicShine 5s ease-in-out infinite;
+}
+
+/* Keyframe für den fließenden Effekt */
+@keyframes metallicShine {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* =========================================
+   1) BOX STYLING FÜR SIDE-BY-SIDE
+   - Subtile Rahmen-Box um Text + Bild
+========================================= */
+.img-side-by-side {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+
+  position: relative;
+  padding: var(--spacing-md);
+  border: 1px solid color-mix(in srgb, var(--text-accent) 25%, transparent 75%);
+  border-radius: 8px;
+  background-color: color-mix(in srgb, var(--bg-tertiary) 90%, var(--bg-main) 10%);
+}
+
+.img-side-by-side-1,
+.img-side-by-side-2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-side-by-side-1 p,
+.img-side-by-side-2 p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-main);
+  text-align: center;
+}
+
+.img-side-by-side-1-img,
+.img-side-by-side-2-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+/* =========================================
+   2) TEXT LINKS, BILD RECHTS
+========================================= */
+.img-text-lf {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-md);
+
+  position: relative;
+  padding: var(--spacing-md);
+  border: 1px solid color-mix(in srgb, var(--text-accent) 25%, transparent 75%);
+  border-radius: 8px;
+  background-color: color-mix(in srgb, var(--bg-tertiary) 90%, var(--bg-main) 10%);
+}
+
+/* Stelle sicher, dass Text + Bild je 50% belegen */
+.img-text-lf p {
+  margin: 0;
+  color: var(--text-main);
+}
+
+.img-text-lf-img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+/* =========================================
+   3) LIGHTBOX-ZOOM (BILDER KLICK-ZOOMEN)
+========================================= */
+.zoom-image {
+  position: relative;
+  display: inline-block;
+}
+
+/* Das Summary-Element zeigt initial nur das Bild (max. Containerbreite) */
+.zoom-image summary {
+  list-style: none;
+  cursor: zoom-in;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.zoom-image summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Das Bild selbst: füllt die vorhandene Breite aus */
+.zoom-image summary img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  object-fit: cover; 
+}
+
+/* Bei Klick (open) wird das Bild als Lightbox zentriert und vergrößert */
+.zoom-image[open] summary img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  border-radius: 6px;
+  object-fit: contain; /* Statt cover => behält Originalseitenverhältnis */
+  cursor: zoom-out;
+}
+
+/* Dunkler Overlay => Klickt man daneben, wird <details> wieder geschlossen. */
+.zoom-image[open]::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+}

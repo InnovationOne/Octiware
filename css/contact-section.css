@@ -1,0 +1,56 @@
+/* =============================================================================
+   CONTACT SECTION
+============================================================================= */
+.contact-section {
+  background-color: var(--bg-main);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-xl) auto;
+}
+
+.contact-content {
+  max-width: var(--layout);
+  margin: 0 auto;
+}
+
+.contact-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.contact-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--text-accent);
+  padding: var(--spacing-md);
+  min-width: 260px;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  cursor: pointer;
+}
+
+.contact-box:hover,
+.contact-box:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.contact-box-title {
+  font-weight: bold;
+  color: var(--text-main);
+  margin-bottom: var(--spacing-xs);
+}
+
+.contact-box-email {
+  color: var(--text-secondary);
+  font-style: italic;
+  transition: color var(--transition-speed);
+  text-decoration: underline dashed;
+}
+
+.contact-box-email:hover,
+.contact-box-email:focus {
+  color: var(--text-accent);
+}

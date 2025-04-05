@@ -1,0 +1,91 @@
+/* =============================================================================
+   POLICY CONTAINER
+================================================================================ */
+.policy-container {
+  max-width: var(--layout-text);
+  margin: var(--spacing-lg) auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+  background-color: var(--bg-secondary);
+  background-image: radial-gradient(color-mix(in srgb, var(--text-accent) 15%, transparent 85%) 1px, transparent 1px);
+  background-size: 15px 15px;
+  border: 1px solid var(--bg-tertiary);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  color: var(--text-main);
+}
+
+.policy-container header h1 {
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+  color: var(--text-main);
+}
+
+.policy-container header p {
+  color: var(--text-dim);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Überschriften (h3) mit größerem Abstand nach oben – ohne Punkt */
+.policy-container h3 {
+  margin: var(--spacing-xxl) 0 var(--spacing-sm);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+/* Paragraphs im Textausrichtungsstil justify */
+.policy-container p {
+  text-align: justify;
+  color: var(--text-secondary);
+}
+
+/* Listenstil */
+.policy-container ul {
+  list-style: none;
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.policy-container ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: var(--spacing-xs);
+}
+
+.policy-container ul li::before {
+  content: "✓";
+  color: var(--text-accent);
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5rem;
+  margin-left: -1.5rem;
+}
+
+/* Aufwertung des privacy-intro Bereichs – themenbasiert mit color-mix */
+.policy-container header .privacy-intro {
+  background: color-mix(in srgb, var(--bg-tertiary) 80%, transparent 20%);
+  color: var(--text-main);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  border-left: 6px solid var(--text-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: var(--spacing-lg) 0;
+  font-style: italic;
+}
+
+/* Neue .highlight Klasse für wichtige Textstellen */
+.policy-container .highlight {
+  color: var(--text-accent);
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Links, die mit mailto: beginnen, kursiv und mit gestrichelter Unterstreichung */
+.policy-container a[href^="mailto:"] {
+  font-style: italic;
+  color: var(--text-secondary);
+  text-decoration: underline dashed;
+}
+
+.policy-container a[href^="mailto:"]:hover {
+  color: var(--text-accent);
+}

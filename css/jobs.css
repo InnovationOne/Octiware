@@ -1,0 +1,182 @@
+/* =============================================================================
+   JOB DETAIL SECTION
+================================================================================ */
+.job-detail-container {
+  max-width: var(--layout-text);
+  margin: 2.5rem auto;
+  padding: var(--spacing-md);
+  background-color: var(--bg-secondary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  color: var(--text-main);
+}
+
+.job-info-top {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--spacing-xl);
+}
+
+.job-header-title {
+  font-weight: bold;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-main);
+  text-align: center;
+}
+
+.job-meta-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+  justify-items: center;
+}
+
+.meta-card {
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  padding: var(--spacing-sm);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid color-mix(in srgb, var(--text-accent) 25%, transparent 75%);
+  width: auto;
+  max-width: 160px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.meta-icon {
+  margin-bottom: var(--spacing-xs);
+}
+
+.meta-label {
+  font-weight: bold;
+  color: var(--text-accent);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+}
+
+.meta-value {
+  color: var(--text-secondary);
+  word-break: break-word;
+  max-width: 95%;
+}
+
+/* Icon SVG Styling */
+.icon-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--text-accent);
+}
+
+/* Back Button mit Pfeil */
+.back-to-list-btn {  
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-accent);
+  border: 2px solid var(--text-accent);
+  text-transform: uppercase;
+  transition: background var(--transition-speed), color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.back-to-list-btn:hover {
+  background: var(--text-accent);
+  color: var(--bg-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.back-to-list-btn:hover svg {
+  color: var(--bg-secondary);
+  fill: currentColor;
+}
+
+/* */
+.job-description {
+  margin: 2rem 0;
+}
+
+/* Container und allgemeine Formatierung – max-width 665px */
+.job-section {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Kombinierter Style aus Style 2 und 6 */
+.style2-6 {
+  background-color: var(--bg-secondary);
+  text-align: left;
+  border-left: 4px solid var(--text-accent);
+  padding: var(--spacing-md);
+  padding-left: calc(var(--spacing-md) * 1.25);
+  border-radius: 8px;
+}
+
+.style2-6 .proposal-title {
+  font-weight: bold;
+  color: var(--text-main);
+  border-bottom: 2px solid var(--text-accent);
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.style2-6 p {
+  margin: 0.5rem 0;
+  color: var(--text-main);
+}
+
+.job-action-button {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Container der FAQ-Sektion */
+.job-highlight-box-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Überschrift für den FAQ-Bereich */
+.job-highlight-box-header h2 {
+  font-weight: bold;
+  color: var(--text-main);
+  border-bottom: 2px solid var(--text-accent);
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Boxen für einzelne Fragen/Antworten */
+.job-highlight-box {
+  background-color: var(--bg-secondary);
+  border-left: 2px solid var(--text-accent);
+  padding: 1rem 1.25rem;
+  margin: var(--spacing-md) 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Frage */
+.job-highlight-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-accent);
+  font-weight: bold;
+}
+
+/* Antwort */
+.job-highlight-box p {
+  margin: 0;
+  color: var(--text-main);
+}
