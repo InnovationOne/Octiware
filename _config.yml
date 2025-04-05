@@ -13,13 +13,21 @@ plugins:
 picture:
   source: "img"
   destination: "img/gen"
-  formats: ["avif", "webp"]
+  markup: auto
+  formats: ["avif", "webp", "original"]
   formats_prefer: "avif"
-  widths: [320, 480, 768, 1024, 1280, 1920, 2560, 3840]
-  markup: "auto"
+  widths: [320, 480, 768, 1024, 1280, 1600, 1920]
   upscale: false
   ignore_missing_images: true
-  ignore_copy_errors: true  
+  ignore_copy_errors: true
+  format_quality:
+    avif: 60
+    webp: 70
+  image_options:
+    avif:
+      compression: av1
+      speed: 4
+  strip_metadata: false
 
 exclude:
   - Gemfile
