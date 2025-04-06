@@ -143,25 +143,21 @@
   border-left: 4px solid var(--text-accent);
   border-radius: 8px;
 }
-
 .vision-section h2 {
   text-align: center;
   margin-bottom: var(--spacing-md);
   color: var(--text-main);
   text-transform: uppercase;
 }
-
 .vision-section p {
   text-align: justify;
   margin-bottom: var(--spacing-md);
 }
-
 .vision-section .highlight {
   color: var(--text-accent);
   font-weight: bold;
   font-style: italic;
 }
-
 .vision-dots2 {
   background-image: radial-gradient(color-mix(in srgb, var(--text-accent) 20%, transparent 80%) 1px, transparent 1px);
   background-size: 15px 15px;
@@ -202,48 +198,38 @@
   gap: var(--spacing-md);
   justify-content: center;
   padding: 0 var(--spacing-sm);
-}
-
-.meet-join-section.header-container {
   align-items: stretch;
 }
-
 .home-box {
   background-color: var(--bg-secondary);
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 300px;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform var(--transition-speed);
+  display: flex;
+  flex-direction: column;
 }
-
 .home-box:hover,
 .home-box:focus {
   transform: translateY(-3px);
 }
-
 .home-box-overlay {
-  position: relative;
   width: 100%;
-  height: 450px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
+  position: relative;
 }
-
 .home-box-overlay img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-
 .home-box-overlay-caption {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.5);
   color: var(--white);
   display: flex;
@@ -253,23 +239,21 @@
   text-align: center;
   transition: opacity var(--transition-speed) ease;
 }
-
 .overlay-title {
-  font-size: 5.5rem;
+  font-size: clamp(2rem, 6vw, 5.5rem);
   font-weight: bold;
   text-transform: uppercase;
-  -webkit-text-stroke: 1px var(--white);
+  -webkit-text-stroke: 2px var(--white);
   color: transparent;
   margin: var(--spacing-md);
 }
-
 .overlay-buttons {
   display: flex;
   gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 .overlay-button {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -288,13 +272,11 @@
   transition: all 0.3s ease;
   text-decoration: none;
 }
-
 .overlay-button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 0.8rem color-mix(in srgb, var(--text-accent) 50%, transparent 50%);
   color: var(--text-accent);
 }
-
 .badge-circle {
   position: absolute;
   top: -0.6rem;
@@ -305,33 +287,27 @@
   align-items: center;
   justify-content: center;
   font-size: calc(var(--current-text-size));
-
   background: var(--text-accent);
   border: 1px solid var(--text-accent);
   box-shadow:
     inset 0 0 0.2rem rgba(255, 255, 255, 0.1),
     0 2px 6px rgba(0, 0, 0, 0.2);
-
   border-radius: 50%;
   color: var(--bg-main);
   z-index: 1;
 }
-
 .home-box-content {
   padding: var(--spacing-md);
 }
-
 .title-and-text {
   display: flex; 
   flex-wrap: wrap;
   gap: var(--spacing-md);
 }
-
 .home-box-title {
   flex: 0.7;
   text-transform: uppercase;
 }
-
 .home-box-paragraph {
   flex: 1;
   text-align: justify;
@@ -339,9 +315,57 @@
   border-left: 1px solid color-mix(in srgb, var(--text-accent) 15%, transparent 85%);
   color: var(--text-secondary);
 }
-
 .home-box-title-caption {
   color: var(--text-accent);
+}
+
+/* ========== TABLET Querformat & kleinere Desktops ========== */
+@media (max-width: 1199px) {
+  .overlay-title {
+    -webkit-text-stroke: 1px var(--white);
+  }
+}
+
+/* ========== TABLET Hochformat ========== */
+@media (max-width: 991px) {
+  .home-box-overlay {
+    aspect-ratio: 4 / 3;
+  }
+  .overlay-title {    
+    color: var(--white);
+    -webkit-text-stroke: 0;
+  }
+  .title-and-text {
+    flex-direction: column;
+  }
+  .home-box-paragraph {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+/* ========== SMARTPHONES ========== */
+@media (max-width: 767px) {
+  .home-box {
+    flex: 1 1 100%;
+  }
+  .home-box-overlay {
+    aspect-ratio: 1 / 1;
+  }
+  .overlay-title {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+  .overlay-buttons {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  .overlay-button {
+    width: 100%;
+    max-width: 240px;
+  }
+  .meet-join-section {
+    align-items: initial;
+  }
 }
 
 /* =============================================================================
@@ -351,31 +375,22 @@
   background-color: var(--bg-secondary);
   padding: var(--spacing-xl) 0;
 }
-
 .news-content {
   padding: var(--spacing-xl) var(--spacing-sm);
   text-align: center;
 }
-
-#news-title {
+#news-title,
+.news-section h2 {
   text-transform: uppercase;
   margin-bottom: var(--spacing-md);
   color: var(--text-main);
 }
-
-.news-section h2 {
-  text-align: center;
-  margin-bottom: var(--spacing-lg);
-  text-transform: uppercase;
-}
-
 .news-tease {
   color: var(--text-secondary);
   margin-bottom: var(--spacing-md);
   max-width: var(--layout-text);
   margin: 0 auto var(--spacing-lg);
 }
-
 .news-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -385,7 +400,6 @@
   max-width: var(--layout);
   margin: 0 auto;
 }
-
 .news-item {
   background: var(--bg-tertiary);
   border-radius: 8px;
@@ -395,25 +409,21 @@
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
   border: 2px solid transparent;
 }
-
 .news-item:hover,
 .news-item:focus {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.20);
   border-color: color-mix(in srgb, var(--text-accent) 50%, transparent 50%);
 }
-
 .news-item h4 {
   margin-bottom: var(--spacing-sm);
   color: var(--text-main);
   border-bottom: 1px solid color-mix(in srgb, var(--text-accent) 25%, transparent 75%);
 }
-
 .news-item p {
   color: var(--text-secondary);
   margin-bottom: var(--spacing-sm);
 }
-
 .news-item a {
   font-weight: bold;
   color: var(--text-dim);
@@ -422,14 +432,12 @@
 .news-item a:hover {
   color: var(--text-accent);
 }
-
 .news-item.new-article {
   border: 2px solid var(--text-accent);
   background-color: var(--bg-tertiary);
   position: relative;
   padding: var(--spacing-md);
 }
-
 .news-item.new-article::before {
   content: "NEW!";
   position: absolute;
@@ -444,13 +452,11 @@
   z-index: 10;
   pointer-events: none;
 }
-
 .load-more-container {
   display: flex;
   justify-content: center;
   margin-top: var(--spacing-sm);
 }
-
 .load-more-btn {
   background: transparent;
   color: var(--text-accent);
@@ -461,26 +467,59 @@
   border-radius: 0.6rem;
   transition: background var(--transition-speed), color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
 }
-
 .load-more-btn:hover {
   background: var(--text-accent);
   color: var(--bg-main);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 .news-item.coming-soon {
   opacity: 0.5;
   cursor: default;
 }
-
 .news-item.coming-soon:hover {
   transform: none;
   border-color: transparent;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
 .news-item.coming-soon a:hover {
   color: var(--text-dim);
   cursor: default;
+}
+
+/* ========== TABLET Querformat & kleinere Desktops ========== */
+@media (max-width: 1199px) {
+  .news-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* ========== TABLET Hochformat ========== */
+@media (max-width: 991px) {
+  .news-content {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+  .news-item h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ========== SMARTPHONES ========== */
+@media (max-width: 767px) {
+  .news-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  .news-item {
+    padding: var(--spacing-sm);
+  }
+  .news-tease {
+    font-size: 0.95rem;
+    margin: 0 var(--spacing-sm) var(--spacing-lg);
+  }
+  .load-more-btn {
+    width: 100%;
+    max-width: 280px;
+  }
 }
