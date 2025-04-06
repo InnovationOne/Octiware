@@ -13,55 +13,16 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   color: var(--text-main);
 }
-
 .policy-container header h1 {
   margin-bottom: var(--spacing-xs);
   text-transform: uppercase;
   color: var(--text-main);
 }
-
 .policy-container header p {
   color: var(--text-dim);
   margin-bottom: var(--spacing-md);
 }
-
-/* Überschriften (h3) mit größerem Abstand nach oben – ohne Punkt */
-.policy-container h3 {
-  margin: var(--spacing-xxl) 0 var(--spacing-sm);
-  text-transform: uppercase;
-  font-weight: bold;
-  color: var(--text-secondary);
-}
-
-/* Paragraphs im Textausrichtungsstil justify */
-.policy-container p {
-  text-align: justify;
-  color: var(--text-secondary);
-}
-
-/* Listenstil */
-.policy-container ul {
-  list-style: none;
-  margin: var(--spacing-md) 0 var(--spacing-lg);
-}
-
-.policy-container ul li {
-  padding-left: 1.5rem;
-  position: relative;
-  margin-bottom: var(--spacing-xs);
-}
-
-.policy-container ul li::before {
-  content: "✓";
-  color: var(--text-accent);
-  font-weight: bold;
-  display: inline-block;
-  width: 1.5rem;
-  margin-left: -1.5rem;
-}
-
-/* Aufwertung des privacy-intro Bereichs – themenbasiert mit color-mix */
-.policy-container header .privacy-intro {
+.policy-container .privacy-intro {
   background: color-mix(in srgb, var(--bg-tertiary) 80%, transparent 20%);
   color: var(--text-main);
   padding: var(--spacing-md);
@@ -71,21 +32,64 @@
   margin: var(--spacing-lg) 0;
   font-style: italic;
 }
-
-/* Neue .highlight Klasse für wichtige Textstellen */
+.policy-container h3 {
+  margin: var(--spacing-xxl) 0 var(--spacing-sm);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+.policy-container p {
+  text-align: justify;
+  color: var(--text-secondary);
+}
+.policy-container ul {
+  list-style: none;
+  margin: var(--spacing-md) 0 var(--spacing-lg);
+}
+.policy-container ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: var(--spacing-xs);
+}
+.policy-container ul li::before {
+  content: "✓";
+  color: var(--text-accent);
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5rem;
+  margin-left: -1.5rem;
+}
 .policy-container .highlight {
   color: var(--text-accent);
   font-weight: bold;
   font-style: italic;
 }
-
-/* Links, die mit mailto: beginnen, kursiv und mit gestrichelter Unterstreichung */
 .policy-container a[href^="mailto:"] {
   font-style: italic;
   color: var(--text-secondary);
   text-decoration: underline dashed;
 }
-
 .policy-container a[href^="mailto:"]:hover {
   color: var(--text-accent);
+}
+
+/* ========== SMARTPHONES ========== */
+@media (max-width: 767px) {
+  .policy-container {
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .policy-container h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .policy-container p,
+  .policy-container ul li {
+    font-size: 0.95rem;
+  }
+
+  .policy-container h3 {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+  }
 }
