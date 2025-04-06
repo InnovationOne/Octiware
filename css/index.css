@@ -76,10 +76,6 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* =============================================================================
-   MEDIA QUERIES: Responsiveness
-============================================================================= */
-
 /* ========== TABLET Querformat & kleinere Desktops ========== */
 @media (max-width: 1199px) {
   .hero-text {
@@ -169,6 +165,30 @@
 .vision-dots2 {
   background-image: radial-gradient(color-mix(in srgb, var(--text-accent) 20%, transparent 80%) 1px, transparent 1px);
   background-size: 15px 15px;
+}
+
+/* ========== TABLET Hochformat ========== */
+@media (max-width: 991px) {
+  .vision-section {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg);
+  }
+}
+
+/* ========== SMARTPHONES ========== */
+@media (max-width: 767px) {
+  .vision-section {
+    padding: var(--spacing-md);
+    margin: var(--spacing-md);
+    border-left: 2px solid var(--text-accent);
+    border-radius: 4px;
+  }
+  .vision-section h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  .vision-section p {
+    font-size: 0.95rem;
+  }
 }
 
 /* =============================================================================
