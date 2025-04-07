@@ -10,6 +10,16 @@
   border-radius: 8px;
 }
 
+.devlog-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.devlog-nav-buttons a {
+  visibility: hidden;
+}
+
 /* Devlog Header Styles */
 .devlog-header {
   text-align: center;

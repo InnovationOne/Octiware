@@ -237,9 +237,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-
-
 // Öffnet Lightbox anhand data-modal
 document.querySelectorAll('.clickable-picture').forEach(el => {
   el.addEventListener('click', () => {
@@ -260,4 +257,56 @@ function closeLightbox() {
 // ESC-Taste schließt das Modal
 document.addEventListener('keydown', function (e) {
   if (e.key === "Escape") closeLightbox();
+});
+
+//  Devlog Navigation 
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname;
+  const match = path.match(/devlog-(\d+)\.html$/);
+  if (!match) return;
+
+  const currentNum = parseInt(match[1], 10);
+
+  const formatNum = (n) => String(n).padStart(2, '0');
+
+  const base = "/articles/";
+  const prevNum = currentNum - 1;
+  const nextNum = currentNum + 1;
+
+  const prevHref = `${base}devlog-${formatNum(prevNum)}.html`;
+  const nextHref = `${base}devlog-${formatNum(nextNum)}.html`;
+
+  const prevButton = document.getElementById("prev-article");
+  const nextButton = document.getElementById("next-article");
+
+  const checkFileExists = async (url) => {
+    try {
+      const response = await fetch(url, { method: 'HEAD' });
+      return response.ok;
+    } catch (err) {
+      return false;
+    }
+  };
+
+  if (prevNum >= 1) {
+    checkFileExists(prevHref).then((exists) => {
+      if (exists) {
+        prevButton.href = prevHref;
+        prevButton.style.visibility = "visible";
+      } else {
+        prevButton.style.visibility = "hidden";
+      }
+    });
+  } else {
+    prevButton.style.visibility = "hidden";
+  }
+
+  checkFileExists(nextHref).then((exists) => {
+    if (exists) {
+      nextButton.href = nextHref;
+      nextButton.style.visibility = "visible";
+    } else {
+      nextButton.style.visibility = "hidden";
+    }
+  });
 });

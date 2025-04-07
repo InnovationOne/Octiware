@@ -172,8 +172,8 @@
     align-items: stretch;
     gap: var(--spacing-sm);
   }
-  .btn-lf,
-  .btn-rt {
+  .buttons-split .btn-lf,
+  .buttons-split .btn-rt {
     width: 100%;
     flex: none;
     text-align: center;
@@ -223,8 +223,8 @@
     gap: var(--spacing-sm);
     margin-top: var(--spacing-md);
   }
-  .btn-lf,
-  .btn-rt {
+  .buttons-split .btn-lf,
+  .buttons-split .btn-rt {
     width: 100%;
     flex: none;
     margin-bottom: var(--spacing-xs);
@@ -270,14 +270,14 @@
     gap: var(--spacing-xs);
     align-items: stretch;
   }
-  .btn-lf {
+  .buttons-split .btn-lf {
     background: color-mix(in srgb, var(--bg-secondary) 95%, transparent 5%);
   }
-  .btn-rt {
+  .buttons-split .btn-rt {
     background: color-mix(in srgb, var(--text-accent) 95%, transparent 5%);
   }
-  .btn-lf,
-  .btn-rt {
+  .buttons-split .btn-lf,
+  .buttons-split .btn-rt {
     width: 100%;
     font-size: 0.95rem;
     padding: 0.75rem 1rem;
