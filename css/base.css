@@ -355,3 +355,19 @@ code {
   --code-bg: #dcdcdc;
   --divider: #CCCCCC;
 }
+
+@media (max-width: 1199px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    overscroll-behavior-x: none;
+    -webkit-overflow-scrolling: touch;
+  }  
+
+  * {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+}
