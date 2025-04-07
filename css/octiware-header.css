@@ -118,9 +118,9 @@
 .mobile-nav-container {
   position: absolute;
   top: calc(100% + var(--spacing-xs));
-  right: 0;
+  right : 0;
   min-width: max-content;
-  padding: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
   background-color: var(--bg-main);
   border: 2px solid var(--text-accent);
   border-radius: 8px;
@@ -722,6 +722,13 @@
 
   .header-right {
     gap: var(--style-toggle-offset);
+  }
+
+  .font-size-slider,
+  .layout-section,
+  .customize-panel .hide-on-small-1,
+  .customize-panel .hide-on-small-3 {
+    display: none;
   }
 }
 
