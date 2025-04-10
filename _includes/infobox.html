@@ -1,0 +1,30 @@
+{% if page.infobox %}
+  <aside class="wiki-right-sidebar">
+    <div class="infobox">
+      <div class="infobox-title">{{ page.title }}</div>
+
+      {% if page.infobox.grid %}
+        <div class="infobox-grid">
+          {% for img in page.infobox.grid %}
+            <img src="{{ img }}" alt="">
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if page.infobox.status %}
+        <div class="infobox-section">
+          <strong>Status:</strong> {{ page.infobox.status }}
+        </div>
+      {% endif %}
+
+      {% if page.infobox.classification %}
+        <div class="infobox-section">
+          <strong>Scientific classification:</strong><br>
+          {% for key in page.infobox.classification %}
+            <strong>{{ key[0] }}:</strong> {{ key[1] }}<br>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </aside>
+{% endif %}

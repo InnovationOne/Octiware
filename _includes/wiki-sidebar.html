@@ -1,0 +1,38 @@
+<!-- _includes/wiki-sidebar.html -->
+<ul class="sidebar-nav">
+  <!-- SECTION: Contents (Auto-TOC per JS) -->
+  <li class="sidebar-section contents-section">
+    <button class="heading-button" data-expanded="true">
+      <span class="heading-left">
+        <svg class="toggle-icon closed-icon" xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none">
+          <path fill="currentColor" d="M5.343 13.06c-.373 0-.69-.13-.95-.392A1.293 1.293 0 0 1 4 11.717c0-.373.13-.69.392-.951.261-.262.578-.393.951-.393s.69.131.951.393c.262.26.393.578.393.95 0 .374-.131.69-.393.952-.26.261-.578.392-.95.392Zm0-5.373c-.373 0-.69-.131-.95-.393A1.293 1.293 0 0 1 4 6.344c0-.374.13-.69.392-.952.261-.261.578-.392.951-.392s.69.13.951.392c.262.261.393.578.393.951s-.131.69-.393.951c-.26.262-.578.393-.95.393Zm0 10.746c-.373 0-.69-.13-.95-.392a1.293 1.293 0 0 1-.393-.95c0-.374.13-.691.392-.952.261-.261.578-.392.951-.392s.69.13.951.392c.262.26.393.578.393.951s-.131.69-.393.951c-.26.262-.578.392-.95.392Zm4.03-.447a.864.864 0 0 1-.637-.258.864.864 0 0 1-.258-.638c0-.254.086-.466.258-.638a.864.864 0 0 1 .637-.258h9.852c.253 0 .466.087.637.258a.865.865 0 0 1 .258.638.864.864 0 0 1-.258.638.864.864 0 0 1-.637.258H9.373Zm0-5.374a.864.864 0 0 1-.637-.258.864.864 0 0 1-.258-.637c0-.254.086-.467.258-.639a.866.866 0 0 1 .637-.257h9.852c.253 0 .466.086.637.257a.867.867 0 0 1 .258.639.865.865 0 0 1-.258.637.864.864 0 0 1-.637.258H9.373Zm0-5.373a.866.866 0 0 1-.637-.257.867.867 0 0 1-.258-.639c0-.253.086-.466.258-.638a.866.866 0 0 1 .637-.257h9.852c.253 0 .466.085.637.257a.867.867 0 0 1 .258.638.867.867 0 0 1-.258.639.866.866 0 0 1-.637.257H9.373Z"/>
+        </svg>
+        <svg class="toggle-icon open-icon" xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none">
+          <path stroke="currentColor" stroke-linecap="round" stroke-width="1.894" d="M6.72 12H17"/>
+        </svg>
+        <span class="heading-text">Contents</span>
+      </span>
+    </button>
+    <ul class="sidebar-list" id="contents-generated">
+      <!-- H1–H6 kommen hier via main.js -->
+    </ul>
+  </li>
+
+  <!-- SECTION: Top-level articles -->
+  <li class="sidebar-section top-level-section">
+    <button class="heading-button" data-expanded="true">
+      <span class="heading-left">
+        <svg class="toggle-icon closed-icon" xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.136 12.046H19m-8.864 0v-5.91m0 5.91v5.318H19M10.136 6.137h4.137m-4.137 0H6"/>
+        </svg>
+        <svg class="toggle-icon open-icon" xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none">
+          <path stroke="currentColor" stroke-linecap="round" stroke-width="1.894" d="M6.72 12H17"/>
+        </svg>
+        <span class="heading-text">Top-level articles</span>
+      </span>
+    </button>
+    <ul class="sidebar-list">
+      {% include render-tree.html node=site.wiki_tree current=page.url path="" %}
+    </ul>
+  </li>
+</ul>

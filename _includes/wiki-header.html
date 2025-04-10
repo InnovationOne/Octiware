@@ -1,0 +1,295 @@
+<header>
+  <div class="header">
+    <div class="header-container" aria-label="Main site header">
+      <!-- LOGO AREA -->
+      <div class="header-logo">
+        <a href="{{ site.baseurl }}/wiki.html" aria-label="Octiware Home" class="logo-link">
+          {% picture logo octiware_logo.png --img class="logo-img" --alt "Octiware Logo" %}
+        </a>
+        <a href="{{ site.baseurl }}/wiki.html" aria-label="Octiware Home" class="logo-text-container">
+          <span class="logo-text">OctiWiki</span>
+          <span class="logo-slogan">The Complete Encyclopedia</span>
+        </a>
+      </div>
+            
+      <!-- MAIN NAVIGATION -->
+      <nav class="header-nav-desktop" aria-label="Main navigation">
+        <ul>
+          <li><a href="{{ site.baseurl }}/index.html">Octiware / Home</a></li>
+        </ul>
+      </nav>
+
+      <!-- Center: Search form -->
+      <div class="wiki-header-right">
+        <form class="wiki-search-form" onsubmit="return false">
+          <input
+            type="search"
+            id="wiki-search-input"
+            placeholder="Search OctiWiki"
+            autocomplete="off"
+          />
+          <span class="clear-icon" id="clearSearchBtn">×</span>
+          <button aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24" fill="none">
+              <path fill="currentColor" d="M15.67 14.15h-.8l-.284-.273a6.589 6.589 0 0 0 1.5-5.413c-.476-2.818-2.828-5.068-5.666-5.413a6.593 6.593 0 0 0-7.369 7.37c.345 2.837 2.595 5.189 5.413 5.665a6.589 6.589 0 0 0 5.413-1.5l.273.284v.8l4.308 4.309a1.07 1.07 0 0 0 1.51 0 1.07 1.07 0 0 0 0-1.51l-4.297-4.319Zm-6.081 0A4.555 4.555 0 0 1 5.028 9.59a4.555 4.555 0 0 1 4.561-4.561 4.555 4.555 0 0 1 4.561 4.561A4.555 4.555 0 0 1 9.59 14.15Z"/>
+            </svg>            
+          </button>
+          <div id="autocomplete-results" class="autocomplete-results"></div>
+        </form>
+      </div>
+      
+      <!-- RIGHT SIDE: SOCIAL + STYLE-SELECTOR BUTTON -->
+      <div class="header-right">
+        <!-- Style-Selector Button -->
+        <button class="style-toggle-btn" id="styleToggleBtn" aria-label="Open style selector">
+          <span class="btn-ring"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+            <path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-85 32-158t87.5-127q55.5-54 130-84.5T489-880q79 0 150 26.5T763.5-780q53.5 47 85 111.5T880-527q0 108-63 170.5T650-294h-75q-18 0-31 14t-13 31q0 27 14.5 46t14.5 44q0 38-21 58.5T480-80Zm0-400Zm-233 26q20 0 35-15t15-35q0-20-15-35t-35-15q-20 0-35 15t-15 35q0 20 15 35t35 15Zm126-170q20 0 35-15t15-35q0-20-15-35t-35-15q-20 0-35 15t-15 35q0 20 15 35t35 15Zm214 0q20 0 35-15t15-35q0-20-15-35t-35-15q-20 0-35 15t-15 35q0 20 15 35t35 15Zm131 170q20 0 35-15t15-35q0-20-15-35t-35-15q-20 0-35 15t-15 35q0 20 15 35t35 15ZM480-140q11 0 15.5-4.5T500-159q0-14-14.5-26T471-238q0-46 30-81t76-35h73q76 0 123-44.5T820-527q0-132-100-212.5T489-820q-146 0-247.5 98.5T140-480q0 141 99.5 240.5T480-140Z"/>
+          </svg>
+          <span class="confetti"></span>
+        </button>
+              
+        <!-- LANGUAGE DROPDOWN -->
+        <!-- 
+        <div class="language-dropdown">
+          <select name="language" id="language" aria-label="Select Language">
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+          </select>
+        </div>
+        --->
+        <!-- MOBILE NAVIGATION (Burger Menu) -->
+        <div class="header-nav-mobile">
+          <button class="mobile-nav-toggle" aria-label="Open mobile menu">☰</button>
+          <div class="mobile-nav-container">
+            <ul>
+              <li><a href="{{ site.baseurl }}/index.html">Octiware / Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== STYLE SELECTOR PANEL ========== -->
+    <div class="customize-panel hidden" id="stylePanel">
+      <!-- Font Size Section -->
+      <div class="font-size-slider">
+        <!-- Beschriftung oben links -->
+        <div class="section-label">Font size</div>
+        
+        <!-- Kleines "T" -->
+        <div class="fs-smallT">T</div>
+        
+        <!-- Großes "T" -->
+        <div class="fs-largeT">T</div>
+        
+        <!-- Track (SVG-Hintergrund) -->
+        <div class="fs-track">
+          <svg width="206" height="9" viewBox="0 0 206 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1V4.5M1 8V4.5M1 4.5H26.5H34.3585M205 8V1V4.5H171.642M103 4.5H137.642M103 4.5H67.717M103 4.5V1M103 4.5V8M34.3585 4.5H67.717M34.3585 4.5V1M34.3585 4.5V8M137.642 4.5H154H171.642M137.642 4.5V1M137.642 4.5V8M171.642 4.5V1V8M67.717 4.5V1M67.717 4.5V8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>      
+        
+        <!-- Thumb (der „Knopf“) -->
+        <div class="fs-thumb"></div>
+        
+        <!-- Unsichtbarer Range-Input zum Abfangen der Maus-/Touch-Events -->
+        <input 
+          type="range" 
+          id="fontSizeRange" 
+          min="1" 
+          max="7" 
+          step="1" 
+          value="3"
+        />
+      </div>
+
+      <div class="divider hide-on-small-1"></div>
+
+      <!-- Fonts Section (24px Sample) -->
+      <div class="fonts-section">
+        <div class="section-label">Fonts</div>
+        <div class="fonts-row">
+          <div class="font-option font-serif" data-font="serif-header">
+            <div class="font-aa serif-header-aa">Aa</div>
+            <div class="font-label">serif</div>
+          </div>
+          <div class="font-option font-sans" data-font="sans-header">
+            <div class="font-aa sans-header-aa">Aa</div>
+            <div class="font-label">sans</div>
+          </div>
+          <div class="font-option font-mono" data-font="mono-header">
+            <div class="font-aa mono-header-aa">Aa</div>
+            <div class="font-label">mono</div>
+          </div>
+        </div>
+
+        <!-- Fonts Section (16px Sample) -->
+        <div class="fonts-row small-fonts">
+          <div class="font-option font-serif" data-font="serif-text">
+            <div class="font-aa serif-text-aa">Aa</div>
+            <div class="font-label">serif</div>
+          </div>
+          <div class="font-option font-sans" data-font="sans-text">
+            <div class="font-aa sans-text-aa">Aa</div>
+            <div class="font-label">sans</div>
+          </div>
+          <div class="font-option mono-text" data-font="mono-text">
+            <div class="font-aa mono-text-aa">Aa</div>
+            <div class="font-label">mono</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Colors Section -->
+      <div class="customice-section">
+        <div class="section-label">Theme</div>
+        <div class="all-colors">
+
+          <!-- 1) THEME 1 -->
+          <div class="color-wrapper color-set-1" data-theme="theme-default">
+            <div class="rect-bg">
+              <div class="rect-right">
+                <div class="rect-left"></div>
+                <div class="rect-mid"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2) THEME 2 -->
+          <div class="color-wrapper color-set-2" data-theme="theme-paper">
+            <div class="rect-bg">
+              <div class="rect-right">
+                <div class="rect-left"></div>
+                <div class="rect-mid"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3) THEME 3 -->
+          <div class="color-wrapper color-set-3" data-theme="theme-dark">
+            <div class="rect-bg">
+              <div class="rect-right">
+                <div class="rect-left"></div>
+                <div class="rect-mid"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4) THEME 4 -->
+          <div class="color-wrapper color-set-4" data-theme="theme-night">
+            <div class="rect-bg">
+              <div class="rect-right">
+                <div class="rect-left"></div>
+                <div class="rect-mid"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5) THEME 5 -->
+          <div class="color-wrapper color-set-5" data-theme="theme-eclipse">
+            <div class="rect-bg">
+              <div class="rect-right">
+                <div class="rect-left"></div>
+                <div class="rect-mid"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6) THEME 6 -->
+          <div class="color-wrapper color-set-6" data-theme="theme-power">
+            <div class="rect-bg">
+              <div class="rect-right">
+                <div class="rect-left"></div>
+                <div class="rect-mid"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7) THEME 7 -->
+          <div class="color-wrapper color-set-7" data-theme="theme-futur">
+            <div class="rect-bg">
+              <div class="rect-right">
+                <div class="rect-left"></div>
+                <div class="rect-mid"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8) THEME 8 -->
+          <div class="color-wrapper color-set-8" data-theme="theme-retro">
+            <div class="rect-bg">
+              <div class="rect-right">
+                <div class="rect-left"></div>
+                <div class="rect-mid"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9) THEME 9 -->
+          <div class="color-wrapper color-set-9" data-theme="theme-joy">
+            <div class="rect-bg">
+              <div class="rect-right">
+                <div class="rect-left"></div>
+                <div class="rect-mid"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider hide-on-small-3"></div>
+
+      <!-- Layout Section -->
+      <div class="layout-section">
+        <div class="section-label">Layout</div>
+        <div class="layout-options">
+          
+          <!-- Default Layout -->
+          <div class="layout-option layout-default" data-layout="default">
+            <div class="layout-bg">
+              <div class="layout-rect"></div>
+              <div class="layout-line horizontal h1"></div>
+              <div class="layout-line horizontal h2"></div>
+              <div class="layout-line horizontal h3"></div>
+              <div class="layout-line vertical v1"></div>
+              <div class="layout-line vertical v2"></div>
+            </div>
+            <div class="layout-label">Default</div>
+          </div>
+      
+          <!-- Narrow Layout -->
+          <div class="layout-option layout-narrow" data-layout="narrow">
+            <div class="layout-bg">
+              <div class="layout-rect"></div>
+              <div class="layout-line horizontal h1"></div>
+              <div class="layout-line horizontal h2"></div>
+              <div class="layout-line horizontal h3"></div>
+              <div class="layout-line vertical v1"></div>
+              <div class="layout-line vertical v2"></div>
+            </div>
+            <div class="layout-label">Narrow</div>
+          </div>
+      
+          <!-- Wide Layout -->
+          <div class="layout-option layout-wide" data-layout="wide">
+            <div class="layout-bg">
+              <div class="layout-rect"></div>
+              <div class="layout-line horizontal h1"></div>
+              <div class="layout-line horizontal h2"></div>
+              <div class="layout-line horizontal h3"></div>
+              <div class="layout-line vertical v1"></div>
+              <div class="layout-line vertical v2"></div>
+            </div>
+            <div class="layout-label">Wide</div>
+          </div>
+      
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</header>

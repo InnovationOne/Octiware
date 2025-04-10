@@ -3,6 +3,8 @@ title: "Octiware"
 description: "Passion Meets Pixels"
 url: "https://octiware.com"
 baseurl: ""
+safe: false
+plugins_dir: _plugins
 
 plugins:
   - jekyll_picture_tag
@@ -28,6 +30,15 @@ picture:
       compression: av1
       speed: 4
   strip_metadata: false
+
+collections:
+  wiki:
+    output: true
+    permalink: /wiki/:path/
+
+markdown: kramdown
+kramdown:
+  input: GFM
 
 exclude:
   - Gemfile
