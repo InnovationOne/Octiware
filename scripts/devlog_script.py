@@ -5,28 +5,41 @@ from datetime import timezone, timedelta
 
 # --- Konfiguration ---
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
+REPO_OWNER = "InnovationOne"
+REPO_NAME = "Project-SI"
 
-REPO_OWNER = "InnovationOne"  # Passe an dein Repo an
-REPO_NAME = "Project-SI"      # Passe an dein Repo an
+# Lese optionale Umgebungsvariablen
+env_since = os.environ.get('SINCE_DATE')  # z.B. "2025-03-09"
+env_until = os.environ.get('UNTIL_DATE')  # z.B. "2025-03-25"
 
-# Heutiges Datum (UTC)
-today = datetime.datetime.now(timezone.utc)
+if env_since:
+    # Beginn um 00:00 UTC
+    since_dt = datetime.datetime.fromisoformat(env_since).replace(tzinfo=timezone.utc)
+else:
+    # erstes Datum: erster Tag des Vormonats 00:00 UTC
+    today = datetime.datetime.now(timezone.utc)
+    first_day_current = today.replace(day=1)
+    last_day_prev = first_day_current - timedelta(days=1)
+    since_dt = last_day_prev.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
 
-# Ersten Tag des aktuellen Monats ermitteln
-first_day_current = today.replace(day=1)
-# Letzter Tag des Vormonats ist ein Tag vor dem ersten Tag des aktuellen Monats
-last_day_previous = first_day_current - timedelta(days=1)
-# Erster Tag des Vormonats
-first_day_previous = last_day_previous.replace(day=1)
+if env_until:
+    # Ende um 23:59 UTC
+    until_dt = datetime.datetime.fromisoformat(env_until).replace(
+        hour=23, minute=59, second=59, microsecond=0, tzinfo=timezone.utc)
+else:
+    # letztes Datum: letzter Tag des Vormonats 23:59 UTC
+    today = datetime.datetime.now(timezone.utc)
+    first_day_current = today.replace(day=1)
+    last_day_prev = first_day_current - timedelta(days=1)
+    until_dt = last_day_prev.replace(hour=23, minute=59, second=59, microsecond=0)
 
-# Konvertiere beide Daten in ISO-Format (z.B. "2025-02-01T00:00:00+00:00")
-since_date = first_day_previous.isoformat()
-until_date = last_day_previous.isoformat()
+# In ISO-Format für die GitHub-API
+since_iso = since_dt.isoformat()
+until_iso = until_dt.isoformat()
 
-# GitHub-API-URL: Alle Commits zwischen seit und bis
 commits_url = (
     f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/commits"
-    f"?since={since_date}&until={until_date}"
+    f"?since={since_iso}&until={until_iso}"
 )
 headers = {"Authorization": f"token {GITHUB_TOKEN}"}
 
@@ -37,24 +50,26 @@ if response.status_code != 200:
 
 commits = response.json()
 
-# --- Aufbereitung der Commit-Daten ---
+# --- Aufbereitung ---
 commit_summaries = []
-for commit in commits:
-    # Extrahiere Datum (YYYY-MM-DD) und Commit-Nachricht
-    commit_date = commit['commit']['author']['date'][:10]
-    message = commit['commit']['message']
-    commit_summaries.append(f"- {commit_date}: {message}")
+for c in commits:
+    date = c['commit']['author']['date'][:10]
+    msg = c['commit']['message'].splitlines()[0]
+    commit_summaries.append(f"- {date}: {msg}")
+
+if not commit_summaries:
+    commit_summaries = ["Keine neuen Commits im definierten Zeitraum gefunden."]
 
 commit_text = "\n".join(commit_summaries)
-if not commit_text:
-    commit_text = "Keine neuen Commits im definierten Zeitraum gefunden."
 
-# --- Commit-Updates in Datei speichern ---
-output_dir = "commit_updates"
-os.makedirs(output_dir, exist_ok=True)
-output_filename = f"commits-{first_day_previous.year}-{first_day_previous.month:02d}.txt"
+# Datei unter Angabe des realen Zeitraums
+out_dir = "commit_updates"
+os.makedirs(out_dir, exist_ok=True)
+start_str = since_dt.strftime("%Y-%m-%d")
+end_str = until_dt.strftime("%Y-%m-%d")
+filename = f"commits_{start_str}_to_{end_str}.txt"
 
-with open(os.path.join(output_dir, output_filename), "w", encoding="utf-8") as f:
+with open(os.path.join(out_dir, filename), "w", encoding="utf-8") as f:
     f.write(commit_text)
 
-print(f"Commit-Updates gespeichert in {output_dir}/{output_filename}")
+print(f"Commit-Updates gespeichert in {out_dir}/{filename}")

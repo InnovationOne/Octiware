@@ -1,10 +1,17 @@
-name: Monthly Devlog Generator
+# .github/workflows/devlog.yml
+name: Devlog Generator
 
 on:
-  schedule:
-    # Wird jeden 1. Monat um 00:00 UTC ausgeführt
-    - cron: '0 0 1 * *'
-  workflow_dispatch:  # Ermöglicht auch manuelles Auslösen
+  workflow_dispatch:
+    inputs:
+      since:
+        description: 'Startdatum (YYYY-MM-DD), z. B. 2025-03-09'
+        required: false
+        default: ''
+      until:
+        description: 'Enddatum (YYYY-MM-DD), z. B. 2025-03-25'
+        required: false
+        default: ''
 
 jobs:
   generate-devlog:
@@ -27,6 +34,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SINCE_DATE: ${{ github.event.inputs.since }}
+          UNTIL_DATE: ${{ github.event.inputs.until }}
         run: |
           python scripts/devlog_script.py
 
@@ -34,6 +43,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add .
+          git add commit_updates/
           git commit -m "Automatisch generierter Devlog"
           git push
