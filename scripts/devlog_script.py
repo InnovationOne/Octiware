@@ -3,73 +3,104 @@ import requests
 import datetime
 from datetime import timezone, timedelta
 
-# --- Konfiguration ---
+# --- Konfiguration --
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
 REPO_OWNER = "InnovationOne"
 REPO_NAME = "Project-SI"
 
-# Lese optionale Umgebungsvariablen
-env_since = os.environ.get('SINCE_DATE')  # z.B. "2025-03-09"
-env_until = os.environ.get('UNTIL_DATE')  # z.B. "2025-03-25"
+# Optional per Env-Var übergebene Daten
+env_since = os.environ.get('SINCE_DATE')
+env_until = os.environ.get('UNTIL_DATE')
 
+# Zeitfenster bestimmen
 if env_since:
-    # Beginn um 00:00 UTC
     since_dt = datetime.datetime.fromisoformat(env_since).replace(tzinfo=timezone.utc)
 else:
-    # erstes Datum: erster Tag des Vormonats 00:00 UTC
     today = datetime.datetime.now(timezone.utc)
     first_day_current = today.replace(day=1)
     last_day_prev = first_day_current - timedelta(days=1)
     since_dt = last_day_prev.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
 
 if env_until:
-    # Ende um 23:59 UTC
     until_dt = datetime.datetime.fromisoformat(env_until).replace(
         hour=23, minute=59, second=59, microsecond=0, tzinfo=timezone.utc)
 else:
-    # letztes Datum: letzter Tag des Vormonats 23:59 UTC
     today = datetime.datetime.now(timezone.utc)
     first_day_current = today.replace(day=1)
     last_day_prev = first_day_current - timedelta(days=1)
     until_dt = last_day_prev.replace(hour=23, minute=59, second=59, microsecond=0)
 
-# In ISO-Format für die GitHub-API
 since_iso = since_dt.isoformat()
 until_iso = until_dt.isoformat()
 
+# 1) Liste aller Commits im Zeitraum abrufen
 commits_url = (
     f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/commits"
     f"?since={since_iso}&until={until_iso}"
 )
 headers = {"Authorization": f"token {GITHUB_TOKEN}"}
+resp = requests.get(commits_url, headers=headers)
+resp.raise_for_status()
+commits = resp.json()
 
-response = requests.get(commits_url, headers=headers)
-if response.status_code != 200:
-    print("Fehler beim Abrufen der Commits:", response.text)
-    exit(1)
-
-commits = response.json()
-
-# --- Aufbereitung ---
-commit_summaries = []
+# 2) Details für jeden Commit holen und formatieren
+lines = []
 for c in commits:
-    date = c['commit']['author']['date'][:10]
-    msg = c['commit']['message'].splitlines()[0]
-    commit_summaries.append(f"- {date}: {msg}")
+    sha = c['sha']
+    # Detail-Endpoint pro Commit
+    detail_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/commits/{sha}"
+    dr = requests.get(detail_url, headers=headers)
+    dr.raise_for_status()
+    detail = dr.json()
 
-if not commit_summaries:
-    commit_summaries = ["Keine neuen Commits im definierten Zeitraum gefunden."]
+    commit = detail['commit']
+    author = commit['author']['name']
+    email = commit['author']['email']
+    date = commit['author']['date']
+    message = commit['message']
+    files = detail.get('files', [])
 
-commit_text = "\n".join(commit_summaries)
+    # Kopfzeile zum Commit
+    lines.append(f"---\nCommit: {sha}")
+    lines.append(f"Author: {author} <{email}>")
+    lines.append(f"Date:   {date}")
+    lines.append("Message:")
+    for line in message.splitlines():
+        lines.append(f"    {line}")
+    lines.append("")  # Leerzeile
 
-# Datei unter Angabe des realen Zeitraums
+    # Geänderte Dateien & Patches
+    if files:
+        lines.append("Changed files:")
+        for f in files:
+            fname = f['filename']
+            status = f['status']
+            additions = f['additions']
+            deletions = f['deletions']
+            lines.append(f"  - {fname} ({status}, +{additions}/-{deletions})")
+            # Den Patch nur anhängen, wenn er nicht zu lang ist:
+            patch = f.get('patch')
+            if patch:
+                lines.append("    Patch:")
+                for pline in patch.splitlines():
+                    lines.append(f"      {pline}")
+        lines.append("")  # Leerzeile zwischen Commits
+    else:
+        lines.append("No file-level details available.\n")
+
+if not lines:
+    lines = ["Keine neuen Commits im definierten Zeitraum gefunden."]
+
+output = "\n".join(lines)
+
+# 3) In Datei schreiben
 out_dir = "commit_updates"
 os.makedirs(out_dir, exist_ok=True)
 start_str = since_dt.strftime("%Y-%m-%d")
-end_str = until_dt.strftime("%Y-%m-%d")
-filename = f"commits_{start_str}_to_{end_str}.txt"
+end_str   = until_dt.strftime("%Y-%m-%d")
+fname = f"commits_{start_str}_to_{end_str}.txt"
 
-with open(os.path.join(out_dir, filename), "w", encoding="utf-8") as f:
-    f.write(commit_text)
+with open(os.path.join(out_dir, fname), "w", encoding="utf-8") as f:
+    f.write(output)
 
-print(f"Commit-Updates gespeichert in {out_dir}/{filename}")
+print(f"Commit-Updates mit Details gespeichert in {out_dir}/{fname}")
