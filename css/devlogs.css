@@ -59,6 +59,16 @@
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
+.img-container-i {
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+  max-width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .devlog-section {
   margin-bottom: var(--spacing-lg);
   background-color: transparent;
