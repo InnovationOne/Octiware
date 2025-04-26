@@ -74,6 +74,21 @@
   text-transform: uppercase;
 }
 
+.devlog-section h4 {
+  color: var(--text-accent);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-xs);
+  font-weight: bold;
+}
+
+.devlog-section h5 {
+  color: var(--text-accent);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xxs);
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* Absatz innerhalb der Section – Text bleibt gut lesbar */
 .devlog-section p {
   color: var(--text-main);
