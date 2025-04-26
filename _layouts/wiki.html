@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TITLE: Nutzt page.title oder fallback site.title -->
+    <title>
+      {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+    </title>
+
+    <!-- Jekyll SEO Tag -->
+    {% seo %}
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ '/img/favicon.ico' | relative_url }}" type="image/x-icon">
+
+    <!-- CSS-Dateien -->
+    <link rel="stylesheet" href="{{ '/css/base.css' | relative_url }}">
+
+    <link rel="stylesheet" href="{{ '/css/octiware-header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/contact-section.css' | relative_url }}">    
+    <link rel="stylesheet" href="{{ '/css/footer.css' | relative_url }}">
+
+    <link rel="stylesheet" href="{{ '/css/general.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/404.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/devlogs.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/index.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/jobs-kinda.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/jobs.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/not-robots.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/privacy-cookie-policy.css' | relative_url }}">
+
+    <link rel="stylesheet" href="{{ '/css/wiki-header.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/wiki.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/timeline.css' | relative_url }}">
+  </head>
+  <body id="top">
+
+    <!-- HEADER -->
+    {% include wiki-header.html %}
+
+    <!-- HAUPTINHALT DER SEITE -->
+    <main>
+      <!-- ========== Title Container ========== -->
+      <div class="wiki-title-container header-container">
+        <div class="wiki-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24" fill="none">
+            <rect width="14.5" height="14.5" x="4.75" y="4.75" stroke="currentColor" stroke-width="1.5" rx="1.25"/>
+            <path fill="currentColor" d="M8 8.75a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Zm3 0a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75Zm-3 3a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Zm3 0a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75Zm-3 3a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Zm3 0a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75Z"/>
+          </svg>
+          <h1 class="page-title">{{ page.title }}</h1>
+        </div>
+        <div class="header-icons">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none">
+              <circle cx="10.523" cy="12.426" r="2.335" fill="currentColor"/>
+              <circle cx="15.626" cy="4.557" r="1.557" fill="currentColor"/>
+              <circle cx="19.603" cy="10.783" r="1.557" fill="currentColor"/>
+              <circle cx="14.069" cy="20.296" r="1.557" fill="currentColor"/>
+              <circle cx="4.557" cy="17.183" r="1.557" fill="currentColor"/>
+              <circle cx="6.113" cy="7.151" r="1.557" fill="currentColor"/>
+              <path stroke="currentColor" stroke-width="1.282" d="M10.524 12.34l-4.41-5.103m4.41 5.102 5.016-7.87m-5.016 7.87 8.993-1.643m-8.993 1.643 3.459 7.696m-3.46-7.696-5.88 4.583"/>
+            </svg>            
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== 3-Column Layout ========== -->
+      <div class="wiki-body header-container">
+
+        <!-- ========== Left Sidebar ========== -->
+        <nav class="wiki-left-sidebar" aria-label="Sidebar navigation">
+          {% include wiki-sidebar.html %}
+        </nav>
+
+        <!-- ========== Main Article ========== -->
+        <main class="wiki-main-content main-content">
+          <article class="wiki-article">
+            {{ content }}
+
+            {% if page.see_also %}
+              <section class="wiki-see-also">
+                <h2>See also</h2>
+                <div class="see-also-list">
+                  {% for item in page.see_also %}
+                    <div class="see-also-item {% if item.variant != 'default' %}variant-{{ item.variant }}{% endif %}">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M5 8h10.957M8.652 12.26H19M5 12.26h0M8.652 16.521H19M5 16.521h0"/>
+                      </svg>
+                      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    </div>
+                  {% endfor %}
+                </div>
+              </section>
+            {% endif %}
+
+            {% if page.categories %}
+              <div class="wiki-categories">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M5 8h10.957M8.652 12.26H19M5 12.26h0M8.652 16.521H19M5 16.521h0"/>
+                </svg>
+                <strong>Categories:</strong>
+                <p>{{ page.categories | join: " • " }}</p>
+              </div>
+            {% endif %}
+
+            <div class="wiki-last-edited">
+              Last updated: {{ page.date | date: "%d %B %Y" }}
+            </div>
+          </article>
+        </main>
+
+        <!-- ========== Right Sidebar ========== -->
+        {% include infobox.html %}
+
+      </div>
+    </main>
+
+
+    <!-- CONTACT SECTION -->
+    {% include contact-section.html %}
+
+    <!-- FOOTER -->
+    {% include footer.html %}
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <a href="#top" class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 -960 960 960">
+        <path d="M446.67-160v-513l-240 240L160-480l320-320 320 320-46.67 47-240-240v513h-66.66Z"/>
+      </svg>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script defer src="http://localhost:35729/livereload.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.js"></script>
+    <script>
+      const SEARCH_JSON_URL = "{{ '/search.json' | relative_url }}";
+    </script>
+    <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+    <script defer src="{{ '/js/main.js' | relative_url }}"></script>
+    <script defer src="{{ '/js/translation.js' | relative_url }}"></script>    
+  </body>
+</html>

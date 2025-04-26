@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--header-gap);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 /* ---------- LOGO AREA ---------- */

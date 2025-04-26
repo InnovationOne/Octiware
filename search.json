@@ -1,0 +1,17 @@
+---
+layout: null
+---
+
+[
+  {% assign items = site.wiki %}
+  {% for item in items %}
+    {
+      "title": {{ item.title | jsonify }},
+      "url": {{ item.url | jsonify }},
+      "thumbnail": {{ item.thumbnail | default: item.infobox.grid[0] | default: '/img/wiki-placeholder.png' | jsonify }},
+      "categories": {{ item.categories | jsonify }},
+      "infobox": {{ item.infobox | jsonify }},
+      "content": {{ item.content | strip_html | strip_newlines | truncate: 350 | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

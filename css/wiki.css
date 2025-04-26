@@ -1,281 +1,53 @@
-/* =====================  wiki.css  ===================== */
-.wiki-header {
-  background: var(--white);
+/* ---------- CSS Variablen & Root ---------- */
+:root {
+  --sidebar-width: 225px;
+  --infobox-width: 270px;
+  --gap: 1rem;
 }
 
-.wiki-header-container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: var(--spacing-md);
-  display: flex;
-  align-items: center;
-  background-color: var(--white);
-  gap: var(--spacing-md);
-  justify-content: space-between;
+/* ---------- Layout Grid ---------- */
+.wiki-body {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr var(--infobox-width);
+  gap: var(--gap);
+  max-width: var(--layout);
+  margin-inline: auto;
+  background: var(--bg-main);
+  padding-top: var(--spacing-md);
+  align-items: flex-start;
 }
 
-.wiki-header-logo {
-  display: flex;
-  align-items: center;
-}
-
-.wiki-logo-img {
-  max-width: 80px;
-  height: auto;
-}
-
-.wiki-logo-text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: var(--spacing-sm);
-}
-
-.wiki-logo-text {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--black);
-  line-height: 1;
-}
-
-.wiki-logo-slogan {
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--brand-color);
-  margin-top: var(--spacing-xs);
-  line-height: 1;
-}
-
-.wiki-header-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  margin: 0 var(--spacing-md);
-}
-.wiki-search-form {
-  position: relative;
-  width: 800px;
-  display: flex;
-  align-items: center;
-}
-.wiki-search-form input[type="search"] {
-  width: 100%;
-  height: 2.2rem;
-  padding: 0 var(--spacing-md) 0 var(--spacing-sm);
-  background-color: #f3f4f6;
-  border: 1px none #ddd;
-  border-radius: 4px;
-  color: #666;
-  font-size: 0.95rem;
-  outline: none;
-}
-.wiki-search-form button {
-  position: absolute;
-  right: var(--spacing-sm);
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.wiki-search-form button img {
-  opacity: 0.4;
-}
-
-.autocomplete-results {
-  position: absolute;
-  top: calc(2.2rem + 4px); 
-  left: 0;
-  width: 100%;
-  max-height: 400px;
+/* ---------- Wiki Sidebar ---------- */
+.wiki-left-sidebar {
+  position: sticky;
+  top: 92px;
+  align-self: start;
   overflow-y: auto;
-  background: var(--white);
-  border: 1px solid #c8ccd1;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 9999;
+  overflow-x: hidden;
+  max-height: calc(100vh - 92px);
+}
+.sidebar-section {
+  margin-bottom: 2rem;
+}
+.sidebar-toggle-button {
+  display: none;
+}
+.sidebar-close-btn {
   display: none;
 }
 
-.autocomplete-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
-  cursor: pointer;
-  border-top: 1px solid var(--light-gray);
-  transition: background 0.15s;
-}
-.autocomplete-item:first-child {
-  border-top: none;
-}
-.autocomplete-item:hover {
-  background: #f2f2f2;
-}
-.autocomplete-item-thumb {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-.autocomplete-text {
-  display: flex;
-  flex-direction: column;
-}
-.autocomplete-item-title {
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 3px;
-  color: #222;
-}
-.autocomplete-item-summary {
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.2;
-}
-
-.autocomplete-see-all {
-  justify-content: center;
-  color: var(--brand-color);
-  font-weight: 500;
-  border-top: 1px solid #eaeaea !important;
-}
-.autocomplete-see-all:hover {
-  background: #e8f0ff;
-}
-
-.wiki-header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1300px;
-  margin: 1rem auto 0 auto;
-  padding: 0 1rem;
-}
-.wiki-page-title {
-  font-size: 1.6rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  color: #333;
-}
-.wiki-header-icons a {
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-
-/* ===================== Sticky Header Bar  ===================== */
-.wiki-title-container {
-  max-width: 1300px;
-  margin: 10px auto 0;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background: #fff;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 0.5rem 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.wiki-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.wiki-title img {
-  width: 29px;
-  height: 29px;
-}
-
-.wiki-header .page-title {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #202122;
-}
-
-.header-icons {
-  display: flex;
-  align-items: center;
-}
-
-.icon-box {
-  width: 50px;
-  height: 50px;
-  background: #f1f1f1;
-  border-radius: 6px;
-  padding: 0.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon-box img {
-  display: block;
-}
-
-/* ===================== MAIN WRAPPER LAYOUT (3 columns) ===================== */
-.wiki-body {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: grid;
-  padding-top: 1rem;
-  grid-template-columns: 225px 1fr 270px;
-  gap: 1rem;
-}
-/* ========== Left Sidebar (sticky) ========== */
-.wiki-left-sidebar {
-  position: sticky;
-  top: 85px;
-  overflow-x: hidden;
-  align-self: start; /* Ensure proper sticky behavior in grid layout */
-}
-
-/* Outer UL for the entire sidebar */
-.sidebar-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Each major section (Contents / Top-level articles) */
-.sidebar-section {
-  margin-bottom: 2rem; /* extra spacing between sections */
-}
-
-/* ================= HEADINGS (e.g. "Contents") ================= */
 .heading-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0.5rem 0;
   background: none;
   border: none;
-  cursor: pointer;
-  padding: 0.5rem 0;
-  margin: 0;
-  font-family: inherit;
-  color: #000;
+  border-bottom: 1px solid var(--text-accent);
   font-weight: bold;
-  border-bottom: 1px solid #ccc;
-}
-
-.closed-icon {
-  display: inline-block;
-}
-.open-icon {
-  display: none;
-}
-
-/* When data-expanded="true", swap icons */
-.heading-button[data-expanded="true"] .closed-icon {
-  display: none;
-}
-.heading-button[data-expanded="true"] .open-icon {
-  display: inline-block;
+  color: var(--text-main);
+  cursor: pointer;
 }
 
 .heading-left {
@@ -283,176 +55,149 @@
   align-items: center;
   gap: 0.5rem;
 }
+
 .heading-text {
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1vw, 1rem);
 }
 
-.heading-right {
-  display: flex;
-  align-items: center;
-}
-.open-icon {
-  display: none;
-}
-
-/* ================= SUB-LISTS ================= */
-.sidebar-list,
-.sidebar-sublist {
-  list-style: none;
-  margin: 0;
-  padding-left: 1.5rem; /* indentation for hierarchy */
-  margin-top: 1rem;     /* spacing above sub-lists */
+/* ---------- Toggle-Icon-Zustände (unverändert) ---------- */
+.toggle-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-/* Additional nesting */
-.sidebar-sublist .sidebar-sublist {
-  margin-top: 0.75rem; /* smaller gap for deeper levels */
-  padding-left: 1.5rem;
+.toggle-branch .toggle-icon {
+  display: inline-block;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: var(--text-accent);
 }
 
-/* More spacing between items */
-.sidebar-list > li,
-.sidebar-sublist > li {
-  margin-bottom: 0.8rem;
-}
-
-/* .hidden collapses the UL (set by JS toggling) */
-.hidden {
-  display: none;
-}
-
-/* ================= EXPANDABLE BUTTONS ================= */
-/* For sub-items (like "Early Twentieth Century", "Cats", "Breeds", etc.) */
-.expandable {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  font-weight: normal;
-  font-family: inherit;
-  text-align: left;
-}
-
-.expandable-text {
-  flex: 1;
-  margin-right: 0.5rem;
-}
-
-.icon-right {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-.icon-right img {
-  width: 20px;
-  height: 20px;
-}
-
-.open-icon {
-  display: none;
-}
-.expandable[data-expanded="true"] .closed-icon {
-  display: none;
-}
-.expandable[data-expanded="true"] .open-icon {
+.heading-button[data-expanded="true"] .open-icon,
+.heading-button[data-expanded="false"] .closed-icon {
   display: inline;
 }
 
-/* ================= LINK COLORS ================= */
-/* 1) "Contents" area => sub-links and sub-headers in gray (#666) */
-.contents-section .sidebar-list a {
-  color: #666;
+.heading-button[data-expanded="true"] .closed-icon,
+.heading-button[data-expanded="false"] .open-icon {
+  display: none;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.sidebar-list li {
+  margin-left: 5px;
+  margin-top: 0.3rem;
+}
+
+/* ---------- Artikelbaum (Branches) ---------- */
+.tree-branch > .branch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branch-title {
+  flex: 1;
+  text-decoration: none;
+  cursor: default;
+}
+
+.branch-title a,
+.branch-title[href] {
+  color: var(--text-accent);
+  cursor: pointer;
   text-decoration: none;
 }
+
+.branch-title:hover {
+  text-decoration: none;
+}
+
+.toggle-branch {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.branch-children {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 10px;
+}
+
+/* ---------- Table of Contents ---------- */
+.contents-section .sidebar-list a {
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
 .contents-section .sidebar-list a:hover {
   text-decoration: underline;
 }
 
-/* Sub-headers in contents are also gray, non-clickable */
-.contents-subheader {
-  color: #666;
-  font-weight: normal;
-  display: block;
+.hidden {
+  display: none;
 }
 
-/* 2) "Top-level articles" => sub-links in blue (#0077cc) */
-.top-level-section .sidebar-list a {
-  color: var(--brand-color);
-  text-decoration: none;
-}
-.top-level-section .sidebar-list a:hover {
-  text-decoration: underline;
-}
-
-/* 3) Visited links remain the same color */
-.sidebar-list a:visited {
-  color: inherit;
-}
-
-/* 4) "Current article" => bold + black */
-.current-article {
-  font-weight: bold;
-  color: #000 !important;
-}
-
-/* ===================== Main Article (center) ===================== */
+/* ---------- Main Content ---------- */
 .wiki-main-content {
   margin: 0 auto;
-  max-width: 665px;
+  max-width: var(--layout-text);
   background: transparent;
   padding: 0;
 }
 
+.wiki-article h1[id],
+.wiki-article h2[id],
+.wiki-article h3[id],
+.wiki-article h4[id],
+.wiki-article h5[id],
+.wiki-article h6[id] {
+  scroll-margin-top: 80px;
+}
+
 .wiki-article h1 {
-  /* Typically used for the main article title */
-  font-size: 1.6rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
-  color: #333;
+  font-weight: bold;
+  color: var(--text-accent);
 }
 
 .wiki-article h2 {
-  /* Major section headings */
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-top: 2rem;    /* More spacing before major sections */
-  margin-bottom: 0.5rem;
-  color: #444;
-  border-bottom: 2px solid var(--brand-color);
+  font-weight: bold;
+  margin-block: clamp(0.5rem, 2vw, 2rem) 0.5rem;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--text-main);
   padding-bottom: 0.25rem;
 }
 
 .wiki-article h3 {
-  /* Subsection headings */
-  font-size: 1.1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-  color: #555;
+  margin-block: clamp(0.3rem, 1.5vw, 1.5rem) 0.3rem;
+  color: var(--text-secondary);
 }
 
-/* Paragraphs */
-.wiki-article p {  
-  text-align: left;
-  line-height: 1.6;
-  color: #333;
+.wiki-article p {
+  color: var(--text-main);
   margin-bottom: 1rem;
-  letter-spacing: 0.025em; 
+  letter-spacing: 0.025em;
+  text-align: left;
 }
 
-/* “See also” section */
+/* ---------- See Also & Kategorien ---------- */
 .wiki-see-also {
   margin-top: 2rem;
   padding-top: 0.5rem;
-}
-.wiki-see-also h2 {
-  margin-top: 0;
 }
 
 .see-also-list {
@@ -466,111 +211,179 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: var(--light-brand-color);
+  background: var(--bg-secondary);
   border-radius: 4px;
   padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
   transition: background 0.2s, border-color 0.2s;
 }
-.see-also-item img {
-  filter: invert(38%) sepia(38%) saturate(941%) hue-rotate(163deg) brightness(92%) contrast(86%);
+
+.see-also-item svg {
+  color: var(--text-main);
 }
+
 .see-also-item a {
-  color: var(--brand-color);
+  color: var(--text-main);
   text-decoration: none;
 }
+
 .see-also-item a:hover {
   text-decoration: underline;
 }
 
-/* Categories box */
 .wiki-categories {
   margin-top: 1.5rem;
   padding: 0.6rem;
-  background: #d8753c19;
+  width: 100%;
+  background: var(--bg-secondary);
   border-radius: 4px;
-  font-size: 0.9rem;
-  color: #444;
+  color: var(--text-accent);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.3rem;
-  flex-wrap: wrap; /* If categories get too long, they wrap nicely */
+  flex-wrap: wrap;
 }
 
-.wiki-categories img {
+.wiki-categories svg {
   display: block;
-  filter: invert(49%) sepia(73%) saturate(475%) hue-rotate(338deg) brightness(94%) contrast(88%);
+  color: var(--text-secondary);
 }
 
 .wiki-categories strong {
+  color: var(--text-secondary);
   white-space: nowrap;
   margin-right: 0.3rem;
 }
 
 .wiki-categories p {
-  flex: 1;
+  margin: 0;
   display: inline;
-  color: #D8753C;
+  color: var(--text-secondary);
   word-break: break-word;
 }
 
-/* Last edited note */
 .wiki-last-edited {
   margin-top: 1.5rem;
-  font-size: 0.85rem;
-  color: #636C7E;
+  color: var(--text-dim);
   margin-bottom: 5rem;
 }
 
-.brand-highlight {
-  color: var(--brand-color);
-}
-.brand-highlight a {
-  color: var(--brand-color);
-  text-decoration: none;
-}
-.brand-highlight a:hover {
-  background-color: #D0E4F2;
-  text-decoration: underline;
-}
-
-
-/* ===================== Right Sidebar ===================== */
+/* ---------- Right Sidebar ---------- */
 .wiki-right-sidebar {
   position: static;
   height: fit-content;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--bg-main);
+  border: 1px solid var(--text-accent);
   border-radius: 8px;
   padding: 0.8rem;
 }
 
 .infobox-title {
-  font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
+
 .infobox-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
+
 .infobox-grid img {
   width: 100%;
   border-radius: 4px;
-  border: 1px solid #ccc;
 }
+
 .infobox-section {
   margin-bottom: 1rem;
 }
+
 .infobox-section strong {
   display: inline-block;
   margin-right: 0.5rem;
 }
 
 .extra-content {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--text-main);
   padding-top: 0.5rem;
   margin-top: 0.5rem;
+}
+
+/* ---------- Sidebar Responsive – Popup auf Smartphones ---------- */
+@media (max-width: 767px) {
+  .wiki-left-sidebar {
+    display: none;
+  }
+
+  /* Kleinere Schriftgrößen in der Sidebar */
+  .heading-text,
+  .branch-title,
+  .sidebar-list li,
+  .wiki-article p {
+    font-size: 0.95rem;
+  }
+
+  .see-also-list {
+    grid-template-columns: 1fr;
+  }
+
+  .infobox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reduziertes Padding für Titelcontainer und Body */
+  .wiki-title-container,
+  .wiki-body {
+    padding-inline: var(--spacing-sm);
+  }
+
+  /* Überschreibe das Gitter, damit Haupt- und Infobox nicht mehr 3-spaltig sind */
+  .wiki-body {
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+      "main"
+      "infobox"
+      /* Die left-sidebar ist ja als Popup implementiert, also keinen festen Platz */
+    ;
+  }
+
+  .wiki-title {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+/* ---------- Tablet Querformat & kleinere Desktops ---------- */
+@media (max-width: 1199px) {
+  .wiki-body {
+    grid-template-columns: var(--sidebar-width) 2fr;
+    grid-template-areas:
+      "sidebar main"
+      "sidebar infobox";
+  }
+
+  .wiki-right-sidebar {
+    grid-column: span 2;
+  }
+}
+
+/* ---------- Tablet Hochformat ---------- */
+@media (max-width: 991px) {
+  .wiki-body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "infobox"
+      "sidebar";
+  }
+
+  .wiki-left-sidebar,
+  .wiki-right-sidebar {
+    max-width: 100%;
+  }
+  
+  .wiki-left-sidebar {
+    display: none;
+  }
 }

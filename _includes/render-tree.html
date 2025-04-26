@@ -1,0 +1,56 @@
+{% if include.node %}
+  {% if include.node contains '/wiki/' %}
+    <!-- Blatt-Datei -->
+    <li class="tree-leaf">
+      <a href="{{ include.node }}">{{ include.node }}</a>
+    </li>
+  {% else %}
+    {% assign pairs = include.node | to_a | sort %}
+    {% for pair in pairs %}
+      {% assign key = pair[0] %}
+      {% assign nodeVal = pair[1] %}
+      {% if key == 'link' %}
+        {% continue %}
+      {% endif %}
+
+      {% if nodeVal contains '/wiki/' %}
+        <!-- Blatt -->
+        <li class="tree-leaf">
+          <a href="{{ nodeVal }}">{{ key | replace:'-',' ' | capitalize }}</a>
+        </li>
+      {% else %}
+        <!-- Branch -->
+        <li class="tree-branch">
+          <div class="branch-header">
+            {% if nodeVal.link %}
+              <a class="branch-title" href="{{ nodeVal.link }}">
+                {{ key | capitalize }}
+              </a>
+            {% else %}
+              <span class="branch-title">{{ key | capitalize }}</span>
+            {% endif %}
+            <button class="toggle-branch" aria-label="Toggle folder">
+              <!-- standard: pfeil nach rechts (arrowRight) -->
+              <span class="toggle-icon" data-arrow="right"></span>
+            </button>
+          </div>
+
+          {% assign branch_path = include.path | append:'/' | append:key | remove_first:'/' | prepend:'/' %}
+          {% assign expanded = false %}
+          {% if include.current and branch_path != '' %}
+            {% if include.current == branch_path or include.current contains branch_path %}
+              {% assign expanded = true %}
+            {% endif %}
+          {% endif %}
+
+          <ul class="branch-children {% unless expanded %}hidden{% endunless %}">
+            {% assign new_path = include.path | append:'/' | append:key | remove_first:'/' | prepend:'/' %}
+            {% include render-tree.html node=nodeVal current=include.current path=new_path %}
+          </ul>
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <li>Baum nicht gefunden</li>
+{% endif %}

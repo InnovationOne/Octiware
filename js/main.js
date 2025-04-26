@@ -310,3 +310,115 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Wiki
+document.addEventListener("DOMContentLoaded", () => {
+  // *** A) Heading-Buttons (Contents, Top-level articles) ***
+  const headingButtons = document.querySelectorAll(".heading-button");
+  headingButtons.forEach(btn => {
+    btn.setAttribute("data-expanded", "true");
+    btn.addEventListener("click", () => {
+      const isExpanded = btn.getAttribute("data-expanded") === "true";
+      btn.setAttribute("data-expanded", isExpanded ? "false" : "true");
+      const nextUl = btn.nextElementSibling;
+      if (nextUl && nextUl.tagName === "UL") {
+        nextUl.classList.toggle("hidden");
+      }
+    });
+  });
+
+  // *** B) Auto-TOC ***
+  const tocTarget = document.getElementById("contents-generated");
+  if (tocTarget) {
+    const headings = document.querySelectorAll(".wiki-article h1, .wiki-article h2, .wiki-article h3, .wiki-article h4, .wiki-article h5, .wiki-article h6");
+    headings.forEach(heading => {
+      const text = heading.textContent.trim();
+      let id = heading.id;
+      if (!id) {
+        id = text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-_]/g, "");
+        heading.id = id;
+      }
+      const li = document.createElement("li");
+      li.style.marginLeft = (parseInt(heading.tagName.slice(1)) - 1) * 1.2 + "rem";
+      const a = document.createElement("a");
+      a.href = `#${id}`;
+      a.textContent = text;
+      li.appendChild(a);
+      tocTarget.appendChild(li);
+    });
+  }
+
+  // *** C) Branch Toggle im Artikelbaum (CSS Masking) ***
+  // WICHTIG: 'fill="%23fff"' statt 'none' oder 'currentColor'
+  //          und entferntes fill="none" in <svg>.
+  const arrowRight = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23fff' d='m9.22 15.153 3.332-3.33L9.22 8.491a.855.855 0 1 1 1.21-1.21l3.94 3.94a.855.855 0 0 1 0 1.21l-3.94 3.94a.855.855 0 0 1-1.21 0 .873.873 0 0 1 0-1.219Z'/%3E%3C/svg%3E";
+  const arrowDown = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23fff' d='m8.47 9.251 3.33 3.33 3.331-3.33a.855.855 0 1 1 1.21 1.21l-3.94 3.94a.855.855 0 0 1-1.21 0l-3.94-3.94a.855.855 0 0 1 0-1.21.873.873 0 0 1 1.219 0Z'/%3E%3C/svg%3E";
+
+  document.querySelectorAll(".toggle-branch").forEach(btn => {
+    const branch = btn.closest(".tree-branch");
+    if (branch) {
+      const children = branch.querySelector(".branch-children");
+      const icon = btn.querySelector(".toggle-icon");
+      if (children && icon) {
+        // Initial: hidden => Pfeil rechts, sonst Pfeil runter
+        if (children.classList.contains("hidden")) {
+          icon.style.webkitMaskImage = `url("${arrowRight}")`;
+          icon.style.maskImage = `url("${arrowRight}")`;
+        } else {
+          icon.style.webkitMaskImage = `url("${arrowDown}")`;
+          icon.style.maskImage = `url("${arrowDown}")`;
+        }
+      }
+    }
+
+    // Bei Klick: Zustand toggeln
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const branch = btn.closest(".tree-branch");
+      if (!branch) return;
+
+      const children = branch.querySelector(".branch-children");
+      const icon = btn.querySelector(".toggle-icon");
+      if (children && icon) {
+        children.classList.toggle("hidden");
+        if (children.classList.contains("hidden")) {
+          icon.style.webkitMaskImage = `url("${arrowRight}")`;
+          icon.style.maskImage = `url("${arrowRight}")`;
+        } else {
+          icon.style.webkitMaskImage = `url("${arrowDown}")`;
+          icon.style.maskImage = `url("${arrowDown}")`;
+        }
+      }
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const searchForms = document.querySelectorAll('.wiki-search-form');
+
+  searchForms.forEach(form => {
+    const input = form.querySelector('input[type="search"]');
+    const clearBtn = form.querySelector('.clear-icon');
+    const resultsBox = form.querySelector('.autocomplete-results');
+
+    if (!input || !clearBtn) return;
+
+    const toggleClearButton = () => {
+      clearBtn.style.display = input.value.trim().length > 0 ? 'block' : 'none';
+    };
+
+    input.addEventListener('input', toggleClearButton);
+
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      toggleClearButton();
+      input.focus();
+      if (resultsBox) {
+        resultsBox.innerHTML = '';
+        resultsBox.style.display = 'none';
+      }      
+    });
+
+    toggleClearButton();
+  });
+});

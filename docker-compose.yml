@@ -8,6 +8,8 @@ services:
     volumes:
       - .:/srv/jekyll:cached
       - jekyll_gems:/usr/local/bundle
+    environment:
+      - JEKYLL_ENV=development
 
 volumes:
   jekyll_gems:
